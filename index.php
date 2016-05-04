@@ -3,6 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title></title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
     <link href='css/style.css' rel='stylesheet' type='text/css' />
     <link href='css/bootstrap.css' rel='stylesheet' type='text/css'>
     <script src="js/jquery.min.js" type="text/javascript"></script>
@@ -153,16 +157,17 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 			</section>
 		<br />
         <marquee behavior="scroll" direction="left">
-        <?
+        <?php
 	$handle=opendir('flags');
      $i=0;
     while (false!==($file = readdir($handle)))
 	{ 
     if ($file != "." && $file != ".." && $file != "index.html")
-	 { ?>
-     
-     <? echo "<img src='flags/$file' border='0'>";?>
-     <? } } closedir($handle); ?> 
+	 {  
+        echo "<img src='flags/$file' border='0'>";
+      } 
+    } closedir($handle); 
+    ?> 
         </marquee>
          
         </div>

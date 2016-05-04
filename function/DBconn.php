@@ -3,8 +3,10 @@
 function connection()
 {
 $host="localhost";
-$user="mawar_Urmaed";
-$password="u&3Mg50W";
+//$user="mawar_Urmaed";
+//$password="u&3Mg50W";
+$user="root";
+$password="bigboss7";
 $DB='mawar_mawared';
 $link = mysql_connect ($host, $user, $password) or die ("Could not connect");
 mysql_select_db($DB,$link) or die ("Could not Select DataBase");
