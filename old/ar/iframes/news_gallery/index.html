@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Tigra Fader Sample #3 - Methods and Properties</title>
+
+	<!-- link Tigra Fader script file in the header or anywhere before the first slide show initialization -->
+	<script language="JavaScript" src="tFader.js"></script>
+</head>
+<body>
+
+<!-- at the location where you want slideshow to appear configure and initialize the instance -->
+<script language="JavaScript">
+
+	// configuration structure
+	var A_TPL = {
+		// randomize the array each time page loads
+		'random' : false,
+		// number of transparency changes during the transition
+		//	increase for smoother transition, reduce for less CPU usage
+		'steps' : 20,
+		// transition duration in seconds
+		'transtime': .5,
+		// slide time in seconds
+		'slidetime': 2,
+		// width of the slide (optional)
+		'width' : 100,
+		// height of the slide (optional)
+		'height': 100,
+		// alt text for the image (optional)
+		'alt' : 'Sample Tigra Fader Slideshow',
+		// css class assigned to the slide <img> (optional)
+		'css' : ''
+	};
+
+	// list of images to display
+	var A_ITEMS = [
+		'img/1.gif',
+		'img/2.gif',
+		'img/3.gif',
+		'img/4.gif',
+		'img/5.gif'
+	];
+
+	// fader initialization	
+	var mySlideShow = new tFader (A_ITEMS, A_TPL);
+
+</script>
+<br />
+
+<a href="javascript:mySlideShow.f_goto('0', true)">Go to first slide (watch next slide)</a><br />
+<a href="javascript:mySlideShow.f_stop()">Pause</a><br />
+<a href="javascript:mySlideShow.f_run()">Resume</a><br />
+<a href="javascript:alert(mySlideShow.n_currentSlide)">Show Current Frame Number (zero based)</a><br />
+<a href="javascript:alert(mySlideShow.a_imgRefs[2].tagName)">Get reference to image element of the frame</a><br />
+
+
+</body>
+</html>

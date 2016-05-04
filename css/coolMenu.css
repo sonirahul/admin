@@ -1,0 +1,49 @@
+/* Structure
+------------------------------------------*/
+#coolMenu,
+#coolMenu ul {
+	list-style: none;
+}
+#coolMenu {
+	float: left;
+}
+#coolMenu > li {
+	float: left;
+}
+#coolMenu li a {
+	display: block;
+}
+#coolMenu ul {
+	position: absolute;
+	display: none;
+	z-index: 999;
+}
+#coolMenu ul li a {
+}
+#coolMenu li:hover ul.noJS {
+	display: block; 
+}
+
+/* Main menu
+------------------------------------------*/
+
+#coolMenu > li > a {
+	color: #fff;
+}
+#coolMenu > li:hover > a {
+	background: #f09d28;
+	color: #000;
+}
+
+
+/* Submenu
+------------------------------------------*/
+#coolMenu ul {
+	background: #f09d28;
+}
+#coolMenu ul li a {
+	color: #000;
+}
+#coolMenu ul li:hover a {
+	background: #ffc97c;
+}

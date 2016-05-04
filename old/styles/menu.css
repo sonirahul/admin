@@ -1,0 +1,393 @@
+@charset "utf-8";
+/* menu of 1st zone */
+
+td img {
+/* Another Mozilla/Netscape bug with making sure our images display correctly */
+	display: block;
+}
+
+#FW_mainMenu {
+/* The master div to make sure that our popup menus get aligned correctly.  Be careful when playing with this one. */
+	position: absolute;
+	margin: 0px;
+	width: 0px;
+	height: 0px;
+	
+}
+
+/*menu lang*/
+#MMMenuContainer_lang {
+	/* This ID is related to the master menu div for menu MMMenuContainer_lang and contains the important positioning information for the menu as a whole */
+	position: absolute;
+	left: 1043px;
+	top: 285px;
+	visibility: hidden;
+	z-index: 300;
+}
+
+#MMMenu_lang {
+	/* This class defines things about menu MMMenu_lang's div. */
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	visibility: hidden;
+	background-color: #FFF;
+	border: 3px solid #666;
+	width: 75px;
+	height: 56px;
+}
+
+.MMMIFVStyleMMMenu_lang {
+	/* This class determines the general characteristics of the menu items in menu MMMenu_lang */
+	border-bottom: 1px solid #999;
+	border-left: 0px solid #999;
+	border-right: 0px solid #999;
+	border-top: 0px solid #999;
+	width: 68px;
+	height: 21px;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+}
+
+.MMMIVStyleMMMenu_lang {
+	/* This class determines the general characteristics of the menu items in menu MMMenu_lang */
+	border: 0px solid #FFF;
+	width: 68px;
+	height: 21px;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+}
+
+#MMMenu_lang_Item_0 {
+	/* Unique ID for item 0 of menu MMMenu_lang so we can set its position */
+	left: 3px;
+	top: 5px;
+}
+
+#MMMenu_lang_Item_1 {
+	/* Unique ID for item 1 of menu MMMenu_lang so we can set its position */
+	left: 3px;
+	top: 33px;
+}
+
+#MMMenuContainer_lang img {
+/* needed for Mozilla/Camino/Netscape */
+	border: 0px;
+}
+
+#MMMenuContainer_lang a {
+	/* Controls the general apperance for menu MMMenuContainer_lang's items, including color and font */
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-indent: 3px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 1px;
+	background-color: #FFF;
+	font-weight: normal;
+	font-style: normal;
+	display: block;
+	position: absolute;
+}
+
+#MMMenuContainer_lang a:hover {
+/* Controls the mouse over effects for menu MMMenuContainer_lang */
+	color: #333;
+	background-color: #FFF;
+	font-weight: bold;
+}
+
+/*menu 1*/
+#MMMenuContainer_aboutus {
+	/* This ID is related to the master menu div for menu MMMenuContainer_aboutus and contains the important positioning information for the menu as a whole */
+	position: absolute;
+	left: 188px;
+	top: 391px;
+	visibility: hidden;
+	z-index: 300;
+	/*filter:alpha(opacity=80);*/
+  	opacity:0.8;
+
+}
+
+#MMMenu_aboutus {
+	/* This class defines things about menu MMMenu_aboutus's div. */
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	visibility: hidden;
+	background-color: #FFF;
+	border: 1px solid #999;
+	width: 150px;
+	height: 60px;
+}
+
+.MMMIFVStyleMMMenu_aboutus {
+	/* This class determines the general characteristics of the menu items in menu MMMenu_aboutus */
+	border-bottom: 1px solid #999;
+	border-left: 0px solid #999;
+	border-right: 0px solid #999;
+	border-top: 0px solid #999;
+	width: 139px;
+	height: 21px;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+}
+
+.MMMIVStyleMMMenu_aboutus {
+	/* This class determines the general characteristics of the menu items in menu MMMenu_aboutus */
+	border: 0px solid #FFF;
+	width: 139px;
+	height: 21px;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+}
+
+#MMMenu_aboutus_Item_0 {
+	/* Unique ID for item 0 of menu MMMenu_aboutus so we can set its position */
+	left: 5px;
+	top: 5px;
+}
+
+#MMMenu_aboutus_Item_1 {
+	/* Unique ID for item 1 of menu MMMenu_aboutus so we can set its position */
+	left: 5px;
+	top: 33px;
+}
+
+#MMMenuContainer_aboutus img {
+/* needed for Mozilla/Camino/Netscape */
+	border: 0px;
+}
+
+#MMMenuContainer_aboutus a {
+	/* Controls the general apperance for menu MMMenuContainer_aboutus's items, including color and font */
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-indent: 3px;
+	text-align: left;
+	vertical-align: middle;
+	padding: 1px;
+	background-color: #FFF;
+	font-weight: normal;
+	font-style: normal;
+	display: block;
+	position: absolute;
+}
+
+#MMMenuContainer_aboutus a:hover {
+/* Controls the mouse over effects for menu MMMenuContainer_aboutus */
+	color: #660000;
+	background-color: #FFF;
+	font-weight:bold;
+}
+
+/*menu 2*/
+#MMMenuContainer_country {
+	/* This ID is related to the master menu div for menu MMMenuContainer_country and contains the important positioning information for the menu as a whole */
+	position: absolute;
+	left: 275px;
+	top: 391px;
+	visibility: hidden;
+	z-index: 300;
+	opacity: 0.8;
+}
+
+#MMMenu_country {
+	/* This class defines things about menu MMMenu_country's div. */
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	visibility: hidden;
+	background-color: #FFF;
+	border: 1px solid #999;
+	width: 174px;
+	height: 199px;
+}
+
+.MMMIFVStyleMMMenu_country {
+	/* This class determines the general characteristics of the menu items in menu MMMenu_country */
+	border-bottom: 1px solid #999;
+	border-left: 0px solid #999;
+	border-right: 0px solid #999;
+	border-top: 0px solid #999;
+	width: 163px;
+	height: 21px;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+}
+
+.MMMIVStyleMMMenu_country {
+	/* This class determines the general characteristics of the menu items in menu MMMenu_country */
+	border: 0px solid #FFF;
+	width: 163px;
+	height: 21px;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+}
+
+#MMMenu_country_Item_0 {
+	/* Unique ID for item 0 of menu MMMenu_country so we can set its position */
+	left: 5px;
+	top: 5px;
+}
+
+#MMMenu_country_Item_1 {
+	/* Unique ID for item 1 of menu MMMenu_country so we can set its position */
+	left: 5px;
+	top: 33px;
+}
+#MMMenu_country_Item_2 {
+	/* Unique ID for item 1 of menu MMMenu_country so we can set its position */
+	left: 5px;
+	top: 61px;
+}
+
+#MMMenu_country_Item_3 {
+	/* Unique ID for item 1 of menu MMMenu_country so we can set its position */
+	left: 5px;
+	top: 89px;
+}
+
+#MMMenu_country_Item_4 {
+	/* Unique ID for item 1 of menu MMMenu_country so we can set its position */
+	left: 5px;
+	top: 117px;
+}
+
+#MMMenu_country_Item_5 {
+	/* Unique ID for item 1 of menu MMMenu_country so we can set its position */
+	left: 5px;
+	top: 145px;
+}
+
+#MMMenu_country_Item_6 {
+	/* Unique ID for item 1 of menu MMMenu_country so we can set its position */
+	left: 5px;
+	top: 173px;
+}
+
+#MMMenuContainer_country img {
+/* needed for Mozilla/Camino/Netscape */
+	border: 0px;
+}
+
+#MMMenuContainer_country a {
+	/* Controls the general apperance for menu MMMenuContainer_country's items, including color and font */
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-indent: 3px;
+	text-align: left;
+	vertical-align: middle;
+	padding: 1px;
+	background-color: #FFF;
+	font-weight: normal;
+	font-style: normal;
+	display: block;
+	position: absolute;
+}
+
+#MMMenuContainer_country a:hover {
+/* Controls the mouse over effects for menu MMMenuContainer_country */
+	color: #660000;
+	background-color: #FFF;
+	font-weight:bold;
+}
+
+/*menu 3*/
+#MMMenuContainer_strategic {
+	/* This ID is related to the master menu div for menu MMMenuContainer_strategic and contains the important positioning information for the menu as a whole */
+	position: absolute;
+	left: 540px;
+	top: 391px;
+	visibility: hidden;
+	z-index: 300;
+	/*filter:alpha(opacity=80);*/
+  	opacity:0.8;
+
+}
+
+#MMMenu_strategic {
+	/* This class defines things about menu MMMenu_strategic's div. */
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	visibility: hidden;
+	background-color: #FFF;
+	border: 1px solid #999;
+	width: 263px;
+	height: 87px;
+}
+
+.MMMIFVStyleMMMenu_strategic {
+	/* This class determines the general characteristics of the menu items in menu MMMenu_strategic */
+	border-bottom: 1px solid #999;
+	border-left: 0px solid #999;
+	border-right: 0px solid #999;
+	border-top: 0px solid #999;
+	width: 253px;
+	height: 21px;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+}
+
+.MMMIVStyleMMMenu_strategic {
+	/* This class determines the general characteristics of the menu items in menu MMMenu_strategic */
+	border: 0px solid #FFF;
+	width: 253px;
+	height: 21px;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+}
+
+#MMMenu_strategic_Item_0 {
+	/* Unique ID for item 0 of menu MMMenu_strategic so we can set its position */
+	left: 5px;
+	top: 5px;
+}
+
+#MMMenu_strategic_Item_1 {
+	/* Unique ID for item 1 of menu MMMenu_strategic so we can set its position */
+	left: 5px;
+	top: 33px;
+}
+#MMMenu_strategic_Item_2 {
+	/* Unique ID for item 1 of menu MMMenu_strategic so we can set its position */
+	left: 5px;
+	top: 61px;
+}
+
+#MMMenuContainer_strategic img {
+/* needed for Mozilla/Camino/Netscape */
+	border: 0px;
+}
+
+#MMMenuContainer_strategic a {
+	/* Controls the general apperance for menu MMMenuContainer_strategic's items, including color and font */
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-indent: 3px;
+	text-align: left;
+	vertical-align: middle;
+	padding: 1px;
+	background-color: #FFF;
+	font-weight: normal;
+	font-style: normal;
+	display: block;
+	position: absolute;
+}
+
+#MMMenuContainer_strategic a:hover {
+/* Controls the mouse over effects for menu MMMenuContainer_strategic */
+	color: #660000;
+	background-color: #FFF;
+	font-weight:bold;
+}

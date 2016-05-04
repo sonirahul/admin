@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xmlticker>
+<pause>3000</pause>
+<message><p><strong>Dubai</strong>3 days / 2 night</p><p class="hr">----------------------------------------------</p><p><strong>Muscat short break</strong>4 days / 3 night</p></message>
+<message url="http://www.cnn.com">This is a link to CNN.com</message>
+<message url="http://yahoo.com" target="_new">This is a link to Yahoo</message>
+<message>This is message #3</message>
+<message>This is message #4</message>
+<message>This is message #5</message>
+</xmlticker>
