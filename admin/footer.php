@@ -1,7 +1,19 @@
-  <tr>
-  <TD WIDTH="777" HEIGHT="44" align="center"  colspan="2">
-  All Copy Rights Reserved for mawaredhouse.com </TD>
-  </tr>
-</table>
-</body>
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            <i class="fa fa-copyright" aria-hidden="true"></i><?php echo date("Y"); ?> All Copy Right Reserved for mawaredhouse.com
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    
+
+
+    
+
+  </body>
 </html>

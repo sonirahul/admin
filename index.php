@@ -3,77 +3,163 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-    <link href='css/style.css' rel='stylesheet' type='text/css' />
-    <link href='css/bootstrap.css' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+    <!-- <link href='css/style.css' rel='stylesheet' type='text/css' /> -->
+    <!-- <link href='css/bootstrap.css' rel='stylesheet' type='text/css'>
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/jquery.scrollTo.js"></script>
-    <script src="js/jquery.localscroll.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/jquery.localscroll.js"></script> -->
+    <!-- <script src="js/scripts.js"></script>
     <script type="text/javascript" src="js/html5.js"></script>
     <link href="jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
     <script src="jqvmap/jquery.vmap.js" type="text/javascript"></script>
     <script src="jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
     <script src="jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
-    <script src="js/jqueryRotate.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/contentslider.js"></script>
-    <link href="css/coolMenu.css" rel="stylesheet" type="text/css" media="screen"/>
-    <script type="text/javascript">
-		function getHTML(url,place) 
-			{
-			  $('#'+place).html('<p><img src="images/loading.gif"/><br>Loading...</p>');
-			  $('#'+place).load(url);
-			}
-			//--------------
+    <script src="js/jqueryRotate.js" type="text/javascript"></script>-->
+    <!-- <script type="text/javascript" src="js/contentslider.js"></script>              
+    <link href="css/coolMenu.css" rel="stylesheet" type="text/css" media="screen"/> --> <!-- This one is for menu -->
+    
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+<style>
+  /* Note: Try to remove the following lines to see the effect of CSS positioning */
+  .affix {
+      top: 0;
+      width: 100%;
+  }
 
-        $(document).ready(function () {
-            $('#vmap').vectorMap({
-                map: 'world_en',
-                backgroundColor: '#FF0000',
-                color: '#FEA203',
-                hoverOpacity: 0.7,
-                selectedColor: '#666666',
-                enableZoom: true,
-                showTooltip: true,
-                values: sample_data,
-                scaleColors: ['#C8EEFF', '#006491'],
-                normalizeFunction: 'polynomial',
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
+  </style></head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-                onRegionClick: function (element, code, region) {
 
-                    if (code.toUpperCase() == "KW") {
-                        window.open("http://www.mawaredhouse.com/index.php?model=countriesofoperation&ID=1")
-                    } else if (code.toUpperCase() == "DZ") {
-                        window.open("http://www.mawaredhouse.com/index.php?model=countriesofoperation&ID=7")
-                    } else if (code.toUpperCase() == "LB") {
-                        window.open("http://www.mawaredhouse.com/index.php?model=countriesofoperation&ID=5")
-                    } else if (code.toUpperCase() == "MA") {
-                        window.open("http://www.mawaredhouse.com/index.php?model=countriesofoperation&ID=2")
-                    } else if (code.toUpperCase() == "SY") {
-                        window.open("http://www.mawaredhouse.com/index.php?model=countriesofoperation&ID=3")
-                    } else if (code.toUpperCase() == "JO") {
-                        window.open("http://www.mawaredhouse.com/index.php?model=countriesofoperation&ID=4")
-                    } else if (code.toUpperCase() == "IR") {
-                        window.open("http://www.mawaredhouse.com/index.php?model=countriesofoperation&ID=6")
-                    }
-                }
-            });
-        });
-		
-		
-    </script>
- <script type="text/javascript">
-<!--
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-//-->
-</script>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1256"></head>
-<body>
+
+
+
+
+
+
+
+<!--data-spy="affix" data-offset-top="197"-->
+
+
+
+<!-- <div class="container-fluid">
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+<div  style="background-color:#F44336;color:#fff;height:200px;">
+  <h1>Bootstrap Affix Example</h1>
+  <h3>Fixed (sticky) navbar on scroll</h3>
+  <p>Scroll this page to see how the navbar behaves with data-spy="affix".</p>
+  <p>The navbar is attached to the top of the page after you have scrolled a specified amount of pixels.</p>
+</div>
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="#">Basic Topnav</a></li>
+    <li><a href="#">Page 1</a></li>
+    <li><a href="#">Page 2</a></li>
+    <li><a href="#">Page 3</a></li>
+  </ul>
+</nav>
+
+  <h1>Some text to enable scrolling 1</h1>
+  <h1>Some text to enable scrolling 2</h1>
+  <h1>Some text to enable scrolling 3</h1>
+  <h1>Some text to enable scrolling 4</h1>
+  <h1>Some text to enable scrolling 5</h1>
+  <h1>Some text to enable scrolling 6</h1>
+  <h1>Some text to enable scrolling 7</h1>
+  <h1>Some text to enable scrolling 8</h1>
+  <h1>Some text to enable scrolling 9</h1>
+  <h1>Some text to enable scrolling 10</h1>
+  <h1>Some text to enable scrolling 11</h1>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div  >
+          <a class="navbar-brand" href="index.php">
+        <img src="images/logo.jpg" class="img-responsive" style="height:150px;" alt="">
+
+
+
+
+
+        </a>
+        </div>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#band">BAND</a></li>
+        <li><a href="#tour">TOUR</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<h1>Some text to enable scrolling 1</h1>
+  <h1>Some text to enable scrolling 2</h1>
+  <h1>Some text to enable scrolling 3</h1>
+  <h1>Some text to enable scrolling 4</h1>
+  <h1>Some text to enable scrolling 5</h1>
+  <h1>Some text to enable scrolling 6</h1>
+  <h1>Some text to enable scrolling 7</h1>
+  <h1>Some text to enable scrolling 8</h1>
+  <h1>Some text to enable scrolling 9</h1>
+  <h1>Some text to enable scrolling 10</h1>
+  <h1>Some text to enable scrolling 11</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php include "function.php";?>
     <div class="wrapper">
         <div class="lang">

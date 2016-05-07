@@ -11,13 +11,16 @@ $Password=addslashes($Password);
 if($LoginAction=='LogIn')
 {
 $Str="select * from adminlog where admin_log='$UserName' and admin_password='$Password' ";
-$login=select_query($link,$Str,0,0);	
+$login=select_query($link,$Str,0,0);
 if(count($login)>0)
 	{
+
 	$Adminid=$login[0]["admin_id"];
 	$LoginAdmin='Admin';
-    $_SESSION['Adminid'] = $Adminid;
+	$LoginAdminName = $login[0]["admin_log"];
+	$_SESSION['Adminid'] = $Adminid;
 	$_SESSION['LoginAdmin'] = $LoginAdmin;
+	$_SESSION['LoginAdminName'] = $LoginAdminName;
     header("Location:index.php");
 	}	
 else
@@ -27,54 +30,42 @@ else
 }
 
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>.: mawaredhouse.com</title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
-<link href="style.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mawaredhouse Admin</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="css/custom.css" rel="stylesheet">
+    <style type="text/css">
+      .login_content h1:before, .login_content h1:after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 38px;
+
+}
+#admin-logo{
+  width: 73px;
+}
+.text-danger{
+	color: #FF1C17;
+}
+
+
+    </style>
 </head>
-
-<body  leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<table width="777" height="100%" border="0" cellpadding="0" cellspacing="0" align="center">
-
-<tr> 
-<td width="96" height=38 ><img src="images/header_text.png" width="233" height="38"></td>
-<td background="images/header_bg.png" HEIGHT="38" width="543" style="background-repeat:repeat-x;"></td>
-</tr>
-<tr><td  colspan="3">
-<form name="Login" method="post" onSubmit="return checkdata()">
-<input name="LoginAction"  type="hidden">
-<table border="0" cellpadding="0" cellspacing="0" class="login" align="center">
-<tr>
-<td width="210" align="center">
-			<p><img src="images/security.png" width="64" height="64" alt="security" /></p>
-			<p>Welcome to mawaredhouse Web Site administration!</p>
-			<div align="left">Use a valid username and password to gain access to the administration console.</div>
-
-</td>
-<td width="217" valign="top" class="form-block">
-<table border="0" width="100%"  align="center" cellpadding="0" cellspacing="0" >
-	
-	<tr><td colspan="2" class="redtitle" align="center">Admin Login</td></tr>
-	<tr><td colspan="2" class="redtitle" align="center" height="20"></td></tr>
-	<tr>
-		<td width="37%" align="center"> UserName </td>
-		<td width="63%" align="center"><input type="text" name="UserName" style="width:120" dir="ltr" class="inputstyle"></td>
-	</tr>
-	<tr>
-		<td width="37%" align="center"> Password </td>
-		<td align="center"><input type="password" name="Password" style="width:120" dir="ltr" class="inputstyle"></td>
-	</tr>
-	<tr><td colspan="2" class="redtitle" align="center" height="20"></td></tr>
-	<tr>
-		<td  colspan="2" align="center"><input type="submit" class="button" value="Login"></td>
-	</tr>
-
-</table>
-</td>
-</tr>
-</table>
-</form>
 <script>
 function checkdata()
 {
@@ -98,21 +89,51 @@ function checkdata()
 			return true;
 }
 </script>
-</td></tr>
-<tr align="center" class="tit">
-<td  colspan="3"> <font size="3" color="#FF0000"><?php if($msgerror==1) echo"Sorry, you have error in Username or Password "; ?></font></td>
-</tr>
-<tr><td>&nbsp;  </td></tr>
-<tr><td>&nbsp;  </td></tr>
-<tr><td>&nbsp;  </td></tr>
-<tr><td>&nbsp;  </td></tr>
-<tr><td>&nbsp;  </td></tr>
-<tr><td>&nbsp;  </td></tr>
-  <tr>
-  <tr>
-  <TD WIDTH="777" align="center" colspan="3">
-  All Copy Right Reserved for mawaredhouse.com </TD>
-  </tr>
-</table>
-</body>
+<body style="background:#F7F7F7;">
+    <div class="container-fluid">
+
+      <div id="wrapper">
+        <div id="login" class=" form">
+          <section class="login_content">
+            <form name="Login" method="post" onSubmit="return checkdata()">
+              <input name="LoginAction"  type="hidden">
+              <h1><img id="admin-logo" src="images/logo.png"></img> Admin Login</h1>
+                <?php if($msgerror == 1) 
+                	echo '<div><p class="text-danger text-left"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></i> Sorry, Username or Password is incorrect.
+					  </p></div>'
+
+
+
+
+
+                ?>
+                <!-- </font> -->
+              
+              <div>
+                <input type="text" class="form-control" placeholder="Username" name="UserName"required />
+              </div>
+              <div>
+                <input type="password" class="form-control" placeholder="Password" name="Password" required />
+              </div>
+              <div>
+                <input type="submit" class="btn btn-primary btn-md btn-block submit" value="Login"/>
+              </div>
+              <div class="clearfix"></div>
+              <div class="separator">
+
+
+                <div class="clearfix"></div>
+                <br />
+                <div>
+                  
+
+                  <p><i class="fa fa-copyright" aria-hidden="true"></i><?php echo date("Y"); ?> All Copy Right Reserved for mawaredhouse.com</p>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
