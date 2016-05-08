@@ -7,7 +7,7 @@ if($_SESSION["LoginAdmin"]!="Admin")
 		}
 include "../function.php";
 include "header.php";
-if($_GET["model"]=="")	$model="main"; else $model=$_GET["model"];
+/*if($_GET["model"]=="")	$model="main"; else $model=$_GET["model"];
 include $model.".php";
-include "footer.php";
+include "footer.php";*/
 ?>
