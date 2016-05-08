@@ -13,6 +13,11 @@
     <script src="../js/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="../js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../js/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../js/nprogress.js"></script>
+    <!-- validator -->
 
 
     <!-- Custom Theme Scripts -->
