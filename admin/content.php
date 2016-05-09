@@ -86,74 +86,76 @@ $UpdatedData=select_query($link,$SQL,0,0);
                     <form class="form-horizontal form-label-left" novalidate>
 
                       </p>
-                      <span class="section">Personal Info</span>
+                      <span class="section">
+                      
+                      	<?php
+						   switch($_GET["contentid"])
+						   {
+						   case 1: echo "Welcome Page"; break;
+						   case 2: echo "About US Welcome"; break;
+						   case 3: echo "Philosophy"; break;
+						   case 4: echo "Visa Application Centres"; break;
+						   case 5: echo "Travel Club"; break;
+						   case 6: echo "Al Rayes Travel Services"; break;
+						   case 7: echo "Sanan Residential Project"; break;
+						   case 8: echo "Site Map"; break;
+						   case 9: echo "Contact Us"; break;
+						   }
+						 ?>
+                      </span>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtatitle">Arabic Title <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required" type="text">
+                          <input lang="ar" dir="rtl" id="txtatitle" class="form-control col-md-7 col-xs-12" name="txtatitle" required="required" type="text" value="<?php  echo $UpdatedData[0]['content_title_ar'];?>">
+						  
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtetitle">English Title <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" id="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="txtetitle" name="txtetitle" required="required" class="form-control col-md-7 col-xs-12" value="<?php  echo $UpdatedData[0]['content_title_en'];?>">
                         </div>
                       </div>
+					  
+					  
+					  
+					  
+					  <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtadesc">Arabic Description <span class="required">*</span>
+                        </label>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea id="txtadesc" class="form-control col-md-7 col-xs-12 ckeditor"  name="txtadesc" cols="60" rows="15"><?php  echo $UpdatedData[0]['content_desc_ar'];?></textarea>
+                        </div>
+                      </div>
+					  
+					  
+					  <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtedesc">English Description <span class="required">*</span>
+                        </label>
+						<div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea id="txtedesc" class="form-control col-md-7 col-xs-12 ckeditor"  name="txtedesc" cols="60" rows="15"><?php  echo $UpdatedData[0]['content_desc_en'];?></textarea>
+                        </div>
+                      </div>
+					  
+										
+						
+						
+						
+						
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Confirm Email <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="content_photo">Photo Attach 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" id="email2" name="confirm_email" data-validate-linked="email" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">Number <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" id="number" name="number" required="required" data-validate-minmax="10,100" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="website">Website URL <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="url" id="website" name="website" required="required" placeholder="www.website.com" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="occupation">Occupation <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="occupation" type="text" name="occupation" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label for="password" class="control-label col-md-3">Password</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="password" type="password" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Repeat Password</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="password2" type="password" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Telephone <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="tel" id="telephone" name="phone" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Textarea <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <textarea id="textarea" required="required" name="textarea" class="form-control col-md-7 col-xs-12"></textarea>
+                          <input id="content_photo" type="file" name="content_photo" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
+						  <?php if(!empty($UpdatedData[0]['content_photo']) && $_GET["action"]=="contentupdate"){
+							 $pic_path=$UpdatedData[0]['content_photo'];
+						  ?>
+						  <img border="0" src="../content/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
+						  <input type="checkbox" style="border:0px;" name="deletefile"  value="1">Delete
+						  <?php } ?>
                         </div>
                       </div>
                       <div class="ln_solid"></div>
@@ -175,8 +177,8 @@ $UpdatedData=select_query($link,$SQL,0,0);
 
 
 
-
-<!-- <form name="Add" method="post" enctype="multipart/form-data">
+<!-- 
+ <form name="Add" method="post" enctype="multipart/form-data">
 <input type="hidden"  name="action">
 <input type="hidden" name="contentid" value="<?=$_GET["contentid"]?>" />
   <table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#526BB5" align="center">
