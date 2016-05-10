@@ -83,7 +83,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
                   </div> -->
                   <div class="x_content">
 
-                    <form name="Add" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" action="beUpdate" novalidate>
+                    <form name="Add" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" novalidate>
 						<input type="hidden"  name="action">
 						<input type="hidden" name="contentid" value="<?=$_GET["contentid"]?>" />
                       </p>
@@ -272,7 +272,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 
         if (submit) {
 			
-			
+			this.action.value='<? echo $_GET["action"]=='contentupdate'? 'beUpdate':'Add';?>';
 			this.submit();
 			return true;
 		}
