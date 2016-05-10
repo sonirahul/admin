@@ -83,8 +83,9 @@ $UpdatedData=select_query($link,$SQL,0,0);
                   </div> -->
                   <div class="x_content">
 
-                    <form class="form-horizontal form-label-left" novalidate>
-
+                    <form name="Add" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" action="beUpdate" novalidate>
+						<input type="hidden"  name="action">
+						<input type="hidden" name="contentid" value="<?=$_GET["contentid"]?>" />
                       </p>
                       <span class="section">
                       
@@ -108,7 +109,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtatitle">Arabic Title <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input lang="ar" dir="rtl" id="txtatitle" class="form-control col-md-7 col-xs-12" name="txtatitle" required="required" type="text" value="<?php  echo $UpdatedData[0]['content_title_ar'];?>">
+                          <input id="txtatitle" class="form-control col-md-7 col-xs-12" name="txtatitle" required="required" type="text" value="<?php  echo $UpdatedData[0]['content_title_ar'];?>">
 						  
                         </div>
                       </div>
@@ -269,8 +270,13 @@ $UpdatedData=select_query($link,$SQL,0,0);
           submit = false;
         }
 
-        if (submit)
-          this.submit();
+        if (submit) {
+			
+			
+			this.submit();
+			return true;
+		}
+          //this.submit();
 
         return false;
       });
