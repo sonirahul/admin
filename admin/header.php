@@ -10,6 +10,8 @@
 
     <title>Mawaredhouse Admin</title>
         <script src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
+	
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
