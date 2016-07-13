@@ -43,14 +43,67 @@ for($i=0;$i<count($DataCheckValue);$i++)
 	}
 }
 
+$SQL="select * from clients where 1=1 ";
+$showdelet=select_query($link,$SQL,0,0);
+echo "ha ha ha";
+echo $showdelet[0]['clients_country_name'];
+
 ?>
-<table border="0" dir="rtl" width="100%" cellpadding="0" cellspacing="0">
+<div class="right_col" role="main">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_content">
+					<form method="post" name="Prowse" class="form-horizontal form-label-left" novalidate>
+          				<input type="hidden" name="Action">
+						<span class="section">Flag Photo</span>
+						<div class="item form-group flag-border">
+	                        <div class="col-md-offset-2 col-md-4 col-sm-3 col-xs-6">Photo
+	                        </div>
+	                        <div class="col-md-4 col-sm-6 col-xs-6">
+	                        	Check All
+							  
+	                        </div>
+	                    </div>
+	                    <?
+							$handle=opendir('../flags');
+						     $i=0;
+						    while (false!==($file = readdir($handle)))
+							{ 
+						    if ($file != "." && $file != ".." && $file != "index.html")
+							 { ?>
+						  <div class="item form-group flag-border">
+	                        <div class="col-md-offset-2 col-md-4 col-sm-3 col-xs-6"> 
+							<? echo "<img src='../flags/$file' width='100' height='100'>";?>
+						    </div>
+							<div class="col-md-4 col-sm-6 col-xs-6"><input type="checkbox" name="DataCheck[<? echo $i?>]" style="border:0;background : transparent;" id="datachk">
+							<input type="hidden" name="DataCheckValue[<? echo $i?>]" value="<?=$file?>">
+							<? $i++; ?> 
+							</div>
+						  </div>
+						  <? } } closedir($handle); ?> 
+	                    <div class="item form-group">
+	                        <div class="col-md-offset-2 col-md-4 col-sm-3 col-xs-6">Photo
+	                        </div>
+	                        <div class="col-md-4 col-sm-6 col-xs-6">
+	                        	Check All
+							  
+	                        </div>
+	                    </div>
+	                </form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--<table border="0" dir="rtl" width="100%" cellpadding="0" cellspacing="0">
 <tr>
 	  <TD  class="tit" align="center" colspan="3" height="50">Flags Photo</TD>
 </tr>
 	<tr>
 		<td  colspan="3" >
-		<!--------Search & Prowsing----------->
+		Search & Prowsing
 			<form method="post" name="Prowse">
           <input type="hidden" name="Action">
         
@@ -86,7 +139,7 @@ for($i=0;$i<count($DataCheckValue);$i++)
         
 		
       </form>
-		<!------------------->
+		
 		</td>
 	</tr>
 	<tr>
@@ -100,4 +153,4 @@ for($i=0;$i<count($DataCheckValue);$i++)
 	</tr>	
 
 
-	</table>
+	</table>-->

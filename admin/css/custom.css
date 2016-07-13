@@ -4696,3 +4696,11 @@ ul.notifications {
   border: 1px solid #e5e5e5;
 }
 /** /Dropzone.js **/
+
+
+/* Flag page */
+.flag-border{
+  border-bottom: 1px solid black;
+    padding-bottom: 1em;
+}
+    
