@@ -45,9 +45,13 @@ for($i=0;$i<count($DataCheckValue);$i++)
 
 $SQL="select * from clients where 1=1 ";
 $showdelet=select_query($link,$SQL,0,0);
-echo "ha ha ha";
-echo $showdelet[0]['clients_country_name'];
 
+
+
+for($d=0;$d<count($showdelet);$d++)
+{
+  echo $showdelet[$d]['clients_country_name'];
+}
 ?>
 <div class="right_col" role="main">
 	<div class="row">
@@ -57,15 +61,42 @@ echo $showdelet[0]['clients_country_name'];
 					<form method="post" name="Prowse" class="form-horizontal form-label-left" novalidate>
           				<input type="hidden" name="Action">
 						<span class="section">Flag Photo</span>
-						<div class="item form-group flag-border">
-	                        <div class="col-md-offset-2 col-md-4 col-sm-3 col-xs-6">Photo
-	                        </div>
-	                        <div class="col-md-4 col-sm-6 col-xs-6">
-	                        	Check All
-							  
-	                        </div>
-	                    </div>
-	                    <?
+						
+						<div class="item form-group">
+	                        <div class="col-md-offset-2 col-md-8 col-sm-3 col-xs-6">
+								<table class="table table-responsive table-striped table-bordered table-condensed table-hover">
+									<thead>
+										<tr>
+											<th class="col-md-2">Country</th>
+											<th class="col-md-4">Flags</th>
+											<th class="col-md-2">Check All</th>
+										</tr>
+									</thead>
+									<tbody>
+									
+										<?
+											for($d=0;$d<count($showdelet);$d++)
+											{
+												$flag_name=$showdelet[$d]['clients_country_flag'];
+												$country_name=$showdelet[$d]['clients_country_name'];?>
+												<tr>
+													<td><? echo "$country_name";?></td>
+													<td><? echo "<img src='../flags/$flag_name' width='100' height='100'>";?></td>
+													<td class="vertical-center">
+														<input type="checkbox" name="DataCheck[<? echo $i?>]" style="border:0;background : transparent;" id="datachk" class="vertical-center">
+														<input type="hidden" name="DataCheckValue[<? echo $i?>]" value="<?=$file?>">
+														<? $i++; ?>
+													</td>
+												</tr>
+										<?	}?>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+						
+						
+	                    <!--<?
 							$handle=opendir('../flags');
 						     $i=0;
 						    while (false!==($file = readdir($handle)))
@@ -81,15 +112,8 @@ echo $showdelet[0]['clients_country_name'];
 							<? $i++; ?> 
 							</div>
 						  </div>
-						  <? } } closedir($handle); ?> 
-	                    <div class="item form-group">
-	                        <div class="col-md-offset-2 col-md-4 col-sm-3 col-xs-6">Photo
-	                        </div>
-	                        <div class="col-md-4 col-sm-6 col-xs-6">
-	                        	Check All
-							  
-	                        </div>
-	                    </div>
+						  <? } } closedir($handle); ?> -->
+	                    
 	                </form>
 				</div>
 			</div>
