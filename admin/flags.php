@@ -31,14 +31,15 @@ $file_dir  = "../flags/";
 //---------------------------------------------
 if($_POST["Action"]=="Del")//Del/Un Del
 	{
-$DataCheckValue=$_POST[DataCheckValue];
-for($i=0;$i<count($DataCheckValue);$i++)
+$DataCheckId=$_POST[DataCheckId];
+$DataCheckFlag=$_POST[DataCheckFlag];
+for($i=0;$i<count($DataCheckId);$i++)
 	{
-	if($_POST["DataCheck"][$i])
+	if($_POST["DataCheck"][$i]=="on")
 
 		{
-		unlink("../flags/".$DataCheckValue[$i]);
-	
+			delete_query($link,"clients","clients_id=$DataCheckId[$i]");
+			unlink("../flags/".$DataCheckFlag[$i]);
 		}
 	}
 }
@@ -46,12 +47,6 @@ for($i=0;$i<count($DataCheckValue);$i++)
 $SQL="select * from clients where 1=1 ";
 $showdelet=select_query($link,$SQL,0,0);
 
-
-
-for($d=0;$d<count($showdelet);$d++)
-{
-  echo $showdelet[$d]['clients_country_name'];
-}
 ?>
 <div class="right_col" role="main">
 	<div class="row">
@@ -69,7 +64,7 @@ for($d=0;$d<count($showdelet);$d++)
 										<tr>
 											<th class="col-md-2">Country</th>
 											<th class="col-md-4">Flags</th>
-											<th class="col-md-2">Check All</th>
+											<th class="col-md-2">Check&nbsp;All<input type="checkbox" style="border:0px;"></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -77,18 +72,25 @@ for($d=0;$d<count($showdelet);$d++)
 										<?
 											for($d=0;$d<count($showdelet);$d++)
 											{
-												$flag_name=$showdelet[$d]['clients_country_flag'];
-												$country_name=$showdelet[$d]['clients_country_name'];?>
+												$clients_id=$showdelet[$d]['clients_id'];
+												$clients_country_flag=$showdelet[$d]['clients_country_flag'];
+												$clients_country_name=$showdelet[$d]['clients_country_name'];?>
 												<tr>
-													<td><? echo "$country_name";?></td>
-													<td><? echo "<img src='../flags/$flag_name' width='100' height='100'>";?></td>
+													<td><? echo "$clients_country_name";?></td>
+													<td><? echo "<img src='../flags/$clients_country_flag' width='100' height='100'>";?></td>
 													<td class="vertical-center">
-														<input type="checkbox" name="DataCheck[<? echo $i?>]" style="border:0;background : transparent;" id="datachk" class="vertical-center">
-														<input type="hidden" name="DataCheckValue[<? echo $i?>]" value="<?=$file?>">
-														<? $i++; ?>
+														<input type="checkbox" name="DataCheck[<? echo $d?>]" style="border:0;background : transparent;" class="vertical-center">
+														<input type="hidden" name="DataCheckId[<? echo $d?>]" value="<?=$clients_id?>">
+														<input type="hidden" name="DataCheckFlag[<? echo $d?>]" value="<?=$clients_country_flag?>">
+														
 													</td>
 												</tr>
 										<?	}?>
+										<tr>
+											<td colspan="3" align="right">
+												<input name='button' type='button' class="button" style='width:70' onClick="Prowse.Action.value='Del';Prowse.submit();" value='Delete'>
+											</td>
+										</tr>
 									</tbody>
 								</table>
 							</div>
@@ -178,3 +180,21 @@ for($d=0;$d<count($showdelet);$d++)
 
 
 	</table>-->
+	<script type="text/javascript">
+	$.noConflict();
+jQuery(function() {
+
+
+    jQuery('thead tr th input[type="checkbox"]').on("click", function(){ 
+
+    	
+    	if (jQuery(this).is(':checked')) {
+            jQuery('tbody tr td input[type="checkbox"]').prop("checked",true);
+        }else {
+        	jQuery('tbody tr td input[type="checkbox"]').prop("checked",false);
+        }
+
+    });
+});
+
+</script>

@@ -20,6 +20,7 @@
 
     <!-- Custom Theme Style -->
     <link href="css/custom.css" rel="stylesheet">
+    
   <style type="text/css">
     a.site_title img {
       height: 50px;
