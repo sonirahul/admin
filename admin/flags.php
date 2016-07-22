@@ -12,17 +12,30 @@ if($_SESSION["LoginAdmin"]!="Admin")
 
 
 //---------------------------------------------
-if($_POST["Action"]=="Del")//Del/Un Del
+if($_POST["Action"]=="Show")
 {
-	$DataCheckId=$_POST[DataCheckId];
-	$DataCheckFlag=$_POST[DataCheckFlag];
-	for($i=0;$i<count($DataCheckId);$i++)
-	{
-		if($_POST["DataCheck"][$i]=="on")
-		{
-			delete_query($link,"clients","clients_id=$DataCheckId[$i]");
-			unlink("../flags/".$DataCheckFlag[$i]);
-		}
+	$ClientId=$_POST[ClientId];
+	echo "hello1";
+	if ($ClientId) {
+		echo "hello1111";
+		$TableName="clients";
+		$TableField=array();
+		$TableField[0][0]="clients_country_flag_visible";
+		$TableField[0][1]="true";	
+		update_query($link,$TableName,$TableField,"clients_id=$ClientId");
+		echo "<script>document.location='index.php?model=flags';</script>";
+	}
+}
+if($_POST["Action"]=="Hide")
+{
+	$ClientId=$_POST[ClientId];
+	if ($ClientId) {
+		$TableName="clients";
+		$TableField=array();
+		$TableField[0][0]="clients_country_flag_visible";
+		$TableField[0][1]="false";	
+		update_query($link,$TableName,$TableField,"clients_id=$ClientId");
+		echo "<script>document.location='index.php?model=flags';</script>";
 	}
 }
 
@@ -30,13 +43,8 @@ if($_POST["Action"]=="Add")//Del/Un Del
 {
 	$DataCountryName=$_POST[countryName];
 	$DataCountryFlag=$_POST[countryFlag];
-	echo "hello";
 	if ($DataCountryName != "")
 	{
-		echo "hello1";
-		
-		
-
 		if($_FILES["countryFlag"]["name"]!="")
 		{ 
 			$file_dir  = "../flags/"; 
@@ -62,7 +70,7 @@ if($_POST["Action"]=="Add")//Del/Un Del
 				$TableField[1][0]="clients_country_name";
 				$TableField[1][1]="'$DataCountryName'";
 				insert_query($link,'clients',$TableField);
-				echo "<script>document.location='index.php?model=flags';</script>";
+				//echo "<script>document.location='index.php?model=flags';</script>";
 
 
 			}else{
@@ -99,14 +107,15 @@ $showdelet=select_query($link,$SQL,0,0);
 								<div class="panel-body">
 									<form method="post" name="Prowse" class="form-horizontal form-label-left" novalidate>
 										<input type="hidden" name="Action">
+										<input type="hidden" name="ClientId">
 										<div class="item form-group">
-											<div class="col-md-offset-2 col-md-8 col-sm-3 col-xs-6">
-												<table class="table table-responsive table-striped table-bordered table-condensed table-hover">
+											<div class="col-md-12 col-sm-12 col-xs-12">
+												<table id="example" class=" display table table-responsive table-striped table-bordered table-condensed table-hover" cellspacing="0" width="100%">
 													<thead>
 														<tr>
-															<th class="col-md-2">Country</th>
-															<th class="col-md-4">Flags</th>
-															<th class="col-md-2">Check&nbsp;All<input type="checkbox" style="border:0px;"></th>
+															<th class="col-md-4 col-md-5 col-xs-5">Country</th>
+															<th class="col-md-4 col-md-4 col-xs-5">Flags</th>
+															<th class="col-md-4 col-md-3 col-xs-2">Show/Hide</th>
 														</tr>
 													</thead>
 													<tbody>
@@ -115,24 +124,30 @@ $showdelet=select_query($link,$SQL,0,0);
 														{
 															$clients_id=$showdelet[$d]['clients_id'];
 															$clients_country_flag=$showdelet[$d]['clients_country_flag'];
-															$clients_country_name=$showdelet[$d]['clients_country_name'];?>
+															$clients_country_name=$showdelet[$d]['clients_country_name'];
+															$clients_country_flag_visible=$showdelet[$d]['clients_country_flag_visible'];?>
 															<tr>
-																<td><? echo "$clients_country_name";?></td>
-																<td><? echo "<img src='../flags/$clients_country_flag' width='100' height='100'>";?></td>
-																<td class="vertical-center">
-																	<input type="checkbox" name="DataCheck[<? echo $d?>]" style="border:0;background : transparent;" class="vertical-center">
-																	<input type="hidden" name="DataCheckId[<? echo $d?>]" value="<?=$clients_id?>">
-																	<input type="hidden" name="DataCheckFlag[<? echo $d?>]" value="<?=$clients_country_flag?>">
-
+																<td style="vertical-align: middle"><? echo ucwords($clients_country_name);?></td>
+																<td><? echo "<img class='img-responsive clients-flag' src='../flags/$clients_country_flag'>";?></td>
+																<td style="vertical-align: middle">
+																	<?
+																	if ($clients_country_flag_visible == "1") {?>
+																		<input name='button' type='button' class="btn btn-danger show-hide" value='Hide' clientId='<?=$clients_id?>'>
+																	<?}
+																	else {?>
+																		<input name='button' type='button' class="btn btn-success show-hide" value='Show' clientId='<?=$clients_id?>'>
+																	<?}?>
 																</td>
 															</tr>
 														<?	}?>
-														<tr>
-															<td colspan="3" align="right">
+														<!--<tr>
+															<td></td>
+															<td></td>
+															<td>
 																<input name='button' type='button' class="btn btn-danger" style='width:70' onClick="Prowse.Action.value='Del';Prowse.submit();" value='Delete'>
-																<!-- <button type="submit" class="btn btn-default">Submit</button> -->
+																
 															</td>
-														</tr>
+														</tr>-->
 													</tbody>
 												</table>
 											</div>
@@ -190,13 +205,12 @@ $showdelet=select_query($link,$SQL,0,0);
 </div>
 <script type="text/javascript">
 	$.noConflict();
+
 	jQuery(function() {
-	    jQuery('thead tr th input[type="checkbox"]').on("click", function(){ 
-			if (jQuery(this).is(':checked')) {
-	            jQuery('tbody tr td input[type="checkbox"]').prop("checked",true);
-	        }else {
-	        	jQuery('tbody tr td input[type="checkbox"]').prop("checked",false);
-	        }
+	    jQuery('.show-hide').on("click", function(){
+			document.forms["Prowse"].elements["Action"].value = jQuery(this).val();
+			document.forms["Prowse"].elements["ClientId"].value = jQuery(this).attr("clientId");
+			document.forms["Prowse"].submit();
 	    });
 	});
 </script>

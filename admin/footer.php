@@ -18,7 +18,7 @@
     <!-- NProgress -->
     <script src="../js/nprogress.js"></script>
     <!-- validator -->
-
+	<script type="text/javascript" src="../js/datatables.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="js/custom.js"></script>

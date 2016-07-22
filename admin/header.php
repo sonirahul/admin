@@ -11,10 +11,11 @@
     <title>Mawaredhouse Admin</title>
         <script src="../js/jquery.min.js"></script>
 		<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
-	
 
     <!-- Bootstrap -->
+	<link href="../css/datatables.min.css" rel="stylesheet">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
 
