@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+	<meta content='width=device-width, initial-scale=1' name='viewport'>
+	<title>UX Design Services: Research, Strategy, Product and Mobile Design</title>
+	<meta content="We improve your customer's experience with our proven Objective-Based Design process and simple &amp; unique UX design subscription model." name='description'>
+	<meta content='UX, Product Design, Customer Experience, Mobile App Design, Website UX Design, Marketing Strategy, Mobile UX' name='keywords'>
+	<meta content='#29aecc' name='theme-color'>
+	<meta content='summary_large_image' name='twitter:card'>
+	<meta content='UX Design Services: Research, Strategy, Product and Mobile Design' name='twitter:title'>
+	<meta content="We improve your customer's experience with our proven Objective-Based Design process and simple &amp; unique UX design subscription model." name='twitter:description'>
+	<meta content='UX Design Services: Research, Strategy, Product and Mobile Design' property='og:title'>
+	<meta content="We improve your customer's experience with our proven Objective-Based Design process and simple &amp; unique UX design subscription model." property='og:description'>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/main-ce83667e.css" media="screen" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+	<link href="css/content_slider_style.css" rel="stylesheet" type="text/css">
+	
+	<script src="js/main-6e0cc465.js" type="text/javascript"></script>
+	<script src="js/process-1d1f249e.js" type="text/javascript"></script>
+
+	<!-- jQuery library -->
+	<script   src="js/jquery-1.12.4.min.js"></script>
+
+	<script   src="js/jquery-ui.min.js"></script>
+	<script   src="js/modernizr-custom.js"></script>
+
+	<script src="js/bootstrap.min.js"></script>
+
+	<script src="js/jquery.content_slider.js" type="text/javascript"></script>
+	<script src="js/jquery.mousewheel.js" type="text/javascript"></script>
+	<!-- navbar -->
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function() {
+				/*var navbarCurrentPos = $("section.nav-bar").offset().top;
+				var welcomePos = $("div.hero.process").height() - $("section.nav-bar").height();
+				if (navbarCurrentPos > welcomePos) {
+					console.log("hit");
+					$(".nav-bar .identity img").css("top","-90px");
+					//$(".nav-bar").css("position","fixed");
+					$("section.nav-bar").addClass("hide-nav");
+				}
+				else
+				{
+					$(".nav-bar .identity img").css("top","0px");
+					//$(".nav-bar").css("position","absolute");
+					$("section.nav-bar").removeClass("hide-nav");
+				}*/
+
+
+				var navbarCurrentPos = $("section.nav-bar").offset().top;
+				var welcomePos = $("#myCarousel").height() - $("section.nav-bar").height();
+				var winTop = $(window).scrollTop();
+				if (winTop > welcomePos) {
+					console.log("hit");
+					$(".nav-bar .identity").css("top","-115px");
+					$(".nav-bar").css("position","fixed");
+					$("section.nav-bar").addClass("hide-nav");
+				}
+				else
+				{
+					$(".nav-bar .identity").css("top","0px");
+					$(".nav-bar").css("position","absolute");
+					$("section.nav-bar").removeClass("hide-nav");
+				}
+			});
+		});
+	</script>
+
+	<!--block count-->
+	<script type="text/javascript">
+		$(function(){ 
+			//Count num
+			function countNum(num, content, target, duration) {
+				if (duration) {
+					var count = 0;
+					var speed = parseInt(duration / num);
+					var interval = setInterval(function(){
+						if (count - 1 < num) {
+							target.html(count);
+						}
+						else {
+							target.html(content);
+							clearInterval(interval);
+						}
+						count++;
+					}, speed);
+				} else {
+					target.html(content);
+				}
+			}
+
+			//Init stats
+			function initStats(duration) {
+				jQuery('.block-stats .num').each(function() {
+					var container = jQuery(this);
+					var num = container.attr('data-num');
+					var content = container.attr('data-content');
+
+					countNum(num, content, container, duration);
+				});
+			}
+			initStats(2000);
+		});
+	</script>
+
+	<!-- animation -->
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function() {
+				$(".slideanim").each(function(){
+					var pos = $(this).offset().top;
+
+					var winTop = $(window).scrollTop();
+					if (pos < winTop + 600) {
+						$(this).addClass("slide");
+					}
+				});
+			});
+		});
+	</script>
+
+	<!-- Add Google Maps -->
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+		$(function(){
+
+			var myCenter = new google.maps.LatLng(29.376250, 47.970571);
+
+			function initialize() {
+				var mapProp = {
+					center:myCenter,
+					zoom:12,
+					scrollwheel:false,
+					draggable:true,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+
+				var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+				var marker = new google.maps.Marker({
+					position:myCenter,
+				});
+
+				marker.setMap(map);
+			}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+		});
+
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			//Init map
+			function initMap() {
+				if (document.getElementById('map')) {	
+					var marker;
+					var latlng = new google.maps.LatLng(0, 0);
+
+					var my_options = {
+						zoom:16,
+						center:latlng,
+						scrollwheel:false,
+						scaleControl:false,
+						disableDefaultUI:false,
+						mapTypeId:google.maps.MapTypeId.ROADMAP
+					};
+
+					var map = new google.maps.Map(document.getElementById('map'), my_options);
+
+					function renderMarkers() {
+						var name = jQuery('#contacts .info > h2').text();
+						var address = jQuery('#contacts .info .address').text();	
+
+						var custom_map = new google.maps.Geocoder();
+
+						custom_map.geocode({'address':address}, function(results, status) {
+							if (status==google.maps.GeocoderStatus.OK) {
+								var location = results[0].geometry.location;
+
+								marker = new google.maps.Marker({
+									map:map,
+									icon:theme_path+'/layout/images/map-marker.png',
+									position:location,
+									title:name
+								});
+
+								var infowindow = new google.maps.InfoWindow({
+									content:name
+								});
+
+								google.maps.event.addListener(marker, 'click', function() {
+									infowindow.open(map, marker);
+								});
+
+								centerMap();		
+								initLinks();
+							} else {
+								alert("Geocode was failed for the following reason: " + status);
+							}
+						});
+					}
+
+					renderMarkers();
+
+					function centerMap() {
+						map.setCenter(marker.getPosition());
+						marker.setIcon(theme_path+'/layout/images/map-marker.png');
+					}
+
+					function initLinks() {
+						jQuery('#view_map').bind('click', function(e) {
+							var height = jQuery('.block-contacts').height();
+							jQuery('.block-contacts').css('height', height + 'px');
+							jQuery('#contacts').addClass('map_only');
+
+							e.preventDefault();
+						});
+
+						jQuery('#view_contacts').bind('click', function(e) {
+							jQuery('#contacts').removeClass('map_only');
+							jQuery('.block-contacts').css('height', 'auto');
+
+							e.preventDefault();
+						});
+					}
+
+					jQuery(window).resize(function() {
+						centerMap();
+					});
+				}	
+			}
+		});
+	</script>
+
+	<!-- Contact View Button -->
+	<script type="text/javascript">
+		$(function(){
+			flag=0;
+			$("#contactView button").click(function(){
+				if(flag==0){
+				//$("#contact").addClass("contactOpacity");
+				$("#contact").fadeOut();
+				$(this).html('View Contact');
+				flag=1;
+			}
+			else
+			{
+				//$("#contact").removeClass("contactOpacity");
+				$("#contact").fadeIn();
+				$(this).html('View Map');
+				flag=0;  
+			}
+		});
+		});
+	</script>
+
+	<link rel="stylesheet" href="33535gillsansmt/font.css">
+
+</head>
+<body data-logo-color='light' data-nav-color='light' data-overlay-id='false' data-overlay-open='false' data-page='process' data-section='unity'>
+
+
+	<section class='nav-bar container-fluid scroll-up' id='navbar'>
+		<div class='nav-bar-inner'>
+			<div class='identity'>
+				<a href="/"><img src="images/lgonew.png" id='digital-telepathy-logo'>
+				</a>
+			</div>
+			<a class="menu-text" href="javascript:;">MENU</a>
+		</div>
+		<div class='menu-wrap'>
+			<a class="hamburger menu" href="javascript:;"><div></div>
+				<div></div>
+				<div></div>
+			</a>
+		</div>
+	</section>
+
+	<div id="lang" class="dropdown">
+		<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+			<img class="langSelectedImage" src="lang/en.png"/>
+			<span class="langSelectedText"> EN</span>
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+			<li><a id="en" href="#"><img src="lang/en.png"/> English</a></li>
+			<li><a id="kw" href="#"><img src="lang/ar.png"/> Arabic</a></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			var langImage = $(".langSelectedImage");
+			var langText = $(".langSelectedText");
+			$("#en").click(function(){	
+				langImage.attr("src","lang/en.png");
+				langText.html("EN");
+			});
+			$("#kw").click(function(){	
+				langImage.attr("src","lang/ar.png");
+				langText.html("AR");
+			});
+		});
+	</script>
+	<style type="text/css">
+		#lang {
+			position: absolute;
+			top: 12px;
+			z-index: 9999;
+			right: 160px;
+		}
+		#lang .dropdown-menu>li>a{font-size:18px;}
+		#lang .btn-primary {
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0.1);
+			border: 0;
+			border-radius: 0;
+			font-size: 18px;
+		}
+		span.langSelectedText {
+			font-size: 22px;
+			font-weight: bold;
+			text-shadow: 0 0 3px #000;
+		}
+		span.langSelected {
+			display: inline-block;
+			padding-left: 10px;
+			padding-bottom: 5px;
+		}
+		#lang img {
+			width: 30px;
+			vertical-align: bottom;
+		}
+	</style>
+
+
+
+
+	<style type="text/css">
+
+		.nav-pills>li>a {
+			border-radius: 50%;
+			width: 150px;
+			height: 150px;
+			text-align: center;
+			background-color: #0F3D69;
+			margin: 0px 45px;
+			position: relative;
+			padding: 0;
+		}
+		.nav-pills>li>a p {
+			position: absolute;
+			font-weight: bold;
+			width: 100%;
+			bottom: -60px;
+			text-align: center;
+		}
+		.tab-content{
+			margin-top: 100px;
+		}
+		ul li{overflow:initial;}
+		.line {
+			width: 90%;
+			height: 4px;
+			margin: 0 auto;
+			background: #0F3D69;
+			position: relative;
+			top: 80px;
+		}
+		.tab-content {
+			margin-top: 100px;
+			background: #0F3D69;
+			padding: 20px;
+			color: #fff;
+			height:540px;
+		}
+		.tab-content *{color: #fff}
+		i.fa{display: none;}
+		li.active i.fa{display: none;}
+		.nav-pills>li>a img {margin-top:12px;}
+	</style>
+
+
+
+	<!-- navbar -->
+	<script type="text/javascript">
+		$(function(){
+			$(".nav-bar").css("position","fixed");
+			$("section.nav-bar").addClass("hide-nav");
+		});
+	</script>
+<style type="text/css">
+    body{padding-bottom:0;padding-top:50px;}
+    .nav-bar .identity{top:-115px;position: relative;}
+    .nav-pills>li+li {
+    margin-left: 19px;
+}
+</style>
+
+
+	<div class="section container-fluid" style="background-color: #cfdfff;">
+		<h2>Countries of Operation</h2>
+		<div class="line"></div>
+		<ul class="nav nav-pills">
+			<li class="active"><a data-toggle="pill" href="#menu0">
+				<img src="flags/australia.png">
+				<p class="menu-country-name">Kuwait</p><i class="fa fa-caret-up" aria-hidden="true"></i>
+			</a></li>
+			<li><a data-toggle="pill" href="#menu1"><img src="http://emojipedia-us.s3.amazonaws.com/cache/70/60/706095dd1ccfcfeb8612009d97ea0647.png"><p class="menu-country-name">Morocco</p><i class="fa fa-caret-up" aria-hidden="true"></i></a></li>
+			<li><a data-toggle="pill" href="#menu2"><img src="http://emojipedia-us.s3.amazonaws.com/cache/f4/5d/f45d47984c498968a3923147becf1589.png"><p class="menu-country-name">Syria</p><i class="fa fa-caret-up" aria-hidden="true"></i></a></li>
+			<li><a data-toggle="pill" href="#menu3"><img src="http://emojipedia-us.s3.amazonaws.com/cache/c5/81/c581a6cea6114b30618b8a0decf96e43.png"><p class="menu-country-name">Jordan</p><i class="fa fa-caret-up" aria-hidden="true"></i></a></li>
+			<li><a data-toggle="pill" href="#menu3"><img src="http://emojipedia-us.s3.amazonaws.com/cache/b2/7b/b27bea826c336e5b2727c83106568b8d.png"><p class="menu-country-name">Lebanon</p><i class="fa fa-caret-up" aria-hidden="true"></i></a></li>
+			<li><a data-toggle="pill" href="#menu3"><img src="http://emojipedia-us.s3.amazonaws.com/cache/db/da/dbda01ffefc6293574883448ef4bcebe.png"><p class="menu-country-name">Iran</p><i class="fa fa-caret-up" aria-hidden="true"></i></a></li>
+			<li><a data-toggle="pill" href="#menu3"><img src="http://emojipedia-us.s3.amazonaws.com/cache/0e/f6/0ef6e3d2c37b0a6c938e6b0c240ba719.png"><p class="menu-country-name">Algeria</p><i class="fa fa-caret-up" aria-hidden="true"></i></a></li>
+		</ul>
+
+
+
+		<div class="tab-content container-fluid">
+			<div id="menu0" class="tab-pane fade in active">
+				<div class="row">
+					<div class="col-sm-6" style="background:url(images/kuwait.jpg);background-size:cover;height:500px;">
+						
+					</div>
+					<div class="col-sm-6">
+						<h2>KUWAIT</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+					</div>
+				</div>
+			</div>
+			<div id="menu1" class="tab-pane fade">
+				<h3>Menu 1</h3>
+				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div id="menu2" class="tab-pane fade">
+				<h3>Menu 2</h3>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+			</div>
+			<div id="menu3" class="tab-pane fade">
+				<h3>Menu 3</h3>
+				<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class='footer'>
+		<div class='footer-inner'>
+			<section class='container'>
+				<div class='row'>
+					<div class='col-md-9 hidden-xs'>
+						<ul class='level-1-nav list-unstyled'>
+							<li class='home'>
+								<a class="home" href="/">Home</a>
+								<span class='icon-right-open-big'></span>
+							</li>
+							<li class='services'>
+								<a class="services active" href="/process/">News</a>
+								<span class='icon-right-open-big'></span>
+							</li>
+							<li class='our-work'>
+								<a class="our-work" href="/work/">Our Team</a>
+								<span class='icon-right-open-big'></span>
+							</li>
+							<li class='philosophy'>
+								<a class="philosophy" href="/philosophy">Operation</a>
+								<span class='icon-right-open-big'></span>
+							</li>
+							<li class='careers'>
+								<a class="careers" href="/careers/">Gallery</a>
+								<span class='icon-right-open-big'></span>
+							</li>
+							<li class='blog'>
+								<a target="_blank" class="blog" href="http://www.com/blog">Clients</a>
+								<span class='icon-right-open-big'></span>
+							</li>
+							<li class='contact'>
+								<a class="contact" href="/contact/">Contact</a>
+								<span class='icon-right-open-big'></span>
+							</li>
+						</ul>
+					</div>
+					<div class='col-md-3 col-xs-12 hidden-sm'>
+						<ul class='social'>
+							<li>
+								<a target="_blank" class="icon-twitter" href="https://twitter.com/" style="color: #57afe7;"></a>
+							</li>
+							<li>
+								<a target="_blank" class="icon-facebook-squared" href="https://www.facebook.com/" style="color:#3b5998"></a>
+							</li>
+							<li>
+								<a target="_blank" class="icon-instagramm" href="http://instagram.com/" style="color: #f51201;"></a>
+							</li>
+							<li>
+								<a target="_blank" class="icon-dribbble" href="https://dribbble.com/" style="color: #c32361;"></a>
+							</li>
+							<li>
+								<a target="_blank" class="icon-linkedin-squared" style="color:#0077b5" href="https://www.linkedin.com/company/mawared-house"></a>
+							</li>
+							<li>
+								<a target="_blank" class="icon-youtube-play" href="https://www.youtube.com/user/" style="color: #e12b28;"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p class='copyright'>
+					&copy; 2016 Mawared House. <span class="hidden-xs">All rights reserved. <a href="/privacy-policy">Privacy&nbsp;Policy</a></span>
+				</p>
+			</section>
+		</div>
+	</div>
+
+	<div class='nav-overlay full-screen-overlay dt-height' id='nav-overlay'>
+		<ul class='level-1-nav list-unstyled'>
+			<li class='home'>
+				<a class="home" href="#main">Home</a>
+				<span class='icon-right-open-big'></span>
+			</li>
+			<li class='services'>
+				<a class="services" href="#news">News</a>
+				<span class='icon-right-open-big'></span>
+			</li>
+			<li class='our-work'>
+				<a class="our-work" href="#mgtTeam">Our Team</a>
+				<span class='icon-right-open-big'></span>
+			</li>
+			<li class='philosophy'>
+				<a class="philosophy" href="coo.html">Operation</a>
+				<span class='icon-right-open-big'></span>
+			</li>
+			<li class='careers'>
+				<a class="careers" href="gallery.html">Gallery</a>
+				<span class='icon-right-open-big'></span>
+			</li>
+			<li class='blog'>
+				<a target="_blank" class="blog" href="#clientss1">Clients</a>
+				<span class='icon-right-open-big'></span>
+			</li>
+			<li class='contact'>
+				<a class="contact" href="#contacts">Contact</a>
+				<span class='icon-right-open-big'></span>
+			</li>
+		</ul>
+		<div class='nav-footer'>
+			<ul class='social'>
+				<li>
+					<a target="_blank" class="icon-twitter" href="https://twitter.com"></a>
+				</li>
+				<li>
+					<a target="_blank" class="icon-facebook-squared" href="https://www.facebook.com"></a>
+				</li>
+				<li>
+					<a target="_blank" class="icon-instagramm" href="http://instagram.com/"></a>
+				</li>
+				<li>
+					<a target="_blank" class="icon-dribbble" href="https://dribbble.com"></a>
+				</li>
+				<li>
+					<a target="_blank" class="icon-linkedin-squared" href="https://www.linkedin.com/company/mawared-house"></a>
+				</li>
+				<li>
+					<a target="_blank" class="icon-youtube-play" href="https://www.youtube.com/user/"></a>
+				</li>
+			</ul>
+			<div class='border'></div>
+			<div class='logo-wrapper'>
+				<img src="images/logo reverse.png" id='digital-telepathy-logo'>
+
+			</div>
+			<p>&copy; 2016 Mawaredhouse.com</p><!-- var d = new Date().getFullYear(); -->
+		</div>
+	</div>
+
+
+	<!-- smooth scroll -->
+	<script type="text/javascript">
+		$(function(){
+			$("#nav-overlay a").click(function() {
+				$('html, body').animate({
+					scrollTop: $($(this).attr("href")).offset().top
+				}, 1500);
+				//$("a.hamburger.menu").click();
+			});
+
+		});
+	</script>
+
+	<!-- hamburger -->
+	<script>
+		$(document).ready(function()
+		{
+			var e = function()
+			{
+
+				var e = $(".hamburger"),
+				n = $("body").find(".nav-bar");
+				$(".nav-overlay").toggleClass("show"), $("body").toggleClass("nav-open"), $(".menu-text").delay(400).queue(function() {
+					$(this).fadeToggle(400), $(this).dequeue(), $("#lang").hide(400)
+				}), e.hasClass("active") ? (e.addClass("active-end"), e.one("transitionend", function() {
+					e.removeClass("active active-end")
+				})) : e.addClass("active"), $(".nav-overlay").hasClass("show") ? n.toggleClass("no-bg") : n.delay(400).queue(function() {
+					$(this).toggleClass("no-bg", 500), $(this).dequeue(), $("#lang").show(400)
+				})
+
+				//$("#lang").toggleClass("show");
+
+			};
+
+			$(".hamburger").click(e);
+			$(".menu-text").click(e);
+
+            //jQuery time
+            var parent, ink, d, x, y;
+            $("ul li a").click(function(e)
+            {
+            	parent = $(this).parent();
+				//create .ink element if it doesn't exist
+				if(parent.find(".ink").length == 0)
+					parent.prepend("<span class='ink'></span>");
+
+				ink = parent.find(".ink");
+				//incase of quick double clicks stop the previous animation
+				ink.removeClass("animate");
+				
+				//set size of .ink
+				if(!ink.height() && !ink.width())
+				{
+					//use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
+					d = Math.max(parent.outerWidth(), parent.outerHeight());
+					ink.css({height: d, width: d});
+				}
+				
+				//get click coordinates
+				//logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
+				x = e.pageX - parent.offset().left - ink.width()/2;
+				y = e.pageY - parent.offset().top - ink.height()/2;
+				
+				//set the position and add class .animate
+				ink.css({top: y+'px', left: x+'px'}).addClass("animate");
+			});
+        });
+    </script>
+
+</body>
+</html>
