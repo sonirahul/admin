@@ -15,9 +15,7 @@ if($_SESSION["LoginAdmin"]!="Admin")
 if($_POST["Action"]=="Show")
 {
 	$ClientId=$_POST[ClientId];
-	echo "hello1";
 	if ($ClientId) {
-		echo "hello1111";
 		$TableName="clients";
 		$TableField=array();
 		$TableField[0][0]="clients_country_flag_visible";

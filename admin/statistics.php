@@ -12,9 +12,9 @@ if($_SESSION["LoginAdmin"]!="Admin")
 
 
 //---------------------------------------------
-if($_POST["Action"]=="Show")
+if($_POST["Action"]=="Save")
 {
-	$ClientId=$_POST[ClientId];
+	$StatisticsId=$_POST[StatisticsId];
 	echo "hello1";
 	if ($ClientId) {
 		echo "hello1111";
@@ -92,15 +92,15 @@ $showdelet=select_query($link,$SQL,0,0);
 					<span class="section">Flag Photo</span>
 					<form method="post" name="Prowse" class="form-horizontal form-label-left" novalidate>
 						<input type="hidden" name="Action">
-						<input type="hidden" name="ClientId">
+						<input type="hidden" name="StatisticsId">
 						<div class="item form-group">
 							<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
 								<table class=" table table-responsive table-striped table-bordered table-condensed table-hover" cellspacing="0" width="100%">
 									<thead>
 										<tr>
-											<th class="col-md-5 col-md-5 col-xs-5">Statistics Name</th>
-											<th class="col-md-5 col-md-5 col-xs-5">Statistics Value</th>
-											<th class="col-md-2 col-md-2 col-xs-2">Action</th>
+											<th class="col-md-4 col-md-4 col-xs-4">Statistics Name</th>
+											<th class="col-md-4 col-md-4 col-xs-4">Statistics Value</th>
+											<th class="col-md-4 col-md-4 col-xs-4">Action</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -111,33 +111,28 @@ $showdelet=select_query($link,$SQL,0,0);
 											$statistics_name=$showdelet[$d]['statistics_name'];
 											$statistics_value=$showdelet[$d]['statistics_value'];?>
 											<tr>
-												<td><input type='text' class='form-control' value='<? echo "$statistics_name";?>' statistics_id='<? echo "$statistics_id";?>'></td>
-												<td><input type='text' class='form-control' value='<? echo "$statistics_value";?>' statistics_id='<? echo "$statistics_id";?>'></td>
+												<td><input type='text' class='form-control' value='<? echo "$statistics_name";?>' statisticsId='<? echo "$statistics_id";?>' disabled=true></td>
+												<td><input type='text' class='form-control' value='<? echo "$statistics_value";?>' statisticsId='<? echo "$statistics_id";?>' disabled=true></td>
 												
 												<td style="vertical-align: middle">
-													
-													<input name='button' type='button' class="btn btn-danger show-hide" value='Hide' clientId='<?=$clients_id?>'>
-												
-													<input name='button' type='button' class="btn btn-success show-hide" value='Show' clientId='<?=$clients_id?>'>
-													
+													<input name='button' type='button' class="btn btn-success statistics-edit" value='Edit' statisticsId='<?=$statistics_id?>'>
+													<input name='button' type='button' class="btn btn-danger statistics-delete" value='Delete' statisticsId='<?=$statistics_id?>'>
 												</td>
 											</tr>
 										<?	}?>
-										<!--<tr>
-											<td></td>
-											<td></td>
-											<td>
-												<input name='button' type='button' class="btn btn-danger" style='width:70' onClick="Prowse.Action.value='Del';Prowse.submit();" value='Delete'>
-												
+										<tr>
+											<td><input type='text' class='form-control'></td>
+											<td><input type='text' class='form-control'></td>
+											
+											<td style="vertical-align: middle">
+												<input name='button' type='button' class="btn btn-success show-hide" value='Add'>
 											</td>
-										</tr>-->
+										</tr>
 									</tbody>
 								</table>
 							</div>
 						</div>
 					</form>
-
-					
 				</div>
 			</div>
 		</div>
@@ -147,10 +142,19 @@ $showdelet=select_query($link,$SQL,0,0);
 	$.noConflict();
 
 	jQuery(function() {
-	    jQuery('.show-hide').on("click", function(){
-			document.forms["Prowse"].elements["Action"].value = jQuery(this).val();
-			document.forms["Prowse"].elements["ClientId"].value = jQuery(this).attr("clientId");
-			document.forms["Prowse"].submit();
+	    jQuery('.statistics-edit').on("click", function(){
+
+			if (jQuery(this).val() == "Edit"){
+				jQuery(this).val('Save');
+				var statisticsId = jQuery(this).attr("statisticsId");
+				jQuery("input[statisticsId='"+statisticsId+"']").attr("disabled", false);
+			}
+			else {
+				document.forms["Prowse"].elements["Action"].value = jQuery(this).val();
+				document.forms["Prowse"].elements["StatisticsId"].value = jQuery(this).attr("statisticsId");
+				document.forms["Prowse"].submit();
+			}
+			
 	    });
 	});
 </script>
