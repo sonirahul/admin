@@ -53,7 +53,7 @@ Pending Admin side work1
 <?php
 	$SQLforMagtTeam="select * from about ";
 	$SQLforContent="select * from content ";
-	$SQLforClients="select * from clients where clients_country_flag_visible = 1";
+	$SQLforClients="select * from clients where clients_country_flag_visible = 1 order by clients_country_name asc";
 	$SQLforNews="select * from news ";
 
 
