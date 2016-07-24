@@ -14,7 +14,7 @@
 
     <!-- Bootstrap -->
 	<link href="../css/datatables.min.css" rel="stylesheet">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.admin.css" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">

@@ -61,14 +61,14 @@ if($_POST["Action"]=="Add")//Del/Un Del
 
 				$TableName="countries";
 				$TableField=array();
-				/*$TableField[0][0]="clients_id";
-				$TableField[0][1]=null;	*/
 				$TableField[0][0]="clients_country_flag";
 				$TableField[0][1]="'$newfile'";	
 				$TableField[1][0]="clients_country_name";
-				$TableField[1][1]="'$DataCountryName'";
+				$TableField[1][1]="'$DataCountryName'";				
+				$TableField[2][0]="clients_country_flag_visible";
+				$TableField[2][1]="'0'";
 				insert_query($link,'clients',$TableField);
-				//echo "<script>document.location='index.php?model=flags';</script>";
+				echo "<script>document.location='index.php?model=flags';</script>";
 
 
 			}else{

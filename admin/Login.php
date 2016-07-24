@@ -42,7 +42,7 @@ else
     <title>Mawaredhouse Admin</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.admin.css" rel="stylesheet">
 
 	<link href="../css/font-awesome.min.css" rel="stylesheet">
 

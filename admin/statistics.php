@@ -15,68 +15,45 @@ if($_SESSION["LoginAdmin"]!="Admin")
 if($_POST["Action"]=="Save")
 {
 	$StatisticsId=$_POST[StatisticsId];
-	echo "hello1";
-	if ($ClientId) {
-		echo "hello1111";
-		$TableName="clients";
+	$Statistics_name=$_POST[statistics_name];
+	$statistics_value=$_POST[statistics_value];
+	if ($StatisticsId) {
+		$TableName="statistics";
 		$TableField=array();
-		$TableField[0][0]="clients_country_flag_visible";
-		$TableField[0][1]="true";	
-		update_query($link,$TableName,$TableField,"clients_id=$ClientId");
-		echo "<script>document.location='index.php?model=flags';</script>";
+		$TableField[0][0]="statistics_name";
+		$TableField[0][1]="\"$Statistics_name[$StatisticsId]\"";			
+		$TableField[1][0]="statistics_value";
+		$TableField[1][1]="\"$statistics_value[$StatisticsId]\"";	
+		update_query($link,$TableName,$TableField,"statistics_id=$StatisticsId");
+		echo "<script>document.location='index.php?model=statistics';</script>";
 	}
 }
-if($_POST["Action"]=="Hide")
+if($_POST["Action"]=="Delete")
 {
-	$ClientId=$_POST[ClientId];
-	if ($ClientId) {
-		$TableName="clients";
-		$TableField=array();
-		$TableField[0][0]="clients_country_flag_visible";
-		$TableField[0][1]="false";	
-		update_query($link,$TableName,$TableField,"clients_id=$ClientId");
-		echo "<script>document.location='index.php?model=flags';</script>";
+	$StatisticsId=$_POST[StatisticsId];
+	if ($StatisticsId) {
+		$TableName="statistics";	
+		delete_query($link,$TableName,"statistics_id=$StatisticsId");
+		echo "<script>document.location='index.php?model=statistics';</script>";
 	}
 }
 
 if($_POST["Action"]=="Add")//Del/Un Del
 {
-	$DataCountryName=$_POST[countryName];
-	$DataCountryFlag=$_POST[countryFlag];
-	if ($DataCountryName != "")
-	{
-		if($_FILES["countryFlag"]["name"]!="")
-		{ 
-			$file_dir  = "../flags/"; 
-			$newfile =$_FILES["countryFlag"]['name'];
-			$filetmpname =$_FILES["countryFlag"]['tmp_name'];
-			$filesize=$_FILES["countryFlag"]["size"];		  
-			$filext=substr($newfile,strpos($newfile,'.'));
-			if(strtolower($filext)==".jpg" || strtolower($filext)==".jpeg" || strtolower($filext)==".gif" || strtolower($filext)==".png" || strtolower($filext)==".tif"  || strtolower($filext)==".pdf" || strtolower($filext)==".doc" || strtolower($filext)==".docx")
-			{ 
-				if (trim($_FILES["countryFlag"]['name'])!="")
-				{ 
-				$filetoupload=$file_dir.$newfile;
-				copy($filetmpname, $filetoupload); 
-				}
-
-
-				$TableName="countries";
-				$TableField=array();
-				/*$TableField[0][0]="clients_id";
-				$TableField[0][1]=null;	*/
-				$TableField[0][0]="clients_country_flag";
-				$TableField[0][1]="'$newfile'";	
-				$TableField[1][0]="clients_country_name";
-				$TableField[1][1]="'$DataCountryName'";
-				insert_query($link,'clients',$TableField);
-				//echo "<script>document.location='index.php?model=flags';</script>";
-
-
-			}else{
-				echo "Error while Uploading";
-			}
-		}
+	$StatisticsId=$_POST[StatisticsId];
+	$Statistics_name=$_POST[statistics_name];
+	$statistics_value=$_POST[statistics_value];
+	echo "test";
+	if ($StatisticsId == "0") {
+		echo "testttt";
+		$TableName="statistics";
+		$TableField=array();
+		$TableField[0][0]="statistics_name";
+		$TableField[0][1]="'$Statistics_name[$StatisticsId]'";			
+		$TableField[1][0]="statistics_value";
+		$TableField[1][1]="'$statistics_value[$StatisticsId]'";	
+		insert_query($link,$TableName,$TableField);
+		echo "<script>document.location='index.php?model=statistics';</script>";
 	}
 }
 
@@ -89,7 +66,7 @@ $showdelet=select_query($link,$SQL,0,0);
 		<div class="col-md-12 col-sm-12 col-xs-12">
 			<div class="x_panel">
 				<div class="x_content">
-					<span class="section">Flag Photo</span>
+					<span class="section">Statistics</span>
 					<form method="post" name="Prowse" class="form-horizontal form-label-left" novalidate>
 						<input type="hidden" name="Action">
 						<input type="hidden" name="StatisticsId">
@@ -111,21 +88,21 @@ $showdelet=select_query($link,$SQL,0,0);
 											$statistics_name=$showdelet[$d]['statistics_name'];
 											$statistics_value=$showdelet[$d]['statistics_value'];?>
 											<tr>
-												<td><input type='text' class='form-control' value='<? echo "$statistics_name";?>' statisticsId='<? echo "$statistics_id";?>' disabled=true></td>
-												<td><input type='text' class='form-control' value='<? echo "$statistics_value";?>' statisticsId='<? echo "$statistics_id";?>' disabled=true></td>
+												<td><input type='text' name='statistics_name[<? echo "$statistics_id";?>]' class='form-control' value='<? echo "$statistics_name";?>' statisticsId='<? echo "$statistics_id";?>' disabled=true></td>
+												<td><input type='text' name='statistics_value[<? echo "$statistics_id";?>]' class='form-control' value='<? echo "$statistics_value";?>' statisticsId='<? echo "$statistics_id";?>' disabled=true></td>
 												
 												<td style="vertical-align: middle">
-													<input name='button' type='button' class="btn btn-success statistics-edit" value='Edit' statisticsId='<?=$statistics_id?>'>
-													<input name='button' type='button' class="btn btn-danger statistics-delete" value='Delete' statisticsId='<?=$statistics_id?>'>
+													<input name='button' type='button' class="btn btn-success statistics-button" value='Edit' statisticsId='<?=$statistics_id?>'>
+													<input name='button' type='button' class="btn btn-danger statistics-button" value='Delete' statisticsId='<?=$statistics_id?>'>
 												</td>
 											</tr>
 										<?	}?>
 										<tr>
-											<td><input type='text' class='form-control'></td>
-											<td><input type='text' class='form-control'></td>
+											<td><input type='text' name='statistics_name[0]' class='form-control'></td>
+											<td><input type='text' name='statistics_value[0]' class='form-control'></td>
 											
 											<td style="vertical-align: middle">
-												<input name='button' type='button' class="btn btn-success show-hide" value='Add'>
+												<input name='button' type='button' class="btn btn-info statistics-button" value='Add' statisticsId='0'>
 											</td>
 										</tr>
 									</tbody>
@@ -142,7 +119,7 @@ $showdelet=select_query($link,$SQL,0,0);
 	$.noConflict();
 
 	jQuery(function() {
-	    jQuery('.statistics-edit').on("click", function(){
+	    jQuery('.statistics-button').on("click", function(){
 
 			if (jQuery(this).val() == "Edit"){
 				jQuery(this).val('Save');
