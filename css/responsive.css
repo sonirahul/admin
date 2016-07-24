@@ -290,7 +290,7 @@
 	.block-stats li{width:86px;height:96px;}
 	.block-stats li .num{font-size:24px;}
 	.block-stats li .type{font-size:15px;}
-	.slider-bottom li,.slider-bottom a{font-size:16px;}
+	.slider-bottom li,.slider-bottom a{font-size:13px;text-transform: uppercase;}
 
 	.nav-bar .identity img{height:100px;}	
 	.nav-bar .menu-text {font-size: 16px;font-family: roboto;margin-top: 4px;font-weight: bold;}
