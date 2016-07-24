@@ -125,6 +125,7 @@
                   <li><a href="index.php?model=content&contentid=8&action=contentupdate" title="Manage Site Map"><i class="fa fa-sitemap"></i> Site Map</a></li>
                   <li><a href="index.php?model=content&contentid=9&action=contentupdate" title="Manage Contact Us"><i class="fa fa-phone"></i> Contact Us</a></li>
                   <li><a href="index.php?model=flags" title="Manage Flags"><i class="fa fa-flag"></i> Flags</a></li>
+                  <li><a href="index.php?model=statistics" title="Manage Statistics"><i class="fa fa-bar-chart"></i> Statistics</a></li>
                   <li><a href="index.php?model=uploading" title="Manage Uploading"><i class="fa fa-upload"></i> Uploading</a></li>
                   <li><a href="index.php?model=mhf" title="Manage Shared Files"><i class="fa fa-file-text"></i> Shared Files</a></li>
                 </ul>
