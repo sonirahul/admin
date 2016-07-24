@@ -76,12 +76,6 @@ if($_POST["Action"]=="Add")//Del/Un Del
 			}
 		}
 	}
-
-	
-
-
-	
-
 }
 
 $SQL="select * from clients where 1=1 ";
@@ -108,7 +102,7 @@ $showdelet=select_query($link,$SQL,0,0);
 										<input type="hidden" name="ClientId">
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<table id="example" class=" display table table-responsive table-striped table-bordered table-condensed table-hover" cellspacing="0" width="100%">
+												<table id="example" class="display table table-responsive table-striped table-bordered table-condensed table-hover" cellspacing="0" width="100%">
 													<thead>
 														<tr>
 															<th class="col-md-4 col-md-5 col-xs-5">Country</th>
