@@ -3,6 +3,13 @@ and un-comment them
 LoadModule deflate_module modules/mod_deflate.so
 LoadModule filter_module modules/mod_filter.so
 -->
+<!--
+Pending Admin side work1
+1. Philosophy mission vision commitment should have seperate rows.
+	photo for management team ka option in db nahi hai ?
+2. Normal Team member data is static . usko dynamic krna hai ya nai ?
+3. Australia flag missing 
+-->
 
 <!DOCTYPE html>
 <html>
@@ -42,7 +49,24 @@ LoadModule filter_module modules/mod_filter.so
 
 </head>
 <body data-logo-color='light' data-nav-color='light' data-overlay-id='false' data-overlay-open='false' data-page='process' data-section='unity'>
+<?php include "function.php";?>
+<?php
+	$SQLforMagtTeam="select * from about ";
+	$SQLforContent="select * from content ";
+	$SQLforClients="select * from clients where clients_country_flag_visible = 1";
+	$SQLforNews="select * from news ";
 
+
+	$allContentData=select_query($link,$SQLforContent,0,0);
+	$welcome = $allContentData[0]["content_desc_en"];
+	$managementTeam = $allContentData[1]["content_desc_en"];
+	$philosophy = $allContentData[2]["content_desc_en"];
+	$vac = $allContentData[3]["content_desc_en"];
+
+	$allMagtTeamData=select_query($link,$SQLforMagtTeam,0,0);
+	$allClientsData=select_query($link,$SQLforClients,0,0);
+	$allNewsData=select_query($link,$SQLforNews,0,0);
+?>
 
 	<section class='nav-bar container-fluid scroll-up' id='navbar'>
 		<div class='nav-bar-inner'>
@@ -292,10 +316,7 @@ LoadModule filter_module modules/mod_filter.so
 				<div class='row  column-center text-justify'>
 					<div class='col-md-12 '>
 						<h2 class="mh-text-colored">Visa Application Center</h2>
-						<p>Mawared House is proud to have been assigned the task of management of VFS Global acquired contracts and operate Visa application Centre's for various diplomatic missions in the MENA Region. In the past seven years Mawared House successfully implemented and managed visa application centers for diplomatic missions across the region.<br/>
-
-							World over, Diplomatic Missions are keen to outsource the time consuming administrative, non-judgmental parts of the passport &amp; visa application process and focus on the key task of assessing applications. Over time, our organization has been addressing this need of providing support services with great efficiency for our partners VFS Global and Diplomatic Missions keeping in mind and addressing concerns regarding security, integrity, quality and efficacy on the outsourced solution of the business. This resulted in exceptional customer service for applicants- from easy visa application processes, and easy access to requisite information.
-						</p>
+						<?php echo $vac ?>
 					</div>
 				</div>
 
@@ -335,9 +356,7 @@ LoadModule filter_module modules/mod_filter.so
 					<div class='col-sm-12'>
 						<h2>About Us</h2>
 						<!-- <p>Mawared House established in Kuwait in 2006 has footprint across seven countries in the Middle East and North African (MENA) Region. we are on a constant endeavor to provide our customers with practical solutions and state-of-the-art services that works seamlessly towards the cause of enhancing their businesses and making their lives much simpler and better. We provide an unmatched array of services ranging from Visa Application facilities, Business Centre's to Travel and Leisure Services.</p> -->
-						<p>
-							The word 'Mawared' in Arabic means 'resources'. And this is exactly what we're all about - providing an unmatched array of services ranging from Visa Application facilities, Business Centre's to Travel and Leisure Services. Established in Kuwait in 2006, Mawared House Trading and Contracting is on a constant endeavor to provide our customers with practical solutions and state-of-the-art services that works seamlessly towards the cause of enhancing their businesses and making their lives much simpler and better. In just a short span Mawared House has put its footprint across seven countries in the Middle East and North African (MENA) Region. And no, we're not stopping at that. At Mawared House we're actively pursuing opportunities across the globe. Armed with passion, skill and the will to succeed, we're ready to meet challenges, and foray head on into the hands of tomorrow.
-						</p>
+						<? echo $welcome?>
 					</div>
 				</div>
 			</div>
@@ -478,126 +497,40 @@ LoadModule filter_module modules/mod_filter.so
 			</div>
 			<div id="news-list" class="col-lg-4 ">
 				<ul class="nav nav-pills nav-stacked">
-					<li class="active news-list-content">
+					<?php for($i=0;$i<count($allNewsData);$i++){?>
+					<li class="<?php if($i==0) echo "active" ?> news-list-content">
 						<a data-toggle="pill" href="#menu1">
 							<div class="row">
-								<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="news/1_c.jpg"> </div>
+								<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="news/<?php echo $allNewsData[$i]["news_photo"]?>"> </div>
 								<div class="col-xs-7 col-sm-8">
-									<p class="news-list-title"> Canada Visa Application Centre opens in Lebanon</p>
+									<p class="news-list-title"> <?php echo $allNewsData[$i]["news_title_en"]?></p>
 								</div>
 							</div>
 						</a>
 					</li>
-					<li class="news-list-content">
-						<a data-toggle="pill" href="#menu2">
-							<div class="row">
-								<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="news/2_c.jpg"> </div>
-								<div class="col-xs-7 col-sm-8">
-									<p class="news-list-title"> Cyprus Visa Application Centre opens in Lebanon - Beirut</p>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="news-list-content">
-						<a data-toggle="pill" href="#menu3">
-							<div class="row">
-								<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="news/3_c.jpg"> </div>
-								<div class="col-xs-7 col-sm-8">
-									<p class="news-list-title"> Norway Visa Centre opens in Amman- Jordan</p>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="news-list-content">
-						<a data-toggle="pill" href="#menu4">
-							<div class="row">
-								<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="news/4_c.jpg"> </div>
-								<div class="col-xs-7 col-sm-8">
-									<p class="news-list-title"> Canada Application Centre opens in Kuwait</p>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="news-list-content">
-						<a data-toggle="pill" href="#menu5">
-							<div class="row">
-								<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="news/5.jpg"> </div>
-								<div class="col-xs-7 col-sm-8">
-									<p class="news-list-title"> Netherlands Application Centre opens in Morocco - Rabat</p>
-								</div>
-							</div>
-						</a>
-					</li>
+					<?php } ?>	
+
 				</ul>
 			</div>
 
 			<div id="news-item" class="col-lg-8">
 				<div class="tab-content">
-					<div id="menu1" class="tab-pane fade in active">
+					<?php for($i=0;$i<count($allNewsData);$i++){?>
+					<div id="menu<?echo $i+1?>" class="tab-pane fade in <?php if($i==0) echo "active" ?>">
 						<div class="row">
 							<div class="col-lg-7 news-image">
-								<div class="imageContainer specificImageSettings" style="background-image:url(news/1_c.jpg);"></div>
+								<div class="imageContainer specificImageSettings" style="background-image:url(news/<?php echo $allNewsData[$i]["news_photo"]?>);"></div>
 							</div>
 							<div class="col-lg-5 news-content">
-								<h3 class="news-title">Canada Visa Application Centre opens in Lebanon</h3>
+								<h3 class="news-title"> <?php echo $allNewsData[$i]["news_title_en"]?> </h3>
 								<p class="news-desc">
-									Mawared House in collaboration with VFS  Global announces the opening of the Canadian Visa Application Centre in Beirut, Lebanon on the 22nd July 2013 to cater to the visa requirements of people residing in Lebanon and planning to visit Canada.The centre was inaugurated by H. E. Miss HilaryChlids-Adams Ambassador of Canada to Lebanon.
+									<?php echo $allNewsData[$i]["news_desc_en"]?>
 								</p>
 							</div>
 						</div>
 					</div>
-					<div id="menu2" class="tab-pane fade in ">
-						<div class="row">
-							<div class="col-sm-7 news-image">
-								<div class="imageContainer specificImageSettings" style="background-image:url(news/2_c.jpg);"></div>
-							</div>
-							<div class="col-sm-5 news-content">
-								<div class="news-title">Cyprus Visa Application Centre opens in Lebanon - Beirut</div>
-								<div class="news-desc">
-									Mawared House in collaboration with VFS  Global announces the opening of the Canadian Visa Application Centre in Beirut, Lebanon on the 22nd July 2013 to cater to the visa requirements of people residing in Lebanon and planning to visit Canada.The centre was inaugurated by H. E. Miss HilaryChlids-Adams Ambassador of Canada to Lebanon.
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="menu3" class="tab-pane fade in ">
-						<div class="row">
-							<div class="col-sm-7 news-image">
-								<div class="imageContainer specificImageSettings" style="background-image:url(news/3_c.jpg);"></div>
-							</div>
-							<div class="col-sm-5 news-content">
-								<div class="news-title">Norway Visa Centre opens in Amman- Jordan</div>
-								<div class="news-desc">
-									Mawared House in collaboration with VFS  Global announces the opening of the Canadian Visa Application Centre in Beirut, Lebanon on the 22nd July 2013 to cater to the visa requirements of people residing in Lebanon and planning to visit Canada.The centre was inaugurated by H. E. Miss HilaryChlids-Adams Ambassador of Canada to Lebanon.
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="menu4" class="tab-pane fade in ">
-						<div class="row">
-							<div class="col-sm-7 news-image">
-								<div class="imageContainer specificImageSettings" style="background-image:url(news/4_c.jpg);"></div>
-							</div>
-							<div class="col-sm-5 news-content">
-								<div class="news-title">Canada Application Centre opens in Kuwait</div>
-								<div class="news-desc">
-									Mawared House in collaboration with VFS  Global announces the opening of the Canadian Visa Application Centre in Beirut, Lebanon on the 22nd July 2013 to cater to the visa requirements of people residing in Lebanon and planning to visit Canada.The centre was inaugurated by H. E. Miss HilaryChlids-Adams Ambassador of Canada to Lebanon.
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="menu5" class="tab-pane fade in ">
-						<div class="row">
-							<div class="col-sm-7 news-image">
-								<div class="imageContainer specificImageSettings" style="background-image:url(news/5.jpg);"></div>
-							</div>
-							<div class="col-sm-5 news-content">
-								<div class="news-title">Netherlands Application Centre opens in Morocco - Rabat</div>
-								<div class="news-desc">
-									Mawared House in collaboration with VFS  Global announces the opening of the Netherlands Visa Application Centre in Rabat, MOROCCO on the 22nd June 2015 to cater to Continue visa requirements of people residing in MOROCCO and planning to visit Netherlands.
-								</div>
-							</div>
-						</div>
-					</div>
+					<?php } ?>	
+
 				</div>
 			</div>
 			<div class="news-mobile-browser hidden-lg">
@@ -615,6 +548,7 @@ LoadModule filter_module modules/mod_filter.so
 				</div>
 			</div>
 			<div class="row mgtTeamMain2Row" style="">
+				<?php for($i=0;$i<count($allMagtTeamData) ;$i++){?>
 				<div class="col-sm-3 col-xs-12">
 					<div class="omgt-team">
 						<div class="omgt-image">
@@ -624,61 +558,15 @@ LoadModule filter_module modules/mod_filter.so
 								</div>
 							</div>
 						</div>
-						<div class="omgt-name">Tareq Al Rashdan</div>
-						<div class="omgt-pos">Founder CEO</div>
+						<div class="omgt-name"><?php echo $allMagtTeamData[$i]["about_title_en"]?></div>
+						<div class="omgt-pos"><?php echo $allMagtTeamData[$i]["about_jobtitle_en"]?></div>
 						<div class="omgt-Content">
-							Tareq Al Rashdan started his career with Kuwait Airways in 1992 as Commercial Officer and was soon promoted to Senior Commercial Officer.  In 1998, he joined the Commercial Planning Department as Senior Researcher. From there he moved on to take larger responsibilities as Marketing Manager of Mashaer Consortium. Within one year he went on to become its Acting CEO. Later Mr. Rashdan was instrumental in spearheading the Dnata Kuwait Project and was its General Manager till July 2004.  In the due course of his career, he has playedk ey roles in creating many successful and profitable partnerships. A lot many success stories like The Dnata Kuwait project implementation, signing up with global Travel Management Company, TQ3 Travel Solutions, BCD Travel, Eurorail, and many other ‘high pride’ projects for Kuwait have been created under his able guidance. He last held the position of CEO at Uniglobe Badur Travels. He is passionate about traveling and started off the travel and leisure segment of business in Kuwait named TRAVEL CLUB.
+							<?php echo $allMagtTeamData[$i]["about_desc_en"]?>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 col-xs-12">
-					<div class="omgt-team">
-						<div class="omgt-image">
-							<div class="hexagon hexagon2">
-								<div class="hexagon-in1">
-									<div class="hexagon-in2" style="background-image: url(team/MT2mishari_c.jpg)"></div>
-								</div>
-							</div>
-						</div>
-						<div class="omgt-name">Mishari A. Al Banwan</div>
-						<div class="omgt-pos">Deputy CEO</div>
-						<div class="omgt-Content">
-							Meshari Al Banwan started his career with Manpower  Restructure and Development Authority as Management Researcher in 2004. He is  now at the forefront of Mawared House’s Business Centre concept and leads the  Human Resources department in Kuwait.  He’s also an elected member of local Societies. With invaluable experience,  Meshari Al Banwan, fuels in new energy into the group’s Business Centre  operations.
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-3 col-xs-12">
-					<div class="omgt-team">
-						<div class="omgt-image">
-							<div class="hexagon hexagon2">
-								<div class="hexagon-in1">
-									<div class="hexagon-in2" style="background-image: url(team/MT1-Tkaushik1_c.jpg)"></div>
-								</div>
-							</div>
-						</div>
-						<div class="omgt-name">Kaushik Ghosh</div>
-						<div class="omgt-pos">Chief Operating Officer</div>
-						<div class="omgt-Content">
-							As Chief Operating Officer,  Kaushik handles visa outsourcing operations in seven countries  in the MENA Region namely Kuwait, Morocco, Iran, Lebanon, Syria, Algeria and  Jordan. The key result areas he handles  are P&amp;L Management, and infrastructure development, and relationship Management with VFS Global Services. He is also actively involved in planning  future strategies for growth in this region and Establishment of the brand of  Mawared House. A Business Graduate, Kaushik brings his valuable experience from  the Kuoni Travel Group, and VFS Global Services Private Limited and puts  it to practical use at Mawared House. He has more than a decade of experience  across functions like Business  Development, Projects Rollout and Operations which essentially enables  him in creating value for Stakeholders at Mawared House.
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-3 col-xs-12">
-					<div class="omgt-team">
-						<div class="omgt-image">
-							<div class="hexagon hexagon2">
-								<div class="hexagon-in1">
-									<div class="hexagon-in2" style="background-image: url(team/MTAslamHameed-CFO_c.jpg)"></div>
-								</div>
-							</div>
-						</div>
-						<div class="omgt-name">Mohamed Aslam</div>
-						<div class="omgt-pos">CFO</div>
-						<div class="omgt-Content">
-							A Commerce Major from the University of Colombo,  and a fellow member of ICAI (Sri Lanka)  and Society of Certified Management Accountants (Sri   Lanka), Aslam manages the overall financial responsibilities  at Mawared House. With over more than 15 years of experience Aslam infuses his  valuable expertise in the subject of finance and administrative operations in  his current role. He is instrumental in creating the necessary processes for  easing business operations and enhancing client deliverable value.
-						</div>
-					</div>
-				</div>
+				<?php } ?>
+
 
 
 			</div>
@@ -939,209 +827,19 @@ LoadModule filter_module modules/mod_filter.so
 		<div class="row col-sm-10 column-center">
 
 			<div class="row">
+				<?php for($i=0;$i<count($allClientsData);$i++){?>
 				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
 					<div class="contry-con1">
 						<div class="flagwave"></div>
 						<div class="clientss-image">
-							<img src="flags/switzerland.png">	
+							<img src="flags/<?php echo $allClientsData[$i]["clients_country_flag"]?>">	
 						</div>
 						<div class="clientss-name">
-							<p>switzerland</p>
+							<p><?php echo $allClientsData[$i]["clients_country_name"]?></p>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/portugal.png">	
-						</div>
-						<div class="clientss-name">
-							<p>portugal</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/netherlands.png">	
-						</div>
-						<div class="clientss-name">
-							<p>netherlands</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/norway.png">	
-						</div>
-						<div class="clientss-name">
-							<p>norway</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/spain.png">	
-						</div>
-						<div class="clientss-name">
-							<p>spain</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/denmark.png">	
-						</div>
-						<div class="clientss-name">
-							<p>denmark</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/australia.png">	
-						</div>
-						<div class="clientss-name">
-							<p>australia</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/india.png">	
-						</div>
-						<div class="clientss-name">
-							<p>india</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/greece.png">	
-						</div>
-						<div class="clientss-name">
-							<p>greece</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/croatia.png">	
-						</div>
-						<div class="clientss-name">
-							<p>croatia</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/belgium.png">	
-						</div>
-						<div class="clientss-name">
-							<p>belgium</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/bulgaria.png">	
-						</div>
-						<div class="clientss-name">
-							<p>bulgaria</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/slovenia.png">	
-						</div>
-						<div class="clientss-name">
-							<p>slovenia</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/united-kingdom.png">	
-						</div>
-						<div class="clientss-name">
-							<!-- <p class="hidden-xs hidden-sm ">united-kingdom</p> -->
-							<p class="">UK</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/united-arab-emirates.png">	
-						</div>
-						<div class="clientss-name">
-							<p>emirates</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/cyprus.png">	
-						</div>
-						<div class="clientss-name">
-							<p>cyprus</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-					<div class="contry-con1">
-						<div class="flagwave"></div>
-						<div class="clientss-image">
-							<img src="flags/turkey.png">	
-						</div>
-						<div class="clientss-name">
-							<p>Turkey</p>
-						</div>
-					</div>
-				</div>
-
+				<?php } ?>	
 
 			</div>
 		</div>
@@ -1556,7 +1254,8 @@ LoadModule filter_module modules/mod_filter.so
 
 	<!-- Show all news list -->
 	<script type="text/javascript">
-		$(function(){		
+		$(function(){	
+
 			newsflag = 0;
 			$("#show-list").click(function(){
 				if(newsflag==0)
@@ -1579,9 +1278,11 @@ LoadModule filter_module modules/mod_filter.so
 			{
 				$("#news-list").removeClass("news-list-open");
 				newsflag=0;
-				setTimeout(function(){
-					$("#news-list").scrollTop(0);
-				},1000);
+				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+					setTimeout(function(){
+						$("#news-list").scrollTop(0);
+					},1000);
+				}
 			}
 		});
 	</script>
