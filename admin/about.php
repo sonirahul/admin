@@ -1,5 +1,5 @@
 <?php
-$aboutid=$_POST["aboutid"];
+$aboutId=$_POST["aboutId"];
 $txtaname=$_POST["txtaname"];
 $txtadesc=$_POST["txtadesc"];
 $txtename=$_POST["txtename"];
@@ -10,19 +10,13 @@ $optradio=$_POST["optradio"];
 $deletefile=$_POST["deletefile"];
 
 //-------------------------------------------Delet Fields
-if($_POST["action"]=="deletfields")
+if($_POST["action"]=="Delete")
 {
 	$TableName="about";
-	$IDcheckValue=$_POST[IDcheckValue];
-	for($i=0;$i<count($IDcheckValue);$i++)
-	{
-		if($IDcheck[$i])
-		{
-		$SQLwhere="about_id=";
-		$SQLwhere.=$IDcheckValue[$i];
-		delete_query($link,$TableName,$SQLwhere);
-		}
-	}
+	$SQLwhere="about_id=";
+	$SQLwhere.=$aboutId;
+	delete_query($link,$TableName,$SQLwhere);
+	echo "<script>document.location='index.php?model=about';</script>";
 }
 //---------Show Data------------------	
 $SQL="select * from about where 1=1 ";
@@ -50,7 +44,7 @@ if($_POST["action"]=="beUpdate")//Applay Updates
 		
 	if($deletefile==1)
 	{ 
-  	    $SQL="select about_image from about where about_id=$aboutid";
+  	    $SQL="select about_image from about where about_id=$aboutId";
 		$showdelet=select_query($link,$SQL,0,0);
 	    unlink("../team/".$showdelet[0]['about_image']);
 		$TableField[$uf][0]="about_image";
@@ -64,18 +58,18 @@ if($_POST["action"]=="beUpdate")//Applay Updates
 		  $uf++;
 		}
 
-    $SQLwhere="about_id=$aboutid";	
+    $SQLwhere="about_id=$aboutId";	
 	update_query($link,$TableName,$TableField,$SQLwhere);
 	echo "<script>document.location='index.php?model=about';</script>";
 }
 //----------------------Add	
 if($_POST["action"]=="Add")
 {
-$aboutid=auto_num($link,"about","about_id");
+$aboutId=auto_num($link,"about","about_id");
 	$TableName="about";
 	$TableField=array();
 	$TableField[0][0]="about_id";
-	$TableField[0][1]="'$aboutid'";	
+	$TableField[0][1]="'$aboutId'";	
 	$TableField[1][0]="about_title_ar";
 	$TableField[1][1]="'$txtaname'";	
 	$TableField[2][0]="about_desc_ar";
@@ -100,7 +94,7 @@ $aboutid=auto_num($link,"about","about_id");
 //---------------------------
 if($_GET["action"]=="aboutupdate")
 {
-$SQL="select * from about where about_id=$_GET[aboutid]";
+$SQL="select * from about where about_id=$_GET[aboutId]";
 $UpdatedData=select_query($link,$SQL,0,0);	
 }
 ?>
@@ -114,9 +108,10 @@ $UpdatedData=select_query($link,$SQL,0,0);
 						<span class="section">Management Team</span>
 						<form method="post" name="Prowse" class="form-horizontal form-label-left" novalidate>
 							<input type="hidden" name="action">
+							<input type="hidden" name="aboutId">
 							<div class="item form-group">
 								<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
-									<a href="index.php?model=about&action=aboutadd" class="btn btn-info">Add New Management Team</a><br/><br/>
+									<a href="index.php?model=about&action=aboutadd" class="btn btn-primary">Add New Management Team</a><br/><br/>
 									<table id="example" class="display table table-responsive table-striped table-bordered table-condensed table-hover" cellspacing="0" width="100%">
 										<thead>
 											<tr>
@@ -131,9 +126,8 @@ $UpdatedData=select_query($link,$SQL,0,0);
 												<td><?php echo $SettingData[$i]["about_title_ar"]?></td>
 												<td><?php echo $SettingData[$i]["about_title_en"]?></td>
 												<td>
-													<input type="checkbox" name="IDcheck[<?php echo $i?>]" id="datachk" style="border:0;background : transparent;"> 
-													<input type="hidden" name="IDcheckValue[<?php echo $i?>]" value="<?php echo $SettingData[$i]['about_id']?>">
-													<a href="index.php?model=about&aboutid=<?php echo $SettingData[$i]["about_id"]?>&action=aboutupdate" class="btn btn-info">Edit</a>
+													<a href="index.php?model=about&aboutid=<?php echo $SettingData[$i]["about_id"]?>&action=aboutupdate" class="btn btn-warning">Edit</a>
+													<input name="button" type="button" class="btn btn-danger about-delete-button" value="Delete" aboutId="<?php echo $SettingData[$i]['about_id']?>">
 												</td>
 											</tr>
 											<?php }?>
@@ -142,11 +136,22 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								</div>
 							</div>
 						</form>
+						<script type="text/javascript">
+							$.noConflict();
+
+							jQuery(function() {
+							    jQuery('.about-delete-button').on("click", function(){
+							    	document.forms["Prowse"].elements["action"].value = jQuery(this).val();
+									document.forms["Prowse"].elements["aboutId"].value = jQuery(this).attr("aboutId");
+									document.forms["Prowse"].submit();
+							    });
+							});
+						</script>
 					<?php }elseif($_GET["action"]=="aboutupdate" || $_GET["action"]=="aboutadd"){?>
 						<span class="section"><?php if ($_GET["action"]=="aboutupdate") echo "Edit Management Team Detail"; else echo "Add Management Team Detail";?></span>
 						<form name="Add" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" novalidate>
 							<input type="hidden"  name="action">
-							<input type="hidden" name="aboutid" value="<?php echo $_GET["aboutid"]?>" />
+							<input type="hidden" name="aboutId" value="<?php echo $_GET["aboutId"]?>" />
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtaname">Arabic Name <span class="required">*</span>
 								</label>

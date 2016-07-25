@@ -553,30 +553,30 @@ Pending Admin side work1
 
 
 					<div class="row" style="margin:0">
-						<?php for($i=0,$n=0;$i<count($allEmployeeTeamData);$i++,$n++){?>
-							<?php if( ($n % 2*$i)+2 > 1)?>
-							<div class="hidden-xs col-sm-2 team-mem">
-								<div class="box" style=""></div>
-							</div>
-							<?php ?>
-							<div class="col-xs-6 col-sm-2 team-mem team-view">
-								<div class="element_hover">
-									<div class="hover-content">
-										<h3 class="sl-hover-title"><?php echo $allEmployeeTeamData[$i]["about_title_en"]?></h3>
-										<h4 class="sl-hover-subtitle"><?php echo $allEmployeeTeamData[$i]["about_jobtitle_en"]?></h4>
-										<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+						<?php 
+							$boxCount=1;
+							for($i=1;$i<=count($allEmployeeTeamData);$i++){?>
+								<div class="col-xs-6 col-sm-2 team-mem team-view">
+									<div class="element_hover">
+										<div class="hover-content">
+											<h3 class="sl-hover-title"><?php echo $allEmployeeTeamData[$i-1]["about_title_en"]?></h3>
+											<h4 class="sl-hover-subtitle"><?php echo $allEmployeeTeamData[$i-1]["about_jobtitle_en"]?></h4>
+											<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+										</div>
 									</div>
+									<img src="team/<?php echo $allEmployeeTeamData[$i-1]["about_image"]?>" alt="<?php echo $allEmployeeTeamData[$i-1]["about_title_en"]?>" class="img_element" width="100%" height="100%/">
+									<div class="mw_team"><?php echo $allEmployeeTeamData[$i-1]["about_title_en"]?></div>
+									<div class="mw-team-quote">
+										<?php echo $allEmployeeTeamData[$i-1]["about_desc_en"]?>
+									</div>
+									<div class="box"></div>
 								</div>
-								<img src="team/<?php echo $allEmployeeTeamData[$i]["about_image"]?>" alt="<?php echo $allEmployeeTeamData[$i]["about_title_en"]?>" class="img_element" width="100%" height="100%/">
-								<div class="mw_team"><?php echo $allEmployeeTeamData[$i]["about_title_en"]?></div>
-								<div class="mw-team-quote">
-									<?php echo $allEmployeeTeamData[$i]["about_desc_en"]?>
+						<?php if( $i/2.5 >= $boxCount) {?>
+								<div class="hidden-xs col-sm-2 team-mem">
+									<div class="box" style=""></div>
 								</div>
-								<div class="box"></div>
-							</div>
-							<?php } ?>	
-
-
+						<?php $boxCount=$boxCount+1;} ?>
+						<?php } ?>	
 						</div>		
 					</div>
 
