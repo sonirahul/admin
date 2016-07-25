@@ -32,6 +32,11 @@
 		.slider-bottom i.fa{color:#fff}
 		#myCarousel .carousel-control .fa{font-size:32px!important;color:#fff}
 
+		#ci2cc{top:42% !important}
+		#ci3cc{top:22% !important}
+		#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:center;}
+		#carouselItem3 blockquote p,#carouselItem2 blockquote p {font-size: 24px;}
+
 	/*vac & about us*/
 		.block-stats li{width:90px;height:initial;margin:5px 5px}
 		.block-stats li{background-size:contain}
@@ -149,6 +154,12 @@
 		.slider-bottom i.fa{color:#fff}
 		#myCarousel .carousel-control .fa{font-size:32px!important;color:#fff}
 
+		#ci2cc{top:45% !important}
+		#ci3cc{top:22% !important}
+		#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:center;}
+		#carouselItem3 blockquote p,#carouselItem2 blockquote p {font-size: 24px;}
+
+
 	/*vac & about us*/
 		.block-stats li{width:90px;height:initial;margin:5px 5px}
 		.block-stats li{background-size:contain}
@@ -242,6 +253,7 @@
 	#contact-content {width: 350px;margin: 0 auto;}
 	.nav-bar .identity.responsive{}
 	.nav-bar .identity.responsive img{}
+	#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:right;}
 
 
 }

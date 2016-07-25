@@ -3,6 +3,7 @@ and un-comment them
 LoadModule deflate_module modules/mod_deflate.so
 LoadModule filter_module modules/mod_filter.so
 -->
+
 <!--
 Pending Admin side work1
 1. Philosophy mission vision commitment should have seperate rows.
@@ -108,10 +109,9 @@ Pending Admin side work1
 			<li data-target="#myCarousel" data-slide-to="1" class=""></li>
 			<li data-target="#myCarousel" data-slide-to="2" class=""></li>
 			<li data-target="#myCarousel" data-slide-to="3" class=""></li>
-			<li data-target="#myCarousel" data-slide-to="4" class=""></li>
 		</ol>
 		<div class="carousel-inner" role="listbox">
-			<div class="item active">
+			<div id="carouselItem1" class="item active">
 				<div style="background-image:url(slider/1_c.jpg);background-size:cover;background-position:center center;width:100%;height:100vh"></div>
 				<div class="container">
 					<div class="carousel-caption">
@@ -138,135 +138,33 @@ Pending Admin side work1
 					</div>
 				</div>
 			</div>
-			<div class="item">
-				<div style="background-image:url(slider/2_c.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
+
+			<div id="carouselItem2"  class="item">
+				<div style="background-image:url(slider/1.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
 				<div class="container">
-					<div class="carousel-caption">
-						<h2 class="main-screen-caption">Local Presence Global Support</h2>
-						<div class="block-stats hidden-xs">
-							<ul>
-								<li class="scroll-animated-item animate1 fadeInRight">
-									<div class="num" data-num="6" data-content="6">6</div>
-									<div class="type">Coutries</div>
-								</li>
-								<li class="scroll-animated-item animate2 fadeInRight">
-									<div class="num" data-num="15" data-content="15">15</div>
-									<div class="type">Cities</div>
-								</li>
-								<li class="scroll-animated-item animate3 fadeInRight">
-									<div class="num" data-num="22" data-content="22">22</div>
-									<div class="type">Offices</div>
-								</li>
-								<li class="scroll-animated-item animate4 fadeInRight">
-									<div class="num" data-num="8" data-content="8K">8K</div>
-									<div class="type">Visas/year</div>
-								</li>
-								<li class="scroll-animated-item animate5 fadeInRight">
-									<div class="num" data-num="500" data-content="500">500</div>
-									<div class="type">Employees</div>
-								</li>
-							</ul>
-						</div>
-						<p class="main-screen-subcaption">Kuwait - Morocco - Syria - Jordan - Lebanon - Iran - Algeria</p>
+					<div id="ci2cc" class="carousel-caption">
+						<blockquote class="blockquote-reverse">
+							<p>State of the art offices</p>
+						</blockquote>
 					</div>
 				</div>
 			</div>
-			<div class="item">
-				<div style="background-image:url(slider/3_c.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
+			<div id="carouselItem3"  class="item">
+				<div style="background-image:url(slider/2.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
 				<div class="container">
-					<div class="carousel-caption">
-						<h2 class="main-screen-caption">Local Presence Global Support</h2>
-						<div class="block-stats hidden-xs">
-							<ul>
-								<li class="scroll-animated-item animate1 fadeInRight">
-									<div class="num" data-num="6" data-content="6">6</div>
-									<div class="type">Coutries</div>
-								</li>
-								<li class="scroll-animated-item animate2 fadeInRight">
-									<div class="num" data-num="15" data-content="15">15</div>
-									<div class="type">Cities</div>
-								</li>
-								<li class="scroll-animated-item animate3 fadeInRight">
-									<div class="num" data-num="22" data-content="22">22</div>
-									<div class="type">Offices</div>
-								</li>
-								<li class="scroll-animated-item animate4 fadeInRight">
-									<div class="num" data-num="8" data-content="8K">8K</div>
-									<div class="type">Visas/year</div>
-								</li>
-								<li class="scroll-animated-item animate5 fadeInRight">
-									<div class="num" data-num="500" data-content="500">500</div>
-									<div class="type">Employees</div>
-								</li>
-							</ul>
-						</div>
-						<p class="main-screen-subcaption">Kuwait - Morocco - Syria - Jordan - Lebanon - Iran - Algeria</p>
+					<div id="ci3cc" class="carousel-caption">
+						<blockquote class="blockquote-reverse">
+							<p>"None of us is as smart as all of us"</p>
+							<footer>Ken Blanchard</footer>
+						</blockquote>
 					</div>
 				</div>
 			</div>
-			<div class="item">
-				<div style="background-image:url(slider/4_c.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
+			<div id="carouselItem4"  class="item">
+				<div style="background-image:url(slider/4th.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
 				<div class="container">
-					<div class="carousel-caption">
-						<h2 class="main-screen-caption">Local Presence Global Support</h2>
-						<div class="block-stats hidden-xs">
-							<ul>
-								<li class="scroll-animated-item animate1 fadeInRight">
-									<div class="num" data-num="6" data-content="6">6</div>
-									<div class="type">Coutries</div>
-								</li>
-								<li class="scroll-animated-item animate2 fadeInRight">
-									<div class="num" data-num="15" data-content="15">15</div>
-									<div class="type">Cities</div>
-								</li>
-								<li class="scroll-animated-item animate3 fadeInRight">
-									<div class="num" data-num="22" data-content="22">22</div>
-									<div class="type">Offices</div>
-								</li>
-								<li class="scroll-animated-item animate4 fadeInRight">
-									<div class="num" data-num="8" data-content="8K">8K</div>
-									<div class="type">Visas/year</div>
-								</li>
-								<li class="scroll-animated-item animate5 fadeInRight">
-									<div class="num" data-num="500" data-content="500">500</div>
-									<div class="type">Employees</div>
-								</li>
-							</ul>
-						</div>
-						<p class="main-screen-subcaption">Kuwait - Morocco - Syria - Jordan - Lebanon - Iran - Algeria</p>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div style="background-image:url(slider/5_c.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
-				<div class="container">
-					<div class="carousel-caption">
-						<h2 class="main-screen-caption">Local Presence Global Support</h2>
-						<div class="block-stats hidden-xs">
-							<ul>
-								<li class="scroll-animated-item animate1 fadeInRight">
-									<div class="num" data-num="6" data-content="6">6</div>
-									<div class="type">Coutries</div>
-								</li>
-								<li class="scroll-animated-item animate2 fadeInRight">
-									<div class="num" data-num="15" data-content="15">15</div>
-									<div class="type">Cities</div>
-								</li>
-								<li class="scroll-animated-item animate3 fadeInRight">
-									<div class="num" data-num="22" data-content="22">22</div>
-									<div class="type">Offices</div>
-								</li>
-								<li class="scroll-animated-item animate4 fadeInRight">
-									<div class="num" data-num="8" data-content="8K">8K</div>
-									<div class="type">Visas/year</div>
-								</li>
-								<li class="scroll-animated-item animate5 fadeInRight">
-									<div class="num" data-num="500" data-content="500">500</div>
-									<div class="type">Employees</div>
-								</li>
-							</ul>
-						</div>
-						<p class="main-screen-subcaption">Kuwait - Morocco - Syria - Jordan - Lebanon - Iran - Algeria</p>
+					<div id="ci4cc" class="carousel-caption">
+
 					</div>
 				</div>
 			</div>
@@ -346,20 +244,28 @@ Pending Admin side work1
 		</section>
 		<style type="text/css">
 			#singaporeAirlines {
-				background-image: url(http://i.istockimg.com/image-zoom/18121972/3/380/253/stock-photo-18121972-singapore-at-sunset-.jpg);
+				background-image: url(images/singaporeAirlinesShown.jpg);
 				background-size: cover;
 				background-attachment: fixed;
 				background-color: rgba(0, 0, 0, 0.45);
 				background-blend-mode: multiply;
 			}
 			#singaporeAirlines h2,#singaporeAirlines #saContent p,#singaporeAirlines #saContent a{color:#fff !important;text-shadow:0 0 3px #666}
+			#singaporeAirlines1 {
+				//background-image: url(images/singaporeAirlines1.jpg);
+				background-size: cover;
+				background-attachment: fixed;
+				background-color: rgba(0, 0, 0, 0.45);
+				background-blend-mode: multiply;
+			}
+			#singaporeAirlines1 h1,#singaporeAirlines1 #saContent p,#singaporeAirlines1 #saContent a{color:#fff !important;text-shadow:0 0 3px #666}
 
 		</style>
 
 		<section id="singaporeAirlines" class="section container-fluid">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h2 class="mh-text-colored">Singapore airlines</h2>
+					<h2 class="mh-text-colored">Singapore Airlines</h2>
 				</div>
 			</div>
 			<div class="row col-sm-10 column-center text-center">
@@ -371,45 +277,42 @@ Pending Admin side work1
 					</p>
 					<br/><br/>
 					<div class="row text-center">
-						<div class="col-md-4"><p> <i class="fa fa-globe" aria-hidden="true"></i> <a href="singaporeair.com/kw">singaporeair.com/kw</a> </p></div>
-						<div class="col-md-4"><p> <i class="fa fa-phone" aria-hidden="true"></i> <a href=" (+965) 2225 8225">(+965) 2225 8225</a> </p></div>
-						<div class="col-md-4"><p> <i class="fa fa-fax" aria-hidden="true"></i>   <a href="singaporeair.com/kw">(+965) 2225 8241</a> </p></div>
+						<div class="col-md-4"><p> <i class="fa fa-globe fa-2x" aria-hidden="true"></i><br/> <a href="singaporeair.com/kw">singaporeair.com/kw</a> </p></div>
+						<div class="col-md-4"><p> <i class="fa fa-phone fa-2x" aria-hidden="true"></i><br/> <a href=" (+965) 2225 8225">(+965) 2225 8225</a> </p></div>
+						<div class="col-md-4"><p> <i class="fa fa-fax fa-2x" aria-hidden="true"></i> <br/>  <a href="singaporeair.com/kw">(+965) 2225 8241</a> </p></div>
 					</div>		
 				</div>
 			</div>
 		</section>
 
 
-		<section id="singaporeAirlines1" class="section container-fluid">
+		<section id="singaporeAirlines1" class="section container-fluid hidden">
 			<div class="row">
-				<div class="col-lg-6">
-					
-				</div>
+
 				<div class="col-lg-6">
 					<div class="col-lg-12 text-center">
-						<h2 class="mh-text-colored">Singapore airlines</h2>
+						<h1 class="mh-text-colored">Singapore airlines</h1>
+					</div>
+					<div class="row col-sm-10 column-center text-center">
+
+						<div id="saContent">
+							<p><br/><br/><br/>Al Rayes Travel Services was established in 1978and since then representing as General Sales Agent for Singapore Airlines in Kuwait.<br/><br/>
+								Singapore Airlines and its regional carrier Silk Air serve over 700 weekly connections to more than 50 destinations across Asia Pacific besides daily 777-300 aircraft to Dubai with 4 cabins, First, Business, Premium Economy and Economy classes.  Passengers from Kuwait can travel on Kuwait Airways/Fly Dubai to Dubai to connect Singapore Airlines.<br/><br/>
+								A city of diversity, Singapore is modern and dynamic with a unique mix of different races, cultures, foods and religions.  The leisure traveler will be able to enjoy the array of activities and places to visit on this island, all year around, even if only on transit.  Kuwaiti visitors can look forward to seamless connections to countries like Malaysia, Indonesia and Thailand, or even Australia and New Zealand after making stopover here in Singapore. 
+							</p>
+							<br/><br/>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12 text-center">
-					<h2 class="mh-text-colored">Singapore airlines</h2>
-				</div>
-			</div>
-			<div class="row col-sm-10 column-center text-center">
-
-				<div id="saContent">
-					<p>Al Rayes Travel Services was established in 1978and since then representing as General Sales Agent for Singapore Airlines in Kuwait.<br/><br/>
-						Singapore Airlines and its regional carrier Silk Air serve over 700 weekly connections to more than 50 destinations across Asia Pacific besides daily 777-300 aircraft to Dubai with 4 cabins, First, Business, Premium Economy and Economy classes.  Passengers from Kuwait can travel on Kuwait Airways/Fly Dubai to Dubai to connect Singapore Airlines.<br/><br/>
-						A city of diversity, Singapore is modern and dynamic with a unique mix of different races, cultures, foods and religions.  The leisure traveler will be able to enjoy the array of activities and places to visit on this island, all year around, even if only on transit.  Kuwaiti visitors can look forward to seamless connections to countries like Malaysia, Indonesia and Thailand, or even Australia and New Zealand after making stopover here in Singapore. 
-					</p>
-					<br/><br/>
+				<div class="col-lg-6">
 					<div class="row text-center">
-						<div class="col-md-4"><p> <i class="fa fa-globe" aria-hidden="true"></i> <a href="singaporeair.com/kw">singaporeair.com/kw</a> </p></div>
-						<div class="col-md-4"><p> <i class="fa fa-phone" aria-hidden="true"></i> <a href=" (+965) 2225 8225">(+965) 2225 8225</a> </p></div>
-						<div class="col-md-4"><p> <i class="fa fa-fax" aria-hidden="true"></i>   <a href="singaporeair.com/kw">(+965) 2225 8241</a> </p></div>
+						<div class="col-md-12"><p> <i class="fa fa-globe fa-2x" aria-hidden="true"></i> <br/><a href="singaporeair.com/kw">singaporeair.com/kw</a> </p></div>
+						<div class="col-md-12"><p> <i class="fa fa-phone fa-2x" aria-hidden="true"></i> <br/><a href=" (+965) 2225 8225">(+965) 2225 8225</a> </p></div>
+						<div class="col-md-12"><p> <i class="fa fa-fax fa-2x"  aria-hidden="true"></i>   <br/><a href="singaporeair.com/kw">(+965) 2225 8241</a> </p></div>
 					</div>		
+
 				</div>
+
 			</div>
 		</section>
 
