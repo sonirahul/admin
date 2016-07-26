@@ -132,7 +132,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 											</tr>
 										</thead>
 										<tbody>
-											<?php for($i=0;$i<count($SettingData)-1;$i++){?>
+											<?php for($i=0;$i<count($SettingData);$i++){?>
 												<tr align="center">
 													<td><?php echo $SettingData[$i]["news_title_ar"]?></td>
 													<td><?php echo $SettingData[$i]["news_title_en"]?></td>
