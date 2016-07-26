@@ -29,7 +29,7 @@ Pending Admin side work1
 	<meta content="We improve your customer's experience with our proven Objective-Based Design process and simple &amp; unique UX design subscription model." property='og:description'>
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main-ce83667e.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
@@ -37,13 +37,13 @@ Pending Admin side work1
 	<link rel="stylesheet" type="text/css" href="css/nanoscroller.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="stylesheet" type="text/css" href="33535gillsansmt/font.css">
-	
+
 	<script src="js/main-6e0cc465.js"></script>
 	<script src="js/process-1d1f249e.js"></script>
-	<script src="js/jquery-1.12.4.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 	<script src="js/modernizr-custom.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="js/jquery.content_slider.js"></script>
 	<script src="js/jquery.mousewheel.js"></script>
 	<script src="js/jquery.nanoscroller.min.js"></script>
@@ -279,7 +279,7 @@ Pending Admin side work1
 					<h2 class="mh-text-colored"><?php echo $singaporeAirlinesName ?></h2>
 				</div>
 			</div>
-			<div class="row col-sm-10 column-center text-center">s
+			<div class="row col-sm-10 column-center text-center">
 				<div id="saContent">
 					<?php echo $singaporeAirlines ?>		
 				</div>
