@@ -122,12 +122,14 @@
                     <ul class="nav child_menu">
                       <li><a href="index.php?model=content&contentid=4&action=contentupdate" title="Manage Visa Application Centres ">Visa Application Centres</a>
                       </li>
-                      <li><a href="index.php?model=content&contentid=5&action=contentupdate" title="Manage Travel Club ">Travel Club</a>
+					  <li><a href="index.php?model=content&contentid=13&action=contentupdate" title="Manage Singapore Airlines ">Singapore Airlines</a>
+                      </li>
+                      <!--<li><a href="index.php?model=content&contentid=5&action=contentupdate" title="Manage Travel Club ">Travel Club</a>
                       </li>
                       <li><a href="index.php?model=content&contentid=6&action=contentupdate" title="Manage Al Rayes Travel Services ">Al Rayes Travel Services</a>
                       </li>
                       <li><a href="index.php?model=content&contentid=7&action=contentupdate" title="Manage Sanan Residential Project">Sanan Residential Project</a>
-                      </li>
+                      </li>-->
                     </ul>
                   </li>
                   <li><a href="index.php?model=countries" title="Manage Countries of Operation"><i class="fa fa-globe" aria-hidden="true"></i> Countries of Operation</a></li>
