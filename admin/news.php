@@ -1,7 +1,4 @@
 <?php
-$Searchname=$_POST["Searchname"];
-$Searchdesc=$_POST["Searchdesc"];
-
 $newsid=$_POST["newsid"];
 $txtaname=$_POST["txtaname"];
 $txtadesc=$_POST["txtadesc"];
@@ -33,36 +30,7 @@ for($i=0;$i<count($IDcheckValue);$i++)
 }
 //---------Show Data------------------	
 $SQL="select * from news where 1=1 ";
-
-if($Searchname && $Searchname!="" && $Searchname!="Arabic Title")
-	{
-	$SQL.=" and news_title_ar like '%$Searchname%'";  
-	}
-if($Searchdesc&& $Searchdesc!="" && $Searchdesc!="English Title")   
-	{
-	$SQL.=" and news_title_en like '%$Searchdesc%'";
-	}
-
-$OrderBy=$_POST["OrderBy"];
-$OrderType=$_POST["OrderType"];
-
-if(!$OrderBy)	$SQL.=" order by news_id";
-else
-	$SQL.=" order by $OrderBy";
-if(!$OrderType)
-{
- $OrderType="asc";
- }else{
- if($OrderType=='asc') $OrderType='desc'; else $OrderType='asc';
- }	
-$SQL.=" $OrderType";
-
-$NofPage=$_POST["NofPage"];
-$PageCount=$_POST["PageCount"];
-
-if(!$NofPage || $NofPage==0)$NofPage=1;
-$PageCount=25;
-$SettingData=select_query($link,$SQL,$PageCount,$NofPage);	
+$SettingData=select_query($link,$SQL,0,0);	
 //--------------------------------
 if($_POST["action"]=="beUpdate")//Applay Updates
 {
