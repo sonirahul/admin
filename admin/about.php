@@ -6,7 +6,7 @@ $txtename=$_POST["txtename"];
 $txtedesc=$_POST["txtedesc"];
 $txtajobtitle=$_POST["txtajobtitle"];
 $txtejobtitle=$_POST["txtejobtitle"];
-$optradio=$_POST["optradio"];
+//$aboutTeamType=$_POST["aboutTeamType"];
 $deletefile=$_POST["deletefile"];
 
 //-------------------------------------------Delet Fields
@@ -16,10 +16,10 @@ if($_POST["action"]=="Delete")
 	$SQLwhere="about_id=";
 	$SQLwhere.=$aboutId;
 	delete_query($link,$TableName,$SQLwhere);
-	echo "<script>document.location='index.php?model=about';</script>";
+	echo "<script>document.location='index.php?model=about&type=$_GET[type]';</script>";
 }
 //---------Show Data------------------	
-$SQL="select * from about where 1=1 ";
+$SQL="select * from about where about_team_type='$_GET[type]'";
 $SettingData=select_query($link,$SQL,0,0);	
 //--------------------------------
 if($_POST["action"]=="beUpdate")//Applay Updates
@@ -39,7 +39,7 @@ if($_POST["action"]=="beUpdate")//Applay Updates
 	$TableField[5][0]="about_jobtitle_en";
 	$TableField[5][1]="'$txtejobtitle'";
 	$TableField[6][0]="about_team_type";
-	$TableField[6][1]="'$optradio'";
+	$TableField[6][1]="'$_GET[type]'";
 	$uf=7;
 		
 	if($deletefile==1)
@@ -52,7 +52,7 @@ if($_POST["action"]=="beUpdate")//Applay Updates
 		$uf++;
 	}elseif($_FILES["about_image"]["name"]!="")
 		{ 
-			$myfile=str_replace(' ', '_', $txtename);
+		  $myfile=str_replace(' ', '_', $txtename);
 		  $TableField[$uf][0]="about_image";
 	      $TableField[$uf][1]=uploadfile("about_image","$myfile","../team");
 		  $uf++;
@@ -60,7 +60,7 @@ if($_POST["action"]=="beUpdate")//Applay Updates
 
     $SQLwhere="about_id=$aboutId";	
 	update_query($link,$TableName,$TableField,$SQLwhere);
-	echo "<script>document.location='index.php?model=about';</script>";
+	echo "<script>document.location='index.php?model=about&type=$_GET[type]';</script>";
 }
 //----------------------Add	
 if($_POST["action"]=="Add")
@@ -83,13 +83,13 @@ $aboutId=auto_num($link,"about","about_id");
 	$TableField[6][0]="about_jobtitle_en";
 	$TableField[6][1]="'$txtejobtitle'";
 	$TableField[7][0]="about_team_type";
-	$TableField[7][1]="'$optradio'";
+	$TableField[7][1]="'$_GET[type]'";
 	$TableField[8][0]="about_image";
 	$myfile=str_replace(' ', '_', $txtename);
 	$TableField[8][1]=uploadfile("about_image","$myfile","../team");
 	
     insert_query($link,$TableName,$TableField);
-	echo "<script>document.location='index.php?model=about';</script>";
+	echo "<script>document.location='index.php?model=about&type=$_GET[type]';</script>";
 }
 //---------------------------
 if($_GET["action"]=="aboutupdate")
@@ -105,13 +105,13 @@ $UpdatedData=select_query($link,$SQL,0,0);
 			<div class="x_panel">
 				<div class="x_content">
 					<?php if ($_GET["action"]==""){?>
-						<span class="section">Management Team</span>
+						<span class="section"><? echo ucfirst($_GET[type]); ?> Team</span>
 						<form method="post" name="Prowse" class="form-horizontal form-label-left" novalidate>
 							<input type="hidden" name="action">
 							<input type="hidden" name="aboutId">
 							<div class="item form-group">
 								<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
-									<a href="index.php?model=about&action=aboutadd" class="btn btn-primary">Add New Management Team</a><br/><br/>
+									<a href="index.php?model=about&type=<? echo $_GET[type]; ?>&action=aboutadd" class="btn btn-primary">Add New <? echo ucfirst($_GET[type]); ?> Team</a><br/><br/>
 									<table id="example" class="display table table-responsive table-striped table-bordered table-condensed table-hover" cellspacing="0" width="100%">
 										<thead>
 											<tr>
@@ -126,7 +126,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 												<td><?php echo $SettingData[$i]["about_title_ar"]?></td>
 												<td><?php echo $SettingData[$i]["about_title_en"]?></td>
 												<td>
-													<a href="index.php?model=about&aboutid=<?php echo $SettingData[$i]["about_id"]?>&action=aboutupdate" class="btn btn-warning">Edit</a>
+													<a href="index.php?model=about&aboutId=<?php echo $SettingData[$i]["about_id"];?>&type=<? echo $_GET[type]; ?>&action=aboutupdate" class="btn btn-warning">Edit</a>
 													<input name="button" type="button" class="btn btn-danger about-delete-button" value="Delete" aboutId="<?php echo $SettingData[$i]['about_id']?>">
 												</td>
 											</tr>
@@ -198,15 +198,15 @@ $UpdatedData=select_query($link,$SQL,0,0);
 									</textarea>
 								</div>
 							</div>
-							<div class="item form-group">
+							<!--<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtjobtype">Job Type <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<!--<input id="txtjobtype" class="form-control col-md-7 col-xs-12" name="txtjobtype" required="required" type="text" value="<?php echo $UpdatedData[0]['about_jobtitle_ar'];?>">-->
-									<label class="radio-inline"><input type="radio" name="optradio" value="management" <?php if($UpdatedData[0]['about_team_type']!= "" && $UpdatedData[0]['about_team_type'] == "management") {echo 'checked';}?>>Management</label>
-									<label class="radio-inline"><input type="radio" name="optradio" value="employee" <?php if($UpdatedData[0]['about_team_type']!= "" && $UpdatedData[0]['about_team_type'] == "employee") {echo 'checked';}?>>Employee</label>
+									
+									<label class="radio-inline"><input type="radio" name="aboutTeamType" value="management" <?php if($UpdatedData[0]['about_team_type']!= "" && $UpdatedData[0]['about_team_type'] == "management") {echo 'checked';}?>>Management</label>
+									<label class="radio-inline"><input type="radio" name="aboutTeamType" value="employee" <?php if($UpdatedData[0]['about_team_type']!= "" && $UpdatedData[0]['about_team_type'] == "employee") {echo 'checked';}?>>Employee</label>
 								</div>
-							</div>
+							</div>-->
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="about_image">Photo Attach 
 								</label>
@@ -219,8 +219,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 									<?php } ?>
 								</div>
 							</div>
-							
-							
+							<div class="ln_solid"></div>
 							<div class="form-group">
 								<div class="col-md-6 col-md-offset-3">
 									<button type="submit" class="btn btn-primary" onclick="checkdata();">Save</button>

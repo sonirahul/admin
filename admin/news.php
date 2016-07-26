@@ -142,150 +142,128 @@ $SQL="select * from news where news_id=$_GET[newsid]";
 $UpdatedData=select_query($link,$SQL,0,0);	
 }
 ?>
+<div class="right_col" role="main">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_content">
+					<?php if ($_GET["action"]==""){?>
+						<span class="section">News</span>
+						<form method="post" name="Prowse" class="form-horizontal form-label-left" novalidate>
+							<input type="hidden" name="action">
+							<input type="hidden" name="newsId">
+							<div class="item form-group">
+								<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+									<a href="index.php?model=news&action=newsadd" class="btn btn-primary">Add New News</a><br/><br/>
+									<table id="example" class="display table table-responsive table-striped table-bordered table-condensed table-hover" cellspacing="0" width="100%">
+										<thead>
+											<tr>
+												<th class="col-md-4 col-md-5 col-xs-5">Arabic Title</th>
+												<th class="col-md-4 col-md-4 col-xs-5">English Title</th>
+												<th class="col-md-4 col-md-3 col-xs-2">Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php for($i=0;$i<count($SettingData)-1;$i++){?>
+												<tr align="center">
+													<td><?php echo $SettingData[$i]["news_title_ar"]?></td>
+													<td><?php echo $SettingData[$i]["news_title_en"]?></td>
+													<td>
+														<a href="index.php?model=news&newsid=<?php echo $SettingData[$i]["news_id"]?>&action=newsupdate" class="btn btn-warning">Edit</a>
+														<input name="button" type="button" class="btn btn-danger news-delete-button" value="Delete" newsId="<?php echo $SettingData[$i]['news_id']?>">
+													</td>
+												</tr>
+											<?php } ?>
+									</table>
+								</div>
+							</div>
+						</form>
 
-<?php if ($_GET["action"]==""){?>
-<form method="post" name="Prowse" >
-<input type="hidden" name="action">
-<input type="hidden" name="NofPage" value="<?php echo $NofPage;?>">			
-<input type="hidden" name="OrderType" value="<?php echo $OrderType?>">
-<input type="hidden" name="OrderBy" value="<?php echo $OrderBy?>">
+					<?php }elseif($_GET["action"]=="newsupdate" || $_GET["action"]=="newsadd"){?>
+						<span class="section"><?php if ($_GET["action"]=="newsupdate") echo "Edit News Detail"; else echo "Add News Detail";?></span>
+						<form name="Add" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" novalidate>
+							<input type="hidden"  name="action">
+							<input type="hidden" name="newsid" value="<?php echo $_GET["newsid"]?>" />
+							<div class="item form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtaname">Arabic Title <span class="required">*</span>
+								</label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<input id="txtaname" class="form-control col-md-7 col-xs-12" name="txtaname" required="required" type="text" value="<?php echo $UpdatedData[0]['news_title_ar'];?>">
+								</div>
+							</div>
+							<div class="item form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtename">English Title <span class="required">*</span>
+								</label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<input id="txtename" class="form-control col-md-7 col-xs-12" name="txtename" required="required" type="text" value="<?php echo $UpdatedData[0]['news_title_en'];?>">
+								</div>
+							</div>
+							<div class="item form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtadesc">Arabic Description <span class="required">*</span>
+								</label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<textarea id="txtadesc" class="form-control col-md-7 col-xs-12 ckeditor" name="txtadesc" cols="60" rows="15">
+										<?php echo $UpdatedData[0]['news_desc_ar'];?>
+									</textarea>
+								</div>
+							</div>
+							<div class="item form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtedesc">English Description <span class="required">*</span>
+								</label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<textarea id="txtedesc" class="form-control col-md-7 col-xs-12 ckeditor" name="txtedesc" cols="60" rows="15">
+										<?php echo $UpdatedData[0]['news_desc_en'];?>
+									</textarea>
+								</div>
+							</div>
+							<div class="item form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="news_photo">News Photo 
+								</label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<input id="news_photo" type="file" name="news_photo" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
+									<?php if(!empty($UpdatedData[0]['news_photo']) && $_GET["action"]=="newsupdate"){
+										$pic_path=$UpdatedData[0]['news_photo'];?>
+										<img border="0" src="../news/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
+										<input type="checkbox" style="border:0px;" name="deletefile"  value="1">Delete
+									<?php } ?>
+								</div>
+							</div>
+							<div class="ln_solid"></div>
+							<div class="form-group">
+								<div class="col-md-6 col-md-offset-3">
+									<button type="submit" class="btn btn-primary" onclick="checkdata();">Save</button>
+									<button type="reset" class="btn btn-success">Reset</button>
+								</div>
+							</div>
+						</form>
 
-<table border="0"width="100%" cellpadding="0" cellspacing="0">
-<tr>
-	  <TD  class="tit" align="center" colspan="2"><br />News</TD>
-</tr>
-<tr>
-	  <td width="77%"></td>
-	  <TD width="23%" align="center"><a href="index.php?model=news&action=newsadd" class="link">Add New News</a></TD>
-</tr>
-			<tr><td colspan="2">&nbsp;</td></tr>
-			
-				<tr>
-					<td colspan="2">
-						<table  width="100%" border="1" cellpadding="0" cellspacing="1" align="center" bordercolor="#DFDFDF">
-						<tr align="center">
-						<td>&nbsp;</td>
-						<td><input  value="<?php echo $Searchname==""? "Arabic Title" : $Searchname ;?>" type="text" name="Searchname" style="width:180" onclick="script:this.value ='' " ></td>
-						<td><input  value="<?php echo $Searchdesc==""? "English Title" : $Searchdesc ;?>" type="text" name="Searchdesc" style="width:180" onclick="script:this.value ='' " ></td>
-						<td><input type="button" name="search" value="Search" onclick="Prowse.OrderType.value='';Prowse.NofPage.value='';Prowse.submit();" class="button" ></td>
-						</tr>
-						<tr align="center">
-						<td>Edit</td>
-						<td>Arabic&nbsp;Title&nbsp;<img src="images/down.gif" style="cursor:pointer" onclick="Prowse.OrderBy.value='news_title_ar';Prowse.NofPage.value=<?php echo $NofPage?>; Prowse.submit();" /></td>
-						<td>English&nbsp;Title&nbsp;<img src="images/down.gif" style="cursor:pointer" onclick="Prowse.OrderBy.value='news_title_en';Prowse.NofPage.value=<?php echo $NofPage?>; Prowse.submit();" /></td>
-						<td>Check&nbsp;All<input type="checkbox" style="border:0px;" onClick="var T=null; T=document.getElementsByName('datachk');  for(var y=0; y<T.length; y++)	T[y].checked=checked;"></td>
-						</tr>
-						<?php if(count($SettingData)-1==0){?>
-						<tr align="center">
-						<td colspan="5" align="center"><br /><h3>There is no data</h3></td>
-						</tr>
-						<?php }else {?>
-						<?php for($i=0;$i<count($SettingData)-1;$i++){?>
-						<tr align="center">
-						<td><a href="index.php?model=news&newsid=<?php echo $SettingData[$i]["news_id"]?>&action=newsupdate" class="link">Edit</a></td>
-						<td><?php echo $SettingData[$i]["news_title_ar"]?></td>
-						<td><?php echo $SettingData[$i]["news_title_en"]?></td>
-						<td><input type="checkbox" name="IDcheck[<?php echo $i?>]" id="datachk" style="border:0;background : transparent;"> 
-              <input type="hidden" name="IDcheckValue[<?php echo $i?>]" value="<?php echo $SettingData[$i]['news_id']?>"></td>
-						</tr>
-						<?php } } ?>
-						<tr align="center">
-						<td colspan="3"></td>
-						<td><input type="button" class="button"  value="Delete" onClick="Prowse.action.value='deletfields';Prowse.OrderType.value='';Prowse.submit();"></td
-						></tr>
-						</table>
-					</td>
-				</tr>
+						<script>
+						function checkdata()
+						{
+									//---------------------------------------
+										if(document.Add.txtaname.value=="")
+									{
+										alert("The Arabic Title should not be empty");
+										document.Add.txtaname.focus()
+										return false;
+									}
+									//---------------------------------------
+										if(document.Add.txtename.value=="")
+									{
+										alert("The English Title should not be empty");
+										document.Add.txtename.focus()
+										return false;
+									}
+									//---------------------------------------
+									document.Add.action.value='<?php echo $_GET["action"]=='newsupdate'? 'beUpdate':'Add';?>';
+									document.Add.submit();
+									return true;
+						}
+						</script>
 
-	<tr align="center"> 
-            <td colspan="2" align="center">
-			<h3>Current Page
-                <?php echo $NofPage;?>
-              </h3></td>
-    </tr>
-          <tr > 
-            <td colspan="2" align="center"> 
-            <?php for($i=1;$i<=$SettingData[PNum];$i++){
-			echo "<label style='cursor:hand;' onClick=\"Prowse.OrderType.value='';Prowse.NofPage.value=$i; Prowse.submit();\"> : ".$i." : </label>&nbsp;";
-			}?>
-            </td>
-          </tr>
-
-  </table>
-</form>
-
-<?php }elseif($_GET["action"]=="newsupdate" || $_GET["action"]=="newsadd"){?>
-<form name="Add" method="post" enctype="multipart/form-data">
-<input type="hidden"  name="action">
-<input type="hidden" name="newsid" value="<?php echo $_GET["newsid"]?>" />
-  <table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#526BB5" align="center">
-            <tr><td colspan="2" height="15" bgcolor="#FFFFFF"></td></tr>
-			<tr height="25" bgcolor="#FFFFFF"> 
-              <td colspan="2" align="center">
-			  <strong><?php if ($_GET["action"]=="newsupdate") echo "Edit News Detail"; else echo "Add News Detail";?></strong>
-			  </td>
-            </tr>
-            <tr height="25" bgcolor="#FFFFFF"> 
-              <td colspan="2"><font color="#FF0000">*&nbsp;</font><strong>indicates Mandatory Fields.</strong></td>
-            </tr>
-			
-			<tr height="25" bgcolor="#FFFFFF"> 
-              <td width="30%"><strong>Arabic Title</strong> <font color="#FF0000">*</font></td>
-              <td width="70%"><input type="text" name="txtaname" class="textfield" value="<?php echo $UpdatedData[0]['news_title_ar'];?>"></td>
-            </tr>
-			<tr height="25" bgcolor="#FFFFFF"> 
-              <td width="30%"><strong>English Title</strong> <font color="#FF0000">*</font></td>
-              <td width="70%"><input type="text" name="txtename" class="textfield" value="<?php echo $UpdatedData[0]['news_title_en'];?>"></td>
-            </tr>
-			<tr height="25" bgcolor="#FFFFFF"> 
-              <td width="30%"><strong>Arabic Description</strong> <font color="#FF0000">*</font></td>
-              <td width="70%"><textarea class="ckeditor" name="txtadesc" cols="60" rows="15"><?php echo $UpdatedData[0]['news_desc_ar'];?></textarea></td>
-            </tr>
-			<tr height="25" bgcolor="#FFFFFF"> 
-              <td width="30%"><strong>English Description</strong> <font color="#FF0000">*</font></td>
-              <td width="70%"><textarea class="ckeditor" name="txtedesc" cols="60" rows="15"><?php echo $UpdatedData[0]['news_desc_en'];?></textarea></td>
-            </tr>
-			<tr height="25" bgcolor="#FFFFFF"> 
-              <td width="30%" valign="top"><strong>News Photo </strong></td>
-              <td width="70%"><input type="file" name="news_photo">&nbsp;
-			  <?php if(!empty($UpdatedData[0]['news_photo']) && $_GET["action"]=="newsupdate"){
-			     $pic_path=$UpdatedData[0]['news_photo'];
-			  ?>
-			  <img border="0" src="../news/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
-			  <input type="checkbox" style="border:0px;" name="deletefile"  value="1">Delete
-              <?php } ?></td>
-			</tr>
-			<tr height="25" bgcolor="#FFFFFF"> 
-              <td colspan="2"> <p align="center"> 
-                  <input value="Save" type="button" title="Save" name="Submit" class="button" onclick="checkdata();">
-                  <input value="Reset" type="reset" title="Reset" class="button">
-			  </td>
-            </tr>
-  </table>
-</form>
-
-<script>
-function checkdata()
-{
-			//---------------------------------------
-				if(document.Add.txtaname.value=="")
-			{
-				alert("The Arabic Title should not be empty");
-				document.Add.txtaname.focus()
-				return false;
-			}
-			//---------------------------------------
-				if(document.Add.txtename.value=="")
-			{
-				alert("The English Title should not be empty");
-				document.Add.txtename.focus()
-				return false;
-			}
-			//---------------------------------------
-			document.Add.action.value='<?php echo $_GET["action"]=='newsupdate'? 'beUpdate':'Add';?>';
-			document.Add.submit();
-			return true;
-}
-</script>
-
-<?php } ?>			
+					<?php } ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>					

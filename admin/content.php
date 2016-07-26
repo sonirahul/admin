@@ -92,7 +92,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
                       	<?php
 						   switch($_GET["contentid"])
 						   {
-						   case 1: echo "Welcome Page"; break;
+						   case 1: echo "About Us"; break;
 						   case 2: echo "About US Welcome"; break;
 						   case 3: echo "Philosophy"; break;
 						   case 4: echo "Visa Application Centres"; break;

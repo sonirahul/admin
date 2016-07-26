@@ -1,15 +1,12 @@
 <?php 
 session_start();
 
-
 if($_SESSION["LoginAdmin"]!="Admin")
 		{
 		header("location:Login.php");
 		return;
 		}
 //-------------------------------------------
-    
-
 
 //---------------------------------------------
 if($_POST["Action"]=="Show")
@@ -21,7 +18,7 @@ if($_POST["Action"]=="Show")
 		$TableField[0][0]="clients_country_flag_visible";
 		$TableField[0][1]="true";	
 		update_query($link,$TableName,$TableField,"clients_id=$ClientId");
-		echo "<script>document.location='index.php?model=flags';</script>";
+		//echo "<script>document.location='index.php?model=flags';</script>";
 	}
 }
 if($_POST["Action"]=="Hide")
@@ -33,7 +30,7 @@ if($_POST["Action"]=="Hide")
 		$TableField[0][0]="clients_country_flag_visible";
 		$TableField[0][1]="false";	
 		update_query($link,$TableName,$TableField,"clients_id=$ClientId");
-		echo "<script>document.location='index.php?model=flags';</script>";
+		//echo "<script>document.location='index.php?model=flags';</script>";
 	}
 }
 
@@ -58,7 +55,6 @@ if($_POST["Action"]=="Add")//Del/Un Del
 				copy($filetmpname, $filetoupload); 
 				}
 
-
 				$TableName="countries";
 				$TableField=array();
 				$TableField[0][0]="clients_country_flag";
@@ -69,8 +65,6 @@ if($_POST["Action"]=="Add")//Del/Un Del
 				$TableField[2][1]="'0'";
 				insert_query($link,'clients',$TableField);
 				echo "<script>document.location='index.php?model=flags';</script>";
-
-
 			}else{
 				echo "Error while Uploading";
 			}
@@ -97,7 +91,7 @@ $showdelet=select_query($link,$SQL,0,0);
 							</div>
 							<div id="collapse1" class="panel-collapse collapse in">
 								<div class="panel-body">
-									<form method="post" name="Prowse" class="form-horizontal form-label-left" novalidate>
+									<form method="post" name="Prowse" id="Prowse" class="form-horizontal form-label-left" novalidate>
 										<input type="hidden" name="Action">
 										<input type="hidden" name="ClientId">
 										<div class="item form-group">
@@ -122,24 +116,15 @@ $showdelet=select_query($link,$SQL,0,0);
 																<td style="vertical-align: middle"><? echo ucwords($clients_country_name);?></td>
 																<td><? echo "<img class='img-responsive clients-flag' src='../flags/$clients_country_flag'>";?></td>
 																<td style="vertical-align: middle">
-																	<?
-																	if ($clients_country_flag_visible == "1") {?>
-																		<input name='button' type='button' class="btn btn-danger show-hide" value='Hide' clientId='<?=$clients_id?>'>
-																	<?}
-																	else {?>
-																		<input name='button' type='button' class="btn btn-success show-hide" value='Show' clientId='<?=$clients_id?>'>
-																	<?}?>
+																	
+																		<input name='button' type='submit' class="btn btn-danger show-hide" value='Hide' clientId='<?=$clients_id?>' <? if ($clients_country_flag_visible == "0") {?>style="display: none;"<?}?>>
+																	
+																	
+																		<input name='button' type='submit' class="btn btn-success show-hide" value='Show' clientId='<?=$clients_id?>' <? if ($clients_country_flag_visible == "1") {?>style="display: none;"<?}?>>
+																	
 																</td>
 															</tr>
 														<?	}?>
-														<!--<tr>
-															<td></td>
-															<td></td>
-															<td>
-																<input name='button' type='button' class="btn btn-danger" style='width:70' onClick="Prowse.Action.value='Del';Prowse.submit();" value='Delete'>
-																
-															</td>
-														</tr>-->
 													</tbody>
 												</table>
 											</div>
@@ -197,12 +182,77 @@ $showdelet=select_query($link,$SQL,0,0);
 </div>
 <script type="text/javascript">
 	$.noConflict();
-
 	jQuery(function() {
 	    jQuery('.show-hide').on("click", function(){
 			document.forms["Prowse"].elements["Action"].value = jQuery(this).val();
 			document.forms["Prowse"].elements["ClientId"].value = jQuery(this).attr("clientId");
-			document.forms["Prowse"].submit();
+			//document.forms["Prowse"].submit();
 	    });
+
+		// Variable to hold request
+		var request;
+
+		// Bind to the submit event of our form
+		$("#Prowse").submit(function(event){
+
+			// Abort any pending request
+			if (request) {
+				request.abort();
+			}
+			// setup some local variables
+			var $form = $(this);
+
+			// Let's select and cache all the fields
+			var $inputs = $form.find("input, select, button, textarea");
+
+			// Serialize the data in the form
+			var serializedData = $form.serialize();
+
+			// Let's disable the inputs for the duration of the Ajax request.
+			// Note: we disable elements AFTER the form data has been serialized.
+			// Disabled form elements will not be serialized.
+			$inputs.prop("disabled", true);
+
+			// Fire off the request to /form.php
+			request = $.ajax({
+				url: "/admin/index.php?model=flags",
+				type: "post",
+				data: serializedData
+			});
+
+			// Callback handler that will be called on success
+			request.done(function (response, textStatus, jqXHR){
+				// Log a message to the console
+				console.log("Hooray, it worked!");
+				//alert("Hooray, it worked!");\
+				//$(".show-hide").toggle();
+				var inputs = $("input[name=ClientId]").val(); 
+				$("input[clientId=" + inputs + "]").toggle();
+				console.log("Hooray, it worked!"+ inputs);
+			});
+
+			// Callback handler that will be called on failure
+			request.fail(function (jqXHR, textStatus, errorThrown){
+				// Log the error to the console
+				console.error(
+					"The following error occurred: "+
+					textStatus, errorThrown
+				);
+				alert(
+					"The following error occurred: "+
+					textStatus, errorThrown
+				);
+			});
+
+			// Callback handler that will be called regardless
+			// if the request failed or succeeded
+			request.always(function () {
+				// Reenable the inputs
+				$inputs.prop("disabled", false);
+			});
+
+			// Prevent default posting of form
+			event.preventDefault();
+		});
 	});
 </script>

@@ -177,7 +177,11 @@ $SQL="select * from countries where countries_id=$_GET[countriesid]";
 $UpdatedData=select_query($link,$SQL,0,0);	
 }
 ?>
-
+<div class="right_col" role="main">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_content">
 <?php if ($_GET["action"]==""){?>
 <form method="post" name="Prowse" >
 <input type="hidden" name="action">
@@ -333,4 +337,9 @@ function checkdata()
 }
 </script>
 
-<?php } ?>			
+<?php } ?>	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>		

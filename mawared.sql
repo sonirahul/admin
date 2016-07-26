@@ -236,7 +236,7 @@ CREATE TABLE `statistics` (
 
 LOCK TABLES `statistics` WRITE;
 /*!40000 ALTER TABLE `statistics` DISABLE KEYS */;
-INSERT INTO `statistics` VALUES (1,'Countries','6'),(2,'Cities','15'),(3,'Offices','22'),(4,'Visas/year','8000'),(5,'Employees','500');
+INSERT INTO `statistics` VALUES (1,'Countries','6'),(2,'Cities','15'),(3,'Offices','22'),(4,'Visas/year','800000'),(5,'Employees','500');
 /*!40000 ALTER TABLE `statistics` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

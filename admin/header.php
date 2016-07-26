@@ -88,18 +88,36 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="index.php?model=content&contentid=1&action=contentupdate" title="Manage Home"><i class="fa fa-home"></i> Home</a></li>
-                  <li><a><i class="fa fa-cc-visa"></i> About Us<span class="fa fa-chevron-down"></span></a>
+				  <li><a><i class="fa fa-home"></i> Home<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.php?model=content&contentid=1&action=contentupdate" title="Manage About Us ">About Us</a>
+                      </li>
+                      <li><a href="index.php?model=content&contentid=3&action=contentupdate" title="Manage Philosophy ">Philosophy</a>
+                      </li>
+					  <li><a href="index.php?model=content&contentid=10&action=contentupdate" title="Manage Mission ">Mission</a>
+                      </li>
+					  <li><a href="index.php?model=content&contentid=11&action=contentupdate" title="Manage Vision ">Vision</a>
+                      </li>
+					  <li><a href="index.php?model=content&contentid=12&action=contentupdate" title="Manage Commitment ">Commitment</a>
+                      </li>
+                    </ul>
+                  </li>
+				  <li><a><i class="fa fa-users"></i> Team<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+					  <li><a href="index.php?model=about&type=management" title="Manage Management Team"></i> Management</a></li>
+                      <li><a href="index.php?model=about&type=employee" title="Manage Employee Team"></i> Employee</a></li>
+                    </ul>
+                  </li>
+                  
+                  <!--<li><a><i class="fa fa-cc-visa"></i> About Us<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.php?model=content&contentid=2&action=contentupdate" title="Manage Welcome ">Welcome</a>
                       </li>
                       <li><a href="index.php?model=content&contentid=3&action=contentupdate" title="Manage Philosophy ">Philosophy</a>
                       </li>
-                      <li><a href="index.php?model=about" title="Manage Management Team">Management Team</a>
-                      </li>
-                      </li>
+                      
                     </ul>
-                  </li>
+                  </li>-->
                   <li><a><i class="fa fa-edit"></i>Strategic Business Units<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.php?model=content&contentid=4&action=contentupdate" title="Manage Visa Application Centres ">Visa Application Centres</a>

@@ -44,6 +44,11 @@ for($i=0;$i<count($DataCheckValue);$i++)
 }
 
 ?>
+<div class="right_col" role="main">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_content">
 <table border="0" dir="rtl" width="100%" cellpadding="0" cellspacing="0">
 <tr>
 	  <TD  class="tit" align="center" colspan="3" height="50">Mawared House File Store</TD>
@@ -107,3 +112,8 @@ for($i=0;$i<count($DataCheckValue);$i++)
 
 
 	</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
