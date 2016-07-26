@@ -38,6 +38,7 @@ if($_POST["action"]=="beUpdate")
 	
     $SQLwhere="content_id=$contentid";	
 	update_query($link,$TableName,$TableField,$SQLwhere);
+	echo "<script>document.location='index.php?model=content&contentid=$_GET[contentid]&action=$_GET[action]';</script>";
 }
 //---------------------------
 if($_GET["action"]=="contentupdate")
