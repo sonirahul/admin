@@ -165,6 +165,11 @@ $UpdatedData=select_query($link,$SQL,0,0);
 }
 ?>
 
+<div class="right_col" role="main">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_content">
 <? if ($_GET["action"]==""){?>
 <form method="post" name="Prowse" >
 <input type="hidden" name="action">
@@ -305,3 +310,8 @@ function checkdata()
 </script>
 
 <? } ?>			
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
