@@ -23,7 +23,7 @@ if($_POST["action"]=="beUpdate")
 		
 	if($deletefile==1)
 	{ 
-  	    $SQL="select content_photo from about where about_id=$contentid";
+  	    $SQL="select content_photo from content where content_id=$contentid";
 		$showdelet=select_query($link,$SQL,0,0);
 	    unlink("../content/".$showdelet[0]['content_photo']);
 		$TableField[$uf][0]="content_photo";
@@ -32,7 +32,7 @@ if($_POST["action"]=="beUpdate")
 	}elseif($_FILES["content_photo"]["name"]!="")
 		{ 
 		  $TableField[$uf][0]="content_photo";
-	      $TableField[$uf][1]=uploadfile("content_photo","about_".$contentid,"../content");
+	      $TableField[$uf][1]=uploadfile("content_photo","content_".$contentid,"../content");
 		  $uf++;
 		}
 	
@@ -62,25 +62,6 @@ $UpdatedData=select_query($link,$SQL,0,0);
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
-                  <!-- <div class="x_title">
-                    <h2>Form validation <small>sub title</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div> -->
                   <div class="x_content">
 
                     <form name="Add" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" novalidate>
@@ -120,10 +101,6 @@ $UpdatedData=select_query($link,$SQL,0,0);
                           <input type="text" id="txtetitle" name="txtetitle" required="required" class="form-control col-md-7 col-xs-12" value="<?php  echo $UpdatedData[0]['content_title_en'];?>">
                         </div>
                       </div>
-					  
-					  
-					  
-					  
 					  <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtadesc">Arabic Description <span class="required">*</span>
                         </label>
@@ -140,13 +117,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
                           <textarea id="txtedesc" class="form-control col-md-7 col-xs-12 ckeditor"  name="txtedesc" cols="60" rows="15"><?php  echo $UpdatedData[0]['content_desc_en'];?></textarea>
                         </div>
                       </div>
-					  
-										
-						
-						
-						
-						
-                      <div class="item form-group">
+					  <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="content_photo">Photo Attach 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -174,12 +145,6 @@ $UpdatedData=select_query($link,$SQL,0,0);
           </div>
         </div>
         <!-- /page content -->
-
-
-
-
-
-
     <script src="../js/validator.min.js"></script>
 
 
