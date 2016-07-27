@@ -59,12 +59,31 @@ Pending Admin side work1
 	$SQLforNews="select * from news ";
 	$SQLforStats="select * from statistics limit 5";
 
-
 	$allContentData=select_query($link,$SQLforContent,0,0);
+
+	$welcomeName = $allContentData[0]["content_title_en"];
 	$welcome = $allContentData[0]["content_desc_en"];
+
+	$managementTeamName = $allContentData[1]["content_title_en"];
 	$managementTeam = $allContentData[1]["content_desc_en"];
+
+	$philosophyName = $allContentData[2]["content_title_en"];
 	$philosophy = $allContentData[2]["content_desc_en"];
+
+	$vacName = $allContentData[3]["content_title_en"];
 	$vac = $allContentData[3]["content_desc_en"];
+
+	$missionName = $allContentData[9]["content_title_en"];
+	$mission = $allContentData[9]["content_desc_en"];
+
+	$visionName = $allContentData[10]["content_title_en"];
+	$vision = $allContentData[10]["content_desc_en"];
+
+	$commitmentName = $allContentData[11]["content_title_en"];
+	$commitment = $allContentData[11]["content_desc_en"];
+
+	$singaporeAirlinesName = $allContentData[12]["content_title_en"];
+	$singaporeAirlines = $allContentData[12]["content_desc_en"];
 
 	$allMagtTeamData=select_query($link,$SQLforMagtTeam,0,0);
 	$allEmployeeTeamData=select_query($link,$SQLforEmployeeTeam,0,0);
@@ -211,7 +230,7 @@ Pending Admin side work1
 			<div class='container'>
 				<div class='row  column-center text-justify'>
 					<div class='col-md-12 '>
-						<h2 class="mh-text-colored">Visa Application Center</h2>
+						<h2 class="mh-text-colored"> <?php echo $vacName ?></h2>
 						<?php echo $vac ?>
 					</div>
 				</div>
@@ -251,79 +270,26 @@ Pending Admin side work1
 				background-blend-mode: multiply;
 			}
 			#singaporeAirlines h2,#singaporeAirlines #saContent p,#singaporeAirlines #saContent a{color:#fff !important;text-shadow:0 0 3px #666}
-			#singaporeAirlines1 {
-				//background-image: url(images/singaporeAirlines1.jpg);
-				background-size: cover;
-				background-attachment: fixed;
-				background-color: rgba(0, 0, 0, 0.45);
-				background-blend-mode: multiply;
-			}
-			#singaporeAirlines1 h1,#singaporeAirlines1 #saContent p,#singaporeAirlines1 #saContent a{color:#fff !important;text-shadow:0 0 3px #666}
-
 		</style>
 
 		<section id="singaporeAirlines" class="section container-fluid">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h2 class="mh-text-colored">Singapore Airlines</h2>
+					<h2 class="mh-text-colored"><?php echo $singaporeAirlinesName ?></h2>
 				</div>
 			</div>
-			<div class="row col-sm-10 column-center text-center">
-
+			<div class="row col-sm-10 column-center text-center">s
 				<div id="saContent">
-					<p>Al Rayes Travel Services was established in 1978and since then representing as General Sales Agent for Singapore Airlines in Kuwait.<br/><br/>
-						Singapore Airlines and its regional carrier Silk Air serve over 700 weekly connections to more than 50 destinations across Asia Pacific besides daily 777-300 aircraft to Dubai with 4 cabins, First, Business, Premium Economy and Economy classes.  Passengers from Kuwait can travel on Kuwait Airways/Fly Dubai to Dubai to connect Singapore Airlines.<br/><br/>
-						A city of diversity, Singapore is modern and dynamic with a unique mix of different races, cultures, foods and religions.  The leisure traveler will be able to enjoy the array of activities and places to visit on this island, all year around, even if only on transit.  Kuwaiti visitors can look forward to seamless connections to countries like Malaysia, Indonesia and Thailand, or even Australia and New Zealand after making stopover here in Singapore. 
-					</p>
-					<br/><br/>
-					<div class="row text-center">
-						<div class="col-md-4"><p> <i class="fa fa-globe fa-2x" aria-hidden="true"></i><br/> <a href="singaporeair.com/kw">singaporeair.com/kw</a> </p></div>
-						<div class="col-md-4"><p> <i class="fa fa-phone fa-2x" aria-hidden="true"></i><br/> <a href=" (+965) 2225 8225">(+965) 2225 8225</a> </p></div>
-						<div class="col-md-4"><p> <i class="fa fa-fax fa-2x" aria-hidden="true"></i> <br/>  <a href="singaporeair.com/kw">(+965) 2225 8241</a> </p></div>
-					</div>		
+					<?php echo $singaporeAirlines ?>		
 				</div>
 			</div>
 		</section>
-
-
-		<section id="singaporeAirlines1" class="section container-fluid hidden">
-			<div class="row">
-
-				<div class="col-lg-6">
-					<div class="col-lg-12 text-center">
-						<h1 class="mh-text-colored">Singapore airlines</h1>
-					</div>
-					<div class="row col-sm-10 column-center text-center">
-
-						<div id="saContent">
-							<p><br/><br/><br/>Al Rayes Travel Services was established in 1978and since then representing as General Sales Agent for Singapore Airlines in Kuwait.<br/><br/>
-								Singapore Airlines and its regional carrier Silk Air serve over 700 weekly connections to more than 50 destinations across Asia Pacific besides daily 777-300 aircraft to Dubai with 4 cabins, First, Business, Premium Economy and Economy classes.  Passengers from Kuwait can travel on Kuwait Airways/Fly Dubai to Dubai to connect Singapore Airlines.<br/><br/>
-								A city of diversity, Singapore is modern and dynamic with a unique mix of different races, cultures, foods and religions.  The leisure traveler will be able to enjoy the array of activities and places to visit on this island, all year around, even if only on transit.  Kuwaiti visitors can look forward to seamless connections to countries like Malaysia, Indonesia and Thailand, or even Australia and New Zealand after making stopover here in Singapore. 
-							</p>
-							<br/><br/>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="row text-center">
-						<div class="col-md-12"><p> <i class="fa fa-globe fa-2x" aria-hidden="true"></i> <br/><a href="singaporeair.com/kw">singaporeair.com/kw</a> </p></div>
-						<div class="col-md-12"><p> <i class="fa fa-phone fa-2x" aria-hidden="true"></i> <br/><a href=" (+965) 2225 8225">(+965) 2225 8225</a> </p></div>
-						<div class="col-md-12"><p> <i class="fa fa-fax fa-2x"  aria-hidden="true"></i>   <br/><a href="singaporeair.com/kw">(+965) 2225 8241</a> </p></div>
-					</div>		
-
-				</div>
-
-			</div>
-		</section>
-
 
 		<section class='hidden-ipad blocks-wrapper' data-scroll-position='above' id='blocks-wrapper'>
 			<div class='container'>
 				<div class='row row-centered' id='let-us-help-you'>
-					<!-- <div class='col-sm-10 col-sm-offset-1'> -->
 					<div class='col-sm-12'>
-						<h2>About Us</h2>
-						<!-- <p>Mawared House established in Kuwait in 2006 has footprint across seven countries in the Middle East and North African (MENA) Region. we are on a constant endeavor to provide our customers with practical solutions and state-of-the-art services that works seamlessly towards the cause of enhancing their businesses and making their lives much simpler and better. We provide an unmatched array of services ranging from Visa Application facilities, Business Centre's to Travel and Leisure Services.</p> -->
+						<h2><? echo $welcomeName ?></h2>
 						<? echo $welcome?>
 					</div>
 				</div>
@@ -333,26 +299,26 @@ Pending Admin side work1
 					<div class='block red' id='block-one'>
 						<div class='v-center'>
 							<i class='icon-research'></i>
-							<h3>1. Philosophy</h3>
-							<p>We wholeheartedly believe that an organization can grow only if its roots are well grounded. Through the years, we have made sure we maintain transparency and integrity so that never once we lose sight of the vision with which this organization was started. In all our dealings and projects, we have always remained focused on our deliveries to create value propositions and never hesitated to go that extra mile to give our clients only the best.</p>
+							<h3>1. <?php echo $philosophyName?></h3>
+							<p><?php echo $philosophy ?></p>
 						</div>
 					</div>
 					<div class='block yellow-solid' id='block-two'>
 						<div class='v-center'>
 							<i class='icon-strategy'></i>
-							<h3>2. Mission</h3>
+							<h3>2. <?php echo $missionName ?></h3>
 						</div>
 					</div>
 					<div class='block blue' id='block-four'>
 						<div class='v-center'>
 							<i class='icon-graph'></i>
-							<h3>4. Vision</h3>
+							<h3>4. <?php echo $visionName ?></h3>
 						</div>
 					</div>
 					<div class='block green' id='block-three'>
 						<div class='v-center'>
 							<i class='icon-wrench'></i>
-							<h3>3. Commitment</h3>
+							<h3>3. <?php echo $commitmentName ?></h3>
 						</div>
 					</div>
 					<div class='circle'>
@@ -392,8 +358,8 @@ Pending Admin side work1
 					</div>
 					<div class='process-content red col-md-5' data-section='1' id='research-content'>
 						<i class='icon-research'></i>
-						<h3>1. Philosophy</h3>
-						<p class='visible-ipad'>We wholeheartedly believe that an organization can grow only if its roots are well grounded. Through the years, we have made sure we maintain transparency and integrity so that never once we lose sight of the vision with which this organization was started. In all our dealings and projects, we have always remained focused on our deliveries to create value propositions and never hesitated to go that extra mile to give our clients only the best.</p>
+						<h3>1. <?php echo $philosophyName?></h3>
+						<p class='visible-ipad'><?php echo $philosophy ?></p>
 					</div>
 				</div>
 				<div class='section-2 dt-height'>
@@ -402,8 +368,8 @@ Pending Admin side work1
 					</div>
 					<div class='process-content yellow col-md-5 col-md-offset-7' data-section='2'>
 						<i class='icon-strategy'></i>
-						<h3>2. Mission</h3>
-						<p>To be the most Trusted &amp; Transparent solutions delivery partner to all our stakeholders across the globe.</p>
+						<h3>2. <?php echo $missionName ?></h3>
+						<p><?php echo $mission ?></p>
 					</div>
 				</div>
 				<div class='section-3 dt-height'>
@@ -412,8 +378,8 @@ Pending Admin side work1
 					</div>
 					<div class='process-content green col-md-5 col-md-offset-7' data-section='3'>
 						<i class='icon-wrench'></i>
-						<h3>3. Commitment</h3>
-						<p>Our commitment is to drive world class service to our customers through a foundation built on trust, integrity and loyalty.  The philosophy of our day-to-day business is to attain customer delight with the help of trained professionals, state-of-the-art technology, enormous global resources and an efficient partner network.</p>
+						<h3>3. <?php echo $commitmentName ?></h3>
+						<p><?php echo $commitment ?></p>
 					</div>
 				</div>
 				<div class='section-4 dt-height'>
@@ -422,8 +388,8 @@ Pending Admin side work1
 					</div>
 					<div class='process-content blue col-md-5' data-section='4'>
 						<i class='icon-graph'></i>
-						<h3>4. Vision</h3>
-						<p>To deliver value and quality services to all our stakeholders through our expertise and experience.</p>
+						<h3>4. <?php echo $visionName ?></h3>
+						<p><?php echo $vision ?></p>
 					</div>
 				</div>
 			</div>
@@ -432,24 +398,24 @@ Pending Admin side work1
 
 	<div id="mobile-about-us" class="visible-xs">
 		<div id="mau1" class="mau">
-			<h3><i class="icon-signs" ></i> About-us</h3>
-			<p>The word 'Mawared' in Arabic means 'resources'. And this is exactly what we're all about - providing an unmatched array of services ranging from Visa Application facilities, Business Centre's to Travel and Leisure Services. Established in Kuwait in 2006, Mawared House Trading and Contracting is on a constant endeavor to provide our customers with practical solutions and state-of-the-art services that works seamlessly towards the cause of enhancing their businesses and making their lives much simpler and better. In just a short span Mawared House has put its footprint across seven countries in the Middle East and North African (MENA) Region. And no, we're not stopping at that. At Mawared House we're actively pursuing opportunities across the globe. Armed with passion, skill and the will to succeed, we're ready to meet challenges, and foray head on into the hands of tomorrow.</p>
+			<h3><i class="icon-signs" ></i> <?php echo $welcomeName ?></h3>
+			<p><?php echo $welcomeName ?></p>
 		</div>
 		<div id="mau2" class="mau">
-			<h3><i class='icon-research'></i> 1. Philosophy</h3>
-			<p class='visible-ipad'>We wholeheartedly believe that an organization can grow only if its roots are well grounded. Through the years, we have made sure we maintain transparency and integrity so that never once we lose sight of the vision with which this organization was started. In all our dealings and projects, we have always remained focused on our deliveries to create value propositions and never hesitated to go that extra mile to give our clients only the best.</p>
+			<h3><i class='icon-research'></i> 1. <?php echo $philosophyName ?></h3>
+			<p class='visible-ipad'> <?php echo $philosophy  ?></p>
 		</div>
 		<div id="mau3" class="mau">
-			<h3><i class='icon-strategy'></i> 2. Mission</h3>
-			<p>To be the most Trusted &amp; Transparent solutions delivery partner to all our stakeholders across the globe.</p>
+			<h3><i class='icon-strategy'></i> 2. <?php echo $missionName ?></h3>
+			<p><?php echo $mission ?></p>
 		</div>
 		<div id="mau4" class="mau">
-			<h3><i class='icon-wrench'></i> 3. Commitment</h3>
-			<p>Our commitment is to drive world class service to our customers through a foundation built on trust, integrity and loyalty.  The philosophy of our day-to-day business is to attain customer delight with the help of trained professionals, state-of-the-art technology, enormous global resources and an efficient partner network.</p>
+			<h3><i class='icon-wrench'></i> 3. <?php echo $commitmentName ?></h3>
+			<p><?php echo $commitment ?></p>
 		</div>
 		<div id="mau5" class="mau">
-			<h3><i class='icon-graph'></i> 4. Vision</h3>
-			<p>To deliver value and quality services to all our stakeholders through our expertise and experience.</p>
+			<h3><i class='icon-graph'></i> 4. <?php echo $visionName ?></h3>
+			<p><?php echo $vision ?></p>
 		</div>
 	</div>
 
