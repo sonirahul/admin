@@ -67,7 +67,7 @@
 		.nmb-arrow{display:inline-block;padding:10px 20px;margin:0;float:left}
 		.nmb-arrow>i::before{font-size:28px;color:#fff}
 		#news .news-title{font-size:14px}
-		#news .news-desc{font-size:15px}
+		#news .news-desc,#news .news-desc *{font-size:15px !important}
 		#news .news-content{height:initial}
 		.news-image-column{padding:0}
 		.news-list-title{font-size:15px}
@@ -190,7 +190,7 @@
 		.nmb-arrow{display:inline-block;padding:10px 20px;margin:0;float:left}
 		.nmb-arrow>i::before{font-size:28px;color:#fff}
 		#news .news-title{font-size:14px}
-		#news .news-desc{font-size:15px}
+		#news .news-desc,.news-desc *{font-size:15px}
 		#news .news-content{height:initial}
 		.news-image-column{padding:0}
 		.news-list-title{font-size:15px}
@@ -240,7 +240,7 @@
 		.cc-title p{font-weight:normal}
 
 	.mw_team,#clientss1 .clientss-name p{font-size:15px !important;}
-	#news .news-title,#news .news-desc,#show-list,.news-list-title,.ourMagtTeam .texte_people,.ourNormalTeam .texte_people,.footer .copyright,#contactView button.btn.btn-success, button[type="submit"]{font-size:19px;}
+	#news .news-title,#news .news-desc,.news-desc *,#show-list,.news-list-title,.ourMagtTeam .texte_people,.ourNormalTeam .texte_people,.footer .copyright,#contactView button.btn.btn-success, button[type="submit"]{font-size:19px;}
 	input[type="text"], input[type="email"], input[type="password"], textarea{font-size:19px;height:50px;padding: 0 0 0 20px;}
 }
 
@@ -291,6 +291,8 @@
 	#contactForm #contact-header-info *{color:#fff !important}
 	.nav-bar .identity.responsive{}
 	.nav-bar .identity.responsive img{}
+	.footer ul.level-1-nav li{padding: 0 8px 0!important;}
+	.footer ul.level-1-nav a{font-size:17px;}
 }
 @media only screen and (min-width:1200px) and (max-width: 1823px) {
 	p,span.langSelectedText{font-size:18px;}
@@ -302,7 +304,7 @@
 	.block-stats li{width:86px;height:96px;}
 	.block-stats li .num{font-size:24px;}
 	.block-stats li .type{font-size:15px;}
-	.slider-bottom li,.slider-bottom a{font-size:13px;text-transform: uppercase;}
+	.slider-bottom li,.slider-bottom a{font-size:16px;//text-transform: uppercase;}
 
 	.nav-bar .identity img{height:100px;}	
 	.nav-bar .menu-text {font-size: 16px;font-family: roboto;margin-top: 4px;font-weight: bold;}
@@ -316,11 +318,11 @@
 	#news-list{float:right;}
 	#news #news-item,#news #news-list{height:360px !important;}
 	#news .news-image{height:338px !important;}
-	#news .news-title,p.news-desc{font-size:16px;}
+	#news .news-title,.news-desc,.news-desc *{font-size:16px;}
 	.mgtTeamMain2Row{margin-top:150px;}
 	.omgt-name{font-size: 22px;}
 	.omgt-pos{font-size:17px;}
-	#mgtTeamMain2 .omgt-Content,.texte_people{font-size:16px;}
+	#mgtTeamMain2 .omgt-Content,.texte_people,#mgtTeamMain2 .omgt-Content *{font-size:15px !important;}
 	.texte_people{padding-top: 5px;}
 	#mgtTeamMain2 .omgt-Content{max-height: 85px;}
 	.mw_team{font-size:14px;}

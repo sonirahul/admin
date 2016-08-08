@@ -184,7 +184,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtadesc">Arabic Description <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<textarea id="txtadesc" class="form-control col-md-7 col-xs-12 ckeditor" name="txtadesc" cols="60" rows="15">
+									<textarea id="txtadesc" class="form-control col-md-7 col-xs-12 " name="txtadesc" cols="60" rows="15">
 										<?php echo $UpdatedData[0]['about_desc_ar'];?>
 									</textarea>
 								</div>
@@ -193,7 +193,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtedesc">English Description <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<textarea id="txtedesc" class="form-control col-md-7 col-xs-12 ckeditor" name="txtedesc" cols="60" rows="15">
+									<textarea id="txtedesc" class="form-control col-md-7 col-xs-12 " name="txtedesc" cols="60" rows="15">
 										<?php echo $UpdatedData[0]['about_desc_en'];?>
 									</textarea>
 								</div>

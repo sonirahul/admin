@@ -11,50 +11,11 @@ Pending Admin side work1
 2. Normal Team member data is static . usko dynamic krna hai ya nai ?
 3. Australia flag missing 
 -->
-
-<!DOCTYPE html>
 <html>
-<head>
-	<!-- <meta charset='utf-8'> -->
-	<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
- 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
- 	<meta content='width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no' name='viewport'>
-	<title>Mawared House | Local Presence Global Support</title>
-	<meta content="We improve your customer's experience with our proven Objective-Based Design process and simple &amp; unique UX design subscription model." name='description'>
-	<meta content='UX, Product Design, Customer Experience, Mobile App Design, Website UX Design, Marketing Strategy, Mobile UX' name='keywords'>
-	<meta content='#29aecc' name='theme-color'>
-	<meta content='summary_large_image' name='twitter:card'>
-	<meta content='UX Design Services: Research, Strategy, Product and Mobile Design' name='twitter:title'>
-	<meta content="We improve your customer's experience with our proven Objective-Based Design process and simple &amp; unique UX design subscription model." name='twitter:description'>
-	<meta content='UX Design Services: Research, Strategy, Product and Mobile Design' property='og:title'>
-	<meta content="We improve your customer's experience with our proven Objective-Based Design process and simple &amp; unique UX design subscription model." property='og:description'>
-
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/main-ce83667e.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="css/content_slider_style.css">
-	<link rel="stylesheet" type="text/css" href="css/nanoscroller.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-	<link rel="stylesheet" type="text/css" href="33535gillsansmt/font.css">
-
-	<script src="js/main-6e0cc465.js"></script>
-	<script src="js/process-1d1f249e.js"></script>
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-	<script src="js/modernizr-custom.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="js/jquery.content_slider.js"></script>
-	<script src="js/jquery.mousewheel.js"></script>
-	<script src="js/jquery.nanoscroller.min.js"></script>
-
-
-</head>
+<?php include "header.php";?>
 <body data-logo-color='light' data-nav-color='light' data-overlay-id='false' data-overlay-open='false' data-page='process' data-section='unity'>
 
 	<?php include "function.php";?>
-
 
 	<?php  
 
@@ -129,36 +90,43 @@ Pending Admin side work1
 		$singaporeAirlinesName = $allContentData[12]["content_title_ar"];
 		$singaporeAirlines = $allContentData[12]["content_desc_ar"];
 	}
-?>
+	?>
 	<style>
 		#loading {
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-   position: fixed;
-   display: block;
-   opacity: 1.0;
-   background-color: #fff;
-   z-index: 999999999;
-   text-align: center;
-}
-
-#loading-image {
-  position: absolute;
-  top: 100px;
-  left: 240px;
-  z-index: 100;
-}
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			position: fixed;
+			display: block;
+			opacity: 1.0;
+			background-color:#000;
+			background: linear-gradient(45deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);
+			background:#fff;
+			z-index: 999999999;
+			text-align: center;
+		}
+		#loading-container {position: absolute;top: 50%;left: 50%;margin-top: -75px;margin-left: -75px;}
+		#siteLogo{width:150px;}
+		#loading-image {z-index: 100;}
+		#loading-caption{width:100%;text-align: center;color: #6c6e71;}
 	</style>
 
 	<div id="loading">
-		<img id="loading-image" src="images/loading1.gif" alt="Loading..." />
+		<div id="loading-container">
+			<img id="siteLogo" src="images/lgonewblack.png"><br/><br/>
+			<img id="loading-image" src="images/loader6.gif" alt="Loading..." /><br/>
+			<p id="loading-caption" class="hidden">Loading... </p>
+		</div>
 	</div>
 	<script type="text/javascript">
 		$(window).load(function() {
-			 $('#loading').hide();
-		  });
+			$('#loading').fadeOut();
+			$('.carousel-inner>.item').addClass("activated");
+			$("li.scroll-animated-item").addClass("blocks-anim");
+			$(".home-main-content").addClass("active");
+			initStats(2000); // defined in footer.php in block count js at line 168
+		});
 	</script>
 	<section class='nav-bar container-fluid scroll-up' id='navbar'>
 		<div class='nav-bar-inner'>
@@ -215,7 +183,7 @@ Pending Admin side work1
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			<div id="carouselItem1" class="item active">
-				<div style="background-image:url(slider/1_c.jpg);background-size:cover;background-position:center center;width:100%;height:100vh"></div>
+				<div style="background-image:url(http://i.istockimg.com/image-zoom/68076165/3/380/246/stock-photo-68076165-kuwait-city.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
 				<div class="container">
 					<div class="carousel-caption">
 						<h2 class="main-screen-caption">Local Presence Global Support</h2>
@@ -237,7 +205,7 @@ Pending Admin side work1
 								<?php } ?>	
 							</ul>
 						</div>
-						<p class="main-screen-subcaption">Kuwait - Morocco - Syria - Jordan - Lebanon - Iran - Algeria</p>
+						<p class="hidden main-screen-subcaption">Kuwait - Morocco - Syria - Jordan - Lebanon - Iran - Algeria</p>
 					</div>
 				</div>
 			</div>
@@ -288,7 +256,7 @@ Pending Admin side work1
 							<li><a href="tel:+96522971100" target="_blank"><i class="fa fa-phone"></i> +965-2297-1100 </a> </li>
 							<li class="hidden-xs"><i class="fa fa-clock-o"></i> 8:30 AM to 05:00 PM </li>
 							<li><a href="mailto:info@mawaredhouse.com" target="_blank"><i class="fa fa-envelope"></i> info@mawaredhouse.com </a></li>
-							<li class="hidden-xs"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
+							<li class="hidden"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
 						</ul>
 					</div>
 				</div>
@@ -348,9 +316,12 @@ Pending Admin side work1
 		<style type="text/css">
 			#singaporeAirlines {
 				background-image: url(images/singaporeAirlinesShown.jpg);
+				background-image: url(http://i.istockimg.com/image-zoom/16896950/3/380/253/stock-photo-16896950-merilon-statue-singapore.jpg);
+				//background-image: url(http://i.istockimg.com/image-zoom/86166105/3/380/268/stock-illustration-86166105-city-of-singapore-with-skycraper.jpg);
 				background-size: cover;
+				background-position:center;
 				background-attachment: fixed;
-				background-color: rgba(0, 0, 0, 0.45);
+				background-color: rgba(0, 0, 0, 0.30);
 				background-blend-mode: multiply;
 			}
 			#singaporeAirlines h2,#singaporeAirlines #saContent p,#singaporeAirlines #saContent a{color:#fff !important;text-shadow:0 0 3px #666}
@@ -359,7 +330,7 @@ Pending Admin side work1
 		<section id="singaporeAirlines" class="section container-fluid">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h2 class="mh-text-colored"><?php echo $singaporeAirlinesName ?></h2>
+					<h2 class="mh-text-colored hidden"><?php echo $singaporeAirlinesName ?></h2>
 				</div>
 			</div>
 			<div class="row col-sm-10 column-center text-center">
@@ -373,8 +344,8 @@ Pending Admin side work1
 			<div class='container'>
 				<div class='row row-centered' id='let-us-help-you'>
 					<div class='col-sm-12'>
-						<h2><? echo $welcomeName ?></h2>
-						<? echo $welcome?>
+						<h2><?php echo $welcomeName ?></h2>
+						<?php echo $welcome?>
 					</div>
 				</div>
 			</div>
@@ -483,7 +454,7 @@ Pending Admin side work1
 	<div id="mobile-about-us" class="visible-xs">
 		<div id="mau1" class="mau">
 			<h3><i class="icon-signs" ></i> <?php echo $welcomeName ?></h3>
-			<p><?php echo $welcomeName ?></p>
+			<p><?php echo $welcome ?></p>
 		</div>
 		<div id="mau2" class="mau">
 			<h3><i class='icon-research'></i> 1. <?php echo $philosophyName ?></h3>
@@ -515,921 +486,371 @@ Pending Admin side work1
 			</div>
 			<div id="news-list" class="col-lg-4 ">
 				<ul class="nav nav-pills nav-stacked">
-					<?php for($i=0;$i<count($allNewsData);$i++){?>
+					<?php 
+					for($i=0;$i<count($allNewsData);$i++){?>
 						<li class="<?php if($i==0) echo "active" ?> news-list-content">
 							<a data-toggle="pill" href="#menu<?php echo $i+1?>">
 								<div class="row">
 									<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="news/<?php echo $allNewsData[$i]["news_photo"]?>"> </div>
 									<div class="col-xs-7 col-sm-8">
 										<p class="news-list-title"> 
-										<?php 
-										if ($finalLang == "en") echo $allNewsData[$i]["news_title_en"];
-										else echo $allNewsData[$i]["news_title_ar"];?>
+											<?php 
+											if ($finalLang == "en") echo $allNewsData[$i]["news_title_en"];
+											else echo $allNewsData[$i]["news_title_ar"];?>
 											
 										</p>
 									</div>
 								</div>
 							</a>
 						</li>
-						<?php } ?>	
+						<?php 
+					} 
+					?>	
 
-					</ul>
-				</div>
-
-				<div id="news-item" class="col-lg-8">
-					<div class="tab-content">
-						<?php for($i=0;$i<count($allNewsData);$i++){?>
-							<div id="menu<?echo $i+1?>" class="tab-pane fade in <?php if($i==0) echo "active" ?>">
-								<div class="row">
-									<div class="col-lg-7 news-image">
-										<div class="imageContainer specificImageSettings" style="background-image:url(news/<?php echo $allNewsData[$i]["news_photo"]?>);"></div>
-									</div>
-									<div class="col-lg-5 news-content">
-										<h3 class="news-title">
-											<?php 
-											if ($finalLang == "en") echo $allNewsData[$i]["news_title_en"];
-											else echo $allNewsData[$i]["news_title_ar"];
-												?>
-										 </h3>
-										<p class="news-desc">
-											<?php 
-											if ($finalLang == "en") echo $allNewsData[$i]["news_desc_en"];
-											else echo $allNewsData[$i]["news_desc_ar"];
-											?>
-										</p>
-									</div>
-								</div>
-							</div>
-							<?php } ?>	
-
-						</div>
-					</div>
-					<div class="news-mobile-browser hidden-lg">
-						<div id="nlprev" class="nmb-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i> Prev</div>
-						<div id="nlnext" class="nmb-arrow pull-right">Next <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
-					</div>
-				</div>
+				</ul>
 			</div>
 
-			<div id="mgtTeamMain2" class="section" style="overflow:hidden">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm-12 text-center">
-							<h2  class="mh-text-colored">Management Team</h2>
-						</div>
-					</div>
-					<div class="row mgtTeamMain2Row" style="">
-						<?php for($i=0;$i<count($allMagtTeamData) ;$i++){?>
-							<div class="col-sm-3 col-xs-12">
-								<div class="omgt-team">
-									<div class="omgt-image">
-										<div class="hexagon hexagon2">
-											<div class="hexagon-in1">
-												<div class="hexagon-in2" style="background-image: url(team/<?php echo $allMagtTeamData[$i]["about_image"]?>)"></div>
-											</div>
-										</div>
-									</div>
-									<div class="omgt-name">
-									<?php 
-									if ($finalLang == "en") echo $allMagtTeamData[$i]["about_title_en"];
-									else echo $allMagtTeamData[$i]["about_title_ar"];
-										?>
-										
-									</div>
-									<div class="omgt-pos">
+			<div id="news-item" class="col-lg-8">
+				<div class="tab-content">
+					<?php 
+					for($i=0;$i<count($allNewsData);$i++){?>
+						<div id="menu<?echo $i+1?>" class="tab-pane fade in <?php if($i==0) echo "active" ?>">
+							<div class="row">
+								<div class="col-lg-7 news-image">
+									<div class="imageContainer specificImageSettings" style="background-image:url(news/<?php echo $allNewsData[$i]["news_photo"]?>);"></div>
+								</div>
+								<div class="col-lg-5 news-content">
+									<h3 class="news-title">
 										<?php 
-										if ($finalLang == "en") echo $allMagtTeamData[$i]["about_jobtitle_en"];
-										else  echo $allMagtTeamData[$i]["about_jobtitle_ar"];
+										if ($finalLang == "en") echo $allNewsData[$i]["news_title_en"];
+										else echo $allNewsData[$i]["news_title_ar"];
 										?>
-										
-									</div>
-									<div class="omgt-Content">
+									</h3>
+									<div class="news-desc">
 										<?php 
-										if ($finalLang == "en") echo $allMagtTeamData[$i]["about_desc_en"];
-										else  echo $allMagtTeamData[$i]["about_desc_ar"];
+										if ($finalLang == "en") echo $allNewsData[$i]["news_desc_en"];
+										else echo $allNewsData[$i]["news_desc_ar"];
 										?>
 									</div>
 								</div>
 							</div>
-							<?php } ?>
-
-
-
 						</div>
-					</div>
+						<?php
+					}
+					?>	
 
 				</div>
+			</div>
+			<div class="news-mobile-browser hidden-lg">
+				<div id="nlprev" class="nmb-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i> Prev</div>
+				<div id="nlnext" class="nmb-arrow pull-right">Next <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
+			</div>
+		</div>
+	</div>
 
-				<div id="mgtTeam" class="section">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-sm-12 text-center">
-								<h2  class="mh-text-colored">Our People</h2>
+	<div id="mgtTeamMain2" class="section" style="overflow:hidden">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<h2  class="mh-text-colored">Management Team</h2>
+				</div>
+			</div>
+			<div class="row mgtTeamMain2Row" style="">
+				<?php 
+				for($i=0;$i<count($allMagtTeamData) ;$i++){?>
+					<div class="col-sm-3 col-xs-12">
+						<div class="omgt-team">
+							<div class="omgt-image">
+								<div class="hexagon hexagon2">
+									<div class="hexagon-in1">
+										<div class="hexagon-in2" style="background-image: url(team/<?php echo $allMagtTeamData[$i]["about_image"]?>)"></div>
+									</div>
+								</div>
+							</div>
+							<div class="omgt-name">
+								<?php 
+								if ($finalLang == "en") echo $allMagtTeamData[$i]["about_title_en"];
+								else echo $allMagtTeamData[$i]["about_title_ar"];
+								?>
+
+							</div>
+							<div class="omgt-pos">
+								<?php 
+								if ($finalLang == "en") echo $allMagtTeamData[$i]["about_jobtitle_en"];
+								else  echo $allMagtTeamData[$i]["about_jobtitle_ar"];
+								?>
+
+							</div>
+							<div class="omgt-Content">
+								<?php 
+								if ($finalLang == "en") echo $allMagtTeamData[$i]["about_desc_en"];
+								else  echo $allMagtTeamData[$i]["about_desc_ar"];
+								?>
 							</div>
 						</div>
 					</div>
+					<?php
+				} 
+				?>
 
 
-					<div class="row" style="margin:0">
-						<?php 
-						$boxCount=1;
-						for($i=1;$i<=count($allEmployeeTeamData);$i++){?>
-							<div class="col-xs-6 col-sm-2 team-mem team-view">
-								<div class="element_hover">
-									<div class="hover-content">
-										<h3 class="sl-hover-title">
-										<?php 
-										if ($finalLang == "en")echo $allEmployeeTeamData[$i-1]["about_title_en"];
-										else echo $allEmployeeTeamData[$i-1]["about_title_ar"];
-										?>
-											
-										</h3>
-										<h4 class="sl-hover-subtitle">
-										<?php 
-										if ($finalLang == "en")echo $allEmployeeTeamData[$i-1]["about_jobtitle_en"];
-										else echo $allEmployeeTeamData[$i-1]["about_jobtitle_ar"];
-										?>
-											
-										</h4>
-										<i class="fa fa-angle-double-right" aria-hidden="true"></i>
-									</div>
-								</div>
-								<img src="team/<?php echo $allEmployeeTeamData[$i-1]["about_image"]?>" alt="
-								<?php
-								if ($finalLang == "en") echo $allEmployeeTeamData[$i-1]["about_title_en"];
-								else echo $allEmployeeTeamData[$i-1]["about_title_ar"];
-								?>
-								" class="img_element" width="100%" height="100%/">
-								<div class="mw_team">
+
+			</div>
+		</div>
+
+	</div>
+
+	<div id="mgtTeam" class="section">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<h2  class="mh-text-colored">Our People</h2>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row" style="margin:0">
+			<?php 
+			$boxCount=1;
+			for($i=1;$i<=count($allEmployeeTeamData);$i++){?>
+				<div class="col-xs-6 col-sm-2 team-mem team-view">
+					<div class="element_hover">
+						<div class="hover-content">
+							<h3 class="sl-hover-title">
 								<?php 
 								if ($finalLang == "en")echo $allEmployeeTeamData[$i-1]["about_title_en"];
 								else echo $allEmployeeTeamData[$i-1]["about_title_ar"];
 								?>
-									
-								</div>
-								<div class="mw-team-quote">
-									<?php 
-									if ($finalLang == "en")echo $allEmployeeTeamData[$i-1]["about_desc_en"];
-									else echo $allEmployeeTeamData[$i-1]["about_desc_ar"];
-									?>
-								</div>
-								<div class="box"></div>
+
+							</h3>
+							<h4 class="sl-hover-subtitle">
+								<?php 
+								if ($finalLang == "en")echo $allEmployeeTeamData[$i-1]["about_jobtitle_en"];
+								else echo $allEmployeeTeamData[$i-1]["about_jobtitle_ar"];
+								?>
+
+							</h4>
+							<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+						</div>
+					</div>
+					<img src="team/<?php echo $allEmployeeTeamData[$i-1]["about_image"]?>" alt="
+					<?php
+					if ($finalLang == "en") echo $allEmployeeTeamData[$i-1]["about_title_en"];
+					else echo $allEmployeeTeamData[$i-1]["about_title_ar"];
+					?>
+					" class="img_element" width="100%" height="100%/">
+					<div class="mw_team">
+						<?php 
+						if ($finalLang == "en")echo $allEmployeeTeamData[$i-1]["about_title_en"];
+						else echo $allEmployeeTeamData[$i-1]["about_title_ar"];
+						?>
+
+					</div>
+					<div class="mw-team-quote">
+						<?php 
+						if ($finalLang == "en")echo $allEmployeeTeamData[$i-1]["about_desc_en"];
+						else echo $allEmployeeTeamData[$i-1]["about_desc_ar"];
+						?>
+					</div>
+					<div class="box"></div>
+				</div>
+				<?php 
+				if( $i/2.5 >= $boxCount) 
+				{
+					?>
+					<div class="col-sm-2 team-mem">
+						<div class="box" style=""></div>
+					</div>
+					<?php $boxCount=$boxCount+1;
+				} 
+				?>
+				<?php
+			} 
+			?>	
+		</div>		
+	</div>
+
+	<div id="mgtTeamViewer">
+		<div class="row">
+			<div class="col-md-5 teamviewerimagecontent">
+				<div class="teamviewerimage"></div>
+			</div>
+			<div class="col-md-7 ">
+				<div class="resume_people">
+					<h3 class="people_Name">Abiola Ojo-Osagie</h3>
+					<p><b>Designation : </b><span class="people-title">MACHINE</span> </p>
+
+					<p class="texte_people"">MACHINE</p>
+				</div>
+			</div>
+			<div class="mgtTeamViewerclose fa fa-times fa-2x" aria-hidden="true"></div>
+		</div>
+		<div class="justBlackBg"></div>
+	</div>
+
+	<div id="clientss1" class="section container-fluid">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2 class="mh-text-colored">Our Clients</h2>
+			</div>
+		</div>
+		<div class="row col-sm-10 column-center">
+
+			<div class="row">
+				<?php for($i=0;$i<count($allClientsData);$i++){?>
+					<div class="col-xs-4 col-sm-3 col-md-2 country-con">
+						<div class="contry-con1">
+							<div class="flagwave"></div>
+							<div class="clientss-image">
+								<img src="flags/<?php echo $allClientsData[$i]["clients_country_flag"]?>">	
 							</div>
-							<?php if( $i/2.5 >= $boxCount) {?>
-								<div class="hidden-xs col-sm-2 team-mem">
-									<div class="box" style=""></div>
+							<div class="clientss-name">
+								<p><?php echo $allClientsData[$i]["clients_country_name"]?></p>
+							</div>
+						</div>
+					</div>
+					<?php
+				} 
+				?>	
+
+			</div>
+		</div>
+	</div>
+
+	<div id="contacts" class="section container-fluid">
+		<div>
+			<div id="googleMap" style="height:650px;width:100%"></div>
+			<div id="contact" class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<h2 class="mh-text-white">Contact</h2>
+					</div>
+				</div>
+
+				<div id="contact-content" class="row">
+					<div class="col-md-8 nopadding">
+						<div class="col-sm-6 nopadding">
+
+							<div class="contact-col nopadding">
+								<div class="contact-col-icon">
+									<i class="fa fa-map-marker" aria-hidden="true"></i>
 								</div>
-								<?php $boxCount=$boxCount+1;} ?>
-								<?php } ?>	
-							</div>		
+								<div class="contact-col-content">
+									<div class="cc-title"><h3>Kuwait</h3></div>
+									<p class="cc-desc">
+										4B, 2nd Floor, Al Banwan building<br/>
+										Al Qibla Area<br/>
+										Opposite Central Bank of Kuwait<br/>
+										Kuwait City
+
+
+									</p>
+								</div>
+							</div>
+
+							<div class="contact-col nopadding">
+								<div class="contact-col-icon">
+									<i class="fa fa-paper-plane" aria-hidden="true"></i>
+								</div>
+								<div class="contact-col-content">
+									<div class="cc-title"><h3>Mailing address</h3></div>
+									<p class="cc-desc">
+										P.O.Box 1112 Salmiya 22012<br/>
+										Kuwait
+									</p>
+								</div>
+							</div>
+
 						</div>
 
-						<div id="mgtTeamViewer">
-							<div class="row">
-								<div class="col-md-5 teamviewerimagecontent">
-									<div class="teamviewerimage"></div>
-								</div>
-								<div class="col-md-7 ">
-									<div class="resume_people">
-										<h3 class="people_Name">Abiola Ojo-Osagie</h3>
-										<p><b>Designation : </b><span class="people-title">MACHINE</span> </p>
 
-										<p class="texte_people"">MACHINE</p>
-									</div>
+						<div class="col-sm-6 nopadding">
+							<div class="contact-col nopadding">
+								<div class="contact-col-icon quick-contact">
+									<i class="fa fa-phone" aria-hidden="true"></i>
 								</div>
-								<div class="mgtTeamViewerclose fa fa-times fa-2x" aria-hidden="true"></div>
+								<div class="contact-col-content">
+									<div class="cc-title"><p> +965 2297 1100</p></div>
+								</div>
 							</div>
-							<div class="justBlackBg"></div>
+
+							<div class="contact-col nopadding">
+								<div class="contact-col-icon quick-contact">
+									<i class="fa fa-fax" aria-hidden="true"></i>
+								</div>
+								<div class="contact-col-content">
+									<div class="cc-title"><p>+965 2249 5787</p></div>
+								</div>
+							</div>
+
+							<div class="contact-col nopadding">
+								<div class="contact-col-icon quick-contact">
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+								</div>
+								<div class="contact-col-content">
+									<div class="cc-title"><p>info@mawaredhouse.com</p></div>
+								</div>
+							</div>
 						</div>
-
-						<div id="clientss1" class="section container-fluid">
+					</div>
+					<div id="contactForm" class="col-sm-6 col-md-4" style="">
+						<div id="contactFormMobileClose" class="visible-xs visible-sm"><i class="icon-rounded-x"></i></div>
+						<div id="mainPopupForm" class="col-sm-6 col-md-12 col-lg-12 column-center">
+							<div id="contact-header-info" class="contact-col">
+								<div class="contact-col-icon">
+									<i class="fa fa-wpforms" aria-hidden="true"></i>
+								</div>
+								<div class="contact-col-content">
+									<div class="cc-title"><h3>Contact/Feedback Form</h3></div>
+								</div>
+							</div>
 							<div class="row">
-								<div class="col-sm-12 text-center">
-									<h2 class="mh-text-colored">Our Clients</h2>
+								<div class="col-lg-6 form-group">
+									<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+								</div>
+								<div class="col-lg-6 form-group">
+									<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
 								</div>
 							</div>
-							<div class="row col-sm-10 column-center">
-
-								<div class="row">
-									<?php for($i=0;$i<count($allClientsData);$i++){?>
-										<div class="col-xs-4 col-sm-3 col-md-2 country-con">
-											<div class="contry-con1">
-												<div class="flagwave"></div>
-												<div class="clientss-image">
-													<img src="flags/<?php echo $allClientsData[$i]["clients_country_flag"]?>">	
-												</div>
-												<div class="clientss-name">
-													<p><?php echo $allClientsData[$i]["clients_country_name"]?></p>
-												</div>
-											</div>
-										</div>
-										<?php } ?>	
-
-									</div>
+							<div class="row">
+								<div class="col-lg-6 form-group">
+									<input class="form-control" id="name" name="name" placeholder="Subject" type="text" required>
+								</div>
+								<div class="col-lg-6 form-group">
+									<input class="form-control" id="email" name="email" placeholder="Mobile" type="email" required>
 								</div>
 							</div>
-
-							<div id="contacts" class="section container-fluid">
-								<div>
-									<div id="googleMap" style="height:650px;width:100%"></div>
-									<div id="contact" class="container-fluid">
-										<div class="row">
-											<div class="col-sm-12 text-center">
-												<h2 class="mh-text-white">Contact</h2>
-											</div>
-										</div>
-
-										<div id="contact-content" class="row">
-											<div class="col-md-8 nopadding">
-												<div class="col-sm-6 nopadding">
-
-													<div class="contact-col nopadding">
-														<div class="contact-col-icon">
-															<i class="fa fa-map-marker" aria-hidden="true"></i>
-														</div>
-														<div class="contact-col-content">
-															<div class="cc-title"><h3>Kuwait</h3></div>
-															<p class="cc-desc">
-																4B, 2nd Floor, Al Banwan building<br/>
-																Al Qibla Area<br/>
-																Opposite Central Bank of Kuwait<br/>
-																Kuwait City
-
-
-															</p>
-														</div>
-													</div>
-
-													<div class="contact-col nopadding">
-														<div class="contact-col-icon">
-															<i class="fa fa-paper-plane" aria-hidden="true"></i>
-														</div>
-														<div class="contact-col-content">
-															<div class="cc-title"><h3>Mailing address</h3></div>
-															<p class="cc-desc">
-																P.O.Box 1112 Salmiya 22012<br/>
-																Kuwait
-															</p>
-														</div>
-													</div>
-
-												</div>
-
-
-												<div class="col-sm-6 nopadding">
-													<div class="contact-col nopadding">
-														<div class="contact-col-icon quick-contact">
-															<i class="fa fa-phone" aria-hidden="true"></i>
-														</div>
-														<div class="contact-col-content">
-															<div class="cc-title"><p> +965 2297 1100</p></div>
-														</div>
-													</div>
-
-													<div class="contact-col nopadding">
-														<div class="contact-col-icon quick-contact">
-															<i class="fa fa-fax" aria-hidden="true"></i>
-														</div>
-														<div class="contact-col-content">
-															<div class="cc-title"><p>+965 2249 5787</p></div>
-														</div>
-													</div>
-
-													<div class="contact-col nopadding">
-														<div class="contact-col-icon quick-contact">
-															<i class="fa fa-envelope" aria-hidden="true"></i>
-														</div>
-														<div class="contact-col-content">
-															<div class="cc-title"><p>info@mawaredhouse.com</p></div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div id="contactForm" class="col-sm-6 col-md-4" style="">
-												<div id="contactFormMobileClose" class="visible-xs visible-sm"><i class="icon-rounded-x"></i></div>
-												<div id="mainPopupForm" class="col-sm-6 col-md-12 col-lg-12 column-center">
-													<div id="contact-header-info" class="contact-col">
-														<div class="contact-col-icon">
-															<i class="fa fa-wpforms" aria-hidden="true"></i>
-														</div>
-														<div class="contact-col-content">
-															<div class="cc-title"><h3>Contact/Feedback Form</h3></div>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-lg-6 form-group">
-															<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-														</div>
-														<div class="col-lg-6 form-group">
-															<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-lg-6 form-group">
-															<input class="form-control" id="name" name="name" placeholder="Subject" type="text" required>
-														</div>
-														<div class="col-lg-6 form-group">
-															<input class="form-control" id="email" name="email" placeholder="Mobile" type="email" required>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-md-12 form-group">
-															<textarea class="form-control hidden-xs" id="comments" name="comments" placeholder="Details" rows="5" style="resize: none;"></textarea>
-															<textarea class="form-control visible-xs" id="comments" name="comments" placeholder="Details" rows="3" style="resize: none;"></textarea>
-														</div>
-													</div>
-													<br>
-													<div class="row">
-														<div class="col-md-12 form-group">
-															<button class="btn btn-default pull-right" type="submit">Send</button>
-														</div>
-													</div>	
-												</div>
-											</div>
-											<div id="contactFormBtn" class="col-xs-12 visible-xs visible-sm">
-												<button type="button" class="btn btn-primary">
-													<span class="icon-scroll"> FEEDBACK FORM</span>
-												</button>
-											</div>
-										</div>
-
-
-									</div>
-									<div id="contactView">
-										<button type="button" class="btn btn-success">View Map</button>
-									</div>
-
+							<div class="row">
+								<div class="col-md-12 form-group">
+									<textarea class="form-control hidden-xs" id="comments" name="comments" placeholder="Details" rows="5" style="resize: none;"></textarea>
+									<textarea class="form-control visible-xs" id="comments" name="comments" placeholder="Details" rows="3" style="resize: none;"></textarea>
 								</div>
 							</div>
-
-							<div class='footer'>
-								<div class='footer-inner'>
-									<section class='container'>
-										<div class='row'>
-											<div class='col-md-9 hidden-xs hidden-sm '>
-												<ul class='level-1-nav list-unstyled'>
-													<li class='home'>
-														<a class="home" href="/">Home</a>
-														<span class='icon-right-open-big'></span>
-													</li>
-													<li class='services'>
-														<a class="services active" href="/process/">News</a>
-														<span class='icon-right-open-big'></span>
-													</li>
-													<li class='our-work'>
-														<a class="our-work" href="/work/">Our Team</a>
-														<span class='icon-right-open-big'></span>
-													</li>
-													<li class='philosophy'>
-														<a class="philosophy" href="/philosophy">Operation</a>
-														<span class='icon-right-open-big'></span>
-													</li>
-													<li class='careers'>
-														<a class="careers" href="/careers/">Gallery</a>
-														<span class='icon-right-open-big'></span>
-													</li>
-													<li class='blog'>
-														<a target="_blank" class="blog" href="http://www.com/blog">Clients</a>
-														<span class='icon-right-open-big'></span>
-													</li>
-													<li class='blog'>
-														<a target="_blank" class="blog" href="https://mail.mawaredhouse.com/owa">Employees</a>
-														<span class='icon-right-open-big'></span>
-													</li>
-													<li class='contact'>
-														<a class="contact" href="/contact/">Contact</a>
-														<span class='icon-right-open-big'></span>
-													</li>
-												</ul>
-											</div>
-											<div class='col-md-3 col-xs-12 '>
-												<ul class='social'>
-													<li>
-														<a target="_blank" class="icon-twitter" href="https://twitter.com/mawaredhouse" style="color: #57afe7;"></a>
-													</li>
-													<li>
-														<a target="_blank" class="icon-facebook-squared" href="https://www.facebook.com/Mawared-House-107948055939170/" style="color:#3b5998"></a>
-													</li>
-													<li>
-														<a target="_blank" class="icon-linkedin-squared" style="color:#0077b5" href="https://www.linkedin.com/company/mawared-house"></a>
-													</li>
-													<li>
-														<a target="_blank" class="icon-mail-squared" href="https://mail.mawaredhouse.com/owa" style="color: #4CAF50;;"></a>
-													</li>
-												</ul>
-											</div>
-										</div>
-										<p class='copyright'>
-											&copy; 2016 Mawared House. <span class="hidden-xs">All rights reserved. <a href="/privacy-policy">Privacy&nbsp;Policy</a></span>
-										</p>
-									</section>
+							<br>
+							<div class="row">
+								<div class="col-md-12 form-group">
+									<button class="btn btn-default pull-right" type="submit">Send</button>
 								</div>
-							</div>
-
-							<div class='nav-overlay full-screen-overlay dt-height' id='nav-overlay'>
-								<ul class='level-1-nav list-unstyled'>
-									<li class='home'>
-										<a class="home" href="#main">Home</a>
-										<span class='icon-right-open-big'></span>
-									</li>
-									<li class='services'>
-										<a class="services" href="#news">News</a>
-										<span class='icon-right-open-big'></span>
-									</li>
-									<li class='our-work'>
-										<a class="our-work" href="#mgtTeam">Our Team</a>
-										<span class='icon-right-open-big'></span>
-									</li>
-									<li class='philosophy'>
-										<a class="philosophy" href="coo.html">Operation</a>
-										<span class='icon-right-open-big'></span>
-									</li>
-									<li class='careers'>
-										<a class="careers" href="gallery.html">Gallery</a>
-										<span class='icon-right-open-big'></span>
-									</li>
-									<li class='blog'>
-										<a target="_blank" class="blog" href="#clientss1">Clients</a>
-										<span class='icon-right-open-big'></span>
-									</li>
-									<li class='contact'>
-										<a class="contact" href="#contacts">Contact</a>
-										<span class='icon-right-open-big'></span>
-									</li>
-								</ul>
-								<div class='nav-footer'>
-									<ul class='social'>
-										<li>
-											<a target="_blank" class="icon-twitter" href="https://twitter.com/mawaredhouse"></a>
-										</li>
-										<li>
-											<a target="_blank" class="icon-facebook-squared" href="https://www.facebook.com/Mawared-House-107948055939170/"></a>
-										</li>
-										<li>
-											<a target="_blank" class="icon-linkedin-squared" href="https://www.linkedin.com/company/mawared-house"></a>
-										</li>
-										<li>
-											<a target="_blank" class="icon-mail-squared" href="https://mail.mawaredhouse.com/owa"></a>
-										</li>
-									</ul>
-									<div class='border'></div>
-									<div class='logo-wrapper'>
-										<img src="images/lgonew.png" id='digital-telepathy-logo'>
-
-									</div>
-									<p>&copy; 2016 Mawaredhouse.com</p><!-- var d = new Date().getFullYear(); -->
-								</div>
-							</div>
-
-							<!-- navbar -->
-							<script type="text/javascript">
-								$(function(){
-									$(window).scroll(function() {
-										var navbarCurrentPos = $("section.nav-bar").offset().top;
-										var welcomePos = $("#myCarousel").height() - $("section.nav-bar").height();
-										var winTop = $(window).scrollTop();
-										if (winTop > welcomePos) {
-					//console.log("hit");
-					$(".nav-bar .identity").addClass("responsive");
-					$(".nav-bar").css("position","fixed");
-					$("section.nav-bar").addClass("hide-nav");
-				}
-				else
-				{
-					$(".nav-bar .identity").removeClass("responsive");
-					$(".nav-bar").css("position","absolute");
-					$("section.nav-bar").removeClass("hide-nav");
-				}
-			});
-								});
-							</script>
-
-							<!--lang-->
-							<script type="text/javascript">
-								$(function(){
-									var langImage = $(".langSelectedImage");
-									var langText = $(".langSelectedText");
-									$("#en").click(function(){	
-										langImage.attr("src","lang/en.png");
-										langText.html("EN");
-									});
-									$("#kw").click(function(){	
-										langImage.attr("src","lang/ar.png");
-										langText.html("AR");
-									});
-								});
-							</script>
-
-							<!--Carousel Initialization-->
-							<script type="text/javascript">
-								$(function(){ 
-									$('.carousel').carousel({
-										interval: false
-									}); 
-								});
-							</script>
-
-							<!--block count-->
-							<script type="text/javascript">
-								$(function(){ 
-			//Count num
-			function countNum(num, content, target, duration) {
-				if (duration) {
-					var count = 0;
-					var speed = parseInt(duration / num);
-					var interval = setInterval(function(){
-						if (count - 1 < num) {
-							target.html(count);
-						}
-						else {
-							target.html(content);
-							clearInterval(interval);
-						}
-						count++;
-					}, speed);
-				} else {
-					target.html(content);
-				}
-			}
-
-			//Init stats
-			function initStats(duration) {
-				jQuery('.block-stats .num').each(function() {
-					var container = jQuery(this);
-					var num = container.attr('data-num');
-					var content = container.attr('data-content');
-
-					countNum(num, content, container, duration);
-				});
-			}
-			initStats(2000);
-		});
-	</script>
-
-	<!--Normal slide animation -->
-	<script type="text/javascript">
-		$(function(){
-			$(window).scroll(function() {
-				$(".slideanim").each(function(){
-					var pos = $(this).offset().top;
-
-					var winTop = $(window).scrollTop();
-					if (pos < winTop + 600) {
-						$(this).addClass("slide");
-					}
-				});
-			});
-		});
-	</script>
-
-	<!-- Management Team Viewer-->
-	<script type="text/javascript">
-		$(".omgt-team").click(function(){
-			var imgsrc = $(this).find(".hexagon-in2").css('background-image').replace('url(','').replace(')','');;
-			var peopleName = $(this).find(".omgt-name").text();
-			var peopleTitle = $(this).find(".omgt-pos").text();
-			var peopleText = $(this).find(".omgt-Content").text();
-
-			//console.log(imgsrc + " " + peopleName + " " + peopleTitle + " " + peopleText);
-			//Setting values
-			$(".teamviewerimage").css("background-image",'url('+imgsrc+')');
-			$(".people_Name").html(peopleName);
-			$(".people-title").html(peopleTitle);
-			$(".texte_people").html(peopleText);
-			$("#mgtTeamViewer").show();
-			$("div#mgtTeamViewer>.row").addClass("ourMagtTeam").removeClass("ourNormalTeam");
-		});
-	</script>
-
-	<!--Local Team Viewer With Close Setting-->
-	<script type="text/javascript">
-		$(".team-view").click(function(){
-			var imgsrc = $(this).find("img").attr("src");
-			var peopleName = $(this).find(".sl-hover-title").text();
-			var peopleTitle = $(this).find(".sl-hover-subtitle").text();
-			var peopleText = $(this).find(".mw-team-quote").text();
-
-			console.log(imgsrc + " " + peopleName + " " + peopleTitle + " " + peopleText);
-			//Setting values
-			$(".teamviewerimage").css("background-image",'url('+imgsrc+')');
-			$(".people_Name").html(peopleName);
-			$(".people-title").html(peopleTitle);
-			$(".texte_people").html(peopleText);
-			$("#mgtTeamViewer").show();
-			$("div#mgtTeamViewer>.row").addClass("ourNormalTeam").removeClass("ourMagtTeam");
-
-		});
-		$(".mgtTeamViewerclose").click(function(){
-			closeTeamViewer();
-		});
-		$(".justBlackBg").click(function(){
-			closeTeamViewer();
-		});
-		function closeTeamViewer()
-		{
-			$(".ourMagtTeam").scrollTop(0);
-			$(".ourNormalTeam").scrollTop(0);
-			setTimeout(function(){
-				$("#mgtTeamViewer").hide();
-				$("div#mgtTeamViewer>.row").removeClass("ourNormalTeam").removeClass("ourMagtTeam");;
-			},10);
-		}
-	</script>
-
-	<!-- Show all news list -->
-	<script type="text/javascript">
-		$(function(){	
-
-			newsflag = 0;
-			$("#show-list").click(function(){
-				if(newsflag==0)
-				{
-					$("#news-list").addClass("news-list-open");
-					newsflag=1;
-					setTimeout(function(){
-						$("#news-list").scrollTop(0);
-					},10);
-				}
-				else
-				{
-					hideNewsList();
-				}
-			});
-			$("#news-list li a").click(function(){
-				hideNewsList();
-			});
-			function hideNewsList()
-			{
-				$("#news-list").removeClass("news-list-open");
-				newsflag=0;
-				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-					setTimeout(function(){
-						$("#news-list").scrollTop(0);
-					},1000);
-				}
-			}
-		});
-	</script>
-
-	<!-- news list next & prev-->
-	<script type="text/javascript">
-		$(function(){
-			$("#nlprev").click(function(){
-				newsListBtnHandler(1);
-			});
-			$("#nlnext").click(function(){
-				newsListBtnHandler(2);
-			});
-			totalListItems = $("#news-list li").length;
-			function newsListBtnHandler(controllerNum)
-			{
-				console.log("called" + controllerNum);
-				activeList = $("#news-list ul.nav>li.active");
-				activeListTargetNumber = activeList.find("a").attr("href").split("#menu")[1];
-				if(controllerNum == 1 )
-				{
-					clickedItemNum = parseInt(activeListTargetNumber)-1;
-					if(clickedItemNum<=0) clickedItemNum = totalListItems;
-				}
-				if(controllerNum == 2 )
-				{
-					clickedItemNum = parseInt(activeListTargetNumber)+1;
-					if(clickedItemNum>totalListItems) clickedItemNum = 1;
-				}
-				$("#news-list li>a[href='#menu" + clickedItemNum + "']").click();
-			}
-		});
-	</script>
-
-	<!-- Contact View Button -->
-	<script type="text/javascript">
-		$(function(){
-			flag=0;
-			$("#contactView button").click(function(){
-				if(flag==0){
-				//$("#contact").addClass("contactOpacity");
-				$("#contact").fadeOut();
-				$(this).html('View Contact');
-				flag=1;
-			}
-			else
-			{
-				//$("#contact").removeClass("contactOpacity");
-				$("#contact").fadeIn();
-				$(this).html('View Map');
-				flag=0;  
-			}
-		});
-		});
-	</script>
-
-	<!-- Contact Mobile Open & Close Button -->
-	<script type="text/javascript">
-		$("#contactFormBtn").click(function(){
-			$("#contactFormMobileClose").fadeIn();
-			$("#contactForm").fadeIn();			
-		});
-		$("#contactFormMobileClose").click(function(){
-			$("#contactFormMobileClose").fadeOut();
-			$("#contactForm").fadeOut();
-		});
-	</script>
-
-	<!-- smooth scroll -->
-	<script type="text/javascript">
-		$(function(){
-			$("#nav-overlay a").click(function() {
-				topValue1 = ($($(this).attr("href")).offset().top);
-				topValue2 = ($($(this).attr("href")).offset().top) - $("section.nav-bar").height()/2;
-				console.log(topValue1 + " " + topValue2);
-				$('html, body').animate({
-					scrollTop: topValue2
-				}, 1500);
-				if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-					$("a.hamburger.menu").click();
-				}
-			});
-
-		});
-	</script>
-
-	<!-- hamburger -->
-	<script>
-		$(document).ready(function()
-		{
-			var e = function()
-			{
-
-				var e = $(".hamburger"),
-				n = $("body").find(".nav-bar");
-				$(".nav-overlay").toggleClass("show"), $("body").toggleClass("nav-open"), $(".menu-text").delay(400).queue(function() {
-					$(this).fadeToggle(400), $(this).dequeue(), $("#lang").hide(400)
-				}), e.hasClass("active") ? (e.addClass("active-end"), e.one("transitionend", function() {
-					e.removeClass("active active-end")
-				})) : e.addClass("active"), $(".nav-overlay").hasClass("show") ? n.toggleClass("no-bg") : n.delay(400).queue(function() {
-					$(this).toggleClass("no-bg", 500), $(this).dequeue(), $("#lang").show(400)
-				})
-
-				//$("#lang").toggleClass("show");
-
-			};
-
-			$(".hamburger").click(e);
-			$(".menu-text").click(e);
-
-            //jQuery time
-            var parent, ink, d, x, y;
-            $("ul li a").click(function(e)
-            {
-            	parent = $(this).parent();
-				//create .ink element if it doesn't exist
-				if(parent.find(".ink").length == 0)
-					parent.prepend("<span class='ink'></span>");
-
-				ink = parent.find(".ink");
-				//incase of quick double clicks stop the previous animation
-				ink.removeClass("animate");
-				
-				//set size of .ink
-				if(!ink.height() && !ink.width())
-				{
-					//use parent's width or height whichever is larger for the diameter to make a circle which can cover the entire element.
-					d = Math.max(parent.outerWidth(), parent.outerHeight());
-					ink.css({height: d, width: d});
-				}
-				
-				//get click coordinates
-				//logic = click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center;
-				x = e.pageX - parent.offset().left - ink.width()/2;
-				y = e.pageY - parent.offset().top - ink.height()/2;
-				
-				//set the position and add class .animate
-				ink.css({top: y+'px', left: x+'px'}).addClass("animate");
-			});
-        });
-    </script>
-
-    <script type="text/javascript">
-    	$(function(){
-    		$(".nano").nanoScroller();
-
-    	});
-    </script>
-
-    <!-- Add Google Maps -->
-
-    <script type="text/javascript">
-    	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    		$("#googleMap").attr("style","height:590px;width:100%")
-    	}
-    </script>
- 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX0-bPtTRwlmoFR-xRk2iqybEzSvX1P14&callback=initMap"
-  		type="text/javascript"></script>
-
-    <script>
-    	$(function(){
-    		var myCenter = new google.maps.LatLng(29.376250, 47.970571);
-    		function initialize() {
-    			var mapProp = {
-    				center:myCenter,
-    				zoom:12,
-    				scrollwheel:false,
-    				draggable:false,
-    				mapTypeId:google.maps.MapTypeId.ROADMAP
-    			};
-    			var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    			var marker = new google.maps.Marker({
-    				position:myCenter,
-    			});
-    			marker.setMap(map);
-    		}
-    		google.maps.event.addDomListener(window, 'load', initialize);
-    	});
-    </script>
-    <script type="text/javascript">
-    	$(function(){
-			//Init map
-			function initMap() {
-				if (document.getElementById('map')) {	
-					var marker;
-					var latlng = new google.maps.LatLng(0, 0);
-
-					var my_options = {
-						zoom:16,
-						center:latlng,
-						scrollwheel:false,
-						scaleControl:false,
-						disableDefaultUI:false,
-						mapTypeId:google.maps.MapTypeId.ROADMAP
-					};
-
-					var map = new google.maps.Map(document.getElementById('map'), my_options);
-
-					function renderMarkers() {
-						var name = jQuery('#contacts .info > h2').text();
-						var address = jQuery('#contacts .info .address').text();	
-
-						var custom_map = new google.maps.Geocoder();
-
-						custom_map.geocode({'address':address}, function(results, status) {
-							if (status==google.maps.GeocoderStatus.OK) {
-								var location = results[0].geometry.location;
-
-								marker = new google.maps.Marker({
-									map:map,
-									icon:theme_path+'/layout/images/map-marker.png',
-									position:location,
-									title:name
-								});
-
-								var infowindow = new google.maps.InfoWindow({
-									content:name
-								});
-
-								google.maps.event.addListener(marker, 'click', function() {
-									infowindow.open(map, marker);
-								});
-
-								centerMap();		
-								initLinks();
-							} else {
-								alert("Geocode was failed for the following reason: " + status);
-							}
-						});
-					}
-
-					renderMarkers();
-
-					function centerMap() {
-						map.setCenter(marker.getPosition());
-						marker.setIcon(theme_path+'/layout/images/map-marker.png');
-					}
-
-					function initLinks() {
-						jQuery('#view_map').bind('click', function(e) {
-							var height = jQuery('.block-contacts').height();
-							jQuery('.block-contacts').css('height', height + 'px');
-							jQuery('#contacts').addClass('map_only');
-
-							e.preventDefault();
-						});
-
-						jQuery('#view_contacts').bind('click', function(e) {
-							jQuery('#contacts').removeClass('map_only');
-							jQuery('.block-contacts').css('height', 'auto');
-
-							e.preventDefault();
-						});
-					}
-
-					jQuery(window).resize(function() {
-						centerMap();
-					});
-				}	
-			}
-		});
-	</script>
+							</div>	
+						</div>
+					</div>
+					<div id="contactFormBtn" class="col-xs-12 visible-xs visible-sm">
+						<button type="button" class="btn btn-primary">
+							<span class="icon-scroll"> FEEDBACK FORM</span>
+						</button>
+					</div>
+				</div>
 
 
+			</div>
+			<div id="contactView">
+				<button type="button" class="btn btn-success">View Map</button>
+			</div>
+
+		</div>
+	</div>
+	<?php include "footer.php";?>
 </body>
+
 </html>
