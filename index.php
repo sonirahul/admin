@@ -183,7 +183,7 @@ Pending Admin side work1
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			<div id="carouselItem1" class="item active">
-				<div style="background-image:url(http://i.istockimg.com/image-zoom/68076165/3/380/246/stock-photo-68076165-kuwait-city.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
+				<div style="background-image:url(http://i.istockimg.com/image-zoom/68076165/3/380/246/stock-photo-68076165-kuwait-city.jpg);//background-image:url(slider/main.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
 				<div class="container">
 					<div class="carousel-caption">
 						<h2 class="main-screen-caption">Local Presence Global Support</h2>

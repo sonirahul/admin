@@ -17,7 +17,7 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
-							<a class="philosophy" href="/philosophy">Countries of Operation</a>
+							<a class="philosophy" href="coo.php">Countries of Operation</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='careers'>
@@ -77,7 +77,7 @@
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='philosophy'>
-			<a class="philosophy" href="coo.html">Countries of Operation</a>
+			<a class="philosophy" href="coo.php">Countries of Operation</a>
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='careers'>
