@@ -232,26 +232,26 @@ $UpdatedData=select_query($link,$SQL,0,0);
 							
 							<script>
 							$.noConflict();
-							var availableTags;
+							
 							jQuery(function() {
-
-    availableTags = [
-	
-	
-      
-    ];
-    jQuery( "#countries_flag" ).autocomplete({
-      source: availableTags
-    });
-  } );
-  </script>
+								jQuery(".js-example-placeholder-single").select2({
+								  placeholder: "Select a Country Flag",
+								  allowClear: true
+								});
+								
+								$(".js-example-placeholder-single").change(function(){
+									
+									
+										$('.country_fflag').attr('src', $(this).val());
+									
+								});
+							});
+							</script>
 							<div class="item form-group">
-								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag">Select list (select one): 
-								</label>
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag">Select Country Flag</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<input class="form-control" list="browsers" name="browser">
-									  <datalist id="browsers">
-										
+									<select class="form-control js-example-placeholder-single" id="countries_flag" >
+										<option></option>
 										<?php
 										$handle=opendir('../flags');
 										 $i=0;
@@ -260,15 +260,19 @@ $UpdatedData=select_query($link,$SQL,0,0);
 										if ($file != "." && $file != ".." && $file != "index.html")
 										 {  
 											//echo "<img src='flags/$file' border='0'>";
-											echo "<option value='$file'>";
+											$flagName = ucwords(str_replace("_"," ",str_replace(".png","",$file)));
+											echo "<option value='../flags/$file'>$flagName</option>";
 											
 										  } 
 										} closedir($handle); 
 										?>
-										
-									  </datalist>
-
-									
+									</select>
+								</div>
+							</div>
+							<div class="item form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag">Selected Flag</label>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<img class="country_fflag">
 								</div>
 							</div>
 							
@@ -330,4 +334,4 @@ $UpdatedData=select_query($link,$SQL,0,0);
 			</div>
 		</div>
 	</div>
-</div>		
+</div>

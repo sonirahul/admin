@@ -31,5 +31,13 @@
     <!-- Custom Theme Scripts -->
     <script src="js/custom.js"></script>
 
+	<?php 
+		$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+		if (strpos($url,'countriesadd') !== false) { 
+		    echo "<script src='../js/select2.full.min.js'></script>";
+			echo "<link rel='stylesheet' type='text/css' href='../css/select2.min.css'>";
+		}
+	?>
+
   </body>
 </html>
