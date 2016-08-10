@@ -19,7 +19,7 @@ if($_POST["action"]=="Delete")
 	echo "<script>document.location='index.php?model=countries';</script>";
 }
 //---------Show Data------------------	
-$SQL="select * from countries where 1=1 ";
+$SQL="select * from countries where countries_operation=1 ";
 $SettingData=select_query($link,$SQL,0,0);	
 //--------------------------------
 if($_POST["action"]=="beUpdate") // Update Fields
@@ -76,54 +76,53 @@ if($_POST["action"]=="beUpdate") // Update Fields
 //----------------------Add	
 if($_POST["action"]=="Add")
 {
-$countriesid=auto_num($link,"countries","countries_id");
+
 	$TableName="countries";
-	$TableField=array();
-	$TableField[0][0]="countries_id";
-	$TableField[0][1]="'$countriesid'";	
-	$TableField[1][0]="countries_title_ar";
-	$TableField[1][1]="'$txtaname'";	
-	$TableField[2][0]="countries_desc_ar";
-	$TableField[2][1]="'$txtadesc'";
-	$TableField[3][0]="countries_title_en";
-	$TableField[3][1]="'$txtename'";	
-	$TableField[4][0]="countries_desc_en";
-	$TableField[4][1]="'$txtedesc'";
+	$TableField=array();;	
+	$TableField[0][0]="countries_title_ar";
+	$TableField[0][1]="'$txtaname'";	
+	$TableField[1][0]="countries_desc_ar";
+	$TableField[1][1]="'$txtadesc'";
+	$TableField[2][0]="countries_title_en";
+	$TableField[2][1]="'$txtename'";	
+	$TableField[3][0]="countries_desc_en";
+	$TableField[3][1]="'$txtedesc'";
+	$TableField[4][0]="countries_client_visible";
+	$TableField[4][1]="'0'";
+	$TableField[5][0]="countries_operation";
+	$TableField[5][1]="'1'";
 
-	$uf=5;
+	$uf=6;
 
-	if($deletefile==1)
-	{ 
-  	    $SQL="select countries_photo from countries where countries_id=$countriesid";
-		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../countries/".$showdelet[0]['countries_photo']);
-		$TableField[$uf][0]="countries_photo";
-		$TableField[$uf][1]="''";
-		$uf++;
-	}elseif($_FILES["countries_photo"]["name"]!="")
+	if($_FILES["countries_photo"]["name"]!="")
 		{ 
 		  $TableField[$uf][0]="countries_photo";
 	      $TableField[$uf][1]=uploadfile("countries_photo","countries_".$countriesid,"../countries");
 		  $uf++;
 		}
-		
-	if($deleteflag==1)
-	{ 
-  	    $SQL="select countries_flag from countries where countries_id=$countriesid";
-		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../countries/".$showdelet[0]['countries_flag']);
-		$TableField[$uf][0]="countries_flag";
-		$TableField[$uf][1]="''";
-		$uf++;
-	}elseif($_FILES["countries_flag"]["name"]!="")
+	
+	$DataCountryFlag=$_POST[countries_flag];
+	if($_FILES["countries_flag"]["name"]!="")
 		{ 
-		  $TableField[$uf][0]="countries_flag";
-	      $TableField[$uf][1]=uploadfile("countries_flag","countries_flag_".$countriesid,"../countries");
-		  $uf++;
+			$file_dir  = "../flags/"; 
+			$newfile =$_FILES["countries_flag"]['name'];
+			$filetmpname =$_FILES["countries_flag"]['tmp_name'];
+			$filesize=$_FILES["countries_flag"]["size"];		  
+			$filext=substr($newfile,strpos($newfile,'.'));
+			if(strtolower($filext)==".jpg" || strtolower($filext)==".jpeg" || strtolower($filext)==".gif" || strtolower($filext)==".png" || strtolower($filext)==".tif"  || strtolower($filext)==".pdf" || strtolower($filext)==".doc" || strtolower($filext)==".docx")
+			{ 
+				if (trim($_FILES["countries_flag"]['name'])!="")
+				{ 
+				$filetoupload=$file_dir.$newfile;
+				copy($filetmpname, $filetoupload); 
+				}
+				
+				$TableField[$uf][0]="countries_flag";
+				$TableField[$uf][1]="'$newfile'";
+			}
 		}
-
-
-    insert_query($link,$TableName,$TableField);
+	
+	insert_query($link,$TableName,$TableField);
 	echo "<script>document.location='index.php?model=countries';</script>";
 }
 //---------------------------
@@ -154,10 +153,10 @@ $UpdatedData=select_query($link,$SQL,0,0);
 											</tr>
 										</thead>
 										<tbody>
-											<?php for($i=0;$i<count($SettingData)-1;$i++){?>
+											<?php for($i=0;$i<count($SettingData);$i++){?>
 											<tr>
 												<td><?php echo $SettingData[$i]["countries_title_ar"]?></td>
-												<td><?php echo $SettingData[$i]["countries_title_en"]?></td>
+												<td><?php echo ucwords($SettingData[$i]["countries_title_en"])?></td>
 												<td>
 													<a href="index.php?model=countries&countriesid=<?php echo $SettingData[$i]["countries_id"]?>&action=countriesupdate" class="btn btn-warning">Edit</a>
 													<input name="button" type="button" class="btn btn-danger about-delete-button" value="Delete" countriesid="<?php echo $SettingData[$i]['countries_id']?>">
@@ -196,7 +195,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtename">English Country Name <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<input id="txtename" class="form-control col-md-7 col-xs-12" name="txtename" required="required" type="text" value="<?php echo $UpdatedData[0]['countries_title_en'];?>">
+									<input id="txtename" class="form-control col-md-7 col-xs-12" name="txtename" required="required" type="text" value="<?php echo ucwords($UpdatedData[0]['countries_title_en']);?>">
 								</div>
 							</div>
 							<div class="item form-group">
@@ -218,7 +217,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								</div>
 							</div>
 							<div class="item form-group">
-								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="about_image">Photo Attach 
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_photo">Photo Attach 
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
 									<input id="countries_photo" type="file" name="countries_photo" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
@@ -230,51 +229,85 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								</div>
 							</div>
 							
-							<script>
-							$.noConflict();
 							
-							jQuery(function() {
-								jQuery(".js-example-placeholder-single").select2({
-								  placeholder: "Select a Country Flag",
-								  allowClear: true
-								});
-								
-								$(".js-example-placeholder-single").change(function(){
+							<?php if($_GET["action"]=="countriesadd"){ ?>
+								<script>
+									$.noConflict();
 									
-									
-										$('.country_fflag').attr('src', $(this).val());
-									
-								});
-							});
-							</script>
-							<div class="item form-group">
-								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag">Select Country Flag</label>
-								<div class="col-md-6 col-sm-6 col-xs-12">
-									<select class="form-control js-example-placeholder-single" id="countries_flag" >
-										<option></option>
-										<?php
-										$handle=opendir('../flags');
-										 $i=0;
-										while (false!==($file = readdir($handle)))
-										{ 
-										if ($file != "." && $file != ".." && $file != "index.html")
-										 {  
-											//echo "<img src='flags/$file' border='0'>";
-											$flagName = ucwords(str_replace("_"," ",str_replace(".png","",$file)));
-											echo "<option value='../flags/$file'>$flagName</option>";
+									jQuery(function() {
+										jQuery(".js-example-placeholder-single").select2({
+										  placeholder: "Select a Country Flag",
+										  allowClear: true
+										});
+										
+										$(".js-example-placeholder-single").change(function(){
 											
-										  } 
-										} closedir($handle); 
-										?>
-									</select>
+											if ($(this).val() != "other" && $(this).val() != "") {
+												$('.country_flag_img_show').removeClass("hidden");
+												$('.country_flag').attr('src', $(this).val());
+												$('.country_flag_img_add').addClass("hidden");
+											} 
+											if ($(this).val() == "other") {
+												$('.country_flag_img_add').removeClass("hidden");
+												$('.country_flag_img_show').addClass("hidden");
+											}
+											
+												
+											
+										});
+									});
+									</script>
+								<div class="item form-group">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag_select">Select Country Flag</label>
+									<div class="col-md-6 col-sm-6 col-xs-12">
+										<select class="form-control js-example-placeholder-single" id="countries_flag_select" >
+											<option></option>
+											<option value="other">Other</option>
+											<?php
+											$handle=opendir('../flags');
+											 $i=0;
+											while (false!==($file = readdir($handle)))
+											{ 
+											if ($file != "." && $file != ".." && $file != "index.html")
+											 {  
+												//echo "<img src='flags/$file' border='0'>";
+												$flagName = ucwords(str_replace("_"," ",str_replace(".png","",$file)));
+												echo "<option value='../flags/$file'>$flagName</option>";
+												
+											  } 
+											} closedir($handle); 
+											?>
+										</select>
+									</div>
 								</div>
-							</div>
-							<div class="item form-group">
-								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag">Selected Flag</label>
-								<div class="col-md-6 col-sm-6 col-xs-12">
-									<img class="country_fflag">
+								<div class="item form-group country_flag_img_show hidden">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="country_flag">Selected Flag</label>
+									<div class="col-md-6 col-sm-6 col-xs-12">
+										<img class="country_flag">
+									</div>
 								</div>
-							</div>
+								<div class="item form-group country_flag_img_add hidden">
+									
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag">Flag Attach</label>
+									<div class="col-md-6 col-sm-6 col-xs-12">									
+										<input type='file' name='countries_flag' class="form-control">
+										
+									</div>
+								</div>
+							<?php } ?>
+							<?php if(!empty($UpdatedData[0]['countries_flag']) && $_GET["action"]=="countriesupdate"){
+								$pic_path=$UpdatedData[0]['countries_flag'];?>
+								<div class="item form-group country_flag_img_show">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="country_flag">Selected Flag</label>
+									<div class="col-md-6 col-sm-6 col-xs-12">
+										<img border="0" src="../flags/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
+										<input type="checkbox" style="border:0px;" name="deletefile"  value="1">Delete
+									</div>
+								</div>
+								
+							<?php } ?>		
+									
+							
 							
 							<div class="ln_solid"></div>
 							<div class="form-group">

@@ -13,11 +13,11 @@ if($_POST["Action"]=="Show")
 {
 	$ClientId=$_POST[ClientId];
 	if ($ClientId) {
-		$TableName="clients";
+		$TableName="countries";
 		$TableField=array();
-		$TableField[0][0]="clients_country_flag_visible";
+		$TableField[0][0]="countries_client_visible";
 		$TableField[0][1]="true";	
-		update_query($link,$TableName,$TableField,"clients_id=$ClientId");
+		update_query($link,$TableName,$TableField,"countries_id=$ClientId");
 		//echo "<script>document.location='index.php?model=flags';</script>";
 	}
 }
@@ -25,11 +25,11 @@ if($_POST["Action"]=="Hide")
 {
 	$ClientId=$_POST[ClientId];
 	if ($ClientId) {
-		$TableName="clients";
+		$TableName="countries";
 		$TableField=array();
-		$TableField[0][0]="clients_country_flag_visible";
+		$TableField[0][0]="countries_client_visible";
 		$TableField[0][1]="false";	
-		update_query($link,$TableName,$TableField,"clients_id=$ClientId");
+		update_query($link,$TableName,$TableField,"countries_id=$ClientId");
 		//echo "<script>document.location='index.php?model=flags';</script>";
 	}
 }
@@ -57,13 +57,13 @@ if($_POST["Action"]=="Add")//Del/Un Del
 
 				$TableName="countries";
 				$TableField=array();
-				$TableField[0][0]="clients_country_flag";
+				$TableField[0][0]="countries_flag";
 				$TableField[0][1]="'$newfile'";	
-				$TableField[1][0]="clients_country_name";
+				$TableField[1][0]="countries_title_en";
 				$TableField[1][1]="'$DataCountryName'";				
-				$TableField[2][0]="clients_country_flag_visible";
+				$TableField[2][0]="countries_client_visible";
 				$TableField[2][1]="'0'";
-				insert_query($link,'clients',$TableField);
+				insert_query($link,'countries',$TableField);
 				echo "<script>document.location='index.php?model=flags';</script>";
 			}else{
 				echo "Error while Uploading";
@@ -72,7 +72,7 @@ if($_POST["Action"]=="Add")//Del/Un Del
 	}
 }
 
-$SQL="select * from clients where 1=1 ";
+$SQL="select * from countries where 1=1 ";
 $showdelet=select_query($link,$SQL,0,0);
 
 ?>
@@ -108,19 +108,19 @@ $showdelet=select_query($link,$SQL,0,0);
 														<?
 														for($d=0;$d<count($showdelet);$d++)
 														{
-															$clients_id=$showdelet[$d]['clients_id'];
-															$clients_country_flag=$showdelet[$d]['clients_country_flag'];
-															$clients_country_name=$showdelet[$d]['clients_country_name'];
-															$clients_country_flag_visible=$showdelet[$d]['clients_country_flag_visible'];?>
+															$countries_id=$showdelet[$d]['countries_id'];
+															$countries_flag=$showdelet[$d]['countries_flag'];
+															$countries_title_en=$showdelet[$d]['countries_title_en'];
+															$countries_client_visible=$showdelet[$d]['countries_client_visible'];?>
 															<tr>
-																<td style="vertical-align: middle"><? echo ucwords($clients_country_name);?></td>
-																<td><? echo "<img class='img-responsive clients-flag' src='../flags/$clients_country_flag'>";?></td>
+																<td style="vertical-align: middle"><? echo ucwords($countries_title_en);?></td>
+																<td><? echo "<img class='img-responsive clients-flag' src='../flags/$countries_flag'>";?></td>
 																<td style="vertical-align: middle">
 																	
-																		<input name='button' type='submit' class="btn btn-danger show-hide" value='Hide' clientId='<?=$clients_id?>' <? if ($clients_country_flag_visible == "0") {?>style="display: none;"<?}?>>
+																		<input name='button' type='submit' class="btn btn-danger show-hide" value='Hide' clientId='<?=$countries_id?>' <? if ($countries_client_visible == "0") {?>style="display: none;"<?}?>>
 																	
 																	
-																		<input name='button' type='submit' class="btn btn-success show-hide" value='Show' clientId='<?=$clients_id?>' <? if ($clients_country_flag_visible == "1") {?>style="display: none;"<?}?>>
+																		<input name='button' type='submit' class="btn btn-success show-hide" value='Show' clientId='<?=$countries_id?>' <? if ($countries_client_visible == "1") {?>style="display: none;"<?}?>>
 																	
 																</td>
 															</tr>
