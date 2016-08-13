@@ -117,28 +117,7 @@
 	</div>
 </div>
 
-<!-- navbar -->
-<script type="text/javascript">
-	$(function(){
-		$(window).scroll(function() {
-			var navbarCurrentPos = $("section.nav-bar").offset().top;
-			var welcomePos = $("#myCarousel").height() - $("section.nav-bar").height();
-			var winTop = $(window).scrollTop();
-			if (winTop > welcomePos) {
-			//console.log("hit");
-			$(".nav-bar .identity").addClass("responsive");
-			$(".nav-bar").css("position","fixed");
-			$("section.nav-bar").addClass("hide-nav");
-		}
-		else
-		{
-			$(".nav-bar .identity").removeClass("responsive");
-			$(".nav-bar").css("position","absolute");
-			$("section.nav-bar").removeClass("hide-nav");
-		}
-	});
-	});
-</script>
+
 
 <!--lang-->
 <script type="text/javascript">

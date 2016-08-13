@@ -37,3 +37,57 @@
 
 
 </head>
+<body data-logo-color='light' data-nav-color='light' data-overlay-id='false' data-overlay-open='false' data-page='process' data-section='unity'>
+	<?php include "function.php";?>
+
+	<?php
+	$finalLang = "en";
+	if($_POST["Action"]=="changeLang")
+	{
+		$finalLang = $_POST["lang"];
+	}
+	?>
+
+	<section class='nav-bar container-fluid scroll-up' id='navbar'>
+		<div class='nav-bar-inner'>
+			<div class='identity'>
+				<a href="/"><img src="images/logo reverse.png" id='digital-telepathy-logo'>
+				</a>
+			</div>
+			<a class="menu-text" href="javascript:;">MENU</a>
+		</div>
+		<div class='menu-wrap'>
+			<a class="hamburger menu" href="javascript:;"><div></div>
+				<div></div>
+				<div></div>
+			</a>
+		</div>
+	</section>
+
+
+	<form id="langForm" name="langForm" method="post" >
+		<input type="hidden" name="Action">
+		<input type="hidden" name="lang">
+		<div id="lang" class="dropdown">
+			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				<img class="langSelectedImage" src="lang/<?php echo $finalLang ?>.png"/>
+				<span class="langSelectedText"> <?php echo $finalLang ?></span>
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a id="en" href="#" lang="en" class="langSelect"><img src="lang/en.png"/> English</a></li>
+				<li><a id="kw" href="#" lang="ar" class="langSelect"><img src="lang/ar.png"/> Arabic</a></li>
+			</ul>
+		</div>
+	</form>
+
+	<script type="text/javascript">
+		$(function(){
+			$(".langSelect").on("click",function(){
+				console.log(  $(this).attr("lang")    );
+				document.forms["langForm"].elements["Action"].value = "changeLang";
+				document.forms["langForm"].elements["lang"].value = $(this).attr("lang");
+				document.forms["langForm"].submit();
+			});
+		});
+	</script>
