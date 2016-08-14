@@ -44,8 +44,13 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 		.nav-pills>li+li {margin-left: 10px;}
 		.tab-content{margin: 100px 30px 30px;}
 	}
+	@media only screen and (min-width:1400px) and (max-width: 1823px) {
+		.nav-pills>li>a{width:130px;height:130px;}
+		.nav-pills>li+li {margin-left: 15px;}
+		.tab-content{margin: 100px 30px 30px;}
+		.nav-pills>li>a img{margin-left:-50px;margin-top:-50px;width:100px;}
+	}
 </style>
-
 
 <div class="section container-fluid" style="background-color: #cfdfff;">
 	<h2>Countries of Operation </h2>
