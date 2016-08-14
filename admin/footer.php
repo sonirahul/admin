@@ -33,7 +33,7 @@
 
 	<?php 
 		$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-		if (strpos($url,'countriesadd') !== false) { 
+		if (strpos($url,'countriesadd') !== false || strpos($url,'countriesupdate') !== false) { 
 		    echo "<script src='../js/select2.full.min.js'></script>";
 			echo "<link rel='stylesheet' type='text/css' href='../css/select2.min.css'>";
 		}

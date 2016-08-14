@@ -9,18 +9,28 @@ $txtename=$_POST["txtename"];
 $txtedesc=$_POST["txtedesc"];
 $deletefile=$_POST["deletefile"];
 $deleteflag=$_POST["deleteflag"];
+$countryFlagSelect=$_POST["countries_flag_select"];
+
 //-------------------------------------------Delet Fields
 if($_POST["action"]=="Delete")
 {
 	$TableName="countries";
 	$SQLwhere="countries_id=";
 	$SQLwhere.=$countriesid;
-	delete_query($link,$TableName,$SQLwhere);
+	$TableField[0][0]="countries_operation";
+	$TableField[0][1]="0";
+	update_query($link,$TableName,$TableField,$SQLwhere);
 	echo "<script>document.location='index.php?model=countries';</script>";
 }
 //---------Show Data------------------	
 $SQL="select * from countries where countries_operation=1 ";
 $SettingData=select_query($link,$SQL,0,0);	
+
+if($_GET["action"]=="countriesupdate")
+{
+$SQL="select * from countries where countries_id=$_GET[countriesid]";
+$UpdatedData=select_query($link,$SQL,0,0);	
+}
 //--------------------------------
 if($_POST["action"]=="beUpdate") // Update Fields
 {
@@ -36,7 +46,6 @@ if($_POST["action"]=="beUpdate") // Update Fields
 	$TableField[3][1]="'$txtedesc'";
 	
 	$uf=4;
-		
 	if($deletefile==1)
 	{ 
   	    $SQL="select countries_photo from countries where countries_id=$countriesid";
@@ -48,26 +57,43 @@ if($_POST["action"]=="beUpdate") // Update Fields
 	}elseif($_FILES["countries_photo"]["name"]!="")
 		{ 
 		  $TableField[$uf][0]="countries_photo";
-	      $TableField[$uf][1]=uploadfile("countries_photo","countries_".$countriesid,"../countries");
+	      $TableField[$uf][1]=uploadfile("countries_photo",$txtename,"../countries");
 		  $uf++;
 		}
 		
+	echo "value of : $deleteflag";
 	if($deleteflag==1)
-	{ 
-  	    $SQL="select countries_flag from countries where countries_id=$countriesid";
-		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../countries/".$showdelet[0]['countries_flag']);
+	{
 		$TableField[$uf][0]="countries_flag";
 		$TableField[$uf][1]="''";
 		$uf++;
-	}elseif($_FILES["countries_flag"]["name"]!="")
-		{ 
+	}
+	else {
+		if($countryFlagSelect != "other" && $UpdatedData[0]['countries_flag'] =="")
+		{
+		$SQL="select countries_flag from countries where countries_flag='$countryFlagSelect'";
+		$countryFlagExits=select_query($link,$SQL,0,0);
+			if ($countryFlagExits[0]['countries_flag'] == '') {
+				$TableField[$uf][0]="countries_flag";
+				  $TableField[$uf][1]="'$countryFlagSelect'";
+				  $uf++;
+			}
+			else {?>
+	  
+		<script>
+			alert("Country or Country Flag name already exist in Database and do not match with inputs provided.");
+		</script>
+		
+	<?}
+		  
+		}
+		elseif ($_FILES["countries_flag"]["name"]!="" && $countryFlagSelect == "other")
+		{
 		  $TableField[$uf][0]="countries_flag";
-	      $TableField[$uf][1]=uploadfile("countries_flag","countries_flag_".$countriesid,"../countries");
+	      $TableField[$uf][1]=uploadfile("countries_flag",$txtename,"../flags");
 		  $uf++;
 		}
-	
-	
+	}
 	
     $SQLwhere="countries_id=$countriesid";	
 	update_query($link,$TableName,$TableField,$SQLwhere);
@@ -76,62 +102,69 @@ if($_POST["action"]=="beUpdate") // Update Fields
 //----------------------Add	
 if($_POST["action"]=="Add")
 {
-
+	
 	$TableName="countries";
 	$TableField=array();;	
 	$TableField[0][0]="countries_title_ar";
 	$TableField[0][1]="'$txtaname'";	
 	$TableField[1][0]="countries_desc_ar";
 	$TableField[1][1]="'$txtadesc'";
-	$TableField[2][0]="countries_title_en";
-	$TableField[2][1]="'$txtename'";	
-	$TableField[3][0]="countries_desc_en";
-	$TableField[3][1]="'$txtedesc'";
-	$TableField[4][0]="countries_client_visible";
-	$TableField[4][1]="'0'";
-	$TableField[5][0]="countries_operation";
-	$TableField[5][1]="'1'";
+	$TableField[2][0]="countries_desc_en";
+	$TableField[2][1]="'$txtedesc'";
+	$TableField[3][0]="countries_operation";
+	$TableField[3][1]="'1'";
 
-	$uf=6;
+	$SQL="select * from countries where countries_title_en='$txtename'";
+	$Countries_Add=select_query($link,$SQL,0,0);
+	
+	$Countries_Add_Id=$Countries_Add[0]['countries_id'];
+	$temp = $Countries_Add[0]['countries_flag'];
+	if ($Countries_Add_Id != '' && $countryFlagSelect == $Countries_Add[0]['countries_flag']) {
+		
+		if($_FILES["countries_photo"]["name"]!="")
+		{ 
+			$TableField[4][0]="countries_photo";
+			$TableField[4][1]=uploadfile("countries_photo",$txtename,"../countries");
+		}
+		$SQLwhere="countries_id=$Countries_Add_Id";	
+		update_query($link,$TableName,$TableField,$SQLwhere);
+		echo "<script>document.location='index.php?model=countries';</script>";
+	}
+	else if ($Countries_Add_Id == '' && $countryFlagSelect == 'other')
+	{
+		$TableField[4][0]="countries_client_visible";
+		$TableField[4][1]="'0'";
+		$TableField[5][0]="countries_title_en";
+		$TableField[5][1]="'$txtename'";
+		$uf=6;
+		if($_FILES["countries_photo"]["name"]!="")
+		{ 
+			$TableField[$uf][0]="countries_photo";
+			$TableField[$uf][1]=uploadfile("countries_photo",$txtename,"../countries");
+			$uf++;
+		}
 
-	if($_FILES["countries_photo"]["name"]!="")
-		{ 
-		  $TableField[$uf][0]="countries_photo";
-	      $TableField[$uf][1]=uploadfile("countries_photo","countries_".$countriesid,"../countries");
-		  $uf++;
+		if($_FILES["countries_flag"]["name"]!="")
+		{
+			$TableField[$uf][0]="countries_flag";
+			$TableField[$uf][1]=uploadfile("countries_flag",$txtename,"../flags");
+			$uf++;
 		}
-	
-	$DataCountryFlag=$_POST[countries_flag];
-	if($_FILES["countries_flag"]["name"]!="")
-		{ 
-			$file_dir  = "../flags/"; 
-			$newfile =$_FILES["countries_flag"]['name'];
-			$filetmpname =$_FILES["countries_flag"]['tmp_name'];
-			$filesize=$_FILES["countries_flag"]["size"];		  
-			$filext=substr($newfile,strpos($newfile,'.'));
-			if(strtolower($filext)==".jpg" || strtolower($filext)==".jpeg" || strtolower($filext)==".gif" || strtolower($filext)==".png" || strtolower($filext)==".tif"  || strtolower($filext)==".pdf" || strtolower($filext)==".doc" || strtolower($filext)==".docx")
-			{ 
-				if (trim($_FILES["countries_flag"]['name'])!="")
-				{ 
-				$filetoupload=$file_dir.$newfile;
-				copy($filetmpname, $filetoupload); 
-				}
-				
-				$TableField[$uf][0]="countries_flag";
-				$TableField[$uf][1]="'$newfile'";
-			}
-		}
-	
-	insert_query($link,$TableName,$TableField);
-	echo "<script>document.location='index.php?model=countries';</script>";
+		insert_query($link,$TableName,$TableField);
+		echo "<script>document.location='index.php?model=countries';</script>";
+	}
+	else { ?>
+	  
+		<script>
+			alert("Country or Country Flag name already exist in Database and do not match with inputs provided.");
+		</script>
+		
+	<?}
 }
 //---------------------------
-if($_GET["action"]=="countriesupdate")
-{
-$SQL="select * from countries where countries_id=$_GET[countriesid]";
-$UpdatedData=select_query($link,$SQL,0,0);	
-}
+
 ?>
+
 <div class="right_col" role="main">
 	<div class="row">
 		<div class="col-md-12 col-sm-12 col-xs-12">
@@ -141,6 +174,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 						<span class="section">Countries of Operation</span>
 						<form method="post" name="Prowse" class="form-horizontal form-label-left" novalidate>
 							<input type="hidden" name="action">
+							<input type="hidden" name="countriesid">
 							<div class="item form-group">
 								<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
 									<a href="index.php?model=countries&action=countriesadd" class="btn btn-primary">Add New Country</a><br/><br/>
@@ -174,7 +208,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 							jQuery(function() {
 							    jQuery('.about-delete-button').on("click", function(){
 							    	document.forms["Prowse"].elements["action"].value = jQuery(this).val();
-									document.forms["Prowse"].elements["aboutId"].value = jQuery(this).attr("aboutId");
+									document.forms["Prowse"].elements["countriesid"].value = jQuery(this).attr("countriesid");
 									document.forms["Prowse"].submit();
 							    });
 							});
@@ -230,26 +264,26 @@ $UpdatedData=select_query($link,$SQL,0,0);
 							</div>
 							
 							
-							<?php if($_GET["action"]=="countriesadd"){ ?>
+							<?php if($_GET["action"]=="countriesadd" || empty($UpdatedData[0]['countries_flag'])){ ?>
 								<script>
 									$.noConflict();
 									
 									jQuery(function() {
-										jQuery(".js-example-placeholder-single").select2({
+										jQuery(".countries_flag_select").select2({
 										  placeholder: "Select a Country Flag",
 										  allowClear: true
 										});
 										
-										$(".js-example-placeholder-single").change(function(){
+										$(".countries_flag_select").change(function(){
 											
 											if ($(this).val() != "other" && $(this).val() != "") {
-												$('.country_flag_img_show').removeClass("hidden");
-												$('.country_flag').attr('src', $(this).val());
-												$('.country_flag_img_add').addClass("hidden");
+												$('.country_flag_show').removeClass("hidden");
+												$('img.country_flag_show').attr('src', '../flags/' + $(this).val());
+												$('.countries_flag').addClass("hidden");
 											} 
 											if ($(this).val() == "other") {
-												$('.country_flag_img_add').removeClass("hidden");
-												$('.country_flag_img_show').addClass("hidden");
+												$('.countries_flag').removeClass("hidden");
+												$('.country_flag_show').addClass("hidden");
 											}
 											
 												
@@ -260,7 +294,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								<div class="item form-group">
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag_select">Select Country Flag</label>
 									<div class="col-md-6 col-sm-6 col-xs-12">
-										<select class="form-control js-example-placeholder-single" id="countries_flag_select" >
+										<select name="countries_flag_select" class="form-control countries_flag_select" id="countries_flag_select" >
 											<option></option>
 											<option value="other">Other</option>
 											<?php
@@ -270,9 +304,8 @@ $UpdatedData=select_query($link,$SQL,0,0);
 											{ 
 											if ($file != "." && $file != ".." && $file != "index.html")
 											 {  
-												//echo "<img src='flags/$file' border='0'>";
 												$flagName = ucwords(str_replace("_"," ",str_replace(".png","",$file)));
-												echo "<option value='../flags/$file'>$flagName</option>";
+												echo "<option value='$file'>$flagName</option>";
 												
 											  } 
 											} closedir($handle); 
@@ -280,28 +313,28 @@ $UpdatedData=select_query($link,$SQL,0,0);
 										</select>
 									</div>
 								</div>
-								<div class="item form-group country_flag_img_show hidden">
-									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="country_flag">Selected Flag</label>
+								<div class="item form-group country_flag_show hidden">
+									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="country_flag_show">Selected Flag</label>
 									<div class="col-md-6 col-sm-6 col-xs-12">
-										<img class="country_flag">
+										<img class="country_flag_show">
 									</div>
 								</div>
-								<div class="item form-group country_flag_img_add hidden">
+								<div class="item form-group countries_flag hidden">
 									
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag">Flag Attach</label>
 									<div class="col-md-6 col-sm-6 col-xs-12">									
-										<input type='file' name='countries_flag' class="form-control">
+										<input name="countries_flag" type='file' class="form-control countries_flag">
 										
 									</div>
 								</div>
 							<?php } ?>
 							<?php if(!empty($UpdatedData[0]['countries_flag']) && $_GET["action"]=="countriesupdate"){
 								$pic_path=$UpdatedData[0]['countries_flag'];?>
-								<div class="item form-group country_flag_img_show">
+								<div class="item form-group country_flag_show">
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="country_flag">Selected Flag</label>
 									<div class="col-md-6 col-sm-6 col-xs-12">
 										<img border="0" src="../flags/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
-										<input type="checkbox" style="border:0px;" name="deletefile"  value="1">Delete
+										<input type="checkbox" style="border:0px;" name="deleteflag"  value="1">Delete
 									</div>
 								</div>
 								
@@ -356,9 +389,22 @@ $UpdatedData=select_query($link,$SQL,0,0);
 									return false;
 								}
 								//---------------------------------------
-								document.Add.action.value='<?php echo $_GET["action"]=='countriesupdate'? 'beUpdate':'Add';?>';
+								var action = '<?php echo $_GET["action"]=='countriesupdate'? 'beUpdate':'Add';?>';
+								document.Add.action.value=action;
+								
+								
+								/*if ($(".countries_flag_select").val() != "other" && $(".countries_flag_select").val() != "") {
+									document.forms["Add"].elements["countries_flag"].value = $(".countries_flag_select").val();
+								}
+								else {
+									document.forms["Add"].elements["countries_flag"].value = $("input.countries_flag").val();
+								}*/
+									
+								
+								
+								
 								document.Add.submit();
-								return true;
+								return false;
 					}
 					</script>
 
