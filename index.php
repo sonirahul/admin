@@ -154,7 +154,7 @@ if($finalLang == "ar")
 					<h2 class="main-screen-caption">
 						<?php 
 						if($finalLang == "en") echo "Local Presence Global Support";
-						if($finalLang == "ar") echo "Ø­Ø¶ÙˆØ± Ù…Ø­Ù„ÙŠ | Ø¯Ø¹Ù… Ø¹Ø§Ù„Ù…ÙŠ";
+						if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
 						?>
 					</h2>
 					<div class="block-stats hidden-xs">
@@ -372,7 +372,7 @@ if($finalLang == "ar")
 					<div class='container'>
 						<div class='row row-centered' id='let-us-help-you'>
 							<h3>Objective-based Design, our repeatable and scalable process</h3>
-							<p class="hidden-xs">Identifying friction in your user journey is important, but itâ€™s only one step in the process. After working with you to validate your userâ€™s pain points, our team of strategists, designers, and developers operate alongside your team developing strategies to achieve your business objectives.</p>
+							<p class="hidden-xs">Identifying friction in your user journey is important, but it’s only one step in the process. After working with you to validate your user’s pain points, our team of strategists, designers, and developers operate alongside your team developing strategies to achieve your business objectives.</p>
 						</div>
 					</div>
 				</div>
