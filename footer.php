@@ -5,35 +5,75 @@
 				<div class='col-md-9 hidden-xs hidden-sm '>
 					<ul class='level-1-nav list-unstyled'>
 						<li class='home'>
-							<a class="home" href="/">Home</a>
+							<a class="home" href="/">
+								<?php 
+								if($finalLang == "en") echo "Home";
+								if($finalLang == "ar") echo "Home_Ar";
+								?>
+							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='services'>
-							<a class="services active" href="/process/">News</a>
+							<a class="services active" href="/#news">
+								<?php 
+								if($finalLang == "en") echo "News";
+								if($finalLang == "ar") echo "News_Ar";
+								?>
+							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='our-work'>
-							<a class="our-work" href="/work/">Our Team</a>
+							<a class="our-work" href="/#mgtTeam">
+								<?php 
+								if($finalLang == "en") echo "Our Team";
+								if($finalLang == "ar") echo "Our Team_Ar";
+								?>
+							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
-							<a class="philosophy" href="coo.php">Countries of Operation</a>
+							<a class="philosophy" href="/coo.php">
+								<?php 
+								if($finalLang == "en") echo "Countries of Operation";
+								if($finalLang == "ar") echo "COO_Ar";
+								?>
+							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='careers'>
-							<a class="careers" href="/careers/">Gallery</a>
+							<a class="careers" href="/gallery.php">
+								<?php 
+								if($finalLang == "en") echo "Gallery";
+								if($finalLang == "ar") echo "Gallery_AR";
+								?>
+							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='blog'>
-							<a target="_blank" class="blog" href="http://www.com/blog">Clients</a>
+							<a target="_blank" class="blog" href="/#clientss1">
+								<?php 
+								if($finalLang == "en") echo "Our Clients";
+								if($finalLang == "ar") echo "Our Clients_Ar";
+								?>
+							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='blog'>
-							<a target="_blank" class="blog" href="https://mail.mawaredhouse.com/owa">Employees</a>
+							<a target="_blank" class="blog" href="https://mail.mawaredhouse.com/owa">
+								<?php 
+								if($finalLang == "en") echo "Employees";
+								if($finalLang == "ar") echo "Employees_Ar";
+								?>
+							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='contact'>
-							<a class="contact" href="/contact/">Contact</a>
+							<a class="contact" href="/#contacts">
+								<?php 
+								if($finalLang == "en") echo "Contacts";
+								if($finalLang == "ar") echo "Contacts_Ar";
+								?>
+							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 					</ul>
@@ -56,7 +96,12 @@
 				</div>
 			</div>
 			<p class='copyright'>
-				&copy; 2016 Mawared House. <span class="hidden-xs">All rights reserved. <a href="/privacy-policy">Privacy&nbsp;Policy</a></span>
+				<?php 
+				if($finalLang == "en") echo "&copy; 2016 Mawared House. <span class='hidden-xs'>All rights reserved. <a href='/privacy-policy'>Privacy&nbsp;Policy</a></span>";
+
+				if($finalLang == "ar") echo "&copy; 2016 Mawared House. <span class='hidden-xs'>All rights reserved. <a href='/privacy-policy'>Privacy&nbsp;Policy</a></span>";
+				?>
+
 			</p>
 		</section>
 	</div>
@@ -65,31 +110,75 @@
 <div class='nav-overlay full-screen-overlay dt-height' id='nav-overlay'>
 	<ul class='level-1-nav list-unstyled'>
 		<li class='home'>
-			<a class="home" href="#main">Home</a>
+			<a class="home" href="/">
+				<?php 
+				if($finalLang == "en") echo "Home";
+				if($finalLang == "ar") echo "Home_Ar";
+				?>
+			</a>
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='services'>
-			<a class="services" href="#news">News</a>
+			<a class="services active" href="/#news">
+				<?php 
+				if($finalLang == "en") echo "News";
+				if($finalLang == "ar") echo "News_Ar";
+				?>
+			</a>
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='our-work'>
-			<a class="our-work" href="#mgtTeam">Our Team</a>
+			<a class="our-work" href="/#mgtTeam">
+				<?php 
+				if($finalLang == "en") echo "Our Team";
+				if($finalLang == "ar") echo "Our Team_Ar";
+				?>
+			</a>
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='philosophy'>
-			<a class="philosophy" href="coo.php">Countries of Operation</a>
+			<a class="philosophy" href="/coo.php">
+				<?php 
+				if($finalLang == "en") echo "Countries of Operation";
+				if($finalLang == "ar") echo "COO_Ar";
+				?>
+			</a>
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='careers'>
-			<a class="careers" href="gallery.html">Gallery</a>
+			<a class="careers" href="/gallery.php">
+				<?php 
+				if($finalLang == "en") echo "Gallery";
+				if($finalLang == "ar") echo "Gallery_AR";
+				?>
+			</a>
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='blog'>
-			<a target="_blank" class="blog" href="#clientss1">Clients</a>
+			<a target="_blank" class="blog" href="/#clientss1">
+				<?php 
+				if($finalLang == "en") echo "Our Clients";
+				if($finalLang == "ar") echo "Our Clients_Ar";
+				?>
+			</a>
+			<span class='icon-right-open-big'></span>
+		</li>
+		<li class='blog'>
+			<a target="_blank" class="blog" href="https://mail.mawaredhouse.com/owa">
+				<?php 
+				if($finalLang == "en") echo "Employees";
+				if($finalLang == "ar") echo "Employees_Ar";
+				?>
+			</a>
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='contact'>
-			<a class="contact" href="#contacts">Contact</a>
+			<a class="contact" href="/#contacts">
+				<?php 
+				if($finalLang == "en") echo "Contacts";
+				if($finalLang == "ar") echo "Contacts_Ar";
+				?>
+			</a>
 			<span class='icon-right-open-big'></span>
 		</li>
 	</ul>
@@ -113,7 +202,12 @@
 			<img src="images/lgonew.png" id='digital-telepathy-logo'>
 
 		</div>
-		<p>&copy; 2016 Mawaredhouse.com</p><!-- var d = new Date().getFullYear(); -->
+		<p>
+			<?php 
+			if($finalLang == "en") echo "&copy; 2016 Mawaredhouse.com";
+			if($finalLang == "ar") echo "&copy; 2016 Mawaredhouse.com_Ar";
+			?>
+		</p><!-- var d = new Date().getFullYear(); -->
 	</div>
 </div>
 
@@ -178,31 +272,31 @@
 			});
 		}
 		
-</script>
+	</script>
 
-<!--Normal slide animation -->
-<script type="text/javascript">
-	$(function(){
-		$(window).scroll(function() {
-			$(".slideanim").each(function(){
-				var pos = $(this).offset().top;
+	<!--Normal slide animation -->
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function() {
+				$(".slideanim").each(function(){
+					var pos = $(this).offset().top;
 
-				var winTop = $(window).scrollTop();
-				if (pos < winTop + 600) {
-					$(this).addClass("slide");
-				}
+					var winTop = $(window).scrollTop();
+					if (pos < winTop + 600) {
+						$(this).addClass("slide");
+					}
+				});
 			});
 		});
-	});
-</script>
+	</script>
 
-<!-- Management Team Viewer-->
-<script type="text/javascript">
-	$(".omgt-team").click(function(){
-		var imgsrc = $(this).find(".hexagon-in2").css('background-image').replace('url(','').replace(')','');;
-		var peopleName = $(this).find(".omgt-name").text();
-		var peopleTitle = $(this).find(".omgt-pos").text();
-		var peopleText = $(this).find(".omgt-Content").text();
+	<!-- Management Team Viewer-->
+	<script type="text/javascript">
+		$(".omgt-team").click(function(){
+			var imgsrc = $(this).find(".hexagon-in2").css('background-image').replace('url(','').replace(')','');;
+			var peopleName = $(this).find(".omgt-name").text();
+			var peopleTitle = $(this).find(".omgt-pos").text();
+			var peopleText = $(this).find(".omgt-Content").text();
 
 		//console.log(imgsrc + " " + peopleName + " " + peopleTitle + " " + peopleText);
 		//Setting values
