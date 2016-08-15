@@ -8,7 +8,7 @@
 							<a class="home" href="/#myCarousel">
 								<?php 
 								if($finalLang == "en") echo "Home";
-								if($finalLang == "ar") echo "Ã‡Ã¡Ã‘Ã†Ã­Ã“Ã­Ã‰";
+								if($finalLang == "ar") echo "ÇáÑÆíÓíÉ";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -32,10 +32,19 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
+							<a class="philosophy" href="/coo.php">
+								<?php 
+								if($finalLang == "en") echo "Countries of Operation";
+								if($finalLang == "ar") echo "ÏÇÆÑÉ ÚãáíÇÊäÇ";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='philosophy'>
 							<a class="philosophy" href="/#mgtTeamMain2">
 								<?php 
 								if($finalLang == "en") echo "Our Team";
-								if($finalLang == "ar") echo "Ã£Ã¦Ã‡Ã‘ÃÃ¤Ã‡ Ã‡Ã¡ÃˆÃ”Ã‘Ã­Ã‰";
+								if($finalLang == "ar") echo "ãæÇÑÏäÇ ÇáÈÔÑíÉ";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -44,16 +53,7 @@
 							<a class="blog" href="/#clientss1">
 								<?php 
 								if($finalLang == "en") echo "Our Clients";
-								if($finalLang == "ar") echo "ÃšÃ£Ã¡Ã‡Ã†Ã¤Ã‡";
-								?>
-							</a>
-							<span class='icon-right-open-big'></span>
-						</li>
-						<li class='philosophy'>
-							<a class="philosophy" href="/coo.php">
-								<?php 
-								if($finalLang == "en") echo "Countries of Operation";
-								if($finalLang == "ar") echo "ÃÃ‡Ã†Ã‘Ã‰ ÃšÃ£Ã¡Ã­Ã‡ÃŠÃ¤Ã‡";
+								if($finalLang == "ar") echo "ÚãáÇÆäÇ";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -62,7 +62,7 @@
 							<a class="careers" href="/gallery.php">
 								<?php 
 								if($finalLang == "en") echo "Gallery";
-								if($finalLang == "ar") echo "Ã£ÃšÃ‘Ã– Ã‡Ã¡Ã•Ã¦Ã‘";
+								if($finalLang == "ar") echo "ãÚÑÖ ÇáÕæÑ";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -122,7 +122,7 @@
 			<a class="home" href="/#myCarousel">
 				<?php 
 				if($finalLang == "en") echo "Home";
-				if($finalLang == "ar") echo "Ã‡Ã¡Ã‘Ã†Ã­Ã“Ã­Ã‰";
+				if($finalLang == "ar") echo "ÇáÑÆíÓíÉ";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
@@ -146,10 +146,19 @@
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='philosophy'>
+			<a class="philosophy" href="/coo.php">
+				<?php 
+				if($finalLang == "en") echo "Countries of Operation";
+				if($finalLang == "ar") echo "ÏÇÆÑÉ ÚãáíÇÊäÇ";
+				?>
+			</a>
+			<span class='icon-right-open-big'></span>
+		</li>
+		<li class='philosophy'>
 			<a class="philosophy" href="/#mgtTeamMain2">
 				<?php 
 				if($finalLang == "en") echo "Our Team";
-				if($finalLang == "ar") echo "Ã£Ã¦Ã‡Ã‘ÃÃ¤Ã‡ Ã‡Ã¡ÃˆÃ”Ã‘Ã­Ã‰";
+				if($finalLang == "ar") echo "ãæÇÑÏäÇ ÇáÈÔÑíÉ";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
@@ -158,16 +167,7 @@
 			<a class="blog" href="/#clientss1">
 				<?php 
 				if($finalLang == "en") echo "Our Clients";
-				if($finalLang == "ar") echo "ÃšÃ£Ã¡Ã‡Ã†Ã¤Ã‡";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
-		<li class='philosophy'>
-			<a class="philosophy" href="/coo.php">
-				<?php 
-				if($finalLang == "en") echo "Countries of Operation";
-				if($finalLang == "ar") echo "ÃÃ‡Ã†Ã‘Ã‰ ÃšÃ£Ã¡Ã­Ã‡ÃŠÃ¤Ã‡";
+				if($finalLang == "ar") echo "ÚãáÇÆäÇ";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
@@ -176,7 +176,7 @@
 			<a class="careers" href="/gallery.php">
 				<?php 
 				if($finalLang == "en") echo "Gallery";
-				if($finalLang == "ar") echo "Ã£ÃšÃ‘Ã– Ã‡Ã¡Ã•Ã¦Ã‘";
+				if($finalLang == "ar") echo "ãÚÑÖ ÇáÕæÑ";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
