@@ -41,11 +41,19 @@
 	<?php include "function.php";?>
 
 	<?php
-	$finalLang = "en";
-	if($_POST["Action"]=="changeLang")
-	{
-		$finalLang = $_POST["lang"];
-	}
+		$cookie_name="language";
+		if(!isset($_COOKIE[$cookie_name])) {
+			$finalLang = "en";
+		} else {
+			$finalLang = $_COOKIE[$cookie_name];
+		}
+
+		if($_POST["Action"]=="changeLang")
+		{
+			$finalLang = $_POST["lang"];
+		}
+		
+		setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/");
 	?>
 
 	<section class='nav-bar container-fluid scroll-up' id='navbar'>
