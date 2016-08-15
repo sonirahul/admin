@@ -676,7 +676,7 @@ if($finalLang == "ar")
 							<img src="flags/<?php echo $allClientsData[$i]["countries_flag"]?>">	
 						</div>
 						<div class="clientss-name">
-							<p><?php echo $allClientsData[$i]["countries_title_en"]?></p>
+							<p><?php if($finalLang == "en") { echo $allClientsData[$i]["countries_title_en"]; } else { echo $allClientsData[$i]["countries_title_ar"]; }?></p>
 						</div>
 					</div>
 				</div>
