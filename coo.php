@@ -8,8 +8,7 @@
 		$(".nav-bar .identity").addClass("responsive");
 		$(".nav-bar").css("position","fixed").fadeIn();
 		$("section.nav-bar").addClass("hide-nav");
-		$("#lang").css("position","fixed");
-
+		$("#lang").addClass("when-slided");
 	});
 </script>
 <?php  
@@ -39,6 +38,43 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 
 	#coo_title{text-transform:uppercase;text-align:left;font-size:x-large;}
 
+	@media only screen and (min-width : 320px) and (max-width:991px){
+		#coo-main{width:100vw;padding:0}
+		.nav-pills>li{width:100%}
+		.nav-pills>li:not(:last-child){border-bottom:2px solid #b8c6e2}
+		.nav-pills>li::after{display:none!important}
+		.nav-pills>li>a{width:100vw!important;background-color:initial!important;border-radius:0!important;height:70px}
+		.nav-pills>li>a img{top:45%;left:15%}
+		.nav-pills>li>a p{top:30%;left:30%; height:0;text-align:left;width:initial;}
+		.nav-pills>li>a,.nav-pills>li+li{margin:0!important}
+		#coo-content-container{width:200vw}
+		.nav-pills{text-align:center;width:100vw;overflow:hidden!important;float:left}
+		.tab-content{height:initial;}
+		.tab-content.container-fluid{width:100vw;overflow:hidden;float:left;margin:0}
+		.nav-pills>li>a:hover{background-color:#0f3d69!important}
+		.nav-pills>li>a:hover p{color:#fff}
+		#con-content-parent{width:100vw;overflow-x:hidden;}
+		.tab-pane{overflow-wrap:break-word;}
+		i#coo-content-back-btn{color: #fff}
+		#coo-con-pic{width:100%}
+		#coo-content-forward-btn {position: absolute;top: 30%;right: 10%;}
+	}
+	@media only screen and (min-width :421px) and (max-width:600px){
+		.nav-pills>li>a{height:80px;}
+		.nav-pills>li>a img{width:90px;margin-top:-45px;margin-left:-45px;}
+		.nav-pills>li>a p{font-size:17px !important;}
+	}
+	@media only screen and (min-width :600px) and (max-width:768px){
+		.nav-pills>li>a{height:90px;}
+		.nav-pills>li>a img{width:100px;margin-top:-50px;margin-left:-50px;}
+		.nav-pills>li>a p{font-size:18px !important;}
+	}
+	@media only screen and (min-width :769px) and (max-width:991px){
+		.nav-pills>li>a{height:110px;}
+		.nav-pills>li>a img{width:120px;margin-top:-60px;margin-left:-60px;}
+		.nav-pills>li>a p{font-size:20px !important;}
+	}
+
 	@media only screen and (min-width:992px) and (max-width: 1199px){
 		.nav-pills>li>a{width:100px;height:100px;}
 		.nav-pills>li+li {margin-left: 10px;}
@@ -52,58 +88,79 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 	}
 </style>
 
-<div class="section container-fluid" style="background-color: #cfdfff;">
+<script type="text/javascript">
+	$(function(){
+		earlierTopValue=0;
+		$(".nav-pills>li>a").click(function(){
+			windowWidth = $(window).width();
+			$('#con-content-parent').delay(500).animate({scrollLeft: windowWidth},300);
+			$(window).delay(800).scrollTop(0);
+		});
+		$("#coo-content-back-btn").click(function(){
+			windowWidth = $(window).width();
+			$('#con-content-parent').animate({scrollLeft:0},300);
+		});
+	});
+</script>
+
+<div id="coo-main" class="section container-fluid" style="background-color: #cfdfff;">
 	<h2>Countries of Operation </h2>
-	<ul class="nav nav-pills">
-		<?php 
-		for($i=0;$i<count($allCooData);$i++){?>
-			<li class="<?php if($i==0) echo active ?>">
-				<a data-toggle="pill" href="#menu<?php echo $i?> ">
-					<img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>">
-					<p class="menu-country-name">
-						<?php 
-						if($finalLang == "en") echo $allCooData[$i]["countries_title_en"];
-						if($finalLang == "ar") echo $allCooData[$i]["countries_title_ar"];
-						?>
-					</p>
-					<i class="fa fa-caret-up" aria-hidden="true"></i>
-				</a>
-			</li>
-			<?php
-		} 
-		?>	
-	</ul>
+	<div id="con-content-parent">
+		<div id="coo-content-container">
+			<ul class="nav nav-pills">
+				<?php 
+				for($i=0;$i<count($allCooData);$i++){?>
+					<li class="<?php if($i==0) echo active ?>">
+						<a data-toggle="pill" href="#menu<?php echo $i?> ">
+							<img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>">
+							<p class="menu-country-name">
+								<?php 
+								if($finalLang == "en") echo $allCooData[$i]["countries_title_en"];
+								if($finalLang == "ar") echo $allCooData[$i]["countries_title_ar"];
+								?>
+							</p>
+							<i id="coo-content-forward-btn" class="fa fa-2x fa-angle-right visible-xs visible-sm" aria-hidden="true"></i>
+							<i class="fa fa-caret-up" aria-hidden="true"></i>
+							<i classs="fa fa-caret-right"></i>
+						</a>
+					</li>
+					<?php
+				} 
+				?>	
+			</ul>
 
 
 
-	<div class="tab-content container-fluid">
-		<?php 
-		for($i=0;$i<count($allCooData);$i++){?>
-			<div id="menu<?php echo $i?>" class="tab-pane fade in <?php if($i==0) echo active ?>">
-				<div class="row">
-					<div class="col-sm-6" style="background:url(images/<?php echo $allCooData[$i]["countries_image"]?>);background-size:cover;height:500px;">
-
-					</div>
-					<div class="col-sm-6">
-						<h2 id="coo_title">
-							<?php 
-							if($finalLang == "en") echo $allCooData[$i]["countries_title_en"];
-							if($finalLang == "ar") echo $allCooData[$i]["countries_title_ar"];
-							?>
-						</h2>
-						<div id="coo_desc">
-							<?php 
-							if($finalLang == "en") echo $allCooData[$i]["countries_desc_en"];
-							if($finalLang == "ar") echo $allCooData[$i]["countries_desc_ar"];
-							?>
+			<div class="tab-content container-fluid">
+				<i id="coo-content-back-btn" class="fa fa-2x fa-angle-left visible-xs visible-sm " aria-hidden="true"></i>
+				<?php 
+				for($i=0;$i<count($allCooData);$i++){?>
+					<div id="menu<?php echo $i?>" class="tab-pane fade in <?php if($i==0) echo active ?>">
+						<div class="row">
+							<div class="col-sm-6 hidden-xs" style="background:url(images/<?php echo $allCooData[$i]["countries_image"]?>);background-size:cover;height:500px;"></div>
+							<div id="coo-con-pic" class="col-sm-6 visible-xs"><img src="images/<?php echo $allCooData[$i]["countries_image"]?>" /></div>
+							<div class="col-sm-6">
+								<h2 id="coo_title">
+									<?php 
+									if($finalLang == "en") echo $allCooData[$i]["countries_title_en"];
+									if($finalLang == "ar") echo $allCooData[$i]["countries_title_ar"];
+									?>
+								</h2>
+								<div id="coo_desc">
+									<?php 
+									if($finalLang == "en") echo $allCooData[$i]["countries_desc_en"];
+									if($finalLang == "ar") echo $allCooData[$i]["countries_desc_ar"];
+									?>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<?php
-		} 
-		?>	
+					<?php
+				} 
+				?>	
 
+			</div>
+		</div>
 	</div>
 </div>
 
