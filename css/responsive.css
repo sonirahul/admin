@@ -1,4 +1,72 @@
 /* Smartphones (portrait and landscape) ----------- */
+.country-con{transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);}
+.country-con:hover{transform: scale(1.1);}
+
+.omgt-name, .omgt-pos {
+   //background-color:#1e456f;;
+   //color: #fff;
+}
+#saContent {
+    background-color: rgba(0, 0, 0, 0.62);
+}
+
+#carouselItem2 blockquote p{
+    display: inline-block;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0,0.6);
+    font-size: 42px;
+}
+#carouselItem3 blockquote>.block-con{
+    display: inline-block;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0,0.6);
+}
+.identity img{background: rgba(0, 0, 0,0.2);}
+
+.mgtTeamMain2RowSupr>div:nth-child(1),.mgtTeamMain2RowSupr>div:nth-child(2){animation-name:magt-effect1;-webkit-animation-name:magt-effect1;animation-duration:4s;-webkit-animation-duration:4s;visibility:visible}
+@keyframes magt-effect1
+{
+	0%{transform:translateX(-200px)}
+	100%{transform:translateX(0px)}
+}
+
+.mgtTeamMain2RowSupr>div:nth-child(3),.mgtTeamMain2RowSupr>div:nth-child(4){animation-name:magt-effect2;-webkit-animation-name:magt-effect2;animation-duration:4s;-webkit-animation-duration:4s;visibility:visible}
+@keyframes magt-effect2
+{
+	0%{transform:translateX(200px)}
+	100%{transform:translateX(0px)}
+}
+
+#main .logo-small {
+    font-size: 50px!important;
+    transition: all .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.slide>div:hover .logo-small {
+    transform: scale(1.3);
+    color: #1f4670 !important;
+}
+.slide>div:hover p {
+    color: #306eb0;
+}
+.slide>div p {
+    transition: all .4s ease-in-out;
+}
+
+
+.omgt-team,.omgt-team *{transition:background 1s ease-in-out}
+.hexagon-in2,.omgt-name,.omgt-pos {background-color:rgba(0,0,0,0)}
+.omgt-team:hover .hexagon-in2 {background-color: cornsilk;background-blend-mode: multiply;}
+.omgt-team:hover {background: linear-gradient(0deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);color: #fff;}
+.omgt-team:hover .omgt-name, .omgt-team:hover .omgt-pos {background-color: rgba(0,0,0,0.4);}
+
+/*.mgtTeamMain2RowSupr>div{opacity:1;right:0;-webkit-transform:translateX(0px);-moz-transform:translateX(0px);-ms-transform:translateX(0px);-o-transform:translateX(0px);transform:translateX(0px)}
+*/
+.mgtTeamMain2RowSupr>div:nth-child(1){-webkit-transition-delay:.2s;transition-delay:.2s}
+.mgtTeamMain2RowSupr>div:nth-child(2){-webkit-transition-delay:.3s;transition-delay:.3s}
+.mgtTeamMain2RowSupr>div:nth-child(3){-webkit-transition-delay:.4s;transition-delay:.4s}
+.mgtTeamMain2RowSupr>div:nth-child(4){-webkit-transition-delay:.5s;transition-delay:.5s}
+.teamviewerimagecontent{padding:0}
+
 @media only screen and (min-width : 320px) and (max-width:480px){
 	.row{margin:0}
 	.section.container-fluid{padding:5px}

@@ -4,7 +4,7 @@ body{margin:0;font-family:"roboto","sans-serif","Helvetica","arial";font-family:
 .div-bg2{background:url(https://www.rgmgroup.com/wp-content/uploads/2015/01/sweep-texture.gif)!important}
 .div-bg3{background:url(http://www.optimumtechnologies.net/images/background/pattern-1.png)}
 .div-bg4{background:url(http://supernovathemes.com/wp-content/themes/supernonvathemes/images/bg/b3.png)}
-.div-bg5{background:url(../images/background-pattern.jpg)}
+.div-bg5{//background:url(../images/background-pattern.jpg)}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
 audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
 audio:not([controls]){display:none;height:0}
@@ -2457,7 +2457,7 @@ span.langSelected{display:inline-block;padding-left:10px;padding-bottom:5px}
    margin: 0 !important;
 }
 
-#ci2cc,#ci3cc{top:58% !important}
+#ci2cc,#ci3cc{top:62% !important}
 #ci3cc footer:after{content: ""}
 #carouselItem3 blockquote p,#carouselItem2 blockquote p {
     font-size: 36px;
@@ -2471,3 +2471,4 @@ span.langSelected{display:inline-block;padding-left:10px;padding-bottom:5px}
 #lang.when-slided{position:fixed;top: 15px!important}
 #singaporeAirlines i{color:#fff}
 #singapore-info{text-align:center;}
+

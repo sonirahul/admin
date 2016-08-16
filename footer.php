@@ -8,7 +8,7 @@
 							<a class="home" href="/#myCarousel">
 								<?php 
 								if($finalLang == "en") echo "Home";
-								if($finalLang == "ar") echo "ÇáÑÆíÓíÉ";
+								if($finalLang == "ar") echo "Ã‡Ã¡Ã‘Ã†Ã­Ã“Ã­Ã‰";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -35,7 +35,7 @@
 							<a class="philosophy" href="/coo.php">
 								<?php 
 								if($finalLang == "en") echo "Countries of Operation";
-								if($finalLang == "ar") echo "ÏÇÆÑÉ ÚãáíÇÊäÇ";
+								if($finalLang == "ar") echo "ÃÃ‡Ã†Ã‘Ã‰ ÃšÃ£Ã¡Ã­Ã‡ÃŠÃ¤Ã‡";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -44,7 +44,7 @@
 							<a class="philosophy" href="/#mgtTeamMain2">
 								<?php 
 								if($finalLang == "en") echo "Our Team";
-								if($finalLang == "ar") echo "ãæÇÑÏäÇ ÇáÈÔÑíÉ";
+								if($finalLang == "ar") echo "Ã£Ã¦Ã‡Ã‘ÃÃ¤Ã‡ Ã‡Ã¡ÃˆÃ”Ã‘Ã­Ã‰";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -53,7 +53,7 @@
 							<a class="blog" href="/#clientss1">
 								<?php 
 								if($finalLang == "en") echo "Our Clients";
-								if($finalLang == "ar") echo "ÚãáÇÆäÇ";
+								if($finalLang == "ar") echo "ÃšÃ£Ã¡Ã‡Ã†Ã¤Ã‡";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -62,7 +62,7 @@
 							<a class="careers" href="/gallery.php">
 								<?php 
 								if($finalLang == "en") echo "Gallery";
-								if($finalLang == "ar") echo "ãÚÑÖ ÇáÕæÑ";
+								if($finalLang == "ar") echo "Ã£ÃšÃ‘Ã– Ã‡Ã¡Ã•Ã¦Ã‘";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -122,7 +122,7 @@
 			<a class="home" href="/#myCarousel">
 				<?php 
 				if($finalLang == "en") echo "Home";
-				if($finalLang == "ar") echo "ÇáÑÆíÓíÉ";
+				if($finalLang == "ar") echo "Ã‡Ã¡Ã‘Ã†Ã­Ã“Ã­Ã‰";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
@@ -149,7 +149,7 @@
 			<a class="philosophy" href="/coo.php">
 				<?php 
 				if($finalLang == "en") echo "Countries of Operation";
-				if($finalLang == "ar") echo "ÏÇÆÑÉ ÚãáíÇÊäÇ";
+				if($finalLang == "ar") echo "ÃÃ‡Ã†Ã‘Ã‰ ÃšÃ£Ã¡Ã­Ã‡ÃŠÃ¤Ã‡";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
@@ -158,7 +158,7 @@
 			<a class="philosophy" href="/#mgtTeamMain2">
 				<?php 
 				if($finalLang == "en") echo "Our Team";
-				if($finalLang == "ar") echo "ãæÇÑÏäÇ ÇáÈÔÑíÉ";
+				if($finalLang == "ar") echo "Ã£Ã¦Ã‡Ã‘ÃÃ¤Ã‡ Ã‡Ã¡ÃˆÃ”Ã‘Ã­Ã‰";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
@@ -167,7 +167,7 @@
 			<a class="blog" href="/#clientss1">
 				<?php 
 				if($finalLang == "en") echo "Our Clients";
-				if($finalLang == "ar") echo "ÚãáÇÆäÇ";
+				if($finalLang == "ar") echo "ÃšÃ£Ã¡Ã‡Ã†Ã¤Ã‡";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
@@ -176,7 +176,7 @@
 			<a class="careers" href="/gallery.php">
 				<?php 
 				if($finalLang == "en") echo "Gallery";
-				if($finalLang == "ar") echo "ãÚÑÖ ÇáÕæÑ";
+				if($finalLang == "ar") echo "Ã£ÃšÃ‘Ã– Ã‡Ã¡Ã•Ã¦Ã‘";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
@@ -247,219 +247,6 @@
 	});
 </script>
 
-<!--Carousel Initialization-->
-<script type="text/javascript">
-	$(function(){ 
-		$('.carousel').carousel({
-			interval: false
-		}); 
-	});
-</script>
-
-<!--block count-->
-<script type="text/javascript">
-	
-		//Count num
-		function countNum(num, content, target, duration) {
-			if (duration) {
-				var count = 0;
-				var speed = parseInt(duration / num);
-				var interval = setInterval(function(){
-					if (count - 1 < num) {
-						target.html(count);
-					}
-					else {
-						target.html(content);
-						clearInterval(interval);
-					}
-					count++;
-				}, speed);
-			} else {
-				target.html(content);
-			}
-		}
-
-		//Init stats
-		function initStats(duration) {
-			jQuery('.block-stats .num').each(function() {
-				var container = jQuery(this);
-				var num = container.attr('data-num');
-				var content = container.attr('data-content');
-
-				countNum(num, content, container, duration);
-			});
-		}
-		
-	</script>
-
-	<!--Normal slide animation -->
-	<script type="text/javascript">
-		$(function(){
-			$(window).scroll(function() {
-				$(".slideanim").each(function(){
-					var pos = $(this).offset().top;
-
-					var winTop = $(window).scrollTop();
-					if (pos < winTop + 600) {
-						$(this).addClass("slide");
-					}
-				});
-			});
-		});
-	</script>
-
-	<!-- Management Team Viewer-->
-	<script type="text/javascript">
-		$(".omgt-team").click(function(){
-			var imgsrc = $(this).find(".hexagon-in2").css('background-image').replace('url(','').replace(')','');;
-			var peopleName = $(this).find(".omgt-name").text();
-			var peopleTitle = $(this).find(".omgt-pos").text();
-			var peopleText = $(this).find(".omgt-Content").text();
-
-		//console.log(imgsrc + " " + peopleName + " " + peopleTitle + " " + peopleText);
-		//Setting values
-		$(".teamviewerimage").css("background-image",'url('+imgsrc+')');
-		$(".people_Name").html(peopleName);
-		$(".people-title").html(peopleTitle);
-		$(".texte_people").html(peopleText);
-		$("#mgtTeamViewer").show();
-		$("div#mgtTeamViewer>.row").addClass("ourMagtTeam").removeClass("ourNormalTeam");
-	});
-</script>
-
-<!--Local Team Viewer With Close Setting-->
-<script type="text/javascript">
-	$(".team-view").click(function(){
-		var imgsrc = $(this).find("img").attr("src");
-		var peopleName = $(this).find(".sl-hover-title").text();
-		var peopleTitle = $(this).find(".sl-hover-subtitle").text();
-		var peopleText = $(this).find(".mw-team-quote").text();
-
-		console.log(imgsrc + " " + peopleName + " " + peopleTitle + " " + peopleText);
-		//Setting values
-		$(".teamviewerimage").css("background-image",'url('+imgsrc+')');
-		$(".people_Name").html(peopleName);
-		$(".people-title").html(peopleTitle);
-		$(".texte_people").html(peopleText);
-		$("#mgtTeamViewer").show();
-		$("div#mgtTeamViewer>.row").addClass("ourNormalTeam").removeClass("ourMagtTeam");
-
-	});
-	$(".mgtTeamViewerclose").click(function(){
-		closeTeamViewer();
-	});
-	$(".justBlackBg").click(function(){
-		closeTeamViewer();
-	});
-	function closeTeamViewer()
-	{
-		$(".ourMagtTeam").scrollTop(0);
-		$(".ourNormalTeam").scrollTop(0);
-		setTimeout(function(){
-			$("#mgtTeamViewer").hide();
-			$("div#mgtTeamViewer>.row").removeClass("ourNormalTeam").removeClass("ourMagtTeam");;
-		},10);
-	}
-</script>
-
-<!-- Show all news list -->
-<script type="text/javascript">
-	$(function(){	
-
-		newsflag = 0;
-		$("#show-list").click(function(){
-			if(newsflag==0)
-			{
-				$("#news-list").addClass("news-list-open");
-				newsflag=1;
-				setTimeout(function(){
-					$("#news-list").scrollTop(0);
-				},10);
-			}
-			else
-			{
-				hideNewsList();
-			}
-		});
-		$("#news-list li a").click(function(){
-			hideNewsList();
-		});
-		function hideNewsList()
-		{
-			$("#news-list").removeClass("news-list-open");
-			newsflag=0;
-			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-				setTimeout(function(){
-					$("#news-list").scrollTop(0);
-				},1000);
-			}
-		}
-	});
-</script>
-
-<!-- news list next & prev-->
-<script type="text/javascript">
-	$(function(){
-		$("#nlprev").click(function(){
-			newsListBtnHandler(1);
-		});
-		$("#nlnext").click(function(){
-			newsListBtnHandler(2);
-		});
-		totalListItems = $("#news-list li").length;
-		function newsListBtnHandler(controllerNum)
-		{
-			console.log("called" + controllerNum);
-			activeList = $("#news-list ul.nav>li.active");
-			activeListTargetNumber = activeList.find("a").attr("href").split("#menu")[1];
-			if(controllerNum == 1 )
-			{
-				clickedItemNum = parseInt(activeListTargetNumber)-1;
-				if(clickedItemNum<=0) clickedItemNum = totalListItems;
-			}
-			if(controllerNum == 2 )
-			{
-				clickedItemNum = parseInt(activeListTargetNumber)+1;
-				if(clickedItemNum>totalListItems) clickedItemNum = 1;
-			}
-			$("#news-list li>a[href='#menu" + clickedItemNum + "']").click();
-		}
-	});
-</script>
-
-<!-- Contact View Button -->
-<script type="text/javascript">
-	$(function(){
-		flag=0;
-		$("#contactView button").click(function(){
-			if(flag==0){
-		//$("#contact").addClass("contactOpacity");
-		$("#contact").fadeOut();
-		$(this).html('View Contact');
-		flag=1;
-	}
-	else
-	{
-		//$("#contact").removeClass("contactOpacity");
-		$("#contact").fadeIn();
-		$(this).html('View Map');
-		flag=0;  
-	}
-});
-	});
-</script>
-
-<!-- Contact Mobile Open & Close Button -->
-<script type="text/javascript">
-	$("#contactFormBtn").click(function(){
-		$("#contactFormMobileClose").fadeIn();
-		$("#contactForm").fadeIn();			
-	});
-	$("#contactFormMobileClose").click(function(){
-		$("#contactFormMobileClose").fadeOut();
-		$("#contactForm").fadeOut();
-	});
-</script>
 
 <!-- smooth scroll -->
 <script type="text/javascript">
@@ -543,29 +330,3 @@
 	});
 </script>
 
-<!-- Add Google Maps -->
-
-<script type='text/javascript'>
-function init_map() {
-    var myOptions = {
-        zoom: 12,
-        scrollwheel:false,
-        scaleControl:false,
-        center: new google.maps.LatLng(29.37585899999999, 48.00223471640631),
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-    marker = new google.maps.Marker({
-        map: map,
-        position: new google.maps.LatLng(29.37585899999999, 48.00223471640631)
-    });
-    infowindow = new google.maps.InfoWindow({
-        content: '<strong>Mawared House</strong><br>4B, 2nd Floor, Al Banwan Building Al Qibla Area Opposite Central Bank Of Kuwait Kuwait City<br>'
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.open(map, marker);
-    });
-    infowindow.open(map, marker);
-}
-google.maps.event.addDomListener(window, 'load', init_map);
-</script>
