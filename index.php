@@ -82,7 +82,6 @@ if($finalLang == "ar")
 }
 ?>
 
-
 <!-- navbar -->
 <script type="text/javascript">
 	$(function(){
@@ -118,7 +117,17 @@ if($finalLang == "ar")
 		});
 	});
 </script>
-
+<script type="text/javascript">
+	$(function(){
+		$(window).scroll(function() {
+			var winTop = $(window).scrollTop();
+			var ourTeamPos = $("#mgtTeam").offset().top - $("#mgtTeam").height()/2;
+			if (winTop > ourTeamPos) {
+				$("#mgtTeam").addClass("effect");
+			}
+		});
+	});
+</script>
 <!-- Complete Loader -->	
 <style>
 	#loading{width:100%;height:100%;top:0;left:0;position:fixed;display:block;opacity:1.0;background-color:#000;background:linear-gradient(45deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);background:#fff;z-index:999999999;text-align:center}
@@ -147,6 +156,12 @@ if($finalLang == "ar")
 	});
 </script>
 
+
+
+<style type="text/css">
+	.carousel-inner .item>div,.carousel{width:100%;height:100vh}
+</style>
+
 <!-- ravi // add class slide ...to make it slide from right to left -->
 <div id="myCarousel" class="carousel" data-ride="carousel">
 	<!-- Indicators -->
@@ -159,7 +174,7 @@ if($finalLang == "ar")
 	</ol>
 	<div class="carousel-inner" role="listbox">
 		<div id="carouselItem1" class="item active">
-			<div style="background-image:url(slider/stock-photo-68076165-kuwait-city_compressed.jpg);//background-image:url(slider/main.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
+			<div style="background-image:url(slider/stock-photo-68076165-kuwait-city_compressed.jpg);//background-image:url(slider/main.jpg);background-size:cover;background-position:center bottom;"></div>
 			<div class="container">
 				<div class="carousel-caption">
 					<h2 class="main-screen-caption">
@@ -192,7 +207,7 @@ if($finalLang == "ar")
 		</div>
 
 		<div id="carouselItem2"  class="item">
-			<div style="background-image:url(slider/1.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
+			<div style="background-image:url(slider/1.jpg);background-size:cover;background-position:center bottom"></div>
 			<div class="container">
 				<div id="ci2cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
@@ -202,7 +217,7 @@ if($finalLang == "ar")
 			</div>
 		</div>
 		<div id="carouselItem3"  class="item">
-			<div style="background-image:url(slider/2.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
+			<div style="background-image:url(slider/2.jpg);background-size:cover;background-position:center bottom"></div>
 			<div class="container">
 				<div id="ci3cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
@@ -215,10 +230,10 @@ if($finalLang == "ar")
 			</div>
 		</div>
 		<div id="carouselItem4"  class="item">
-			<div style="background-image:url(slider/4th.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
+			<div style="background-image:url(slider/4th.jpg);background-size:cover;background-position:center bottom"></div>
 		</div>
 		<div id="carouselItem5"  class="item">
-			<div style="background-image:url(slider/slider6_c.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
+			<div style="background-image:url(slider/slider6_c.jpg);background-size:cover;background-position:center bottom"></div>
 			<div class="container">
 				<div id="ci5cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
@@ -266,6 +281,13 @@ if($finalLang == "ar")
 		}
 	</script>
 </div>
+
+<!-- setting fixed height throught javascript instead of viewport -->
+<script type="text/javascript">
+	finalHeight=window.innerHeight;
+	$(".carousel-inner .item>div,.carousel").css("height",finalHeight)
+</script>
+
 
 <div class='main clearfix div-bg5' id='main'>
 	<section id='do-dont-process'>
@@ -721,13 +743,10 @@ if($finalLang == "ar")
 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBygc9FtuNgR_pyjs_FAt6d4p3DHhIoFII&callback=initMap"
 type="text/javascript"></script>
-<style>
-	#gmap_canvas img{max-width:none!important;background:none!important}
-</style>
 
 <div id="contacts" class="section container-fluid">
 	<div>
-		<div id="googleMap" style='overflow:hidden;height:650px;width:100%'>
+		<div id="googleMap">
 			<div id='gmap_canvas' style='height:650px;width:100%'>
 
 			</div>
