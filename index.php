@@ -155,10 +155,11 @@ if($finalLang == "ar")
 		<li data-target="#myCarousel" data-slide-to="1" class=""></li>
 		<li data-target="#myCarousel" data-slide-to="2" class=""></li>
 		<li data-target="#myCarousel" data-slide-to="3" class=""></li>
+		<li data-target="#myCarousel" data-slide-to="4" class=""></li>
 	</ol>
 	<div class="carousel-inner" role="listbox">
 		<div id="carouselItem1" class="item active">
-			<div style="background-image:url(http://i.istockimg.com/image-zoom/68076165/3/380/246/stock-photo-68076165-kuwait-city.jpg);//background-image:url(slider/main.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
+			<div style="background-image:url(slider/stock-photo-68076165-kuwait-city_compressed.jpg);//background-image:url(slider/main.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
 			<div class="container">
 				<div class="carousel-caption">
 					<h2 class="main-screen-caption">
@@ -215,9 +216,16 @@ if($finalLang == "ar")
 		</div>
 		<div id="carouselItem4"  class="item">
 			<div style="background-image:url(slider/4th.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
+		</div>
+		<div id="carouselItem5"  class="item">
+			<div style="background-image:url(slider/slider6_c.jpg);background-size:cover;background-position:center bottom;width:100%;height:100vh"></div>
 			<div class="container">
-				<div id="ci4cc" class="carousel-caption">
-
+				<div id="ci5cc" class="carousel-caption">
+					<blockquote class="blockquote-reverse">
+						<div class="block-con">
+							<p>"Global Presence"</p>
+						</div>
+					</blockquote>
 				</div>
 			</div>
 		</div>
@@ -264,7 +272,7 @@ if($finalLang == "ar")
 		<div class='container'>
 			<div class='row  column-center text-justify'>
 				<div class='col-md-12 '>
-					<h2 class="mh-text-colored"> <?php echo $vacName ?></h2>
+					<h2 class="mh-text-colored"> <i class="fa-cc-visa fa-2x" style="color:#000"></i> <?php echo $vacName ?></h2>
 					<?php echo $vac ?>
 				</div>
 			</div>
@@ -306,7 +314,7 @@ if($finalLang == "ar")
 			background-color: rgba(0, 0, 0, 0.30);
 			background-blend-mode: multiply;
 		}
-		#singaporeAirlines h2,#singaporeAirlines #saContent p,#singaporeAirlines #saContent a{color:#fff !important;text-shadow:0 0 3px #666}
+		#singaporeAirlines h2,#singaporeAirlines #saContent p,#singaporeAirlines #saContent a{color:#fff ;text-shadow:0 0 3px #666}
 	</style>
 
 	<section id="singaporeAirlines" class="section container-fluid">
@@ -326,7 +334,7 @@ if($finalLang == "ar")
 		<div class='container'>
 			<div class='row row-centered' id='let-us-help-you'>
 				<div class='col-sm-12'>
-					<h2><?php echo $welcomeName ?></h2>
+					<h2> <i class="fa-group fa-2x" style="color:#000"></i> <?php echo $welcomeName ?></h2>
 					<?php echo $welcome?>
 				</div>
 			</div>
@@ -857,7 +865,7 @@ type="text/javascript"></script>
 <?php include "footer.php";?>
 
 <!-- news menu slider -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	$(function(){
 		count=1;
 		scrollValue = $(".news-list-content:nth-child("+count+")").position().top;
@@ -869,14 +877,14 @@ type="text/javascript"></script>
 				if($("#news-list").scrollTop() >= resetValue) count=1;
 			},3000);
 		});
-</script>
+</script> -->
 
 
 <!--Carousel Initialization-->
 <script type="text/javascript">
 	$(function(){ 
 		$('.carousel').carousel({
-			interval:6000
+			interval:false
 		}); 
 	});
 </script>
@@ -1019,6 +1027,7 @@ type="text/javascript"></script>
 				},1000);
 			}
 		}
+		$("#show-list").click();
 	});
 </script>
 
@@ -1091,7 +1100,7 @@ type="text/javascript"></script>
 <script type='text/javascript'>
 	function init_map() {
 		var myOptions = {
-			zoom: 12,
+			zoom: 4,
 			scrollwheel:false,
 			scaleControl:false,
 			center: new google.maps.LatLng(29.37585899999999, 48.00223471640631),
