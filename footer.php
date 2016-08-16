@@ -32,6 +32,15 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
+							<a class="philosophy" href="/coo.php">
+								<?php 
+								if($finalLang == "en") echo "Countries of Operation";
+								if($finalLang == "ar") echo "COO_Ar";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='philosophy'>
 							<a class="philosophy" href="/#mgtTeamMain2">
 								<?php 
 								if($finalLang == "en") echo "Our Team";
@@ -45,15 +54,6 @@
 								<?php 
 								if($finalLang == "en") echo "Our Clients";
 								if($finalLang == "ar") echo "Our Clients_Ar";
-								?>
-							</a>
-							<span class='icon-right-open-big'></span>
-						</li>
-						<li class='philosophy'>
-							<a class="philosophy" href="/coo.php">
-								<?php 
-								if($finalLang == "en") echo "Countries of Operation";
-								if($finalLang == "ar") echo "COO_Ar";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -146,6 +146,15 @@
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='philosophy'>
+			<a class="philosophy" href="/coo.php">
+				<?php 
+				if($finalLang == "en") echo "Countries of Operation";
+				if($finalLang == "ar") echo "COO_Ar";
+				?>
+			</a>
+			<span class='icon-right-open-big'></span>
+		</li>
+		<li class='philosophy'>
 			<a class="philosophy" href="/#mgtTeamMain2">
 				<?php 
 				if($finalLang == "en") echo "Our Team";
@@ -159,15 +168,6 @@
 				<?php 
 				if($finalLang == "en") echo "Our Clients";
 				if($finalLang == "ar") echo "Our Clients_Ar";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
-		<li class='philosophy'>
-			<a class="philosophy" href="/coo.php">
-				<?php 
-				if($finalLang == "en") echo "Countries of Operation";
-				if($finalLang == "ar") echo "COO_Ar";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>

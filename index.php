@@ -636,8 +636,18 @@ if($finalLang == "ar")
 			} 
 			?>
 			<?php
-		} 
+		}
 		?>	
+		<!-- <div class="col-sm-2 team-mem visible-lg">
+			<div class="box" style=""></div>
+		</div>
+		<div class="col-sm-2 team-mem visible-lg">
+			<div class="box" style=""></div>
+		</div>
+		<div class="col-sm-2 team-mem visible-lg">
+			<div class="box" style=""></div>
+		</div> --> 
+		
 	</div>		
 </div>
 
@@ -689,8 +699,10 @@ if($finalLang == "ar")
 </div>
 
 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBygc9FtuNgR_pyjs_FAt6d4p3DHhIoFII&callback=initMap"
+type="text/javascript"></script>
 <style>
-#gmap_canvas img{max-width:none!important;background:none!important}
+	#gmap_canvas img{max-width:none!important;background:none!important}
 </style>
 
 <div id="contacts" class="section container-fluid">
