@@ -5,7 +5,7 @@
 				<div class='col-md-9 hidden-xs hidden-sm '>
 					<ul class='level-1-nav list-unstyled'>
 						<li class='home'>
-							<a class="home" href="/">
+							<a class="home" href="/#">
 								<?php 
 								if($finalLang == "en") echo "Home";
 								if($finalLang == "ar") echo "Home_Ar";
@@ -110,7 +110,7 @@
 <div class='nav-overlay full-screen-overlay dt-height' id='nav-overlay'>
 	<ul class='level-1-nav list-unstyled'>
 		<li class='home'>
-			<a class="home" href="/">
+			<a class="home" href="/#">
 				<?php 
 				if($finalLang == "en") echo "Home";
 				if($finalLang == "ar") echo "Home_Ar";

@@ -28,7 +28,7 @@
             blockOneP: "#block-one p",
             blockOneH3: "#block-one h3",
             objectiveHolder: "#objectives-holder",
-            objective: "#objective",
+            objective: "#news",
             lavaLamp: "#process .lava-lamp"
         },
         dimensions: {},

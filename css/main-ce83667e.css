@@ -764,7 +764,7 @@ ul.level-1-nav a{position:relative;display:block;text-transform:uppercase;text-d
 }@media(min-width:768px){.nav-footer{opacity:0;padding:0;position:absolute;bottom:25px;text-align:center;-webkit-transition:opacity 300ms ease-in 300ms;-moz-transition:opacity 300ms ease-in 300ms;-o-transition:opacity 300ms ease-in 300ms;transition:opacity 300ms ease-in 300ms}
 }.nav-footer .border{border-top:2px solid white;padding-top:32px;width:245px;margin:0 auto}
 @media(min-width:768px){.nav-footer .border{border-top:1px solid #7ac9dd}
-}.nav-footer .logo-wrapper{//width:35px;height:140px;margin:0 95px}
+}.nav-footer .logo-wrapper{//width:35px;height:100px;margin:0 95px}
 .nav-footer .logo-wrapper #digital-telepathy-logo{width:150px}
 .nav-footer .logo-wrapper .dt-brandmark{fill:white}
 .nav-footer p{color:#fff;font-weight:bold;font-size:14px!important;margin:8px 0 0 0}
