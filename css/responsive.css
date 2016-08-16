@@ -18,6 +18,7 @@
 		.nav-footer .logo-wrapper{height:80px}
 		.nav-bar .identity.responsive{top: -85px;}
 		.nav-bar .identity.responsive img{height: 130px;}
+		.nav-overlay .level-1-nav li{padding-bottom:7px;}
 
 	/*lang*/
 		#lang img{width:24px!important}
@@ -301,8 +302,12 @@
 	.nav-bar .identity.responsive img{}
 	.footer ul.level-1-nav li{padding: 0 8px 0!important;}
 	.footer ul.level-1-nav a{font-size:17px;}
-
 	#sa-img img {width: 160px;}
+
+	.footer ul.level-1-nav li{display: block;border-right: none !Important}
+	.footer ul.level-1-nav a{text-align:center;}
+	.footer ul.level-1-nav li:first-child{padding-left: 15px !important;}
+	.footer ul.level-1-nav.list-unstyled{-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;}	
 }
 @media only screen and (min-width:1200px) and (max-width: 1823px) {
 	p,span.langSelectedText{font-size:18px;}
@@ -319,7 +324,7 @@
 	.nav-bar .identity img{height:100px;}	
 	.nav-bar .menu-text {font-size: 16px;font-family: roboto;margin-top: 4px;font-weight: bold;}
 	.nav-bar .hamburger{width:24px;}
-	.nav-overlay .level-1-nav li a{font-size: 24px;text-align:center;}
+	.nav-overlay .level-1-nav li a{font-size: 21px;text-align:center;}
 	.nav-overlay .level-1-nav{padding-right:0}
 	.nav-overlay .social li a{font-size:22px;}
 	.nav-footer .logo-wrapper #digital-telepathy-logo{width:120px;}
@@ -343,6 +348,11 @@
 	.nav-bar .identity.responsive img{height:130px;}
 	#sa-img img {width: 170px;}
 	#singapore-info>div {display: inline-block;}
+
+	.footer ul.level-1-nav li{display: block;border-right: none !Important}
+	.footer ul.level-1-nav a{text-align:center;}
+	.footer ul.level-1-nav li:first-child{padding-left: 15px !important;}
+	.footer ul.level-1-nav.list-unstyled{-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;}
 }
 
 @media only screen and (min-width:1824px){
@@ -359,4 +369,8 @@
 	.nav-bar .identity.responsive img{height:150px;}
 	#sa-img img {width: 200px;}
 	#singapore-info>div {display: inline-block;}
+	.footer ul.level-1-nav li{display: block;border-right: none !Important}
+	.footer ul.level-1-nav a{text-align:center;}
+	.footer ul.level-1-nav li:first-child{padding-left: 15px !important;}
+	.footer ul.level-1-nav.list-unstyled{-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;}
 }

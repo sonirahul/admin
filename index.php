@@ -688,9 +688,19 @@ if($finalLang == "ar")
 	</div>
 </div>
 
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+<style>
+#gmap_canvas img{max-width:none!important;background:none!important}
+</style>
+
 <div id="contacts" class="section container-fluid">
 	<div>
-		<div id="googleMap" style="height:650px;width:100%"></div>
+		<div id="googleMap" style='overflow:hidden;height:650px;width:100%'>
+			<div id='gmap_canvas' style='height:650px;width:100%'>
+
+			</div>
+		</div>
+
 		<div id="contact" class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12 text-center">

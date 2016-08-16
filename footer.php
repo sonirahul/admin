@@ -5,7 +5,7 @@
 				<div class='col-md-9 hidden-xs hidden-sm '>
 					<ul class='level-1-nav list-unstyled'>
 						<li class='home'>
-							<a class="home" href="/#">
+							<a class="home" href="/#myCarousel">
 								<?php 
 								if($finalLang == "en") echo "Home";
 								if($finalLang == "ar") echo "Home_Ar";
@@ -14,19 +14,37 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='services'>
-							<a class="services active" href="/#news">
+							<a class="services" href="/#main">
 								<?php 
-								if($finalLang == "en") echo "News";
-								if($finalLang == "ar") echo "News_Ar";
+								if($finalLang == "en") echo "Visa Application Center";
+								if($finalLang == "ar") echo "Visa Application Center_Ar";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='our-work'>
-							<a class="our-work" href="/#mgtTeam">
+							<a class="our-work" href="/#singaporeAirlines">
+								<?php 
+								if($finalLang == "en") echo "Singapore Airlines";
+								if($finalLang == "ar") echo "Singapore Airlines_Ar";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='philosophy'>
+							<a class="philosophy" href="/#mgtTeamMain2">
 								<?php 
 								if($finalLang == "en") echo "Our Team";
 								if($finalLang == "ar") echo "Our Team_Ar";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='blog'>
+							<a class="blog" href="/#clientss1">
+								<?php 
+								if($finalLang == "en") echo "Our Clients";
+								if($finalLang == "ar") echo "Our Clients_Ar";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -49,20 +67,11 @@
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
-						<li class='blog'>
-							<a target="_blank" class="blog" href="/#clientss1">
+						<li class='our-work'>
+							<a class="our-work" href="/#blocks-wrapper">
 								<?php 
-								if($finalLang == "en") echo "Our Clients";
-								if($finalLang == "ar") echo "Our Clients_Ar";
-								?>
-							</a>
-							<span class='icon-right-open-big'></span>
-						</li>
-						<li class='blog'>
-							<a target="_blank" class="blog" href="https://mail.mawaredhouse.com/owa">
-								<?php 
-								if($finalLang == "en") echo "Employees";
-								if($finalLang == "ar") echo "Employees_Ar";
+								if($finalLang == "en") echo "About Us";
+								if($finalLang == "ar") echo "About Us_Ar";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -110,7 +119,7 @@
 <div class='nav-overlay full-screen-overlay dt-height' id='nav-overlay'>
 	<ul class='level-1-nav list-unstyled'>
 		<li class='home'>
-			<a class="home" href="/#">
+			<a class="home" href="/#myCarousel">
 				<?php 
 				if($finalLang == "en") echo "Home";
 				if($finalLang == "ar") echo "Home_Ar";
@@ -119,19 +128,37 @@
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='services'>
-			<a class="services active" href="/#news">
+			<a class="services" href="/#main">
 				<?php 
-				if($finalLang == "en") echo "News";
-				if($finalLang == "ar") echo "News_Ar";
+				if($finalLang == "en") echo "Visa Application Center";
+				if($finalLang == "ar") echo "Visa Application Center_Ar";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
 		</li>
 		<li class='our-work'>
-			<a class="our-work" href="/#mgtTeam">
+			<a class="our-work" href="/#singaporeAirlines">
+				<?php 
+				if($finalLang == "en") echo "Singapore Airlines";
+				if($finalLang == "ar") echo "Singapore Airlines_Ar";
+				?>
+			</a>
+			<span class='icon-right-open-big'></span>
+		</li>
+		<li class='philosophy'>
+			<a class="philosophy" href="/#mgtTeamMain2">
 				<?php 
 				if($finalLang == "en") echo "Our Team";
 				if($finalLang == "ar") echo "Our Team_Ar";
+				?>
+			</a>
+			<span class='icon-right-open-big'></span>
+		</li>
+		<li class='blog'>
+			<a class="blog" href="/#clientss1">
+				<?php 
+				if($finalLang == "en") echo "Our Clients";
+				if($finalLang == "ar") echo "Our Clients_Ar";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
@@ -154,20 +181,11 @@
 			</a>
 			<span class='icon-right-open-big'></span>
 		</li>
-		<li class='blog'>
-			<a target="_blank" class="blog" href="/#clientss1">
+		<li class='our-work'>
+			<a class="our-work" href="/#blocks-wrapper">
 				<?php 
-				if($finalLang == "en") echo "Our Clients";
-				if($finalLang == "ar") echo "Our Clients_Ar";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
-		<li class='blog'>
-			<a target="_blank" class="blog" href="https://mail.mawaredhouse.com/owa">
-				<?php 
-				if($finalLang == "en") echo "Employees";
-				if($finalLang == "ar") echo "Employees_Ar";
+				if($finalLang == "en") echo "About Us";
+				if($finalLang == "ar") echo "About Us_Ar";
 				?>
 			</a>
 			<span class='icon-right-open-big'></span>
@@ -446,9 +464,10 @@
 <!-- smooth scroll -->
 <script type="text/javascript">
 	$(function(){
-		$("#nav-overlay a").click(function() {
-			topValue1 = ($($(this).attr("href")).offset().top);
-			topValue2 = ($($(this).attr("href")).offset().top) - $("section.nav-bar").height()/2;
+		$(".level-1-nav a").click(function() {
+			getClickedElement = $(this).attr("href").split("/")[1];
+			topValue1 = ($(getClickedElement).offset().top);
+			topValue2 = ($(getClickedElement).offset().top) - $("section.nav-bar").height()/4;
 			console.log(topValue1 + " " + topValue2);
 			$('html, body').animate({
 				scrollTop: topValue2
@@ -526,117 +545,27 @@
 
 <!-- Add Google Maps -->
 
-<script type="text/javascript">
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		$("#googleMap").attr("style","height:590px;width:100%")
-	}
+<script type='text/javascript'>
+function init_map() {
+    var myOptions = {
+        zoom: 12,
+        scrollwheel:false,
+        scaleControl:false,
+        center: new google.maps.LatLng(29.37585899999999, 48.00223471640631),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+    marker = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(29.37585899999999, 48.00223471640631)
+    });
+    infowindow = new google.maps.InfoWindow({
+        content: '<strong>Mawared House</strong><br>4B, 2nd Floor, Al Banwan Building Al Qibla Area Opposite Central Bank Of Kuwait Kuwait City<br>'
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map, marker);
+    });
+    infowindow.open(map, marker);
+}
+google.maps.event.addDomListener(window, 'load', init_map);
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX0-bPtTRwlmoFR-xRk2iqybEzSvX1P14&callback=initMap"
-type="text/javascript"></script>
-
-<script>
-	$(function(){
-		var myCenter = new google.maps.LatLng(29.376250, 47.970571);
-		function initialize() {
-			var mapProp = {
-				center:myCenter,
-				zoom:12,
-				scrollwheel:false,
-				draggable:false,
-				mapTypeId:google.maps.MapTypeId.ROADMAP
-			};
-			var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-			var marker = new google.maps.Marker({
-				position:myCenter,
-			});
-			marker.setMap(map);
-		}
-		google.maps.event.addDomListener(window, 'load', initialize);
-	});
-</script>
-<script type="text/javascript">
-	$(function(){
-		//Init map
-		function initMap() {
-			if (document.getElementById('map')) {	
-				var marker;
-				var latlng = new google.maps.LatLng(0, 0);
-
-				var my_options = {
-					zoom:16,
-					center:latlng,
-					scrollwheel:false,
-					scaleControl:false,
-					disableDefaultUI:false,
-					mapTypeId:google.maps.MapTypeId.ROADMAP
-				};
-
-				var map = new google.maps.Map(document.getElementById('map'), my_options);
-
-				function renderMarkers() {
-					var name = jQuery('#contacts .info > h2').text();
-					var address = jQuery('#contacts .info .address').text();	
-
-					var custom_map = new google.maps.Geocoder();
-
-					custom_map.geocode({'address':address}, function(results, status) {
-						if (status==google.maps.GeocoderStatus.OK) {
-							var location = results[0].geometry.location;
-
-							marker = new google.maps.Marker({
-								map:map,
-								icon:theme_path+'/layout/images/map-marker.png',
-								position:location,
-								title:name
-							});
-
-							var infowindow = new google.maps.InfoWindow({
-								content:name
-							});
-
-							google.maps.event.addListener(marker, 'click', function() {
-								infowindow.open(map, marker);
-							});
-
-							centerMap();		
-							initLinks();
-						} else {
-							alert("Geocode was failed for the following reason: " + status);
-						}
-					});
-				}
-
-				renderMarkers();
-
-				function centerMap() {
-					map.setCenter(marker.getPosition());
-					marker.setIcon(theme_path+'/layout/images/map-marker.png');
-				}
-
-				function initLinks() {
-					jQuery('#view_map').bind('click', function(e) {
-						var height = jQuery('.block-contacts').height();
-						jQuery('.block-contacts').css('height', height + 'px');
-						jQuery('#contacts').addClass('map_only');
-
-						e.preventDefault();
-					});
-
-					jQuery('#view_contacts').bind('click', function(e) {
-						jQuery('#contacts').removeClass('map_only');
-						jQuery('.block-contacts').css('height', 'auto');
-
-						e.preventDefault();
-					});
-				}
-
-				jQuery(window).resize(function() {
-					centerMap();
-				});
-			}	
-		}
-	});
-</script>
-
-
-
