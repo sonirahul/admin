@@ -8,7 +8,7 @@
 							<a class="home" href="/#myCarousel">
 								<?php 
 								if($finalLang == "en") echo "Home";
-								if($finalLang == "ar") echo "√á√°√ë√Ü√≠√ì√≠√â";
+								if($finalLang == "ar") echo "«·—∆Ì”Ì…";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -17,7 +17,7 @@
 							<a class="services" href="/#main">
 								<?php 
 								if($finalLang == "en") echo "Visa Application Center";
-								if($finalLang == "ar") echo "√ä√É√î√≠√ë√â √£√ë√ü√í √á√°√ä√ò√à√≠√û";
+								if($finalLang == "ar") echo " √‘Ì—… „—ﬂ“ «· ÿ»Ìﬁ";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -26,7 +26,7 @@
 							<a class="our-work" href="/#singaporeAirlines">
 								<?php 
 								if($finalLang == "en") echo "Singapore Airlines";
-								if($finalLang == "ar") echo "√é√ò√¶√ò √á√°√ò√≠√ë√á√§ √á√°√ì√§√õ√á√ù√¶√ë√≠√â";
+								if($finalLang == "ar") echo "ŒÿÊÿ «·ÿÌ—«‰ «·”‰€«›Ê—Ì…";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -35,7 +35,7 @@
 							<a class="philosophy" href="/coo.php">
 								<?php 
 								if($finalLang == "en") echo "Countries of Operation";
-								if($finalLang == "ar") echo "√è√á√Ü√ë√â √ö√£√°√≠√á√ä√§√á";
+								if($finalLang == "ar") echo "œ«∆—… ⁄„·Ì« ‰«";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -44,7 +44,7 @@
 							<a class="philosophy" href="/#mgtTeamMain2">
 								<?php 
 								if($finalLang == "en") echo "Our Team";
-								if($finalLang == "ar") echo "√£√¶√á√ë√è√§√á √á√°√à√î√ë√≠√â";
+								if($finalLang == "ar") echo "„Ê«—œ‰« «·»‘—Ì…";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -53,7 +53,7 @@
 							<a class="blog" href="/#clientss1">
 								<?php 
 								if($finalLang == "en") echo "Our Clients";
-								if($finalLang == "ar") echo "√ö√£√°√á√Ü√§√á";
+								if($finalLang == "ar") echo "⁄„·«∆‰«";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -62,7 +62,7 @@
 							<a class="careers" href="/gallery.php">
 								<?php 
 								if($finalLang == "en") echo "Gallery";
-								if($finalLang == "ar") echo "√£√ö√ë√ñ √á√°√ï√¶√ë";
+								if($finalLang == "ar") echo "„⁄—÷ «·’Ê—";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -71,7 +71,7 @@
 							<a class="our-work" href="/#blocks-wrapper">
 								<?php 
 								if($finalLang == "en") echo "About Us";
-								if($finalLang == "ar") echo "√£√ö√°√¶√£√á√ä √ö√§√á";
+								if($finalLang == "ar") echo "„⁄·Ê„«  ⁄‰«";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -80,7 +80,7 @@
 							<a class="contact" href="/#contacts">
 								<?php 
 								if($finalLang == "en") echo "Contact Us";
-								if($finalLang == "ar") echo "√á√ä√ï√° √à√§√á";
+								if($finalLang == "ar") echo "« ’· »‰«";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -106,9 +106,9 @@
 			</div>
 			<p class='copyright'>
 				<?php 
-				if($finalLang == "en") echo "&copy; 2016 Mawared House. <span class='hidden-xs'>All rights reserved. <a href='/privacy-policy'>Privacy&nbsp;Policy</a></span>";
+				if($finalLang == "en") echo "&copy; 2016 Mawared House. <span class='hidden-xs'>All rights reserved. <a href='/privacy-policy'>Privacy Policy</a></span>";
 
-				if($finalLang == "ar") echo "&copy; 2016 Mawared House. <span class='hidden-xs'>All rights reserved. <a href='/privacy-policy'>Privacy&nbsp;Policy</a></span>";
+				if($finalLang == "ar") echo "&copy; 2016 ‘—ﬂ… „Ê«—œ «·»Ì  <span class='hidden-xs'>ﬂ· «·ÕﬁÊﬁ „Õ›ÊŸ… <a href='/privacy-policy'>”Ì«”… «·Œ’Ê’Ì…</a></span>";
 				?>
 
 			</p>
@@ -118,87 +118,87 @@
 
 <div class='nav-overlay full-screen-overlay dt-height' id='nav-overlay'>
 	<ul class='level-1-nav list-unstyled'>
-		<li class='home'>
-			<a class="home" href="/#myCarousel">
-				<?php 
-				if($finalLang == "en") echo "Home";
-				if($finalLang == "ar") echo "√á√°√ë√Ü√≠√ì√≠√â";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
-		<li class='services'>
-			<a class="services" href="/#main">
-				<?php 
-				if($finalLang == "en") echo "Visa Application Center";
-				if($finalLang == "ar") echo "Visa Application Center_Ar";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
-		<li class='our-work'>
-			<a class="our-work" href="/#singaporeAirlines">
-				<?php 
-				if($finalLang == "en") echo "Singapore Airlines";
-				if($finalLang == "ar") echo "Singapore Airlines_Ar";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
-		<li class='philosophy'>
-			<a class="philosophy" href="/coo.php">
-				<?php 
-				if($finalLang == "en") echo "Countries of Operation";
-				if($finalLang == "ar") echo "√è√á√Ü√ë√â √ö√£√°√≠√á√ä√§√á";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
-		<li class='philosophy'>
-			<a class="philosophy" href="/#mgtTeamMain2">
-				<?php 
-				if($finalLang == "en") echo "Our Team";
-				if($finalLang == "ar") echo "√£√¶√á√ë√è√§√á √á√°√à√î√ë√≠√â";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
-		<li class='blog'>
-			<a class="blog" href="/#clientss1">
-				<?php 
-				if($finalLang == "en") echo "Our Clients";
-				if($finalLang == "ar") echo "√ö√£√°√á√Ü√§√á";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
-		<li class='careers'>
-			<a class="careers" href="/gallery.php">
-				<?php 
-				if($finalLang == "en") echo "Gallery";
-				if($finalLang == "ar") echo "√£√ö√ë√ñ √á√°√ï√¶√ë";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
-		<li class='our-work'>
-			<a class="our-work" href="/#blocks-wrapper">
-				<?php 
-				if($finalLang == "en") echo "About Us";
-				if($finalLang == "ar") echo "About Us_Ar";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
-		<li class='contact'>
-			<a class="contact" href="/#contacts">
-				<?php 
-				if($finalLang == "en") echo "Contacts";
-				if($finalLang == "ar") echo "Contacts_Ar";
-				?>
-			</a>
-			<span class='icon-right-open-big'></span>
-		</li>
+						<li class='home'>
+							<a class="home" href="/#myCarousel">
+								<?php 
+								if($finalLang == "en") echo "Home";
+				if($finalLang == "ar") echo "«·—∆Ì”Ì…";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='services'>
+							<a class="services" href="/#main">
+								<?php 
+								if($finalLang == "en") echo "Visa Application Center";
+								if($finalLang == "ar") echo "?????? ???? ???????";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='our-work'>
+							<a class="our-work" href="/#singaporeAirlines">
+								<?php 
+								if($finalLang == "en") echo "Singapore Airlines";
+								if($finalLang == "ar") echo "???? ??????? ???????????";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='philosophy'>
+							<a class="philosophy" href="/coo.php">
+								<?php 
+								if($finalLang == "en") echo "Countries of Operation";
+				if($finalLang == "ar") echo "œ«∆—… ⁄„·Ì« ‰«";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='philosophy'>
+							<a class="philosophy" href="/#mgtTeamMain2">
+								<?php 
+								if($finalLang == "en") echo "Our Team";
+				if($finalLang == "ar") echo "„Ê«—œ‰« «·»‘—Ì…";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='blog'>
+							<a class="blog" href="/#clientss1">
+								<?php 
+								if($finalLang == "en") echo "Our Clients";
+				if($finalLang == "ar") echo "⁄„·«∆‰«";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='careers'>
+							<a class="careers" href="/gallery.php">
+								<?php 
+								if($finalLang == "en") echo "Gallery";
+				if($finalLang == "ar") echo "„⁄—÷ «·’Ê—";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='our-work'>
+							<a class="our-work" href="/#blocks-wrapper">
+								<?php 
+								if($finalLang == "en") echo "About Us";
+								if($finalLang == "ar") echo "??????? ???";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='contact'>
+							<a class="contact" href="/#contacts">
+								<?php 
+								if($finalLang == "en") echo "Contact Us";
+								if($finalLang == "ar") echo "???? ???";
+								?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
 	</ul>
 	<div class='nav-footer'>
 		<ul class='social'>
@@ -223,7 +223,7 @@
 		<p>
 			<?php 
 			if($finalLang == "en") echo "&copy; 2016 Mawaredhouse.com";
-			if($finalLang == "ar") echo "&copy; 2016 Mawaredhouse.com_Ar";
+			if($finalLang == "ar") echo "&copy; 2016 Mawaredhouse.com";
 			?>
 		</p><!-- var d = new Date().getFullYear(); -->
 	</div>
