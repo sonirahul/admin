@@ -17,7 +17,7 @@
 							<a class="services" href="/#main">
 								<?php 
 								if($finalLang == "en") echo "Visa Application Center";
-								if($finalLang == "ar") echo "Visa Application Center_Ar";
+								if($finalLang == "ar") echo "ÊÃÔíÑÉ ãÑßÒ ÇáÊØÈíÞ";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -26,7 +26,7 @@
 							<a class="our-work" href="/#singaporeAirlines">
 								<?php 
 								if($finalLang == "en") echo "Singapore Airlines";
-								if($finalLang == "ar") echo "Singapore Airlines_Ar";
+								if($finalLang == "ar") echo "ÎØæØ ÇáØíÑÇä ÇáÓäÛÇÝæÑíÉ";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -71,7 +71,7 @@
 							<a class="our-work" href="/#blocks-wrapper">
 								<?php 
 								if($finalLang == "en") echo "About Us";
-								if($finalLang == "ar") echo "About Us_Ar";
+								if($finalLang == "ar") echo "ãÚáæãÇÊ ÚäÇ";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -79,8 +79,8 @@
 						<li class='contact'>
 							<a class="contact" href="/#contacts">
 								<?php 
-								if($finalLang == "en") echo "Contacts";
-								if($finalLang == "ar") echo "Contacts_Ar";
+								if($finalLang == "en") echo "Contact Us";
+								if($finalLang == "ar") echo "ÇÊÕá ÈäÇ";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
