@@ -623,61 +623,67 @@ if($finalLang == "ar")
 
 
 	<div class="row" style="margin:0">
-		<?php 
-		$boxCount=1;
-		for($i=1;$i<=count($allEmployeeTeamData);$i++){?>
-			<div class="col-xs-6 col-sm-2 team-mem team-view">
-				<div class="element_hover">
-					<div class="hover-content">
-						<h3 class="sl-hover-title">
-							<?php 
-							if ($finalLang == "en")echo $allEmployeeTeamData[$i-1]["about_title_en"];
-							else echo $allEmployeeTeamData[$i-1]["about_title_ar"];
-							?>
-
-						</h3>
-						<h4 class="sl-hover-subtitle">
-							<?php 
-							if ($finalLang == "en")echo $allEmployeeTeamData[$i-1]["about_jobtitle_en"];
-							else echo $allEmployeeTeamData[$i-1]["about_jobtitle_ar"];
-							?>
-
-						</h4>
-						<i class="fa fa-angle-double-right" aria-hidden="true"></i>
-					</div>
-				</div>
-				<img src="team/<?php echo $allEmployeeTeamData[$i-1]["about_image"]?>" alt="
-				<?php
-				if ($finalLang == "en") echo $allEmployeeTeamData[$i-1]["about_title_en"];
-				else echo $allEmployeeTeamData[$i-1]["about_title_ar"];
-				?>
-				" class="img_element" width="100%" height="100%/">
-				<div class="mw_team">
-					<?php 
-					if ($finalLang == "en")echo $allEmployeeTeamData[$i-1]["about_title_en"];
-					else echo $allEmployeeTeamData[$i-1]["about_title_ar"];
-					?>
-
-				</div>
-				<div class="mw-team-quote">
-					<?php 
-					if ($finalLang == "en")echo $allEmployeeTeamData[$i-1]["about_desc_en"];
-					else echo $allEmployeeTeamData[$i-1]["about_desc_ar"];
-					?>
-				</div>
-				<div class="box"></div>
-			</div>
-			<?php 
-			if( $i/2.5 >= $boxCount) 
+		<?php
+		$coloredBoxes=array(1,5,8,12,13,15,17);
+		$colors=array("#ff5d72","#f1c824","#43c696","#45b1cc","#f1c824","#45b1cc","#43c696");
+		$boxCount=0;
+		$totalBoxes = count($allEmployeeTeamData) + count($coloredBoxes);
+		$employeeNo=0;
+		for($i=1;$i<=$totalBoxes;$i++){
+			
+			if( $i == $coloredBoxes[$boxCount]) 
 			{
 				?>
 				<div class="col-sm-2 team-mem">
-					<div class="box" style=""></div>
+					<div class="box" style="background-color: <?php echo $colors[$boxCount] ?>"></div>
 				</div>
 				<?php $boxCount=$boxCount+1;
-			} 
-			?>
-			<?php
+			}
+			else {?>
+				<div class="col-xs-6 col-sm-2 team-mem team-view">
+					<div class="element_hover">
+						<div class="hover-content">
+							<h3 class="sl-hover-title">
+								<?php 
+								if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_title_en"];
+								else echo $allEmployeeTeamData[$employeeNo]["about_title_ar"];
+								?>
+
+							</h3>
+							<h4 class="sl-hover-subtitle">
+								<?php 
+								if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_jobtitle_en"];
+								else echo $allEmployeeTeamData[$employeeNo]["about_jobtitle_ar"];
+								?>
+
+							</h4>
+							<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+						</div>
+					</div>
+					<img src="team/<?php echo $allEmployeeTeamData[$employeeNo]["about_image"]?>" alt="
+					<?php
+					if ($finalLang == "en") echo $allEmployeeTeamData[$employeeNo]["about_title_en"];
+					else echo $allEmployeeTeamData[$employeeNo]["about_title_ar"];
+					?>
+					" class="img_element" width="100%" height="100%/">
+					<div class="mw_team">
+						<?php 
+						if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_title_en"];
+						else echo $allEmployeeTeamData[$employeeNo]["about_title_ar"];
+						?>
+
+					</div>
+					<div class="mw-team-quote">
+						<?php 
+						if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_desc_en"];
+						else echo $allEmployeeTeamData[$employeeNo]["about_desc_ar"];
+						?>
+					</div>
+					<div class="box"></div>
+				</div>
+				<?php
+				$employeeNo = $employeeNo + 1;
+			}
 		}
 		?>	
 		<!-- <div class="col-sm-2 team-mem visible-lg">
