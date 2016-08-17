@@ -294,7 +294,7 @@ if($finalLang == "ar")
 		<div class='container'>
 			<div class='row  column-center text-justify'>
 				<div class='col-md-12 '>
-					<h2 class="mh-text-colored"> <i class="fa-cc-visa fa-2x" style="color:#000"></i> <?php echo $vacName ?></h2>
+					<h2 class="mh-text-colored"><?php echo $vacName ?></h2>
 					<?php echo $vac ?>
 				</div>
 			</div>
@@ -356,7 +356,7 @@ if($finalLang == "ar")
 		<div class='container'>
 			<div class='row row-centered' id='let-us-help-you'>
 				<div class='col-sm-12'>
-					<h2> <i class="fa-group fa-2x" style="color:#000"></i> <?php echo $welcomeName ?></h2>
+					<h2>  <?php echo $welcomeName ?></h2>
 					<?php echo $welcome?>
 				</div>
 			</div>
