@@ -330,6 +330,7 @@ if($finalLang == "ar")
 			background-image: url(images/singaporeAirlinesShown.jpg);
 			background-image: url(http://i.istockimg.com/image-zoom/16896950/3/380/253/stock-photo-16896950-merilon-statue-singapore.jpg);
 			//background-image: url(http://i.istockimg.com/image-zoom/86166105/3/380/268/stock-illustration-86166105-city-of-singapore-with-skycraper.jpg);
+			background-image: url(images/singapore_c.jpg);
 			background-size: cover;
 			background-position:center;
 			background-attachment: fixed;
