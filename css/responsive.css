@@ -15,10 +15,11 @@
 }
 #gmap_canvas img{max-width:none!important;background:none!important}
 #googleMap{overflow:hidden;height:650px;width:100%}
-#gmap_canvas{height:650px;width:100%}}
-#carouselItem2 blockquote p,#carouselItem5 blockquote p{display:inline-block;padding:10px 30px;background:rgba(0,0,0,0.6);font-size:42px}
-,#carouselItem5 blockquote p{font-size:36px}
+#gmap_canvas{height:650px;width:100%}
+#carouselItem2 blockquote p,#carouselItem5 blockquote{display:inline-block;padding:10px 30px;background:rgba(0,0,0,0.6);font-size:42px}
+#carouselItem5 blockquote p{font-size:36px}
 #carouselItem3 blockquote>.block-con{display:inline-block;padding:10px 30px;background:rgba(0,0,0,0.6)}
+
 .mgtTeamMain2RowSupr>div:nth-child(1),.mgtTeamMain2RowSupr>div:nth-child(2){animation-name:magt-effect1;-webkit-animation-name:magt-effect1;animation-duration:4s;-webkit-animation-duration:4s;visibility:visible}
 @keyframes magt-effect1{0%{transform:translateX(-200px)}
 100%{transform:translateX(0px)}
@@ -73,7 +74,9 @@
 	#ci2cc{top:42% !important}
 	#ci3cc{top:22% !important}
 	#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:center;}
-	#carouselItem3 blockquote p,#carouselItem2 blockquote p {font-size: 24px;}
+	#carouselItem3 blockquote p,#carouselItem2 blockquote p,#carouselItem5 blockquote p{font-size: 24px;}
+	#carouselItem5>div{background-image:url(../slider/5-sm.jpg);}
+	#carouselItem3 blockquote>.block-con{padding:10px;}
 
 	/*vac & about us*/
 	.block-stats li{width:90px;height:initial;margin:5px 5px}
@@ -204,9 +207,9 @@
 	#ci2cc{top:45% !important}
 	#ci3cc{top:22% !important}
 	#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:center;}
-	#carouselItem3 blockquote p,#carouselItem2 blockquote p {font-size: 24px;}
-
-
+	#carouselItem3 blockquote p,#carouselItem2 blockquote p,#carouselItem5 blockquote p {font-size: 24px;}
+	#carouselItem5>div{background-image:url(../slider/5-sm.jpg);}
+	#carouselItem3 blockquote>.block-con{padding:10px;}
 	/*vac & about us*/
 	.block-stats li{width:90px;height:initial;margin:5px 5px}
 	.block-stats li{background-size:contain}
@@ -311,6 +314,7 @@
 	#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:right;}
 	#sa-img img {width: 150px;}
 	#singapore-info>div {display: inline-block;}
+	#carouselItem5>div{background-image:url(../slider/5-md.jpg);}
 
 }
 @media only screen and (min-width:768px) and (max-width: 1199px) {
@@ -330,6 +334,8 @@
 	.nav-bar .identity.responsive{}
 	.nav-bar .identity.responsive img{}
 	#sa-img img {width: 150px;}
+	#carouselItem5>div{background-image:url(../slider/5-md.jpg);}
+	#carouselItem3 blockquote>.block-con{padding:10px 30px;}
 }
 
 @media only screen and (min-width:992px) and (max-width: 1199px){
@@ -352,6 +358,8 @@
 	.footer ul.level-1-nav li{padding: 0 8px 0!important;}
 	.footer ul.level-1-nav a{font-size:17px;}
 	#sa-img img {width: 160px;}
+	#carouselItem5>div{background-image:url(../slider/5-lg.jpg);}
+		#carouselItem3 blockquote>.block-con{padding:10px 30px;}
 
 	.omgt-team,.omgt-team *{transition:background 1s ease-in-out}
 	.hexagon-in2,.omgt-name,.omgt-pos {background-color:rgba(0,0,0,0)}
@@ -376,6 +384,7 @@
 	.block-stats li .num{font-size:24px;}
 	.block-stats li .type{font-size:15px;}
 	.slider-bottom li,.slider-bottom a{font-size:16px;//text-transform: uppercase;}
+	#carouselItem5>div{background-image:url(../slider/5-lg.jpg);}
 
 	.nav-bar .identity img{height:100px;}	
 	.nav-bar .menu-text {font-size: 16px;font-family: roboto;margin-top: 4px;font-weight: bold;}
@@ -470,6 +479,7 @@ body{overflow-x:hidden;}
 	.omgt-team:hover .hexagon-in2 {background-color: cornsilk;background-blend-mode: multiply;}
 	.omgt-team:hover {background: linear-gradient(180deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);color: #fff;background: linear-gradient(180deg,#f2e0ba 0,rgb(153, 3, 3) 100%);background: linear-gradient(180deg,white 0,#f58000 70%);}
 	.omgt-team:hover .omgt-name, .omgt-team:hover .omgt-pos {background-color: rgba(255, 0, 0, 0.57);background-color: rgba(0,0,0,0.15);}
+	#carouselItem5>div{background-image:url(../slider/5-lg.jpg);}
 
 	
 	#contactView button.btn.btn-success, button[type="submit"]{font-size:18px;}

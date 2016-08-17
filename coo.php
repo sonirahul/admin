@@ -137,8 +137,8 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 				for($i=0;$i<count($allCooData);$i++){?>
 					<div id="menu<?php echo $i?>" class="tab-pane fade in <?php if($i==0) echo active ?>">
 						<div class="row">
-							<div class="col-sm-6 hidden-xs" style="background:url(images/<?php echo $allCooData[$i]["countries_image"]?>);background-size:cover;height:500px;"></div>
-							<div id="coo-con-pic" class="col-sm-6 visible-xs"><img src="images/<?php echo $allCooData[$i]["countries_image"]?>" /></div>
+							<div class="col-sm-6 hidden-xs" style="background:url(countries/<?php echo $allCooData[$i]["countries_photo"]?>);background-size:cover;height:500px;"></div>
+							<div id="coo-con-pic" class="col-sm-6 visible-xs"><img src="countries/<?php echo $allCooData[$i]["countries_photo"]?>" /></div>
 							<div class="col-sm-6">
 								<h2 id="coo_title">
 									<?php 

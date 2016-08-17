@@ -2459,7 +2459,8 @@ span.langSelected{display:inline-block;padding-left:10px;padding-bottom:5px}
    margin: 0 !important;
 }
 
-#ci2cc,#ci3cc,#ci5cc{top:62% !important}
+#ci2cc,#ci3cc{top:62% !important}
+#ci5cc{top:50% !important}
 #ci3cc footer:after{content: ""}
 #carouselItem3 blockquote p,#carouselItem2 blockquote p,#carouselItem5 blockquote p {
     font-size: 36px;
