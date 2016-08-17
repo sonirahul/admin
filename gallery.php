@@ -253,7 +253,7 @@ DATA BY RAVI
             <li class="gridder-list" data-griddercontent="#gridder-content-<?php echo $i+1?>">
                 <div class="parent">
                     <div class="one">
-                        <img src="gallery/<?php echo $allGalleryData[$i]["gallery_thumb"]?>" class="img-responsive" />
+                        <img src="gallery/final/<?php echo $allGalleryData[$i]["gallery_photo"]?>" class="img-responsive" />
                     </div>
                     <div class="three">
                         <h4>
@@ -264,7 +264,7 @@ DATA BY RAVI
                         </h4>
                     </div>
                     <div class="two">
-                        <img src="gallery/<?php echo $allGalleryData[$i]["gallery_thumb"]?>" class="img-responsive" />
+                        <img src="gallery/final/<?php echo $allGalleryData[$i]["gallery_photo"]?>" class="img-responsive" />
                     </div>
                 </div>
             </li>
@@ -278,7 +278,7 @@ DATA BY RAVI
     for($i=0;$i<count($allGalleryData);$i++){?>
 
         <div id="gridder-content-<?php echo $i+1?>" class="gridder-content">
-            <img src="gallery/<?php echo $allGalleryData[$i]["gallery_photo"]?>" class="img-responsive" />
+            <img src="gallery/final/<?php echo $allGalleryData[$i]["gallery_photo"]?>" class="img-responsive" />
             <div class="description">
                 <h3>
                     <?php 

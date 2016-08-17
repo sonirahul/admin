@@ -233,7 +233,7 @@ if($finalLang == "ar")
 			<div style="background-image:url(slider/4th.jpg);background-size:cover;background-position:center bottom"></div>
 		</div>
 		<div id="carouselItem5"  class="item">
-			<div style="background-image:url(slider/slider6_c.jpg);background-size:cover;background-position:center bottom"></div>
+			<div style="background-image:url(slider/PhotoGrid_1471274152405_c.jpg);background-size:cover;background-position:center bottom"></div>
 			<div class="container">
 				<div id="ci5cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
