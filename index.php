@@ -293,8 +293,8 @@ if($finalLang == "ar")
 	<section id='do-dont-process'>
 		<div class='container'>
 			<div class='row  column-center text-justify'>
-				<div class='col-md-12 '>
-					<h2 class="mh-text-colored"><?php echo $vacName ?></h2>
+				<div class='col-md-12 <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
+					<h2 class="mh-text-colored <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>"><?php echo $vacName ?></h2>
 					<?php echo $vac ?>
 				</div>
 			</div>
@@ -332,7 +332,7 @@ if($finalLang == "ar")
 			//background-image: url(http://i.istockimg.com/image-zoom/86166105/3/380/268/stock-illustration-86166105-city-of-singapore-with-skycraper.jpg);
 			background-image: url(images/singapore_c.jpg);
 			background-size: cover;
-			background-position:center;
+			background-position:center top;
 			background-attachment: fixed;
 			background-color: rgba(0, 0, 0, 0.30);
 			background-blend-mode: multiply;
@@ -347,7 +347,7 @@ if($finalLang == "ar")
 			</div>
 		</div>
 		<div class="row col-sm-10 column-center text-center">
-			<div id="saContent">
+			<div id="saContent" <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?> >
 				<?php echo $singaporeAirlines ?>		
 			</div>
 		</div>
@@ -356,8 +356,8 @@ if($finalLang == "ar")
 	<section class='hidden-ipad blocks-wrapper' data-scroll-position='above' id='blocks-wrapper'>
 		<div class='container'>
 			<div class='row row-centered' id='let-us-help-you'>
-				<div class='col-sm-12'>
-					<h2>  <?php echo $welcomeName ?></h2>
+				<div class='col-sm-12 <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
+					<h2 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>>  <?php echo $welcomeName ?></h2>
 					<?php echo $welcome?>
 				</div>
 			</div>
@@ -367,26 +367,26 @@ if($finalLang == "ar")
 				<div class='block red' id='block-one'>
 					<div class='v-center'>
 						<i class='icon-research'></i>
-						<h3>1. <?php echo $philosophyName?></h3>
-						<p><?php echo $philosophy ?></p>
+						<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>>1. <?php echo $philosophyName?></h3>
+						<p <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><?php echo $philosophy ?></p>
 					</div>
 				</div>
 				<div class='block yellow-solid' id='block-two'>
 					<div class='v-center'>
 						<i class='icon-strategy'></i>
-						<h3>2. <?php echo $missionName ?></h3>
+						<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>>2. <?php echo $missionName ?></h3>
 					</div>
 				</div>
 				<div class='block blue' id='block-four'>
 					<div class='v-center'>
 						<i class='icon-graph'></i>
-						<h3>4. <?php echo $visionName ?></h3>
+						<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>>4. <?php echo $visionName ?></h3>
 					</div>
 				</div>
 				<div class='block green' id='block-three'>
 					<div class='v-center'>
 						<i class='icon-wrench'></i>
-						<h3>3. <?php echo $commitmentName ?></h3>
+						<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>>3. <?php echo $commitmentName ?></h3>
 					</div>
 				</div>
 				<div class='circle'>
@@ -426,8 +426,8 @@ if($finalLang == "ar")
 				</div>
 				<div class='process-content red col-md-5' data-section='1' id='research-content'>
 					<i class='icon-research'></i>
-					<h3>1. <?php echo $philosophyName?></h3>
-					<p class='visible-ipad'><?php echo $philosophy ?></p>
+					<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>>1. <?php echo $philosophyName?></h3>
+					<p class='visible-ipad <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><?php echo $philosophy ?></p>
 				</div>
 			</div>
 			<div class='section-2 dt-height'>
@@ -436,8 +436,8 @@ if($finalLang == "ar")
 				</div>
 				<div class='process-content yellow col-md-5 col-md-offset-7' data-section='2'>
 					<i class='icon-strategy'></i>
-					<h3>2. <?php echo $missionName ?></h3>
-					<p><?php echo $mission ?></p>
+					<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>>2. <?php echo $missionName ?></h3>
+					<p <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><?php echo $mission ?></p>
 				</div>
 			</div>
 			<div class='section-3 dt-height'>
@@ -446,8 +446,8 @@ if($finalLang == "ar")
 				</div>
 				<div class='process-content green col-md-5 col-md-offset-7' data-section='3'>
 					<i class='icon-wrench'></i>
-					<h3>3. <?php echo $commitmentName ?></h3>
-					<p><?php echo $commitment ?></p>
+					<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>>3. <?php echo $commitmentName ?></h3>
+					<p <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><?php echo $commitment ?></p>
 				</div>
 			</div>
 			<div class='section-4 dt-height'>
@@ -456,8 +456,8 @@ if($finalLang == "ar")
 				</div>
 				<div class='process-content blue col-md-5' data-section='4'>
 					<i class='icon-graph'></i>
-					<h3>4. <?php echo $visionName ?></h3>
-					<p><?php echo $vision ?></p>
+					<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>>4. <?php echo $visionName ?></h3>
+					<p <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><?php echo $vision ?></p>
 				</div>
 			</div>
 		</div>
@@ -466,24 +466,24 @@ if($finalLang == "ar")
 
 <div id="mobile-about-us" class="visible-xs">
 	<div id="mau1" class="mau">
-		<h3><i class="icon-signs" ></i> <?php echo $welcomeName ?></h3>
-		<p><?php echo $welcome ?></p>
+		<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><i class="icon-signs" ></i> <?php echo $welcomeName ?></h3>
+		<p <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><?php echo $welcome ?></p>
 	</div>
 	<div id="mau2" class="mau">
-		<h3><i class='icon-research'></i> 1. <?php echo $philosophyName ?></h3>
-		<p class='visible-ipad'> <?php echo $philosophy  ?></p>
+		<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><i class='icon-research'></i> 1. <?php echo $philosophyName ?></h3>
+		<p class='visible-ipad <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $philosophy  ?></p>
 	</div>
 	<div id="mau3" class="mau">
-		<h3><i class='icon-strategy'></i> 2. <?php echo $missionName ?></h3>
-		<p><?php echo $mission ?></p>
+		<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><i class='icon-strategy'></i> 2. <?php echo $missionName ?></h3>
+		<p <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><?php echo $mission ?></p>
 	</div>
 	<div id="mau4" class="mau">
-		<h3><i class='icon-wrench'></i> 3. <?php echo $commitmentName ?></h3>
-		<p><?php echo $commitment ?></p>
+		<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><i class='icon-wrench'></i> 3. <?php echo $commitmentName ?></h3>
+		<p <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><?php echo $commitment ?></p>
 	</div>
 	<div id="mau5" class="mau">
-		<h3><i class='icon-graph'></i> 4. <?php echo $visionName ?></h3>
-		<p><?php echo $vision ?></p>
+		<h3 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><i class='icon-graph'></i> 4. <?php echo $visionName ?></h3>
+		<p <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>><?php echo $vision ?></p>
 	</div>
 </div>
 
