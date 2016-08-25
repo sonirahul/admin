@@ -294,11 +294,13 @@ if($finalLang == "ar")
 		<div class='container'>
 			<div class='row  column-center text-justify'>
 				<div class='col-md-12 <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
-					<h2 class="mh-text-colored <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>"><?php echo $vacName ?></h2>
+					<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+						<i class="fa fa-cc-visa fa-lg mh-icon-colored" aria-hidden="true"></i>
+						<span class="mh-text-colored-with-underline"><?php echo $vacName ?></span>
+					</h2>
 					<?php echo $vac ?>
 				</div>
 			</div>
-
 			<br><br class="hidden-xs">
 			<div class="row col-sm-12 column-center slideanim text-center" style="font-weight:bold;">
 				<div class="col-sm-2 col-xs-4 col-sm-offset-1">
@@ -357,11 +359,39 @@ if($finalLang == "ar")
 		<div class='container'>
 			<div class='row row-centered' id='let-us-help-you'>
 				<div class='col-sm-12 <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
-					<h2 <?php if ($finalLang == "ar") {echo "class='dir-rtl'";} ?>>  <?php echo $welcomeName ?></h2>
+					<!--<h2  class="mh-text-no-underline">
+						<i class="fa fa-newspaper-o fa-lg mh-icon-colored" aria-hidden="true"></i>
+						<span class="mh-text-colored-with-underline">News And Events</span>
+					</h2>-->
+					<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>" style="text-decoration: none">
+						<i class="fa fa-plane fa-lg about-us" aria-hidden="true"></i>
+						<span style="text-decoration: underline"><?php echo $welcomeName ?></span>
+					</h2>
 					<?php echo $welcome?>
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".mh-text-no-underline").hover(function(){
+						$( this ).children( 'i' ).css("color", "#F99F1C");
+					}, function(){
+						if($( this ).children( 'i' ).hasClass("about-us")) {
+							$( this ).children( 'i' ).css("color", "#FFF");
+						}
+						else {
+							$( this ).children( 'i' ).css("color", "rgba(4,48,95,0.89)");
+						}
+				});
+				$(".block-stats li").hover(function(){
+						$( this ).children( '.type' ).css("color", "#FFF");
+						$( this ).children( '.num' ).css("color", "#234973");
+					}, function(){
+						$( this ).children( '.type' ).css("color", "lightblue");
+						$( this ).children( '.num' ).css("color", "#eaeff3");
+				});
+			});
+		</script>
 		<div class='container'>
 			<div class='row row-centered blocks'>
 				<div class='block red' id='block-one'>
@@ -490,7 +520,10 @@ if($finalLang == "ar")
 <div id="news" class="section container-fluid">
 	<div class="row">
 		<div class="col-sm-12 text-center">
-			<h2  class="mh-text-colored">News And Events</h2>
+			<h2  class="mh-text-no-underline">
+				<i class="fa fa-newspaper-o fa-lg mh-icon-colored" aria-hidden="true"></i>
+				<span class="mh-text-colored-with-underline">News And Events</span>
+			</h2>
 		</div>
 	</div>
 	<div id="list-row" class="row">
@@ -565,7 +598,10 @@ if($finalLang == "ar")
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<h2  class="mh-text-colored">Management Team</h2>
+				<h2  class="mh-text-no-underline">
+					<i class="fa fa-universal-access fa-lg mh-icon-colored" aria-hidden="true"></i>
+					<span class="mh-text-colored-with-underline">Management Team</span>
+				</h2>
 			</div>
 		</div>
 		<div class="row mgtTeamMain2Row" style="">
@@ -617,7 +653,10 @@ if($finalLang == "ar")
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<h2  class="mh-text-colored">Our People</h2>
+				<h2  class="mh-text-no-underline">
+					<i class="fa fa-users fa-lg mh-icon-colored" aria-hidden="true"></i>
+					<span class="mh-text-colored-with-underline">Our People</span>
+				</h2>
 			</div>
 		</div>
 	</div>
@@ -765,7 +804,10 @@ if($finalLang == "ar")
 <div id="clientss1" class="section container-fluid">
 	<div class="row">
 		<div class="col-sm-12 text-center">
-			<h2 class="mh-text-colored">Our Clients</h2>
+			<h2  class="mh-text-no-underline">
+				<i class="fa fa-street-view fa-lg mh-icon-colored" aria-hidden="true"></i>
+				<span class="mh-text-colored-with-underline">Our Clients</span>
+			</h2>
 		</div>
 	</div>
 	<div class="row col-sm-10 column-center">
@@ -806,7 +848,10 @@ type="text/javascript"></script>
 		<div id="contact" class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h2 class="mh-text-white">Contact</h2>
+					<h2 class="mh-text-white mh-text-no-underline">
+						<i class="fa fa-plane fa-lg about-us" aria-hidden="true"></i>
+						<span style="text-decoration: underline">Contact Us</span>
+					</h2>
 				</div>
 			</div>
 

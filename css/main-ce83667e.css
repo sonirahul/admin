@@ -2280,6 +2280,7 @@ body[data-page="process"] .contact-form .form-header p{padding:0 0 30px 0}
 .block-stats ul{margin:0;padding:0}
 .block-stats li:first-child{//margin-left:0}
 .block-stats li{background-image:url(../images/bg_stats_home.png);background-size:cover}
+.block-stats li:hover{background-image:url(../images/bg_stats_home_hover.png)}
 .block-stats li{width:105px;height:116px;margin-left:34px;float:left;display:block;background-repeat:no-repeat;text-align:center;margin:5px 20px}
 .block-stats li .num{padding:26px 0 2px;font-size:32px;color:#000;color:#eaeff3;font-weight:bold}
 .block-stats li .type{font-size:16px;color:lightblue;font-family:sans-serif;position:relative;top:-10px}
@@ -2410,6 +2411,11 @@ div#mgtTeamViewer{position:fixed;width:100vw;height:100vh;left:0;top:0;//backgro
 .omgt-pos{font-size:22px}
 .omgt-Content{font-size:20px;padding-top:20px;max-height:200px;overflow:auto}
 .mh-text-colored{color:rgba(4,48,95,0.89)!important}
+.mh-text-no-underline{text-decoration:none;//transition: all .2s ease-in-out}
+//.mh-text-no-underline:hover{font-size:28.5px}
+.mh-text-colored-with-underline{color:rgba(4,48,95,0.89)!important;text-decoration:underline}
+.fa.mh-icon-colored{color:rgba(4,48,95,0.89)}
+.fa.mh-icon-colored:hover{color:#F99F1C}
 .mh-text-white{color:#fff!important}
 html,body{-webkit-font-smoothing:antialiased;//font-family:"Whitney SSm A","Whitney SSm B",sans-serif;font-size:16px}
 p{font-size:22px;line-height:1.6em;color:#1e1e1e}

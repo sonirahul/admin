@@ -357,7 +357,7 @@
 	.nav-bar .identity.responsive img{}
 	.footer ul.level-1-nav li{padding: 0 8px 0!important;}
 	.footer ul.level-1-nav a{font-size:17px;}
-	#sa-img img {width: 160px;}
+	#sa-img img {width: 170px;}
 	#carouselItem5>div{background-image:url(../slider/5-lg.jpg);}
 		#carouselItem3 blockquote>.block-con{padding:10px 30px;}
 
@@ -412,7 +412,7 @@
 	.nav-bar .identity.responsive{top:-93px;}
 	.nav-bar .identity.responsive img{height:130px;}
 
-	#sa-img img {width: 170px;}
+	#sa-img img {width: 180px;}
 	#saContent {background-color: rgba(0, 0, 0, 0.45);padding:10px}
 	#singapore-info>div {display: inline-block;}
 
