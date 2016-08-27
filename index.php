@@ -94,14 +94,15 @@ if($finalLang == "ar")
 			$(".nav-bar .identity").addClass("responsive");
 			$(".nav-bar").css("position","fixed").fadeIn();
 			$("section.nav-bar").addClass("hide-nav");
-			$("#lang").addClass("when-slided");
+			$("#langForm").addClass("when-slided");
+			
 		}
 		else
 		{
 			$(".nav-bar .identity").removeClass("responsive");
 			$(".nav-bar").css("position","absolute");
 			$("section.nav-bar").removeClass("hide-nav");
-			$("#lang").removeClass("when-slided");
+			$("#langForm").removeClass("when-slided");
 		}
 	});
 	});
