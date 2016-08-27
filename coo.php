@@ -147,10 +147,122 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 									?>
 								</h2>
 								<div id="coo_desc">
-									<?php 
+									<!--<?php 
 									if($finalLang == "en") echo $allCooData[$i]["countries_desc_en"];
 									if($finalLang == "ar") echo $allCooData[$i]["countries_desc_ar"];
-									?>
+									?>-->
+									
+									
+									
+									<!-- test start -->
+									
+									<div id="page" class="site">
+										<div id="content" class="site-content">
+											<div class="content-wrap">
+												<div id="primary" class="content-area">
+													<main id="main" class="site-main" role="main">
+														<article id="post-98" class="entry-content-wrap post-98 post type-post status-publish format-standard has-post-thumbnail hentry category-style5">
+															<div class="entry-content">
+																<div class="content-inner-wrap">
+																	<ul class="flik-timeline flik-timeline-10" data-scroll-effect="default-effect">
+																		<li class="active default-effect">
+																			<div class="relative">
+																				<label class="show-title">Spain</label>
+																				<span class="date"><img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>" style="width: 5em;"></span>
+																				<span class="circle"/>
+																			</div>
+																			<div class="flik-timeline-content">
+																				<div class="content-title">Spain</div>
+																				<div class="content-main">Larry Page and Sergey Brin meet at Stanford University, where they become fast friends after discovering a common interest in owning and selling the personal information of millions of people</div>
+																			</div>
+																		</li>
+																		<li class="default-effect">
+																			<div class="relative">
+																				<label class="show-title">Spain</label>
+																				<span class="date"><img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>" style="width: 5em;"></span>
+																				<span class="circle"/>
+																			</div>
+																			<div class="flik-timeline-content">
+																				<div class="content-title">Research paper</div>
+																				<div class="content-main">Google first cited in high school research paper bibliography</div>
+																			</div>
+																		</li>
+																		<li class="default-effect">
+																			<div class="relative">
+																				<label class="show-title">Spain</label>
+																				<span class="date"><img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>" style="width: 5em;"></span>
+																				<span class="circle"/>
+																			</div>
+																			<div class="flik-timeline-content">
+																				<div class="content-title">Gmail</div>
+																				<div class="content-main">Gmail launched, forever changing the way people attempt to trigger the release of dopamine by repeatedly clicking the refresh button</div>
+																			</div>
+																		</li>
+																		<li class="default-effect">
+																			<div class="relative">
+																				<label class="show-title">YouTube joined Google</label>
+																				<span class="date">March 10, 2006</span>
+																				<span class="circle"/>
+																			</div>
+																			<div class="flik-timeline-content">
+																				<div class="content-title">YouTube joined Google</div>
+																				<div class="content-main">Google acquires YouTube for $1.6 billion in effort to gain access to trove of “Master Of Puppets” drum tutorial videos</div>
+																			</div>
+																		</li>
+																		<li class="default-effect">
+																			<div class="relative">
+																				<label class="show-title">Inbox</label>
+																				<span class="date">August 10, 2014</span>
+																				<span class="circle"/>
+																			</div>
+																			<div class="flik-timeline-content">
+																				<div class="content-title">Inbox</div>
+																				<div class="content-main">Inbox—from the Gmail team—is a different take on email, designed to focus on what really matters.&nbsp;
+																					<div class="flik-thumbnails">
+																						<ul class="flik-thumbnails-slider">
+																							<li>
+																								<a href="http://timeline.cidcode.net/wp-content/uploads/2014/08/google-inbox-invite.jpg" title="inbox web">
+																									<img src="images/google-inbox-invite-150x150.jpg">
+																								</a>
+																							</li>
+																							<li>
+																								<a href="http://timeline.cidcode.net/wp-content/uploads/2014/08/3037483-poster-p-1-google-reimagines-email-with-their-new-inbox-app.jpg" title="inbox 1">
+																									<img src="images/3037483-poster-p-1-google-reimagines-email-with-their-new-inbox-app-150x150.jpg">
+																								</a>
+																							</li>
+																							<li>
+																								<a href="http://timeline.cidcode.net/wp-content/uploads/2014/08/intro-logo.png" title="inbox">
+																									<img src="images/intro-logo-150x150.png">
+																								</a>
+																							</li>
+																						</ul>
+																					</div>
+																				</div>
+																			</div>
+																		</li>
+																	</ul>
+
+																</div>
+															</div><!-- .entry-content -->
+														</article><!-- #post-## -->
+													</main><!-- #main -->
+												</div><!-- #primary -->
+											</div><!-- .content-wrap -->
+										</div><!-- #content -->
+									</div><!-- #page -->
+									
+									
+									
+									
+									
+									<!-- test end -->
+									
+									
+									
+									
+									
+									
+									
 								</div>
 							</div>
 						</div>
