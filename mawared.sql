@@ -145,7 +145,7 @@ CREATE TABLE `countries_content` (
   `countries_website_en` varchar(300) DEFAULT NULL,
   PRIMARY KEY (`countries_content_id`),
   UNIQUE KEY `countries_content_id_UNIQUE` (`countries_content_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=48 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -154,7 +154,7 @@ CREATE TABLE `countries_content` (
 
 LOCK TABLES `countries_content` WRITE;
 /*!40000 ALTER TABLE `countries_content` DISABLE KEYS */;
-INSERT INTO `countries_content` VALUES (1,150,'Spain','http://www.vfsglobal.com/spain/morocco/'),(2,150,'Austria','http://www.vfsglobal.com/Austria/Morocco/'),(3,150,'Portugal','http://www.vfsglobal.com/portugal/morocco/'),(4,150,'Canada','http://www.vfsglobal.ca/Canada/Morocco/'),(5,150,'Sweden','https://www.vfsglobal.se/Morocco/index.html'),(6,150,'Croatia','http://www.vfsglobal.com/croatia/morocco/'),(7,150,'Netherlands','http://www.vfsglobal.com/netherlands/morocco/'),(8,4,'Spain','http://www.vfsglobal.com/Spain/Algeria'),(9,4,'Greece','http://www.vfsglobal.com/Greece/Algeria'),(10,4,'Malta','http://www.vfsglobal.com/Malta/Algeria'),(11,4,'Canada','http://www.vfsglobal.ca/Canada/Algeria'),(12,4,'Croatia','http://www.vfsglobal.com/Croatia/Algeria'),(13,4,'Austria','http://www.vfsglobal.com/Austria/Algeria'),(14,4,'Turkey','http://www.vfsglobal.com/Turkey/Algeria'),(15,4,'Hungary','http://www.vfsglobal.com/Hungary/Algeria');
+INSERT INTO `countries_content` VALUES (1,150,'203','http://www.vfsglobal.com/spain/morocco/'),(2,150,'15','http://www.vfsglobal.com/Austria/Morocco/'),(3,150,'178','http://www.vfsglobal.com/portugal/morocco/'),(4,150,'39','http://www.vfsglobal.ca/Canada/Morocco/'),(5,150,'214','https://www.vfsglobal.se/Morocco/index.html'),(6,150,'57','http://www.vfsglobal.com/croatia/morocco/'),(7,150,'156','http://www.vfsglobal.com/netherlands/morocco/'),(8,4,'203','http://www.vfsglobal.com/Spain/Algeria'),(9,4,'88','http://www.vfsglobal.com/Greece/Algeria'),(10,4,'137','http://www.vfsglobal.com/Malta/Algeria'),(11,4,'39','http://www.vfsglobal.ca/Canada/Algeria'),(12,4,'57','http://www.vfsglobal.com/Croatia/Algeria'),(13,4,'15','http://www.vfsglobal.com/Austria/Algeria'),(14,4,'227','http://www.vfsglobal.com/Turkey/Algeria'),(15,4,'101','http://www.vfsglobal.com/Hungary/Algeria'),(16,114,'57','http://www.vfsglobal.com/croatia/Jordan'),(17,114,'60','http://www.vfsglobal.com/cyprus/jordan'),(18,114,'61','http://www.vfsglobal.com/czechrepublic/Jordan'),(19,114,'88','http://www.vfsglobal.com/greece/Jordan'),(20,114,'103','http://www.vfsglobal.com/india/Jordan'),(21,114,'166','http://www.vfsglobal.com/norway/Jordan'),(22,114,'203','http://www.vfsglobal.com/spain/Jordan'),(23,114,'214','http://www.vfsglobal.se/Jordan'),(24,105,'234','http://www.vfsglobal.co.uk/iran/'),(25,105,'233','http://www.dubaivisa.net/'),(26,123,'203','http://www.vfsglobal.com/spain/lebanon'),(27,123,'88','http://www.vfsglobal.com/greece/lebanon'),(28,123,'166','http://www.vfsglobal.com/Norway/Lebanon'),(29,123,'15','http://www.vfsglobal.com/Austria/lebanon'),(30,123,'156','http://www.vfsglobal.com/Netherlands/Lebanon'),(31,123,'60','http://www.vfsglobal.com/cyprus/lebanon'),(32,123,'39','http://www.vfsglobal.ca/Canada/Lebanon'),(33,123,'233','http://www.dubaivisa.net/lebanon'),(34,123,'214','http://www.vfsglobal.se/lebanon'),(35,123,'57','http://www.vfsglobal.com/croatia/Lebanon'),(36,119,'14','http://www.vfsglobal.com/Australia/GCC/'),(37,119,'15','http://vfsglobal.com/austria/kuwait/'),(38,119,'39','http://www.vfsglobal.ca/canada/Kuwait/index.html'),(39,119,'57','http://vfsglobal.com/croatia/kuwait/'),(40,119,'61','http://www.vfsglobal.com/czechrepublic/kuwait/'),(41,119,'88','http://vfsglobal.com/greece/kuwait/'),(42,119,'101','http://vfsglobal.com/hungary/kuwait/'),(43,119,'156','http://vfsglobal.com/netherlands/kuwait/'),(44,119,'196','http://www.vfsglobal.com/slovenia/kuwait/'),(45,119,'203','http://vfsglobal.com/spain/kuwait/'),(46,119,'215','https://www.vfsglobal.ch/switzerland/kuwait/index.html'),(47,119,'234','https://www.vfsglobal.co.uk/kuwait/');
 /*!40000 ALTER TABLE `countries_content` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -250,4 +250,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-08-28 18:07:12
+-- Dump completed on 2016-08-28 20:14:23
