@@ -385,7 +385,10 @@ if($finalLang == "ar")
 						}
 				});
 				$(".block-stats li").hover(function(){
-						$( this ).children( '.type' ).css("color", "#FFF");
+						
+						$( this ).children( '.type' ).css("color", "#F99F1C");
+						$( this ).children( '.num' ).css("color", "#F99F1C");
+						$( this ).children( '.type' ).css("color", "#234973");
 						$( this ).children( '.num' ).css("color", "#234973");
 					}, function(){
 						$( this ).children( '.type' ).css("color", "lightblue");

@@ -34,6 +34,17 @@
 	<script src="js/jquery.content_slider.js"></script>
 	<script src="js/jquery.mousewheel.js"></script>
 	<script src="js/jquery.nanoscroller.min.js"></script>
+	
+	<?php 
+		$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+		if (strpos($url,'coo.php') !== false) { 
+			echo "<script type='text/javascript' src='js/jquery.magnific-popup.min.js'></script>";
+			echo "<script type='text/javascript' src='js/jquery.overscroll.min.js'></script>";
+			echo "<script type='text/javascript' src='js/flik-timeline.js'></script>";
+			echo "<script type='text/javascript' src='js/jquery.bxslider.min.js'></script>";
+			echo "<link rel='stylesheet' id='flik_timeline-flik-css-css' href='css/flik-timeline.min.css' type='text/css' media='all'>";
+		}
+	?>
 
 
 </head>

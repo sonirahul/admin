@@ -34,7 +34,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 	.tab-content{margin-top:100px}
 	.tab-content{margin-top:100px;background:#0f3d69;padding:20px;color:#fff;height:540px}
 	.tab-content .row { margin: auto;}
-	.tab-content *{color:#fff}
+	//.tab-content *{color:#fff}
 
 	#coo_title{text-transform:uppercase;text-align:left;font-size:x-large;}
 
@@ -155,14 +155,19 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 									
 									
 									<!-- test start -->
-									
-									<div id="page" class="site">
+									<style>
+									.tab-pane {
+										background-color:#FFF;
+									}
+									</style>
+									<div id="page" class="site" style="padding-top:1px;background-color:#FFF;color:#000;">
 										<div id="content" class="site-content">
 											<div class="content-wrap">
 												<div id="primary" class="content-area">
 													<main id="main" class="site-main" role="main">
 														<article id="post-98" class="entry-content-wrap post-98 post type-post status-publish format-standard has-post-thumbnail hentry category-style5">
 															<div class="entry-content">
+																<p>To apply Visa for the countries mentioned below:</p>
 																<div class="content-inner-wrap">
 																	<ul class="flik-timeline flik-timeline-10" data-scroll-effect="default-effect">
 																		<li class="active default-effect">
@@ -173,46 +178,13 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 																			</div>
 																			<div class="flik-timeline-content">
 																				<div class="content-title">Spain</div>
-																				<div class="content-main">Larry Page and Sergey Brin meet at Stanford University, where they become fast friends after discovering a common interest in owning and selling the personal information of millions of people</div>
+																				<div class="content-main"><a href="http://www.vfsglobal.com/Spain/Algeria">http://www.vfsglobal.com/Spain/Algeria</a></div>
 																			</div>
 																		</li>
 																		<li class="default-effect">
 																			<div class="relative">
 																				<label class="show-title">Spain</label>
 																				<span class="date"><img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>" style="width: 5em;"></span>
-																				<span class="circle"/>
-																			</div>
-																			<div class="flik-timeline-content">
-																				<div class="content-title">Research paper</div>
-																				<div class="content-main">Google first cited in high school research paper bibliography</div>
-																			</div>
-																		</li>
-																		<li class="default-effect">
-																			<div class="relative">
-																				<label class="show-title">Spain</label>
-																				<span class="date"><img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>" style="width: 5em;"></span>
-																				<span class="circle"/>
-																			</div>
-																			<div class="flik-timeline-content">
-																				<div class="content-title">Gmail</div>
-																				<div class="content-main">Gmail launched, forever changing the way people attempt to trigger the release of dopamine by repeatedly clicking the refresh button</div>
-																			</div>
-																		</li>
-																		<li class="default-effect">
-																			<div class="relative">
-																				<label class="show-title">YouTube joined Google</label>
-																				<span class="date">March 10, 2006</span>
-																				<span class="circle"/>
-																			</div>
-																			<div class="flik-timeline-content">
-																				<div class="content-title">YouTube joined Google</div>
-																				<div class="content-main">Google acquires YouTube for $1.6 billion in effort to gain access to trove of “Master Of Puppets” drum tutorial videos</div>
-																			</div>
-																		</li>
-																		<li class="default-effect">
-																			<div class="relative">
-																				<label class="show-title">Inbox</label>
-																				<span class="date">August 10, 2014</span>
 																				<span class="circle"/>
 																			</div>
 																			<div class="flik-timeline-content">
