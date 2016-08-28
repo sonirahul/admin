@@ -1722,7 +1722,7 @@
 }
 
 .flik-timeline-10 li {
-    margin: 40px 0;
+    margin: 60px 0;
     position: relative;
 }
 
@@ -1737,7 +1737,7 @@
 
 .flik-timeline-10 li .date {
     color: rgba(0, 0, 0, .4);
-    margin-top: -10px;
+    margin-top: -20px;
     top: 0;
     min-width: 120px;
     text-align: right;

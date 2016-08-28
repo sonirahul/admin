@@ -18,7 +18,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 
 <style type="text/css">
 	body{padding-bottom:0;padding-top:50px}
-	#coo-main{background-color: #cfdfff;background-image:linear-gradient(bottom,#f6f6f6 45%,#86b0ff 100%);background-image:-moz-linear-gradient(bottom,#f6f6f6 45%,#86b0ff 100%);background-image:-webkit-linear-gradient(bottom,#f6f6f6 45%,#86b0ff 100%)}
+	#coo-main{font-family: 'Source Sans Pro', sans-serif !important;background-color: #cfdfff;background-image:linear-gradient(bottom,#f6f6f6 45%,#86b0ff 100%);background-image:-moz-linear-gradient(bottom,#f6f6f6 45%,#86b0ff 100%);background-image:-webkit-linear-gradient(bottom,#f6f6f6 45%,#86b0ff 100%)}
 	ul.nav.nav-pills li:not(:last-child):after{content:"";width:50px;height:5px;background:#1a4270;display:block;position:absolute;top:50%;right:-40px}
 	ul li{overflow:initial}
 	li.active i.fa{display:none}
@@ -36,7 +36,8 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 	.tab-content{margin-top:100px;background:#0f3d69;padding:20px;padding:0;color:#fff;height:540px}
 	.tab-content .row { margin: auto;box-shadow: 0 0 20px #a9a9a9;}
 	//.tab-content *{color:#fff}
-
+	.entry-content {margin: 20px 100px;}
+.tab-pane {background-color:#FFF;}
 	#coo_title{text-transform:uppercase;text-align:left;font-size:x-large;}
 #coo-country-name {
     color: #333;
@@ -172,16 +173,9 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 									<!-- test start -->
 									<style>
 									.tab-pane {
-										background-color:#FFF;
+										//background-color:#FFF;
 									}
 									</style>
-									<div id="page" class="site" style="padding-top:1px;background-color:#FFF;color:#000;">
-										<div id="content" class="site-content">
-											<div class="content-wrap">
-												<div id="primary" class="content-area">
-													<main id="main" class="site-main" role="main">
-														<article id="post-98" class="entry-content-wrap post-98 post type-post status-publish format-standard has-post-thumbnail hentry category-style5">
-															<!-- <div class="post-thumbnail-wrap"><img width="1170" height="545" src="images/google-amp-fast-speed-travel-ss-1920-1170x545.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="google-amp-fast-speed-travel-ss-1920"></div>-->
 															<div class="entry-content">
 																
 																<div class="content-inner-wrap">
@@ -233,13 +227,6 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 
 																</div>
 															</div><!-- .entry-content -->
-														</article><!-- #post-## -->
-													</main><!-- #main -->
-												</div><!-- #primary -->
-											</div><!-- .content-wrap -->
-										</div><!-- #content -->
-									</div><!-- #page -->
-									
 									
 									
 									
