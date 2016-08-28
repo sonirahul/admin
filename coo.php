@@ -145,7 +145,11 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 			<div class="tab-content col-sm-8 column-center">
 				<i id="coo-content-back-btn" class="fa fa-2x fa-angle-left visible-xs visible-sm " aria-hidden="true"></i>
 				<?php 
-				for($i=0;$i<count($allCooData);$i++){?>
+				for($i=0;$i<count($allCooData);$i++){
+					$SQLforCooFor="select * from countries_content where countries_id = ".$allCooData[$i]["countries_id"];
+					$allCooForData=select_query($link,$SQLforCooFor,0,0);
+					
+				?>
 					<div id="menu<?php echo $i?>" class="tab-pane fade in <?php if($i==0) echo active ?>">
 						<div class="row">
 							<div id="coo-country-name" class="col-sm-12 "> 
@@ -164,6 +168,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 									?>
 								</h2>-->
 								<div id="coo_desc">
+									<p>To apply Visa for the countries mentioned below:</p>
 									<!--<?php 
 									if($finalLang == "en") echo $allCooData[$i]["countries_desc_en"];
 									if($finalLang == "ar") echo $allCooData[$i]["countries_desc_ar"];
@@ -180,20 +185,24 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 															<div class="entry-content">
 																
 																<div class="content-inner-wrap">
-																	<p>To apply Visa for the countries mentioned below:</p>
+																	
 																	<ul class="flik-timeline flik-timeline-10" data-scroll-effect="default-effect">
-																		<li class="active default-effect">
-																			<div class="relative">
-																				<label class="show-title">Spain</label>
-																				<span class="date"><img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>" style="width: 5em;"></span>
-																				<span class="circle"/>
-																			</div>
-																			<div class="flik-timeline-content">
-																				<div class="content-title">Spain</div>
-																				<div class="content-main"><a href="http://www.vfsglobal.com/Spain/Algeria">http://www.vfsglobal.com/Spain/Algeria</a></div>
-																			</div>
-																		</li>
-																		<li class="default-effect">
+																		<?php for($j=0;$j<count($allCooForData);$j++){ ?>
+																			<li class="default-effect">
+																				<div class="relative">
+																					<label class="show-title">
+																						<?php echo $allCooForData[$j]["countries_mission_en"]; ?>
+																					</label>
+																					<span class="date"><img src="flags/<?php echo $allCooData[$i]["countries_flag"]; ?>" style="width: 5em;"></span>
+																					<span class="circle"/>
+																				</div>
+																				<div class="flik-timeline-content">
+																					<div class="content-title"><?php echo $allCooForData[$j]["countries_mission_en"]; ?></div>
+																					<div class="content-main"><a href="<?php echo $allCooForData[$j]["countries_website_en"]; ?>"><?php echo $allCooForData[$j]["countries_website_en"]; ?></a></div>
+																				</div>
+																			</li>
+																		<? } ?>
+																		<!--<li class="default-effect">
 																			<div class="relative">
 																				<label class="show-title">Spain</label>
 																				<span class="date"><img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>" style="width: 5em;"></span>
@@ -223,7 +232,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 																					</div>
 																				</div>
 																			</div>
-																		</li>
+																		</li>-->
 																	</ul>
 
 																</div>
