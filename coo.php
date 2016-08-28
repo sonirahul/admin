@@ -166,9 +166,11 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 												<div id="primary" class="content-area">
 													<main id="main" class="site-main" role="main">
 														<article id="post-98" class="entry-content-wrap post-98 post type-post status-publish format-standard has-post-thumbnail hentry category-style5">
+															<div class="post-thumbnail-wrap"><img width="1170" height="545" src="images/google-amp-fast-speed-travel-ss-1920-1170x545.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="google-amp-fast-speed-travel-ss-1920"></div>
 															<div class="entry-content">
-																<p>To apply Visa for the countries mentioned below:</p>
+																
 																<div class="content-inner-wrap">
+																	<p>To apply Visa for the countries mentioned below:</p>
 																	<ul class="flik-timeline flik-timeline-10" data-scroll-effect="default-effect">
 																		<li class="active default-effect">
 																			<div class="relative">
