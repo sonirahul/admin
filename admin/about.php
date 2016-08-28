@@ -160,7 +160,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtaname">Arabic Name <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<input id="txtaname" class="form-control col-md-7 col-xs-12" name="txtaname" required="required" type="text" value="<?php echo $UpdatedData[0]['about_title_ar'];?>">
+									<input id="txtaname" class="form-control col-md-7 col-xs-12 dir-rtl" name="txtaname" required="required" type="text" value="<?php echo $UpdatedData[0]['about_title_ar'];?>">
 								</div>
 							</div>
 							<div class="item form-group">
@@ -174,7 +174,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtajobtitle">Arabic Job Title <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<input id="txtajobtitle" class="form-control col-md-7 col-xs-12" name="txtajobtitle" required="required" type="text" value="<?php echo $UpdatedData[0]['about_jobtitle_ar'];?>">
+									<input id="txtajobtitle" class="form-control col-md-7 col-xs-12 dir-rtl" name="txtajobtitle" required="required" type="text" value="<?php echo $UpdatedData[0]['about_jobtitle_ar'];?>">
 								</div>
 							</div>
 							<div class="item form-group">

@@ -4455,4 +4455,6 @@ ul.notifications {
 .clients-flag{
 max-width:100px;
 }
+
+.dir-rtl{direction:rtl;text-align: right;}
     
