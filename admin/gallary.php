@@ -26,8 +26,8 @@ for($i=0;$i<count($IDcheckValue);$i++)
 		$showdelet=select_query($link,$SQL,0,0);
         for($d=0;$d<count($showdelet);$d++)
 		{
-		  if($showdelet[$d]['gallery_photo']!="") unlink("../gallary/".$showdelet[$d]['gallery_photo']);
-		  if($showdelet[$d]['gallery_thumb']!="") unlink("../gallary/".$showdelet[$d]['gallery_thumb']);
+		  if($showdelet[$d]['gallery_photo']!="") unlink("../gallery/final/".$showdelet[$d]['gallery_photo']);
+		  if($showdelet[$d]['gallery_thumb']!="") unlink("../gallery/final/".$showdelet[$d]['gallery_thumb']);
 		}
 		//----------------------------------------
 		delete_query($link,$TableName,$SQLwhere);
@@ -77,7 +77,7 @@ if($_POST["action"]=="beUpdate")//Applay Updates
 	{ 
   	    $SQL="select * from gallery where gallery_id=$gid";
 		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../gallary/".$showdelet[0]['gallery_photo']);
+	    unlink("../gallery/final/".$showdelet[0]['gallery_photo']);
 		$TableField[$uf][0]="gallery_photo";
 		$TableField[$uf][1]="''";
 		$uf++;
@@ -85,7 +85,7 @@ if($_POST["action"]=="beUpdate")//Applay Updates
 		{ 
 		  $TableField[$uf][0]="gallery_photo";
 		  $photoid=mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
-	      $TableField[$uf][1]=uploadfile("gallery_photo",$photoid,"../gallary");
+	      $TableField[$uf][1]=uploadfile("gallery_photo",$photoid,"../gallery/final");
 		  $uf++;
 		}
 		
@@ -93,14 +93,14 @@ if($_POST["action"]=="beUpdate")//Applay Updates
 	{ 
   	    $SQL="select * from gallery where gallery_id=$gid";
 		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../gallary/".$showdelet[0]['gallery_thumb']);
+	    unlink("../gallery/final/".$showdelet[0]['gallery_thumb']);
 		$TableField[$uf][0]="gallery_thumb";
 		$TableField[$uf][1]="''";
 	}elseif($_FILES["gallery_thumb"]["name"]!="")
 		{ 
 		  $TableField[$uf][0]="gallery_thumb";
 		  $photoid=mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
-	     $TableField[$uf][1]=uploadfile("gallery_thumb","thumb_".$photoid,"../gallary");
+	     $TableField[$uf][1]=uploadfile("gallery_thumb","thumb_".$photoid,"../gallery/final");
 		}
 		
     $SQLwhere="gallery_id=$gid";	
@@ -127,7 +127,7 @@ $gid=auto_num($link,"gallery","gallery_id");
 	{ 
   	    $SQL="select * from gallery where gallery_id=$gid";
 		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../gallary/".$showdelet[0]['gallery_photo']);
+	    unlink("../gallery/final/".$showdelet[0]['gallery_photo']);
 		$TableField[$af][0]="gallery_photo";
 		$TableField[$af][1]="''";
 		$af++;
@@ -135,7 +135,7 @@ $gid=auto_num($link,"gallery","gallery_id");
 		{
 		  $TableField[$af][0]="gallery_photo";
 		  $photoid=mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
-	      $TableField[$af][1]=uploadfile("gallery_photo",$photoid,"../gallary");
+	      $TableField[$af][1]=uploadfile("gallery_photo",$photoid,"../gallery/final");
 		  $af++;
 		}
 		
@@ -143,14 +143,14 @@ $gid=auto_num($link,"gallery","gallery_id");
 	{ 
   	    $SQL="select * from gallery where gallery_id=$gid";
 		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../gallary/".$showdelet[0]['gallery_thumb']);
+	    unlink("../gallery/final/".$showdelet[0]['gallery_thumb']);
 		$TableField[$af][0]="gallery_thumb";
 		$TableField[$af][1]="''";
 	}elseif($_FILES["gallery_thumb"]["name"]!="")
 		{ 
 		  $TableField[$af][0]="gallery_thumb";
 		  $photoid=mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
-	      $TableField[$af][1]=uploadfile("gallery_thumb","thumb_".$photoid,"../gallary");
+	      $TableField[$af][1]=uploadfile("gallery_thumb","thumb_".$photoid,"../gallery/final");
 		}
 
     insert_query($link,$TableName,$TableField);
@@ -212,7 +212,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 						<tr align="center">
 						<td><a href="index.php?model=gallary&gid=<?=$SettingData[$i]["gallery_id"]?>&action=galleryupdate" class="link">Edit</a></td>
                         <td><?=$SettingData[$i]["gallery_name_en"]?></td>
-						<td><img border="0" src="../gallary/<?=$SettingData[$i]["gallery_photo"]?>" width="80" height="80" align="absmiddle"></td>
+						<td><img border="0" src="../gallery/final/<?=$SettingData[$i]["gallery_photo"]?>" width="80" height="80" align="absmiddle"></td>
 						<td><input type="checkbox" name="IDcheck[<? echo $i?>]" id="datachk" style="border:0;background : transparent;"> 
               <input type="hidden" name="IDcheckValue[<? echo $i?>]" value="<? echo $SettingData[$i]['gallery_id']?>"></td>
 						</tr>
@@ -270,7 +270,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 			  <? if(!empty($UpdatedData[0]['gallery_photo']) && $_GET["action"]=="galleryupdate"){	
 			  $pic_path=$UpdatedData[0]['gallery_photo'];
 			  ?>
-			  <img border="0" src="../gallary/<?=$pic_path?>" width="80" height="80" align="absmiddle">
+			  <img border="0" src="../gallery/final/<?=$pic_path?>" width="80" height="80" align="absmiddle">
 			  <input type="checkbox" style="border:0px;" name="deletefile"  value="1">Delete
               <? } ?></td>
 			</tr>
@@ -280,7 +280,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 			  <? if(!empty($UpdatedData[0]['gallery_thumb']) && $_GET["action"]=="galleryupdate"){	
 			  $pic_path=$UpdatedData[0]['gallery_thumb'];
 			  ?>
-			  <img border="0" src="../gallary/<?=$pic_path?>" width="80" height="80" align="absmiddle">
+			  <img border="0" src="../gallery/final/<?=$pic_path?>" width="80" height="80" align="absmiddle">
 			  <input type="checkbox" style="border:0px;" name="deletethumbfile"  value="1">Delete
               <? } ?></td>
 			</tr>
