@@ -2398,7 +2398,8 @@ div#mgtTeamViewer{position:fixed;width:100vw;height:100vh;left:0;top:0;//backgro
 .ourMagtTeam{width:75vw;margin:0 auto;background-color:#fff;position:relative;z-index:2;top:50%;margin-top:-30vh}
 .texte_people{border-top:1px solid #dedede;padding-top:20px;font-size:22px}
 .teamviewerimagecontent{border-right:1px solid #efefef;background-color:#efefef}
-.mgtTeamViewerclose.fa.fa-times{//font-size:42px!important;position:absolute;top:0;right:0;background-color:#11549c;color:#fff;padding:5px 10px}
+.mgtTeamViewerclose.fa.fa-times{//font-size:42px!important;position:absolute;top:0;right:0;background-color:#11549c;color:#fff;padding:5px 10px;cursor:pointer}
+.mgtTeamViewercloseleft.fa.fa-times{//font-size:42px!important;position:absolute;top:0;left:0;background-color:#11549c;color:#fff;padding:5px 10px;cursor:pointer}
 .mgtTeamViewerclose.fa.fa-times:hover{cursor:pointer}
 .carousel-inner>.item.active .carousel-caption{padding:0;margin:0;top:35%}
 .hexagon{overflow:hidden;visibility:hidden;-webkit-transform:rotate(120deg);-moz-transform:rotate(120deg);-ms-transform:rotate(120deg);-o-transform:rotate(120deg);transform:rotate(120deg);cursor:pointer}

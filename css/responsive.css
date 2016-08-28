@@ -2,6 +2,7 @@
 .country-con{transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);}
 .country-con:hover{transform: scale(1.1);}
 .dir-rtl{direction:rtl;}
+.dir-rtl-right{direction:rtl;text-align: right;}
 #contact-header-info {
 	border-bottom: 2px solid;
 }
