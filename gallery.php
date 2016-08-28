@@ -12,7 +12,7 @@
         $(".nav-bar .identity").addClass("responsive");
         $(".nav-bar").css("position","fixed").fadeIn();
         $("section.nav-bar").addClass("hide-nav");
-        $("#lang").addClass("when-slided");
+        $("#langForm").addClass("when-slided");
     });
 </script>
 

@@ -8,7 +8,7 @@
 		$(".nav-bar .identity").addClass("responsive");
 		$(".nav-bar").css("position","fixed").fadeIn();
 		$("section.nav-bar").addClass("hide-nav");
-		$("#lang").addClass("when-slided");
+		$("#langForm").addClass("when-slided");
 	});
 </script>
 <?php  
@@ -32,7 +32,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 	.nav-pills>li>a img{position:absolute;top:50%;left:50%;margin-left:-40px;margin-top:-40px;width:80px}
 	.nav-pills>li>a p{position:absolute;font-weight:bold;width:100%;bottom:-60px;text-align:center;text-transform: capitalize;font-size:16px;}
 
-	.tab-content{margin-top:100px}
+
 	.tab-content{margin-top:100px;background:#0f3d69;padding:20px;padding:0;color:#fff;height:540px}
 	.tab-content .row { margin: auto;box-shadow: 0 0 20px #a9a9a9;}
 	//.tab-content *{color:#fff}
@@ -46,6 +46,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
     padding: 30px;
     font-size: 32px;
 }
+#coo-pic{padding-top:54%;background-position: center !important;}
 	
 	
 	@media only screen and (min-width : 320px) and (max-width:991px){
@@ -88,12 +89,12 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 	@media only screen and (min-width:992px) and (max-width: 1199px){
 		.nav-pills>li>a{width:100px;height:100px;}
 		.nav-pills>li+li {margin-left: 10px;}
-		.tab-content{margin: 100px 30px 30px;}
+		//.tab-content{margin: 100px 30px 30px;}
 	}
 	@media only screen and (min-width:1400px) and (max-width: 1823px) {
 		.nav-pills>li>a{width:130px;height:130px;}
 		.nav-pills>li+li {margin-left: 15px;}
-		.tab-content{margin: 100px 30px 30px;}
+		//.tab-content{margin: 100px 30px 30px;}
 		.nav-pills>li>a img{margin-left:-50px;margin-top:-50px;width:100px;}
 	}
 </style>
@@ -153,7 +154,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 									if($finalLang == "ar") echo $allCooData[$i]["countries_title_ar"];
 									?>
 							</div>
-							<div class="col-sm-12 hidden-xs" style="background:url(countries/<?php echo $allCooData[$i]["countries_photo"]?>);background-size:cover;height:500px;"></div>
+							<div id="coo-pic" class="col-sm-12 hidden-xs" style="background:url(countries/<?php echo $allCooData[$i]["countries_photo"]?>);background-size:cover;"></div>
 							<div id="coo-con-pic" class="col-sm-12 visible-xs"><img src="countries/<?php echo $allCooData[$i]["countries_photo"]?>" /></div>
 							<div class="col-sm-12">
 								<!--<h2 id="coo_title">
