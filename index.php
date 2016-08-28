@@ -620,21 +620,21 @@ if($finalLang == "ar")
 								</div>
 							</div>
 						</div>
-						<div class="omgt-name">
+						<div class="omgt-name <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 							<?php 
 							if ($finalLang == "en") echo $allMagtTeamData[$i]["about_title_en"];
 							else echo $allMagtTeamData[$i]["about_title_ar"];
 							?>
 
 						</div>
-						<div class="omgt-pos">
+						<div class="omgt-pos <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 							<?php 
 							if ($finalLang == "en") echo $allMagtTeamData[$i]["about_jobtitle_en"];
 							else  echo $allMagtTeamData[$i]["about_jobtitle_ar"];
 							?>
 
 						</div>
-						<div class="omgt-Content">
+						<div class="omgt-Content <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 							<?php 
 							if ($finalLang == "en") echo $allMagtTeamData[$i]["about_desc_en"];
 							else  echo $allMagtTeamData[$i]["about_desc_ar"];
@@ -731,14 +731,14 @@ if($finalLang == "ar")
 				<div class="col-xs-6 col-sm-2 team-mem team-view">
 					<div class="element_hover">
 						<div class="hover-content">
-							<h3 class="sl-hover-title">
+							<h3 class="sl-hover-title <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
 								<?php 
 								if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_title_en"];
 								else echo $allEmployeeTeamData[$employeeNo]["about_title_ar"];
 								?>
 
 							</h3>
-							<h4 class="sl-hover-subtitle">
+							<h4 class="sl-hover-subtitle <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
 								<?php 
 								if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_jobtitle_en"];
 								else echo $allEmployeeTeamData[$employeeNo]["about_jobtitle_ar"];
@@ -754,14 +754,14 @@ if($finalLang == "ar")
 					else echo $allEmployeeTeamData[$employeeNo]["about_title_ar"];
 					?>
 					" class="img_element" width="100%" height="100%/">
-					<div class="mw_team">
+					<div class="mw_team <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
 						<?php 
 						if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_title_en"];
 						else echo $allEmployeeTeamData[$employeeNo]["about_title_ar"];
 						?>
 
 					</div>
-					<div class="mw-team-quote">
+					<div class="mw-team-quote <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
 						<?php 
 						if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_desc_en"];
 						else echo $allEmployeeTeamData[$employeeNo]["about_desc_ar"];
@@ -789,18 +789,18 @@ if($finalLang == "ar")
 
 <div id="mgtTeamViewer">
 	<div class="row">
-		<div class="col-md-5 teamviewerimagecontent">
+		<div class="col-md-5 teamviewerimagecontent <?php if ($finalLang == "ar") {echo "pull-right";} ?>">
 			<div class="teamviewerimage"></div>
 		</div>
 		<div class="col-md-7 ">
 			<div class="resume_people">
-				<h3 class="people_Name">Abiola Ojo-Osagie</h3>
-				<p><b>Designation : </b><span class="people-title">MACHINE</span> </p>
+				<h3 class="people_Name <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">Abiola Ojo-Osagie</h3>
+				<p class="<?php if ($finalLang == "ar") {echo "dir-rtl";} ?>"><b><?php if ($finalLang == "ar") {echo "ÇáÊÚííä : ";} else { echo "Designation : ";} ?></b><span class="people-title">MACHINE</span> </p>
 
-				<p class="texte_people"">MACHINE</p>
+				<p class="texte_people <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">MACHINE</p>
 			</div>
 		</div>
-		<div class="mgtTeamViewerclose fa fa-times fa-2x" aria-hidden="true"></div>
+		<div class="fa fa-times fa-2x <?php if ($finalLang == "ar") {echo "mgtTeamViewercloseleft";} else { echo "mgtTeamViewerclose";} ?>" aria-hidden="true"></div>
 	</div>
 	<div class="justBlackBg"></div>
 </div>
@@ -1098,6 +1098,9 @@ type="text/javascript"></script>
 
 	});
 	$(".mgtTeamViewerclose").click(function(){
+		closeTeamViewer();
+	});
+	$(".mgtTeamViewercloseleft").click(function(){
 		closeTeamViewer();
 	});
 	$(".justBlackBg").click(function(){
