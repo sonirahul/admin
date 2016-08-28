@@ -1695,12 +1695,14 @@
     margin: 50px 0 30px 180px;
     padding-left: 30px;
     border-left: 4px solid #4298c3;
+    border-left: 4px solid #FFF;
     color: #FFF;
 }
 
 .flik-timeline-10:before, .flik-timeline-10:after {
     content: "";
     background: #4298c3;
+    background: #FFF;
     border-radius: 100%;
     display: block;
     position: absolute;
@@ -1775,7 +1777,7 @@
 
 .flik-timeline-10 li.active .content-title {
     margin-bottom: 7px;
-    font-size: 18px;
+    font-size: 24px;
     cursor: auto;
     transform: translateX(0);
     display: block;
@@ -1787,6 +1789,7 @@
 
 .flik-timeline-10 li.active .flik-timeline-content {
     border-color: #4298c3;
+    border-color: #FFF;
     margin-right: 20px;
     transform: translateX(20px);
     transition: min-height .3s linear, border-color .4s linear, transform .1s linear;
@@ -1834,7 +1837,7 @@
 }
 
 .flik-timeline-10 .flik-timeline-content:after {
-    border-right-color: #fff;
+    border-right-color: #133963;
     border-width: 19px;
     top: -2px;
     left: -16px;
@@ -1899,3 +1902,6 @@
         line-height: 1.4;
     }
 }
+.default-effect.active .circle {
+		background: #133963 !important;
+	}

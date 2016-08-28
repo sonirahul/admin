@@ -35,7 +35,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 
 	.tab-content{margin-top:100px;background:#0f3d69;padding:20px;padding:0;color:#fff;height:540px}
 	.tab-content .row { margin: auto;box-shadow: 0 0 20px #a9a9a9;}
-	//.tab-content *{color:#fff}
+	.tab-content *{color:#fff}
 	.entry-content {margin: 20px 100px;}
 .tab-pane {background-color:#FFF;}
 	#coo_title{text-transform:uppercase;text-align:left;font-size:x-large;}
@@ -98,6 +98,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 		//.tab-content{margin: 100px 30px 30px;}
 		.nav-pills>li>a img{margin-left:-50px;margin-top:-50px;width:100px;}
 	}
+	.content-title {color: #F99F1C;}
 </style>
 
 <script type="text/javascript">
