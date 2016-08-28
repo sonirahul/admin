@@ -719,7 +719,7 @@ if($finalLang == "ar")
 			if( $i == $var[0]) 
 			{
 				?>
-				<div class="col-sm-2 team-mem">
+				<div class="col-sm-2 team-mem hidden-xs hidden-sm">
 					<div class="box" style="background-color: <?php echo $var[1] ?>"></div>
 				</div>
 				<?php $boxCount=$boxCount+1;
