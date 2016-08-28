@@ -170,7 +170,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 									?>
 								</h2>-->
 								<div id="coo_desc">
-									<p>To apply Visa for the countries mentioned below:</p>
+									
 									<!--<?php 
 									if($finalLang == "en") echo $allCooData[$i]["countries_desc_en"];
 									if($finalLang == "ar") echo $allCooData[$i]["countries_desc_ar"];
@@ -187,7 +187,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 															<div class="entry-content">
 																
 																<div class="content-inner-wrap">
-																	
+																	<h4>To know more about the visa process click the country below:</h4>
 																	<ul class="flik-timeline flik-timeline-10" data-scroll-effect="default-effect">
 																		<?php for($j=0;$j<count($allCooForData);$j++){ ?>
 																			<li class="default-effect">
