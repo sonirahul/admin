@@ -95,7 +95,6 @@ if($finalLang == "ar")
 			$(".nav-bar").css("position","fixed").fadeIn();
 			$("section.nav-bar").addClass("hide-nav");
 			$("#langForm").addClass("when-slided");
-			
 		}
 		else
 		{
@@ -175,7 +174,7 @@ if($finalLang == "ar")
 	</ol>
 	<div class="carousel-inner" role="listbox">
 		<div id="carouselItem1" class="item active">
-			<div style="background-image:url(slider/stock-photo-68076165-kuwait-city_compressed.jpg);//background-image:url(slider/main.jpg);background-size:cover;background-position:center bottom;"></div>
+			<div style="background-image:url(slider/kuwait.jpg);background-size:cover;background-position:center bottom;"></div>
 			<div class="container">
 				<div class="carousel-caption">
 					<h2 class="main-screen-caption">
@@ -208,7 +207,7 @@ if($finalLang == "ar")
 		</div>
 
 		<div id="carouselItem2"  class="item">
-			<div style="background-image:url(slider/1.jpg);background-size:cover;background-position:center bottom"></div>
+			<div style="background-image:url(slider/2.jpg);background-size:cover;background-position:center bottom"></div>
 			<div class="container">
 				<div id="ci2cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
@@ -218,7 +217,7 @@ if($finalLang == "ar")
 			</div>
 		</div>
 		<div id="carouselItem3"  class="item">
-			<div style="background-image:url(slider/2.jpg);background-size:cover;background-position:center bottom"></div>
+			<div style="background-image:url(slider/3.jpg);background-size:cover;background-position:center bottom"></div>
 			<div class="container">
 				<div id="ci3cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
@@ -234,7 +233,7 @@ if($finalLang == "ar")
 			<div style="background-image:url(slider/4th.jpg);background-size:cover;background-position:center bottom"></div>
 		</div>
 		<div id="carouselItem5"  class="item">
-			<div style="//background-image:url(slider/5-lg.jpg);background-size:cover;background-position:center bottom"></div>
+			<div style="//background-image:url(slider/5.jpg);background-size:cover;background-position:center bottom"></div>
 			<div class="container">
 				<div id="ci5cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
@@ -330,10 +329,7 @@ if($finalLang == "ar")
 	</section>
 	<style type="text/css">
 		#singaporeAirlines {
-			background-image: url(images/singaporeAirlinesShown.jpg);
-			background-image: url(http://i.istockimg.com/image-zoom/16896950/3/380/253/stock-photo-16896950-merilon-statue-singapore.jpg);
-			//background-image: url(http://i.istockimg.com/image-zoom/86166105/3/380/268/stock-illustration-86166105-city-of-singapore-with-skycraper.jpg);
-			background-image: url(images/singapore_c.jpg);
+			background-image: url(image/singapore.jpg);
 			background-size: cover;
 			background-position:center top;
 			background-attachment: fixed;
@@ -1222,7 +1218,7 @@ type="text/javascript"></script>
 <script type='text/javascript'>
 	function init_map() {
 		var myOptions = {
-			zoom: 4,
+			zoom: 12,
 			scrollwheel:false,
 			scaleControl:false,
 			center: new google.maps.LatLng(29.37585899999999, 48.00223471640631),
