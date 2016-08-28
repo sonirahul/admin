@@ -34,7 +34,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 	.tab-content{margin-top:100px}
 	.tab-content{margin-top:100px;background:#0f3d69;padding:20px;color:#fff;height:540px}
 	.tab-content .row { margin: auto;}
-	.tab-content *{color:#fff}
+	//.tab-content *{color:#fff}
 
 	#coo_title{text-transform:uppercase;text-align:left;font-size:x-large;}
 
@@ -147,10 +147,94 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 									?>
 								</h2>
 								<div id="coo_desc">
-									<?php 
+									<!--<?php 
 									if($finalLang == "en") echo $allCooData[$i]["countries_desc_en"];
 									if($finalLang == "ar") echo $allCooData[$i]["countries_desc_ar"];
-									?>
+									?>-->
+									
+									
+									
+									<!-- test start -->
+									<style>
+									.tab-pane {
+										background-color:#FFF;
+									}
+									</style>
+									<div id="page" class="site" style="padding-top:1px;background-color:#FFF;color:#000;">
+										<div id="content" class="site-content">
+											<div class="content-wrap">
+												<div id="primary" class="content-area">
+													<main id="main" class="site-main" role="main">
+														<article id="post-98" class="entry-content-wrap post-98 post type-post status-publish format-standard has-post-thumbnail hentry category-style5">
+															<div class="entry-content">
+																<p>To apply Visa for the countries mentioned below:</p>
+																<div class="content-inner-wrap">
+																	<ul class="flik-timeline flik-timeline-10" data-scroll-effect="default-effect">
+																		<li class="active default-effect">
+																			<div class="relative">
+																				<label class="show-title">Spain</label>
+																				<span class="date"><img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>" style="width: 5em;"></span>
+																				<span class="circle"/>
+																			</div>
+																			<div class="flik-timeline-content">
+																				<div class="content-title">Spain</div>
+																				<div class="content-main"><a href="http://www.vfsglobal.com/Spain/Algeria">http://www.vfsglobal.com/Spain/Algeria</a></div>
+																			</div>
+																		</li>
+																		<li class="default-effect">
+																			<div class="relative">
+																				<label class="show-title">Spain</label>
+																				<span class="date"><img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>" style="width: 5em;"></span>
+																				<span class="circle"/>
+																			</div>
+																			<div class="flik-timeline-content">
+																				<div class="content-title">Inbox</div>
+																				<div class="content-main">Inbox—from the Gmail team—is a different take on email, designed to focus on what really matters.&nbsp;
+																					<div class="flik-thumbnails">
+																						<ul class="flik-thumbnails-slider">
+																							<li>
+																								<a href="http://timeline.cidcode.net/wp-content/uploads/2014/08/google-inbox-invite.jpg" title="inbox web">
+																									<img src="images/google-inbox-invite-150x150.jpg">
+																								</a>
+																							</li>
+																							<li>
+																								<a href="http://timeline.cidcode.net/wp-content/uploads/2014/08/3037483-poster-p-1-google-reimagines-email-with-their-new-inbox-app.jpg" title="inbox 1">
+																									<img src="images/3037483-poster-p-1-google-reimagines-email-with-their-new-inbox-app-150x150.jpg">
+																								</a>
+																							</li>
+																							<li>
+																								<a href="http://timeline.cidcode.net/wp-content/uploads/2014/08/intro-logo.png" title="inbox">
+																									<img src="images/intro-logo-150x150.png">
+																								</a>
+																							</li>
+																						</ul>
+																					</div>
+																				</div>
+																			</div>
+																		</li>
+																	</ul>
+
+																</div>
+															</div><!-- .entry-content -->
+														</article><!-- #post-## -->
+													</main><!-- #main -->
+												</div><!-- #primary -->
+											</div><!-- .content-wrap -->
+										</div><!-- #content -->
+									</div><!-- #page -->
+									
+									
+									
+									
+									
+									<!-- test end -->
+									
+									
+									
+									
+									
+									
+									
 								</div>
 							</div>
 						</div>
