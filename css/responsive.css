@@ -553,12 +553,15 @@ body{overflow-x:hidden;}
 
 @media only screen and (min-width:320px){
 	#slider5Collage{background-image:url(../slider/5th/5th_320_480.jpg);background-size:cover;background-position:center}
+	#singaporeAirlines {background-image: url(../image/singapore_320.jpg) !Important}}
 }
 @media only screen and (min-width:360px){
 	#slider5Collage{background-image:url(../slider/5th/5th_360_640.jpg);background-size:cover;background-position:center}
+	#singaporeAirlines {background-image: url(../image/singapore_360.jpg) !Important}}
 }
 @media only screen and (min-width:410px){
 	#slider5Collage{background-image:url(../slider/5th/5th_412_730.jpg);background-size:cover;background-position:center}
+	#singaporeAirlines {background-image: url(../image/singapore_360.jpg) !Important}}
 }
 @media only screen and (min-width:768px) and (orientation:portrait){
 	#slider5Collage{background-image:url(../slider/5th/5th_768_1024.jpg);background-size:cover;background-position:center}
