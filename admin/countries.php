@@ -29,7 +29,10 @@ $SettingData=select_query($link,$SQL,0,0);
 if($_GET["action"]=="countriesupdate")
 {
 $SQL="select * from countries where countries_id=$_GET[countriesid]";
-$UpdatedData=select_query($link,$SQL,0,0);	
+$UpdatedData=select_query($link,$SQL,0,0);
+
+$SQL="select * from countries_content cc, countries c where c.countries_id=cc.countries_mission_en and cc.countries_id =$_GET[countriesid]";
+$UpdatedDataFor=select_query($link,$SQL,0,0);
 }
 //--------------------------------
 if($_POST["action"]=="beUpdate") // Update Fields
@@ -214,6 +217,7 @@ if($_POST["action"]=="Add")
 							});
 						</script>
 					<?php }elseif($_GET["action"]=="countriesupdate" || $_GET["action"]=="countriesadd"){?>
+						<!-- update start -->
 						<span class="section"><?php if ($_GET["action"]=="countriesupdate") echo "Edit Countries of Operation Detail"; else echo "Add Countries of Operation Detail";?></span>
 						<form name="Add" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" novalidate>
 							<input type="hidden"  name="action">
@@ -221,22 +225,143 @@ if($_POST["action"]=="Add")
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtaname">Arabic Country Name <span class="required">*</span>
 								</label>
-								<div class="col-md-6 col-sm-6 col-xs-12">
-									<input id="txtaname" class="form-control col-md-7 col-xs-12" name="txtaname" required="required" type="text" value="<?php echo $UpdatedData[0]['countries_title_ar'];?>">
+								<div class="col-md-8 col-sm-6 col-xs-12">
+									<input id="txtaname" class="form-control col-md-8 col-xs-12 dir-rtl" name="txtaname" required="required" type="text" value="<?php echo $UpdatedData[0]['countries_title_ar'];?>">
 								</div>
 							</div>
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtename">English Country Name <span class="required">*</span>
 								</label>
-								<div class="col-md-6 col-sm-6 col-xs-12">
-									<input id="txtename" class="form-control col-md-7 col-xs-12" name="txtename" required="required" type="text" value="<?php echo ucwords($UpdatedData[0]['countries_title_en']);?>">
+								<div class="col-md-8 col-sm-6 col-xs-12">
+									<input id="txtename" class="form-control col-md-8 col-xs-12" name="txtename" required="required" type="text" value="<?php echo ucwords($UpdatedData[0]['countries_title_en']);?>">
 								</div>
 							</div>
 							<div class="item form-group">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtename">Mission &amp; Website Links <span class="required">*</span>
+								</label>
+								<div class="col-md-8 col-sm-9 col-xs-12">
+									<table class=" table table-responsive table-striped table-bordered table-condensed table-hover" cellspacing="0" width="100%">
+										<thead>
+											<tr>
+												<th class="col-md-4 col-sm-3 col-xs-3">Mission Name</th>
+												<th class="col-md-5 col-sm-6 col-xs-5">Website</th>
+												<th class="col-md-3 col-sm-3 col-xs-4">Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php for($j=0;$j<count($UpdatedDataFor);$j++){ ?>
+												<tr>
+													<td>
+														<select name="countries_flag_select" class="form-control countries_flag_select" id="countries_flag_select" countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>' disabled=true>
+															<option></option>
+															<option value="other">Other</option>
+															<?php
+															$handle=opendir('../flags');
+															while (false!==($file = readdir($handle)))
+															{ 
+															if ($file != "." && $file != ".." && $file != "index.html")
+															 {  
+																$flagName = ucwords(str_replace("_"," ",str_replace(".png","",$file)));
+																if (ucwords($UpdatedDataFor[$j]["countries_title_en"]) == $flagName) {
+																	echo "<option value='$file' selected>$flagName</option>";
+																}
+																else {
+																	echo "<option value='$file'>$flagName</option>";
+																}
+															  } 
+															} closedir($handle); 
+															?>
+														</select>
+													</td>
+													<td>
+														<input type="text" class="form-control" value="<?php echo $UpdatedDataFor[$j]["countries_website_en"]; ?>" countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>' disabled=true>
+													</td>
+													<td>
+														<input name='button' type='button' class="btn btn-success hidden-xs hidden-sm countries-update-del-button" value='Edit' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'>
+														<input name='button' type='button' class="btn btn-danger hidden-xs hidden-sm countries-update-del-button hidden" value='Clear' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'>
+														<button type='button' class="btn btn-success hidden-md hidden-lg countries-update-del-button" value='Edit' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'><span class="glyphicon glyphicon-pencil"></span></button>
+														<button type='button' class="btn btn-danger hidden-md hidden-lg countries-update-del-button hidden" value='Clear' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'><span class="glyphicon glyphicon-remove"></span></button>
+													</td>
+												</tr>
+											<? } ?>
+											<tr>
+												<td>
+													<select name="countries_flag_select" class="form-control countries_flag_select" id="countries_flag_select">
+														<option></option>
+														<option value="other">Other</option>
+														<?php
+														$handle=opendir('../flags');
+														while (false!==($file = readdir($handle)))
+														{ 
+														if ($file != "." && $file != ".." && $file != "index.html")
+														 {  
+															$flagName = ucwords(str_replace("_"," ",str_replace(".png","",$file)));
+															if (ucwords($UpdatedDataFor[$j]["countries_title_en"]) == $flagName) {
+																echo "<option value='$file' selected>$flagName</option>";
+															}
+															else {
+																echo "<option value='$file'>$flagName</option>";
+															}
+														  } 
+														} closedir($handle); 
+														?>
+													</select>
+												</td>
+												<td><input type='text' class='form-control'></td>
+												
+												<td style="vertical-align: middle">
+													<input name='button' type='button' class="btn btn-info hidden-xs hidden-sm" value='Add'>
+													<button type='button' class="btn btn-info hidden-md hidden-lg" ><span class="glyphicon glyphicon-plus"></span></button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<script type="text/javascript">
+								$.noConflict();
+
+								jQuery(function() {
+									jQuery('.countries-update-del-button').on("click", function(){
+										var countriesContentId = jQuery(this).attr("countriesContentId");
+										if (jQuery(this).val() == "Edit"){
+											
+
+											jQuery(".countries-update-del-button[countriesContentId='"+countriesContentId+"'][value='Edit']").addClass("hidden");
+											jQuery(".countries-update-del-button[countriesContentId='"+countriesContentId+"'][value='Clear']").removeClass("hidden");
+											jQuery("input[countriesContentId='"+countriesContentId+"']").attr("disabled", false);
+											jQuery("select[countriesContentId='"+countriesContentId+"']").attr("disabled", false);
+										}
+										else {
+											$("select[countriesContentId='"+countriesContentId+"']").val("");
+											$("input[countriesContentId='"+countriesContentId+"'][type='text']").val("");
+											/*document.forms["Prowse"].elements["Action"].value = jQuery(this).val();
+											document.forms["Prowse"].elements["StatisticsId"].value = jQuery(this).attr("statisticsId");
+											document.forms["Prowse"].submit();*/
+										}
+										
+									});
+									
+									/* Reset button functionality */
+									jQuery("button[type='reset']").on("click", function(){
+										$("*[value='Clear']").each(function(val,index) {
+											if ($(this).hasClass("hidden")){} 
+											else { 
+												var countryContentId=jQuery(this).attr("countriesContentId");
+												$("input[countriesContentId=" + countryContentId +"][type='text']").attr("disabled", true);
+												$("select[countriesContentId=" + countryContentId +"]").attr("disabled", true);
+												$("input[countriesContentId=" + countryContentId +"][value='Clear'], button[countriesContentId=" + countryContentId +"][value='Clear']").addClass("hidden");
+												$("input[countriesContentId=" + countryContentId +"][value='Edit'], button[countriesContentId=" + countryContentId +"][value='Edit']").removeClass("hidden");
+											} 
+										});
+									});
+								});
+							</script>
+							<!--<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtadesc">Arabic Description <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<textarea id="txtadesc" class="form-control col-md-7 col-xs-12 ckeditor" name="txtadesc" cols="60" rows="15">
+									<textarea id="txtadesc" class="form-control col-md-8 col-xs-12 ckeditor" name="txtadesc" cols="60" rows="15">
 										<?php echo $UpdatedData[0]['countries_desc_ar'];?>
 									</textarea>
 								</div>
@@ -245,16 +370,16 @@ if($_POST["action"]=="Add")
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtedesc">English Description <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<textarea id="txtedesc" class="form-control col-md-7 col-xs-12 ckeditor" name="txtedesc" cols="60" rows="15">
+									<textarea id="txtedesc" class="form-control col-md-8 col-xs-12 ckeditor" name="txtedesc" cols="60" rows="15">
 										<?php echo $UpdatedData[0]['countries_desc_en'];?>
 									</textarea>
 								</div>
-							</div>
+							</div>-->
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_photo">Photo Attach 
 								</label>
-								<div class="col-md-6 col-sm-6 col-xs-12">
-									<input id="countries_photo" type="file" name="countries_photo" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
+								<div class="col-md-8 col-sm-6 col-xs-12">
+									<input id="countries_photo" type="file" name="countries_photo" data-validate-length-range="5,20" class="optional form-control col-md-8 col-xs-12">
 									<?php if(!empty($UpdatedData[0]['countries_photo']) && $_GET["action"]=="countriesupdate"){
 										$pic_path=$UpdatedData[0]['countries_photo'];?>
 										<img border="0" src="../countries/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
@@ -293,7 +418,7 @@ if($_POST["action"]=="Add")
 									</script>
 								<div class="item form-group">
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag_select">Select Country Flag</label>
-									<div class="col-md-6 col-sm-6 col-xs-12">
+									<div class="col-md-8 col-sm-6 col-xs-12">
 										<select name="countries_flag_select" class="form-control countries_flag_select" id="countries_flag_select" >
 											<option></option>
 											<option value="other">Other</option>
@@ -315,14 +440,14 @@ if($_POST["action"]=="Add")
 								</div>
 								<div class="item form-group country_flag_show hidden">
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="country_flag_show">Selected Flag</label>
-									<div class="col-md-6 col-sm-6 col-xs-12">
+									<div class="col-md-8 col-sm-6 col-xs-12">
 										<img class="country_flag_show">
 									</div>
 								</div>
 								<div class="item form-group countries_flag hidden">
 									
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag">Flag Attach</label>
-									<div class="col-md-6 col-sm-6 col-xs-12">									
+									<div class="col-md-8 col-sm-6 col-xs-12">									
 										<input name="countries_flag" type='file' class="form-control countries_flag">
 										
 									</div>
@@ -332,7 +457,7 @@ if($_POST["action"]=="Add")
 								$pic_path=$UpdatedData[0]['countries_flag'];?>
 								<div class="item form-group country_flag_show">
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="country_flag">Selected Flag</label>
-									<div class="col-md-6 col-sm-6 col-xs-12">
+									<div class="col-md-8 col-sm-6 col-xs-12">
 										<img border="0" src="../flags/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
 										<input type="checkbox" style="border:0px;" name="deleteflag"  value="1">Delete
 									</div>
@@ -344,7 +469,7 @@ if($_POST["action"]=="Add")
 							
 							<div class="ln_solid"></div>
 							<div class="form-group">
-								<div class="col-md-6 col-md-offset-3">
+								<div class="col-md-8 col-md-offset-3">
 									<button type="submit" class="btn btn-primary" onclick="checkdata();">Save</button>
 									<button type="reset" class="btn btn-success">Reset</button>
 								</div>
@@ -407,7 +532,7 @@ if($_POST["action"]=="Add")
 								return false;
 					}
 					</script>
-
+					<!-- update end -->
 					<?php } ?>	
 				</div>
 			</div>

@@ -75,9 +75,9 @@ $showdelet=select_query($link,$SQL,0,0);
 								<table class=" table table-responsive table-striped table-bordered table-condensed table-hover" cellspacing="0" width="100%">
 									<thead>
 										<tr>
-											<th class="col-md-4 col-md-4 col-xs-4">Statistics Name</th>
-											<th class="col-md-4 col-md-4 col-xs-4">Statistics Value</th>
-											<th class="col-md-4 col-md-4 col-xs-4">Action</th>
+											<th class="col-md-4 col-sm-4 col-xs-4">Statistics Name</th>
+											<th class="col-md-4 col-sm-4 col-xs-4">Statistics Value</th>
+											<th class="col-md-4 col-sm-4 col-xs-4">Action</th>
 										</tr>
 									</thead>
 									<tbody>
