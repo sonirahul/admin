@@ -493,7 +493,7 @@ body{overflow-x:hidden;}
 	.nav-bar .identity.responsive{top:-110px}
 	.nav-bar .identity.responsive img{height:150px;}
 	#sa-img img {width: 200px;}
-	#saContent {background-color: rgba(0, 0, 0, 0.62);}
+	#saContent {background-color: rgba(0, 0, 0, 0.62);padding: 10px;}
 	#singapore-info>div {display: inline-block;}
 	.footer ul.level-1-nav li{display: block;border-right: none !Important}
 	.footer ul.level-1-nav a{text-align:center;}
