@@ -23,7 +23,7 @@ body {
 #carouselItem2 blockquote p,#carouselItem5 blockquote{display:inline-block;padding:10px 30px;background:rgba(0,0,0,0.6);font-size:42px}
 #carouselItem5 blockquote p{font-size:36px}
 #carouselItem3 blockquote>.block-con{display:inline-block;padding:10px 30px;background:rgba(0,0,0,0.6)}
-
+.main-screen-caption{background-color:rgba(0,0,0,0.6);padding:20px;display:inline-block}
 .mgtTeamMain2RowSupr>div:nth-child(1),.mgtTeamMain2RowSupr>div:nth-child(2){animation-name:magt-effect1;-webkit-animation-name:magt-effect1;animation-duration:4s;-webkit-animation-duration:4s;visibility:visible}
 @keyframes magt-effect1{0%{transform:translateX(-200px)}
 100%{transform:translateX(0px)}
@@ -391,7 +391,7 @@ body {
 	h3{font-size:20px;}
 
 	#myCarousel .carousel-control .fa {font-size: 32px!important;}
-	.main-screen-caption{background-color:rgba(0,0,0,0.6);padding:20px;display:inline-block}
+	
 	.block-stats{max-width:640px;}
 	.block-stats li{width:86px;height:96px;}
 	.block-stats li .num{font-size:24px;}
