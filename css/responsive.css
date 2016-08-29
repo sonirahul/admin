@@ -109,12 +109,13 @@ body {
 
 	/*mobile about us*/
 	.mau{padding:10px}
-	#mau1{background-color:#62426a;color:#fff}
-	#mau1 *{color:#fff}
-	#mau2{background-color:rgba(255,76,99,0.9)}
-	#mau3{background-color:rgba(241,196,15,0.9)}
-	#mau4{background-color:rgba(73,218,165,0.9)}
-	#mau5{background-color:rgba(55,174,204,0.9)}
+	//#mau1{background-color:#62426a;color:#fff}
+	//#mau1 *{color:#fff}
+	//#mau2{background-color:rgba(255,76,99,0.9)}
+	//#mau3{background-color:rgba(241,196,15,0.9)}
+	//#mau4{background-color:rgba(73,218,165,0.9)}
+	//#mau5{background-color:rgba(55,174,204,0.9)}
+	#mau5 i{margin-right:10px;}
 
 	/*news*/
 	#news .news-image{width:100%;height:190px;height:60vw;padding:0;margin:0}
@@ -179,11 +180,15 @@ body {
 	.cc-title p{font-weight:normal}
 
 	#sa-img img {width: 140px;}
+	#singapore-info i{vertical-align: baseline;float: left}
+	#singapore-info>div {margin: 0 0 20px 0}
+	#singapore-info br {display: none !important}
 }
 
 @media only screen and (min-width:390px) and (max-width: 480px){
 	.col-xs-4.country-con{width:33.3%}
 }
+
 @media only screen and (min-width:481px) and (max-width: 1199px){
 	p{font-size:19px;}
 	h2{font-size:28px;}
@@ -240,12 +245,15 @@ body {
 
 	/*mobile about us*/
 	.mau{padding:10px}
-	#mau1{background-color:#62426a;color:#fff}
+	/*#mau1{background-color:#62426a;color:#fff}
 	#mau1 *{color:#fff}
 	#mau2{background-color:rgba(255,76,99,0.9)}
 	#mau3{background-color:rgba(241,196,15,0.9)}
 	#mau4{background-color:rgba(73,218,165,0.9)}
-	#mau5{background-color:rgba(55,174,204,0.9)}
+	#mau5{background-color:rgba(55,174,204,0.9)}*/
+	#singapore-info i{vertical-align: baseline;float: left}
+	#singapore-info>div {margin: 0 0 20px 0}
+	#singapore-info br {display: none !important}
 
 	/*news*/
 	#news .news-image{width:100%;height:190px;height:60vw;padding:0;margin:0}
@@ -324,13 +332,11 @@ body {
 	.col-xs-4.col-sm-2.country-con{padding:0 25px;}
 	#contact-content {width: 350px;margin: 0 auto;}
 	#langForm{top:8px !important;right:60px !important}
-	.nav-bar .identity.responsive{}
-	.nav-bar .identity.responsive img{}
 	#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:right;}
 	#sa-img img {width: 150px;}
 	#singapore-info>div {display: inline-block;}
-
 }
+
 @media only screen and (min-width:768px) and (max-width: 1199px) {
 	#lang .dropdown-menu>li>a {font-size: 18px!important;}
 	.carousel-inner>.item.active .carousel-caption{top: 35% !important}
