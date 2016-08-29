@@ -578,7 +578,7 @@ body{overflow-x:hidden;}
 	#slider5Collage{background-image:url(../slider/5th/5th_7_5.jpg);background-size:cover;background-position:center}
 }
 @media only screen and (min-width:1200px) and (orientation:landscape){
-	#slider5Collage{background-image:url(../slider/5th/5th_2_1.jpg);background-size:cover;background-position:center}
+	#slider5Collage{background-image:url(../slider/5th/5th_16_9.jpg);background-size:cover;background-position:center}
 }
 @media only screen and (min-width:1800px) and (orientation:landscape){
 	#slider5Collage{background-image:url(../slider/5th/5th_16_9.jpg);background-size:cover;background-position:center}
