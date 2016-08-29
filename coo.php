@@ -30,7 +30,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 	.nav-pills>li>a{border-radius:50%;width:110px;height:110px;text-align:center;background-color:#0f3d69;margin:0 10px;position:relative;padding:0}
 	.nav-pills>li>a:hover{background-color: #0a2a49 !important}
 	.nav-pills>li>a img{position:absolute;top:50%;left:50%;margin-left:-40px;margin-top:-40px;width:80px}
-	.nav-pills>li>a p{position:absolute;font-weight:bold;width:100%;bottom:-60px;text-align:center;text-transform: capitalize;font-size:24px;}
+	.nav-pills>li>a p{position:absolute;font-weight:bold;width:100%;bottom:-60px;text-align:center;text-transform: capitalize;font-size:18px;}
 
 
 	.tab-content{margin-top:100px;background:#0f3d69;padding:20px;padding:0;color:#fff;height:540px}
@@ -42,10 +42,24 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 #coo-country-name {
     color: #333;
 	color: #FFF;
+	    //color: #f99f1c;
     text-transform: uppercase;
     text-align: center;
     padding: 30px;
     font-size: 32px;
+	
+}
+li.active p.menu-country-name {
+    color: orange;
+}
+.content-inner-wrap h4 {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: normal;
+}
+#coo-main h2, .menu-country-name{color:#133963}
+label.show-title {
+    font-weight: normal !important;
 }
 #coo-pic{padding-top:54%;background-position: center !important;}
 	
