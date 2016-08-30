@@ -1887,21 +1887,45 @@
         top: -16px;
         left: 50px;
         margin-left: -17px;
+		
+		left: 1px;
+		top: 3px;
+		border-bottom-color: transparent;
+		border-right-color: #133963;
+		z-index: 9;
     }
 
+	
     .flik-timeline-10 .flik-timeline-content:after {
+		
         border-bottom-color: #fff;
         border-width: 20px;
         top: -20px;
         left: 50px;
         margin-left: -20px;
+		
+		opacity:0;
+		left: 0;
+		top: -5px;
+		border-bottom-color: transparent;
+		border-right-color: #fff;
     }
+	
+	li.active .flik-timeline-content:after {
+		opacity:1 !important;
+	}
 
     .flik-timeline-10 .flik-timeline-content .content-main {
         font-size: .9em;
         line-height: 1.4;
     }
 }
+
+@media screen and (min-width: 320px) and (max-width:480px) {
+	.flik-timeline-10{margin-left:20px;padding: 50px 10px 50px 20px;}
+}
+
+
 .default-effect.active .circle {
 		background: #133963 !important;
 	}

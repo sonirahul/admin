@@ -121,24 +121,6 @@ label.show-title {
 	.content-title {color: #F99F1C;}
 </style>
 
-<script type="text/javascript">
-
-	$(function(){
-		$(".tab-content").hide();
-		earlierTopValue=0;
-		$(".nav-pills>li>a").click(function(){
-			windowWidth = $(window).width();
-			$('#con-content-parent').delay(500).animate({scrollLeft: windowWidth},300);
-			$(window).delay(800).scrollTop(0);
-			$(".tab-content").show();
-		});
-		$("#coo-content-back-btn").click(function(){
-			windowWidth = $(window).width();
-			$('#con-content-parent').animate({scrollLeft:0},300);
-			$(".tab-content").hide();
-		});
-	});
-</script>
 
 <div id="coo-main" class="section container-fluid">
 	<h2>Countries of Operation </h2>
@@ -247,6 +229,31 @@ label.show-title {
 </div>
 
 <?php include "footer.php";?>
+
+<script type="text/javascript">
+
+	$(function(){
+		if(isDeviceMobile()) {$(".tab-content").hide();}
+		earlierTopValue=0;
+		$(".nav-pills>li>a").click(function(){
+			windowWidth = $(window).width();
+			$('#con-content-parent').delay(500).animate({scrollLeft: windowWidth},300);
+			$(window).delay(800).scrollTop(0);
+			if(isDeviceMobile()) {
+				$(".tab-content").show();
+			}
+		});
+		$("#coo-content-back-btn").click(function(){
+			windowWidth = $(window).width();
+			$('#con-content-parent').animate({scrollLeft:0},300);
+			if(isDeviceMobile()) {
+				$(".tab-content").hide();
+			}
+		});
+	});
+</script>
+
+
 
 </body>
 </html>
