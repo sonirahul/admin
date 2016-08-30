@@ -187,20 +187,8 @@ label.show-title {
 							<div id="coo-pic" class="col-sm-12 hidden-xs" style="background:url(countries/<?php echo $allCooData[$i]["countries_photo"]?>);background-size:cover;"></div>
 							<div id="coo-con-pic" class="col-sm-12 visible-xs"><img src="countries/<?php echo $allCooData[$i]["countries_photo"]?>" /></div>
 							<div class="col-sm-12">
-								<!--<h2 id="coo_title">
-									<?php 
-									if($finalLang == "en") echo $allCooData[$i]["countries_title_en"];
-									if($finalLang == "ar") echo $allCooData[$i]["countries_title_ar"];
-									?>
-								</h2>-->
+								
 								<div id="coo_desc">
-									
-									<!--<?php 
-									if($finalLang == "en") echo $allCooData[$i]["countries_desc_en"];
-									if($finalLang == "ar") echo $allCooData[$i]["countries_desc_ar"];
-									?>-->
-									
-									
 									
 									<!-- test start -->
 									<style>
@@ -228,37 +216,7 @@ label.show-title {
 																				</div>
 																			</li>
 																		<? } ?>
-																		<!--<li class="default-effect">
-																			<div class="relative">
-																				<label class="show-title">Spain</label>
-																				<span class="date"><img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>" style="width: 5em;"></span>
-																				<span class="circle"/>
-																			</div>
-																			<div class="flik-timeline-content">
-																				<div class="content-title">Inbox</div>
-																				<div class="content-main">Inbox—from the Gmail team—is a different take on email, designed to focus on what really matters.&nbsp;
-																					<div class="flik-thumbnails">
-																						<ul class="flik-thumbnails-slider">
-																							<li>
-																								<a href="http://timeline.cidcode.net/wp-content/uploads/2014/08/google-inbox-invite.jpg" title="inbox web">
-																									<img src="images/google-inbox-invite-150x150.jpg">
-																								</a>
-																							</li>
-																							<li>
-																								<a href="http://timeline.cidcode.net/wp-content/uploads/2014/08/3037483-poster-p-1-google-reimagines-email-with-their-new-inbox-app.jpg" title="inbox 1">
-																									<img src="images/3037483-poster-p-1-google-reimagines-email-with-their-new-inbox-app-150x150.jpg">
-																								</a>
-																							</li>
-																							<li>
-																								<a href="http://timeline.cidcode.net/wp-content/uploads/2014/08/intro-logo.png" title="inbox">
-																									<img src="images/intro-logo-150x150.png">
-																								</a>
-																							</li>
-																						</ul>
-																					</div>
-																				</div>
-																			</div>
-																		</li>-->
+																		
 																	</ul>
 
 																</div>
