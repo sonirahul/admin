@@ -177,12 +177,14 @@ if($finalLang == "ar")
 			<div style="background-image:url(slider/kuwait.jpg);background-size:cover;background-position:center bottom;"></div>
 			<div class="container">
 				<div class="carousel-caption">
-					<h2 class="main-screen-caption">
-						<?php 
-						if($finalLang == "en") echo "Local Presence Global Support";
-						if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
-						?>
-					</h2>
+					<div class="block-con">
+						<p>
+							<?php 
+							if($finalLang == "en") echo "Local Presence Global Support";
+							if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+							?>
+						</p>
+					</div>
 					<div class="block-stats hidden-xs">
 						<ul>
 							<?php for($i=0;$i<count($allStatsData);$i++){?>
@@ -496,23 +498,28 @@ if($finalLang == "ar")
 
 <div id="mobile-about-us" class="visible-xs">
 	<div id="mau1" class="mau">
-		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class="icon-signs mh-icon-colored" ></i><?php echo $welcomeName ?></h3>
+		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class="icon-signs 
+mh-icon-colored" ></i><?php echo $welcomeName ?></h3>
 		<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $welcome ?></p>
 	</div>
 	<div id="mau2" class="mau">
-		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-research mh-icon-colored'></i>1. <?php echo $philosophyName ?></h3>
+		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-research 
+mh-icon-colored'></i>1. <?php echo $philosophyName ?></h3>
 		<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $philosophy  ?></p>
 	</div>
 	<div id="mau3" class="mau">
-		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-strategy mh-icon-colored'></i>2. <?php echo $missionName ?></h3>
+		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-strategy 
+mh-icon-colored'></i>2. <?php echo $missionName ?></h3>
 		<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $mission ?></p>
 	</div>
 	<div id="mau4" class="mau">
-		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-wrench mh-icon-colored'></i>3. <?php echo $commitmentName ?></h3>
+		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-wrench 
+mh-icon-colored'></i>3. <?php echo $commitmentName ?></h3>
 		<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $commitment ?></p>
 	</div>
 	<div id="mau5" class="mau">
-		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-graph mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
+		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-graph 
+mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $vision ?></p>
 	</div>
 </div>
@@ -537,7 +544,8 @@ if($finalLang == "ar")
 					<li class="<?php if($i==0) echo "active" ?> news-list-content">
 						<a data-toggle="pill" href="#menu<?php echo $i+1?>">
 							<div class="row">
-								<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="news/<?php echo $allNewsData[$i]["news_photo"]?>"> </div>
+								<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="news/<?php echo 
+$allNewsData[$i]["news_photo"]?>"> </div>
 								<div class="col-xs-7 col-sm-8">
 									<p class="news-list-title"> 
 										<?php 
@@ -697,7 +705,9 @@ if($finalLang == "ar")
 				$coloredBoxes=array("1:#ff5d72","5:#f1c824","8:#43c696","12:#45b1cc","13:#f1c824","15:#45b1cc","17:#43c696");
 			}
 			if ($boxes == 8) {
-				$coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696","11:#ff5d72","14:#f1c824","16:#45b1cc");
+				
+$coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696","11:#ff5d72","14:#f1c824","16:#45b1cc"
+);
 			}
 			
 		?>
