@@ -114,24 +114,30 @@ if($_POST["action"]=="beUpdate") // Update Fields
 		$TableField[2][0]="countries_website_en";
 
 		for ($temp=0;$temp<$countriesContentCount; $temp++) {
-			$performUpdate = false;
-			if (strlen($countriesContent[$temp][0]) != 0){
-				$TableField[0][1]="'$countriesid'";
-			}	
-			if (strlen($countriesContent[$temp][1]) != 0){
-				$mission = $countriesContent[$temp][1];
-				$TableField[1][1]="'$mission'";
-			}	
-			if (strlen($countriesContent[$temp][2]) != 0){
-				$website = $countriesContent[$temp][2];
-				$TableField[2][1]="'$website'";
-				$performUpdate = true;
-			}
-			
-			if($performUpdate) {
-				$countryContentId=$countriesContent[$temp][0];
-				$SQLwhere="countries_content_id=$countryContentId";	
-				update_query($link,$TableName,$TableField,$SQLwhere);
+
+			if($countriesContent[$temp][3] != "noChange") {
+				if ($countriesContent[$temp][3] == "update") {
+					$mission = $countriesContent[$temp][1];
+					$TableField[1][1]="'$mission'";
+					$website = $countriesContent[$temp][2];
+					$TableField[2][1]="'$website'";
+					$countryContentId=$countriesContent[$temp][0];
+					$SQLwhere="countries_content_id=$countryContentId";	
+					update_query($link,$TableName,$TableField,$SQLwhere);
+				}
+				else if ($countriesContent[$temp][3] == "add") {
+					$mission = $countriesContent[$temp][1];
+					$TableField[1][1]="'$mission'";
+					$website = $countriesContent[$temp][2];
+					$TableField[2][1]="'$website'";
+					insert_query($link,$TableName,$TableField);
+				}
+				else if ($countriesContent[$temp][3] == "delete") {
+					$countryContentId=$countriesContent[$temp][0];
+					$SQLwhere="countries_content_id=$countryContentId";
+					delete_query($link,$TableName,$SQLwhere);
+					
+				}
 			}
 		}
 		echo "<script>document.location='index.php?model=countries';</script>";
@@ -150,9 +156,10 @@ if($_POST["action"]=="Add")
 
 	$SQL="select * from countries where countries_title_en='$txtename'";
 	$Countries_Add=select_query($link,$SQL,0,0);
-	
 	$Countries_Add_Id=$Countries_Add[0]['countries_id'];
-	$temp = $Countries_Add[0]['countries_flag'];
+
+	$performUpdate = true;
+	
 	if ($Countries_Add_Id != '' && $countryFlagSelect == $Countries_Add[0]['countries_flag']) {
 		
 		if($_FILES["countries_photo"]["name"]!="")
@@ -187,13 +194,37 @@ if($_POST["action"]=="Add")
 		insert_query($link,$TableName,$TableField);
 		echo "<script>document.location='index.php?model=countries';</script>";
 	}
-	else { ?>
+	else { 
+		$performUpdate = false;
+	?>
 	  
 		<script>
 			alert("Country or Country Flag name already exist in Database and do not match with inputs provided.");
 		</script>
 		
 	<?}
+	
+	if ($performUpdate) {
+		
+		$TableName="countries_content";
+		$TableField=array();
+		$TableField[0][0]="countries_id";
+		$TableField[0][1]="'$Countries_Add_Id'";	
+		$TableField[1][0]="countries_mission_en";
+		$TableField[2][0]="countries_website_en";
+
+		for ($temp=0;$temp<$countriesContentCount; $temp++) {
+
+			if($countriesContent[$temp][3] != "noChange" && $countriesContent[$temp][3] == "add") {
+				$mission = $countriesContent[$temp][1];
+				$TableField[1][1]="'$mission'";
+				$website = $countriesContent[$temp][2];
+				$TableField[2][1]="'$website'";
+				insert_query($link,$TableName,$TableField);
+			}
+		}
+		echo "<script>document.location='index.php?model=countries';</script>";
+	}
 }
 //---------------------------
 
@@ -237,12 +268,12 @@ if($_POST["action"]=="Add")
 							</div>
 						</form>
 						<script type="text/javascript">
-							$.noConflict();
+							
 
-							jQuery(function() {
-							    jQuery('.about-delete-button').on("click", function(){
-							    	document.forms["Prowse"].elements["action"].value = jQuery(this).val();
-									document.forms["Prowse"].elements["countriesid"].value = jQuery(this).attr("countriesid");
+							$(function() {
+							    $('.about-delete-button').on("click", function(){
+							    	document.forms["Prowse"].elements["action"].value = $(this).val();
+									document.forms["Prowse"].elements["countriesid"].value = $(this).attr("countriesid");
 									document.forms["Prowse"].submit();
 							    });
 							});
@@ -253,7 +284,7 @@ if($_POST["action"]=="Add")
 						<form name="Add" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" novalidate>
 							<input type="hidden"  name="action">
 							<input type="hidden" name="countriesid" value="<?php echo $_GET["countriesid"]?>" />
-							<input type="hidden" name="countriesContentCount" value="<?php echo count($UpdatedDataFor)?>" />
+							<input type="hidden" name="countriesContentCount" />
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtaname">Arabic Country Name <span class="required">*</span>
 								</label>
@@ -302,12 +333,13 @@ if($_POST["action"]=="Add")
 													</td>
 													<td>
 														<input type="text" name="countriesContent[<?php echo $j ?>][2]" class="form-control" value="<?php echo $UpdatedDataFor[$j]["countries_website_en"]; ?>" countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>' disabled=true>
+														<input type="hidden" name="countriesContent[<?php echo $j ?>][3]" id="countriesContentAction_<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>" value="noChange">
 													</td>
 													<td>
 														<input name='button' type='button' class="btn btn-success hidden-xs hidden-sm countries-update-del-button" value='Edit' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'>
-														<input name='button' type='button' class="btn btn-danger hidden-xs hidden-sm countries-update-del-button hidden" value='Clear' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'>
+														<input name='button' type='button' class="btn btn-danger hidden-xs hidden-sm countries-update-del-button hidden" value='Delete' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'>
 														<button type='button' class="btn btn-success hidden-md hidden-lg countries-update-del-button" value='Edit' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'><span class="glyphicon glyphicon-pencil"></span></button>
-														<button type='button' class="btn btn-danger hidden-md hidden-lg countries-update-del-button hidden" value='Clear' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'><span class="glyphicon glyphicon-remove"></span></button>
+														<button type='button' class="btn btn-danger hidden-md hidden-lg countries-update-del-button hidden" value='Delete' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'><span class="glyphicon glyphicon-remove"></span></button>
 													</td>
 												</tr>
 											<? } ?>
@@ -319,47 +351,50 @@ if($_POST["action"]=="Add")
 								</div>
 							</div>
 							<script type="text/javascript">
-								$.noConflict();
-								var newCountryContentRowCount=0;
-								jQuery(function() {
-									jQuery('.countries-update-del-button').on("click", function(){
-										var countriesContentId = jQuery(this).attr("countriesContentId");
-										if (jQuery(this).val() == "Edit"){
+								
+								var countriesContentCount=<?php echo count($UpdatedDataFor); ?>;
+								$(function() {
+									$('.countries-update-del-button').on("click", function(){
+										var countriesContentId = $(this).attr("countriesContentId");
+										if ($(this).val() == "Edit"){
 											
 
-											jQuery(".countries-update-del-button[countriesContentId='"+countriesContentId+"'][value='Edit']").addClass("hidden");
-											jQuery(".countries-update-del-button[countriesContentId='"+countriesContentId+"'][value='Clear']").removeClass("hidden");
-											jQuery("input[countriesContentId='"+countriesContentId+"']").attr("disabled", false);
-											jQuery("select[countriesContentId='"+countriesContentId+"']").attr("disabled", false);
+											$(".countries-update-del-button[countriesContentId='"+countriesContentId+"'][value='Edit']").addClass("hidden");
+											$(".countries-update-del-button[countriesContentId='"+countriesContentId+"'][value='Delete']").removeClass("hidden");
+											$("#countriesContentAction_" + countriesContentId).val("update");
+											$("input[countriesContentId='"+countriesContentId+"']").attr("disabled", false);
+											$("select[countriesContentId='"+countriesContentId+"']").attr("disabled", false);
 										}
-										else if (jQuery(this).val() == "Clear") {
+										else if ($(this).val() == "Delete") {
 											$("select[countriesContentId='"+countriesContentId+"']").val("");
 											$("input[countriesContentId='"+countriesContentId+"'][type='text']").val("");
-											/*document.forms["Prowse"].elements["Action"].value = jQuery(this).val();
-											document.forms["Prowse"].elements["StatisticsId"].value = jQuery(this).attr("statisticsId");
+											$("#countriesContentAction_" + countriesContentId).val("delete");
+											/*document.forms["Prowse"].elements["Action"].value = $(this).val();
+											document.forms["Prowse"].elements["StatisticsId"].value = $(this).attr("statisticsId");
 											document.forms["Prowse"].submit();*/
 										}
-										else if (jQuery(this).val() == "Add") {
+										else if ($(this).val() == "Add") {
 											
-											var tableRow= '<tr><td><select name="countriesContentNew['+ newCountryContentRowCount +'][0]" class="form-control countries_flag_select"><option></option><option value="other">Other</option><?php for ($k=0; $k < count($AllData);$k++) { echo "<option value=".$AllData[$k]["countries_id"].">".ucwords($AllData[$k]["countries_title_en"])."</option>"; } ?></select></td><td><input type="text" name="countriesContentNew['+ newCountryContentRowCount +'][1]" class="form-control"></td></tr>';
+											var tableRow= '<tr><td><select name="countriesContent['+ countriesContentCount +'][1]" class="form-control countries_flag_select"><option></option><option value="other">Other</option><?php for ($k=0; $k < count($AllData);$k++) { echo "<option value=".$AllData[$k]["countries_id"].">".ucwords($AllData[$k]["countries_title_en"])."</option>"; } ?></select></td><td><input type="text" name="countriesContent['+ countriesContentCount +'][2]" class="form-control"><input type="hidden" name="countriesContent['+ countriesContentCount +'][3]" value="add"></td></tr>';
 											console.log(tableRow);
 											$('#countryContentTable tbody').append(tableRow);
-											newCountryContentRowCount = newCountryContentRowCount + 1;
+											countriesContentCount = countriesContentCount + 1;
 										}
 										
 									});
 									
 									/* Reset button functionality */
-									jQuery("button[type='reset']").on("click", function(){
-										$("*[value='Clear']").each(function(val,index) {
+									$("button[type='reset']").on("click", function(){
+										$("*[value='Delete']").each(function(val,index) {
 											if ($(this).hasClass("hidden")){} 
 											else { 
-												var countryContentId=jQuery(this).attr("countriesContentId");
+												var countryContentId=$(this).attr("countriesContentId");
 												$("input[countriesContentId=" + countryContentId +"][type='text']").attr("disabled", true);
 												$("select[countriesContentId=" + countryContentId +"]").attr("disabled", true);
-												$("input[countriesContentId=" + countryContentId +"][value='Clear'], button[countriesContentId=" + countryContentId +"][value='Clear']").addClass("hidden");
+												$("input[countriesContentId=" + countryContentId +"][value='Delete'], button[countriesContentId=" + countryContentId +"][value='Delete']").addClass("hidden");
 												$("input[countriesContentId=" + countryContentId +"][value='Edit'], button[countriesContentId=" + countryContentId +"][value='Edit']").removeClass("hidden");
-											} 
+											}
+											$(this).val("noChange");
 										});
 									});
 								});
@@ -380,10 +415,10 @@ if($_POST["action"]=="Add")
 							
 							<?php if($_GET["action"]=="countriesadd" || empty($UpdatedData[0]['countries_flag'])){ ?>
 								<script>
-									$.noConflict();
 									
-									jQuery(function() {
-										jQuery(".countries_flag_select").select2({
+									
+									$(function() {
+										$(".countries_flag_select").select2({
 										  placeholder: "Select a Country Flag",
 										  allowClear: true
 										});
@@ -504,8 +539,10 @@ if($_POST["action"]=="Add")
 								}
 								//---------------------------------------
 								var action = '<?php echo $_GET["action"]=='countriesupdate'? 'beUpdate':'Add';?>';
-								document.Add.action.value=action;
 								
+								document.Add.action.value=action;
+								document.Add.countriesContentCount.value=countriesContentCount;
+								$("*[disabled=true]").attr("disabled", false);
 								
 								/*if ($(".countries_flag_select").val() != "other" && $(".countries_flag_select").val() != "") {
 									document.forms["Add"].elements["countries_flag"].value = $(".countries_flag_select").val();
@@ -515,9 +552,9 @@ if($_POST["action"]=="Add")
 								}*/
 									
 								
+								alert("1");
 								
-								
-								document.Add.submit();
+								//document.Add.submit();
 								return false;
 					}
 					</script>
