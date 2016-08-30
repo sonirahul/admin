@@ -176,15 +176,16 @@ if($finalLang == "ar")
 		<div id="carouselItem1" class="item active">
 			<div style="background-image:url(slider/kuwait.jpg);background-size:cover;background-position:center bottom;"></div>
 			<div class="container">
-				<div class="carousel-caption">
-					<div class="block-con">
+				<div id="ci1cc" class="carousel-caption">
+					<blockquote class="blockquote-reverse">
 						<p>
 							<?php 
 							if($finalLang == "en") echo "Local Presence Global Support";
 							if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
 							?>
 						</p>
-					</div>
+					</blockquote>
+					
 					<div class="block-stats hidden-xs">
 						<ul>
 							<?php for($i=0;$i<count($allStatsData);$i++){?>
@@ -204,7 +205,9 @@ if($finalLang == "ar")
 						</ul>
 					</div>
 					<p class="hidden main-screen-subcaption">Kuwait - Morocco - Syria - Jordan - Lebanon - Iran - Algeria</p>
+
 				</div>
+
 			</div>
 		</div>
 
@@ -850,7 +853,7 @@ type="text/javascript"></script>
 <div id="contacts" class="section container-fluid">
 	<div>
 		<div id="googleMap">
-			<div id='gmap_canvas' style='height:650px;width:100%'>
+			<div id='gmap_canvas' style='width:100%'>
 
 			</div>
 		</div>
@@ -982,7 +985,7 @@ type="text/javascript"></script>
 
 		</div>
 		<div id="contactView">
-			<button type="button" class="btn btn-success">View Map</button>
+			<button type="button" class="btn btn-success"><i class="fa fa-map-o" aria-hidden="true"></i> &nbsp;View Map</button>
 		</div>
 
 	</div>
@@ -1009,7 +1012,7 @@ type="text/javascript"></script>
 <script type="text/javascript">
 	$(function(){ 
 		$('.carousel').carousel({
-			interval:7000
+			interval:false
 		}); 
 	});
 </script>
@@ -1149,7 +1152,7 @@ type="text/javascript"></script>
 		{
 			$("#news-list").removeClass("news-list-open");
 			newsflag=0;
-			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			if(isDeviceMobile()) {
 				setTimeout(function(){
 					$("#news-list").scrollTop(0);
 				},1000);
@@ -1204,7 +1207,7 @@ type="text/javascript"></script>
 	{
 		//$("#contact").removeClass("contactOpacity");
 		$("#contact").fadeIn();
-		$(this).html('View Map');
+		$(this).html('<i class="fa fa-map-o" aria-hidden="true"></i> &nbsp;View Map');
 		flag=0;  
 	}
 });
@@ -1230,6 +1233,7 @@ type="text/javascript"></script>
 		var myOptions = {
 			zoom: 12,
 			scrollwheel:false,
+			draggable: false,
 			scaleControl:false,
 			center: new google.maps.LatLng(29.37585899999999, 48.00223471640631),
 			mapTypeId: google.maps.MapTypeId.ROADMAP

@@ -65,7 +65,13 @@ label.show-title {
 	
 	
 	@media only screen and (min-width : 320px) and (max-width:991px){
-		#coo-main{width:100vw;padding:0}
+		.entry-content {margin: 0 !important;}
+		.tab-content{margin:0;width:100vw;float:left}
+		#coo-con-pic img{width:100%}
+		.tab-content .row{box-shadow:none}
+		
+		
+		#coo-main{width:100vw;padding:0;margin-top: 30px;}
 		.nav-pills>li{width:100%}
 		.nav-pills>li:not(:last-child){border-bottom:2px solid #b8c6e2}
 		.nav-pills>li::after{display:none!important}
@@ -74,14 +80,14 @@ label.show-title {
 		.nav-pills>li>a p{top:30%;left:30%; height:0;text-align:left;width:initial;}
 		.nav-pills>li>a,.nav-pills>li+li{margin:0!important}
 		#coo-content-container{width:200vw}
-		.nav-pills{text-align:center;width:100vw;overflow:hidden!important;float:left}
+		.nav-pills{text-align:center;width:100vw;overflow:hidden!important;float:left;z-index:9;background:#fff;position:relative}
 		.tab-content{height:initial;}
 		.tab-content.container-fluid{width:100vw;overflow:hidden;float:left;margin:0}
 		.nav-pills>li>a:hover{background-color:#0f3d69!important}
 		.nav-pills>li>a:hover p{color:#fff}
 		#con-content-parent{width:100vw;overflow-x:hidden;}
 		.tab-pane{overflow-wrap:break-word;}
-		i#coo-content-back-btn{color: #fff}
+		i#coo-content-back-btn{color: #fff;margin-left: 20px;}
 		#coo-con-pic{width:100%}
 		#coo-content-forward-btn {position: absolute;top: 30%;right: 10%;}
 	}
@@ -116,16 +122,20 @@ label.show-title {
 </style>
 
 <script type="text/javascript">
+
 	$(function(){
+		$(".tab-content").hide();
 		earlierTopValue=0;
 		$(".nav-pills>li>a").click(function(){
 			windowWidth = $(window).width();
 			$('#con-content-parent').delay(500).animate({scrollLeft: windowWidth},300);
 			$(window).delay(800).scrollTop(0);
+			$(".tab-content").show();
 		});
 		$("#coo-content-back-btn").click(function(){
 			windowWidth = $(window).width();
 			$('#con-content-parent').animate({scrollLeft:0},300);
+			$(".tab-content").hide();
 		});
 	});
 </script>
@@ -159,7 +169,7 @@ label.show-title {
 
 
 			<div class="tab-content col-sm-8 column-center">
-				<i id="coo-content-back-btn" class="fa fa-2x fa-angle-left visible-xs visible-sm " aria-hidden="true"></i>
+				<i id="coo-content-back-btn" class="fa fa-3x fa-angle-left visible-xs visible-sm " aria-hidden="true"></i>
 				<?php 
 				for($i=0;$i<count($allCooData);$i++){
 					$SQLforCooFor="select * from countries_content cc, countries c where c.countries_id=cc.countries_mission_en and cc.countries_id = ".$allCooData[$i]["countries_id"];

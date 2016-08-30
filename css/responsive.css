@@ -9,7 +9,12 @@ body {
 #contact-header-info {
 	border-bottom: 2px solid;
 }
-
+#mobile-about-us {
+    background: repeating-linear-gradient(-45deg, rgb(245, 245, 209), rgba(206, 207, 126, 0.5),rgba(206, 207, 126, 0), rgba(242, 242, 206, 0.64) , rgb(243, 243, 207));
+    background-size: cover;
+    background-position: left top;
+}
+.carousel-indicators li{border: 2px solid #fff;}
 #singapore-info>div * {
 	color: #fff;
 	transition: all 1s ease-in-out;
@@ -20,10 +25,12 @@ body {
 #gmap_canvas img{max-width:none!important;background:none!important}
 #googleMap{overflow:hidden;height:650px;width:100%}
 #gmap_canvas{height:650px;width:100%}
-#carouselItem2 blockquote p,#carouselItem5 blockquote{display:inline-block;padding:10px 30px;background:rgba(0,0,0,0.6);font-size:42px}
-#carouselItem5 blockquote p{font-size:36px}
+#carouselItem1 blockquote p,#carouselItem2 blockquote p,#carouselItem5 blockquote{display:inline-block;padding:10px 30px;background:rgba(0,0,0,0.6);}
+#ci1cc .blockquote-reverse {
+    text-align: center;
+}
 #carouselItem3 blockquote>.block-con{display:inline-block;padding:10px 30px;background:rgba(0,0,0,0.6)}
-.main-screen-caption{background-color:rgba(0,0,0,0.6);padding:20px;display:inline-block}
+
 .mgtTeamMain2RowSupr>div:nth-child(1),.mgtTeamMain2RowSupr>div:nth-child(2){animation-name:magt-effect1;-webkit-animation-name:magt-effect1;animation-duration:4s;-webkit-animation-duration:4s;visibility:visible}
 @keyframes magt-effect1{0%{transform:translateX(-200px)}
 100%{transform:translateX(0px)}
@@ -81,16 +88,20 @@ body {
 	#langForm.when-slided{top:15px!important}
 
 	/*carousel*/
+	.slider-bottom li{font-size:16px;}
 	.carousel-indicators{bottom:90px}
 	.carousel-indicators li,.carousel-indicators .active{width:12px;height:12px}
 	.slider-bottom i.fa{color:#fff}
 	#myCarousel .carousel-control .fa{font-size:32px!important;color:#fff}
 
 	.carousel-inner>.item.active .carousel-caption{top: 45% !important}
+	
+	#ci1cc{top:42% !important}
 	#ci2cc{top:42% !important}
-	#ci3cc{top:22% !important}
+	#ci3cc{top:13% !important}
+	#ci5cc {top: 46% !important;}
 	#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:center;}
-	#carouselItem3 blockquote p,#carouselItem2 blockquote p,#carouselItem5 blockquote p{font-size: 22px;}
+	#carouselItem1 blockquote p,#carouselItem2 blockquote p,#carouselItem3 blockquote p,#carouselItem5 blockquote p{font-size: 21px;}
 	#carouselItem3 blockquote>.block-con{padding:10px;}
 
 	/*vac & about us*/
@@ -184,10 +195,27 @@ body {
 	#singapore-info>div {margin: 0 0 20px 0;overflow:auto}
 	#singapore-info br {display: none !important}
 	#singapore-info>div a {float: left;}
+	
+	#carouselItem4>div{background-image:url(../slider/4th_320.jpg) !important}
+	#contact>div>div>h2{margin-top:40px;margin-bottom:20px;}
+	#contactView i {color: #fff;}
+}
+
+@media only screen and (min-width:360px) and (max-width: 480px){
+	#carouselItem1 blockquote p, #carouselItem2 blockquote p, #carouselItem3 blockquote p, #carouselItem5 blockquote p {font-size: 22px;}
+	#ci1cc{top:42% !important}
+	#ci2cc{top:42% !important}
+	#ci3cc{top:12% !important}
+	#carouselItem4>div{background-image:url(../slider/4th_360.jpg) !important}	
 }
 
 @media only screen and (min-width:390px) and (max-width: 480px){
 	.col-xs-4.country-con{width:33.3%}
+}
+
+@media only screen and (min-width:410px) and (max-width: 480px){
+	#carouselItem1 blockquote p, #carouselItem2 blockquote p, #carouselItem3 blockquote p, #carouselItem5 blockquote p {font-size: 26px;}
+	#singapore-info {padding-left: 45px;}
 }
 
 @media only screen and (min-width:481px) and (max-width: 1199px){
@@ -228,7 +256,7 @@ body {
 	#ci2cc{top:45% !important}
 	#ci3cc{top:22% !important}
 	#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:center;}
-	#carouselItem3 blockquote p,#carouselItem2 blockquote p,#carouselItem5 blockquote p {font-size: 24px;}
+	#carouselItem1 blockquote p,#carouselItem2 blockquote p,#carouselItem3 blockquote p,#carouselItem5 blockquote p {font-size: 24px;}
 	#carouselItem3 blockquote>.block-con{padding:10px;}
 	/*vac & about us*/
 	.block-stats li{width:90px;height:initial;margin:5px 5px}
