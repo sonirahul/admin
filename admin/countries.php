@@ -288,14 +288,14 @@ if($_POST["action"]=="Add")
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtaname">Arabic Country Name <span class="required">*</span>
 								</label>
-								<div class="col-md-8 col-sm-6 col-xs-12">
+								<div class="col-md-8 col-sm-9 col-xs-12">
 									<input id="txtaname" class="form-control col-md-8 col-xs-12 dir-rtl" name="txtaname" required="required" type="text" value="<?php echo $UpdatedData[0]['countries_title_ar'];?>">
 								</div>
 							</div>
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtename">English Country Name <span class="required">*</span>
 								</label>
-								<div class="col-md-8 col-sm-6 col-xs-12">
+								<div class="col-md-8 col-sm-9 col-xs-12">
 									<input id="txtename" class="form-control col-md-8 col-xs-12" name="txtename" required="required" type="text" value="<?php echo ucwords($UpdatedData[0]['countries_title_en']);?>">
 								</div>
 							</div>
@@ -306,9 +306,9 @@ if($_POST["action"]=="Add")
 									<table class=" table table-responsive table-striped table-bordered table-condensed table-hover" id="countryContentTable" cellspacing="0" width="100%">
 										<thead>
 											<tr>
-												<th class="col-md-4 col-sm-3 col-xs-3">Mission Name</th>
-												<th class="col-md-5 col-sm-6 col-xs-5">Website</th>
-												<th class="col-md-3 col-sm-3 col-xs-4">Action</th>
+												<th class="col-md-4 col-sm-3 col-xs-4">Mission Name</th>
+												<th class="col-md-6 col-sm-7 col-xs-6">Website</th>
+												<th class="col-md-2 col-sm-2 col-xs-2">Action</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -337,9 +337,9 @@ if($_POST["action"]=="Add")
 													</td>
 													<td>
 														<input name='button' type='button' class="btn btn-success hidden-xs hidden-sm countries-update-del-button" value='Edit' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'>
-														<input name='button' type='button' class="btn btn-danger hidden-xs hidden-sm countries-update-del-button hidden" value='Delete' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'>
+														<!--<input name='button' type='button' class="btn btn-danger hidden-xs hidden-sm countries-update-del-button hidden" value='Delete' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'>-->
 														<button type='button' class="btn btn-success hidden-md hidden-lg countries-update-del-button" value='Edit' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'><span class="glyphicon glyphicon-pencil"></span></button>
-														<button type='button' class="btn btn-danger hidden-md hidden-lg countries-update-del-button hidden" value='Delete' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'><span class="glyphicon glyphicon-remove"></span></button>
+														<!--<button type='button' class="btn btn-danger hidden-md hidden-lg countries-update-del-button hidden" value='Delete' countriesContentId='<?php echo $UpdatedDataFor[$j]["countries_content_id"]; ?>'><span class="glyphicon glyphicon-remove"></span></button>-->
 													</td>
 												</tr>
 											<? } ?>
@@ -359,16 +359,18 @@ if($_POST["action"]=="Add")
 										if ($(this).val() == "Edit"){
 											
 
-											$(".countries-update-del-button[countriesContentId='"+countriesContentId+"'][value='Edit']").addClass("hidden");
-											$(".countries-update-del-button[countriesContentId='"+countriesContentId+"'][value='Delete']").removeClass("hidden");
+											$(".countries-update-del-button[countriesContentId='"+countriesContentId+"']").addClass("btn-danger").removeClass("btn-success").val("Delete");
+											$(".countries-update-del-button[countriesContentId='"+countriesContentId+"'] span").addClass("glyphicon-remove").removeClass("glyphicon-pencil");
 											$("#countriesContentAction_" + countriesContentId).val("update");
 											$("input[countriesContentId='"+countriesContentId+"']").attr("disabled", false);
 											$("select[countriesContentId='"+countriesContentId+"']").attr("disabled", false);
 										}
 										else if ($(this).val() == "Delete") {
-											$("select[countriesContentId='"+countriesContentId+"']").val("");
-											$("input[countriesContentId='"+countriesContentId+"'][type='text']").val("");
+											$("select[countriesContentId='"+countriesContentId+"']").css("text-decoration", "line-through");
+											$("input[countriesContentId='"+countriesContentId+"'][type='text']").css("text-decoration", "line-through");
 											$("#countriesContentAction_" + countriesContentId).val("delete");
+											$(".countries-update-del-button[countriesContentId='"+countriesContentId+"']").addClass("btn-info").removeClass("btn-danger").val("Undo");
+											$(".countries-update-del-button[countriesContentId='"+countriesContentId+"'] span").addClass("glyphicon-erase").removeClass("glyphicon-remove");
 											/*document.forms["Prowse"].elements["Action"].value = $(this).val();
 											document.forms["Prowse"].elements["StatisticsId"].value = $(this).attr("statisticsId");
 											document.forms["Prowse"].submit();*/
@@ -379,6 +381,14 @@ if($_POST["action"]=="Add")
 											console.log(tableRow);
 											$('#countryContentTable tbody').append(tableRow);
 											countriesContentCount = countriesContentCount + 1;
+										}
+										else if ($(this).val() == "Undo") {
+											
+											$("select[countriesContentId='"+countriesContentId+"']").css("text-decoration", "none");
+											$("input[countriesContentId='"+countriesContentId+"'][type='text']").css("text-decoration", "none");
+											$("#countriesContentAction_" + countriesContentId).val("update");
+											$(".countries-update-del-button[countriesContentId='"+countriesContentId+"']").addClass("btn-danger").removeClass("btn-info").val("Delete");
+											$(".countries-update-del-button[countriesContentId='"+countriesContentId+"'] span").addClass("glyphicon-remove").removeClass("glyphicon-erase");
 										}
 										
 									});
@@ -402,7 +412,7 @@ if($_POST["action"]=="Add")
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_photo">Photo Attach 
 								</label>
-								<div class="col-md-8 col-sm-6 col-xs-12">
+								<div class="col-md-8 col-sm-9 col-xs-12">
 									<input id="countries_photo" type="file" name="countries_photo" data-validate-length-range="5,20" class="optional form-control col-md-8 col-xs-12">
 									<?php if(!empty($UpdatedData[0]['countries_photo']) && $_GET["action"]=="countriesupdate"){
 										$pic_path=$UpdatedData[0]['countries_photo'];?>
@@ -442,7 +452,7 @@ if($_POST["action"]=="Add")
 									</script>
 								<div class="item form-group">
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag_select">Select Country Flag</label>
-									<div class="col-md-8 col-sm-6 col-xs-12">
+									<div class="col-md-8 col-sm-9 col-xs-12">
 										<select name="countries_flag_select" class="form-control countries_flag_select" id="countries_flag_select" >
 											<option></option>
 											<option value="other">Other</option>
@@ -464,14 +474,14 @@ if($_POST["action"]=="Add")
 								</div>
 								<div class="item form-group country_flag_show hidden">
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="country_flag_show">Selected Flag</label>
-									<div class="col-md-8 col-sm-6 col-xs-12">
+									<div class="col-md-8 col-sm-9 col-xs-12">
 										<img class="country_flag_show">
 									</div>
 								</div>
 								<div class="item form-group countries_flag hidden">
 									
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="countries_flag">Flag Attach</label>
-									<div class="col-md-8 col-sm-6 col-xs-12">									
+									<div class="col-md-8 col-sm-9 col-xs-12">									
 										<input name="countries_flag" type='file' class="form-control countries_flag">
 										
 									</div>
@@ -481,7 +491,7 @@ if($_POST["action"]=="Add")
 								$pic_path=$UpdatedData[0]['countries_flag'];?>
 								<div class="item form-group country_flag_show">
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="country_flag">Selected Flag</label>
-									<div class="col-md-8 col-sm-6 col-xs-12">
+									<div class="col-md-8 col-sm-9 col-xs-12">
 										<img border="0" src="../flags/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
 										<input type="checkbox" style="border:0px;" name="deleteflag"  value="1">Delete
 									</div>
@@ -544,17 +554,7 @@ if($_POST["action"]=="Add")
 								document.Add.countriesContentCount.value=countriesContentCount;
 								$("*[disabled=true]").attr("disabled", false);
 								
-								/*if ($(".countries_flag_select").val() != "other" && $(".countries_flag_select").val() != "") {
-									document.forms["Add"].elements["countries_flag"].value = $(".countries_flag_select").val();
-								}
-								else {
-									document.forms["Add"].elements["countries_flag"].value = $("input.countries_flag").val();
-								}*/
-									
-								
-								alert("1");
-								
-								//document.Add.submit();
+								document.Add.submit();
 								return false;
 					}
 					</script>
