@@ -1,5 +1,22 @@
-<!DOCTYPE html>
+<?php
+		$cookie_name="language";
+		if(!isset($_COOKIE[$cookie_name])) {
+			$finalLang = "en";
+		} else {
+			$finalLang = $_COOKIE[$cookie_name];
+		}
 
+		if($_POST["Action"]=="changeLang")
+		{
+			$finalLang = $_POST["lang"];
+			setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/");
+			echo "<script>document.location='index.php';</script>";
+		}
+		
+		setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/");
+	?>
+<!DOCTYPE html>
+<html>
 <head>
 	<!-- <meta charset='utf-8'> -->
 	<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
@@ -51,23 +68,7 @@
 <body data-logo-color='light' data-nav-color='light' data-overlay-id='false' data-overlay-open='false' data-page='process' data-section='unity'>
 	<?php include "function.php";?>
 
-	<?php
-		$cookie_name="language";
-		if(!isset($_COOKIE[$cookie_name])) {
-			$finalLang = "en";
-		} else {
-			$finalLang = $_COOKIE[$cookie_name];
-		}
-
-		if($_POST["Action"]=="changeLang")
-		{
-			$finalLang = $_POST["lang"];
-			setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/");
-			echo "<script>document.location='index.php';</script>";
-		}
-		
-		setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/");
-	?>
+	
 
 	<section class='nav-bar container-fluid scroll-up' id='navbar'>
 		<div class='nav-bar-inner'>

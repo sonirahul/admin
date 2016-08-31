@@ -11,7 +11,7 @@ Pending Admin side work1
 2. Normal Team member data is static . usko dynamic krna hai ya nai ?
 3. Australia flag missing 
 -->
-<html>
+
 <?php include "header.php";?>
 <?php  
 $SQLforMagtTeam="select * from about where about_team_type = 'management'";
