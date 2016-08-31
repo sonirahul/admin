@@ -1888,7 +1888,7 @@
         left: 50px;
         margin-left: -17px;
 		
-		left: 1px;
+		left: 2px;
 		top: 3px;
 		border-bottom-color: transparent;
 		border-right-color: #133963;
@@ -1922,9 +1922,12 @@
 }
 
 @media screen and (min-width: 320px) and (max-width:480px) {
-	.flik-timeline-10{margin-left:20px;padding: 50px 10px 50px 20px;}
+	.flik-timeline-10 .flik-timeline-content:before{left:1px;}
+	.flik-timeline-10{margin-left:20px;padding: 50px 10px 50px 30px;}
 }
-
+@media screen and (min-width: 481px) and (max-width: 767px) {
+	.flik-timeline-10 .flik-timeline-content:before{left:2px;}
+}
 
 .default-effect.active .circle {
 		background: #133963 !important;
