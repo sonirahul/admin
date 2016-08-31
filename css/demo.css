@@ -212,9 +212,10 @@ h1 {
 .parent {
 	position: relative;
     padding: 50px;
-    	overflow: hidden;
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.79);
-        border: 1px solid #fff;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.79);
+    border: 1px solid #fff;
+	z-index:1;
 }
 .one {
 	position: absolute;
@@ -263,5 +264,5 @@ h1 {
 }
 
 .img-responsive {
-    width: 100em;
+    width: 100%;
 }
