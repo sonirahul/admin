@@ -1043,7 +1043,7 @@ type="text/javascript"></script>
 <script type="text/javascript">
 	$(function(){ 
 		$('.carousel').carousel({
-			interval:false
+			interval:7000
 		}); 
 	});
 </script>
