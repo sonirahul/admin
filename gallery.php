@@ -77,7 +77,7 @@ $(".gridder").gridderExpander({
     //canvas dimensions
     var W = window.innerWidth;
     var H = window.innerHeight;
-    //canvas.width = W;
+    canvas.width = W;
     //canvas.style.width = "100vw";
     canvas.height = H;
     
@@ -197,6 +197,7 @@ $allGalleryData=select_query($link,$SQLforGallery,0,0);
     canvas {
         display: block;
         position: absolute;
+		z-index:1;
     }
 </style>
 
