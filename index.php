@@ -216,7 +216,12 @@ if($finalLang == "ar")
 			<div class="container">
 				<div id="ci2cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
-						<p>State of the art offices</p>
+						<p>
+							<?php 
+							if($finalLang == "en") echo "State of the art offices";
+							if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+							?>
+						</p>
 					</blockquote>
 				</div>
 			</div>
@@ -227,8 +232,18 @@ if($finalLang == "ar")
 				<div id="ci3cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
 						<div class="block-con">
-							<p>"None of us is as smart as all of us"</p>
-							<footer>Ken Blanchard</footer>
+							<p>
+								<?php 
+								if($finalLang == "en") echo '"None of us is as smart as all of us"';
+								if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+								?>
+							</p>
+							<footer>
+								<?php 
+								if($finalLang == "en") echo "Ken Blanchard";
+								if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+								?>
+							</footer>
 						</div>
 					</blockquote>
 				</div>
@@ -243,7 +258,12 @@ if($finalLang == "ar")
 				<div id="ci5cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
 						<div class="block-con">
-							<p>Global Presence</p>
+							<p>
+								<?php 
+								if($finalLang == "en") echo "Global Presence";
+								if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+								?>
+							</p>
 						</div>
 					</blockquote>
 				</div>
@@ -532,13 +552,24 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		<div class="col-sm-12 text-center">
 			<h2  class="mh-text-no-underline">
 				<i class="fa fa-newspaper-o fa-lg mh-icon-colored" aria-hidden="true"></i>
-				<span class="mh-text-colored-with-underline">News And Events</span>
+				<span class="mh-text-colored-with-underline">
+					<?php 
+						if($finalLang == "en") echo "News And Events";
+						if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+					?>
+				</span>
 			</h2>
 		</div>
 	</div>
 	<div id="list-row" class="row">
 		<div class="news-mobile-browser hidden-lg ">
-			<div id="show-list" class="nmb-arrow pull-right"> Show News List <i class="fa fa-th-list" aria-hidden="true"></i> </div>
+			<div id="show-list" class="nmb-arrow pull-right"> 
+					<?php 
+						if($finalLang == "en") echo "Show News List";
+						if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+					?>
+
+			<i class="fa fa-th-list" aria-hidden="true"></i> </div>
 		</div>
 		<div id="news-list" class="col-lg-4 ">
 			<ul class="nav nav-pills nav-stacked">
