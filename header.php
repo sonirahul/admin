@@ -6,14 +6,14 @@
  	<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
  	<meta content='width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no' name='viewport'>
 	<title>Mawared House | Local Presence Global Support</title>
-	<meta content="We improve your customer's experience with our proven Objective-Based Design process and simple &amp; unique UX design subscription model." name='description'>
-	<meta content='UX, Product Design, Customer Experience, Mobile App Design, Website UX Design, Marketing Strategy, Mobile UX' name='keywords'>
+	<meta content="Mawared House | Local Presence Global Support" name='description'>
+	<meta content='Mawared House | Local Presence Global Support' name='keywords'>
 	<meta content='#29aecc' name='theme-color'>
-	<meta content='summary_large_image' name='twitter:card'>
-	<meta content='UX Design Services: Research, Strategy, Product and Mobile Design' name='twitter:title'>
-	<meta content="We improve your customer's experience with our proven Objective-Based Design process and simple &amp; unique UX design subscription model." name='twitter:description'>
-	<meta content='UX Design Services: Research, Strategy, Product and Mobile Design' property='og:title'>
-	<meta content="We improve your customer's experience with our proven Objective-Based Design process and simple &amp; unique UX design subscription model." property='og:description'>
+	<meta content='Mawared House | Local Presence Global Support' name='twitter:card'>
+	<meta content='Mawared House | Local Presence Global Support' name='twitter:title'>
+	<meta content="Local Presence Global Support" name='twitter:description'>
+	<meta content='Mawared House | Local Presence Global Support' property='og:title'>
+	<meta content="Local Presence Global Support" property='og:description'>
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
