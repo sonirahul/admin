@@ -320,7 +320,7 @@ if($finalLang == "ar")
 			<div class='row  column-center text-justify'>
 				<div class='col-md-12 <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
 					<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
-						<i class="fa fa-cc-visa fa-lg mh-icon-colored" aria-hidden="true"></i>
+						<i class="fa fa-cc-visa fa-lg mh-icon-colored hidden" aria-hidden="true"></i>
 						<span class="mh-text-colored-with-underline"><?php echo $vacName ?></span>
 					</h2>
 					<?php echo $vac ?>
