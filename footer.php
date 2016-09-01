@@ -217,7 +217,7 @@
 		</ul>
 		<div class='border'></div>
 		<div class='logo-wrapper'>
-			<img src="images/lgonew.png" id='digital-telepathy-logo'>
+			<img src="images/lgonew.png" id='mawaredhouse-logo'>
 
 		</div>
 		<p>
