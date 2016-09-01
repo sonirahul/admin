@@ -280,7 +280,7 @@ DATA BY RAVI
 
         <div id="gridder-content-<?php echo $i+1?>" class="gridder-content">
             <img src="gallery/final/<?php echo $allGalleryData[$i]["gallery_photo"]?>" class="img-responsive" />
-            <div class="description">
+            <div class="description hidden-xs">
                 <h3>
                     <?php 
                     if($finalLang == "en") echo $allGalleryData[$i]["gallery_name_en"];
