@@ -766,7 +766,7 @@ ul.level-1-nav a{position:relative;display:block;text-transform:uppercase;text-d
 }.nav-footer .border{border-top:2px solid white;padding-top:32px;width:245px;margin:0 auto}
 @media(min-width:768px){.nav-footer .border{border-top:1px solid #7ac9dd}
 }.nav-footer .logo-wrapper{//width:35px;height:100px;margin:0 95px}
-.nav-footer .logo-wrapper #digital-telepathy-logo{width:150px}
+.nav-footer .logo-wrapper #mawaredhouse-logo{width:150px}
 .nav-footer .logo-wrapper .dt-brandmark{fill:white}
 .nav-footer p{color:#fff;font-weight:bold;font-size:14px!important;margin:8px 0 0 0}
 @media(min-width:680px) and (max-height:660px){.nav-footer{//display:none!important}
@@ -1707,7 +1707,7 @@ body[data-page="work-detail"] .hero .services-btd li:first-child:before,body[dat
 [data-section="landing-page"] .landing-page-header h1,[data-section="landing-page"] .landing-page-header h2,[data-section="landing-page"] .landing-page-header h3,[data-section="landing-page"] .landing-page-header p{color:#fff}
 [data-section="landing-page"] .landing-page-logo-wrapper{width:55px;margin:0 auto;margin-bottom:60px}
 [data-section="landing-page"] #navbar{display:none}
-[data-section="landing-page"] #digital-telepathy-logo{background:#37aecc;display:block;margin:20px auto 0;fill:#fff}
+[data-section="landing-page"] #mawaredhouse-logo{background:#37aecc;display:block;margin:20px auto 0;fill:#fff}
 [data-section="landing-page"] .main-content [class^="col-"]{margin-bottom:60px}
 [data-section="landing-page"] .main-content .company-questions{text-align:left}
 [data-section="landing-page"] .main-content .company-questions p{padding:0;margin:0 0 .25em;font-weight:600}
