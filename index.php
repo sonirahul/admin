@@ -181,7 +181,7 @@ if($finalLang == "ar")
 						<p>
 							<?php 
 							if($finalLang == "en") echo "Local Presence Global Support";
-							if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+							if($finalLang == "ar") echo "ÃÃ–Ã¦Ã‘ Ã£ÃÃ¡Ã­  |  ÃÃšÃ£ ÃšÃ‡Ã¡Ã£Ã­";
 							?>
 						</p>
 					</blockquote>
@@ -219,7 +219,7 @@ if($finalLang == "ar")
 						<p>
 							<?php 
 							if($finalLang == "en") echo "State of the art offices";
-							if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+							if($finalLang == "ar") echo "ÃÃ–Ã¦Ã‘ Ã£ÃÃ¡Ã­  |  ÃÃšÃ£ ÃšÃ‡Ã¡Ã£Ã­";
 							?>
 						</p>
 					</blockquote>
@@ -235,13 +235,13 @@ if($finalLang == "ar")
 							<p>
 								<?php 
 								if($finalLang == "en") echo '"None of us is as smart as all of us"';
-								if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+								if($finalLang == "ar") echo "ÃÃ–Ã¦Ã‘ Ã£ÃÃ¡Ã­  |  ÃÃšÃ£ ÃšÃ‡Ã¡Ã£Ã­";
 								?>
 							</p>
 							<footer>
 								<?php 
 								if($finalLang == "en") echo "Ken Blanchard";
-								if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+								if($finalLang == "ar") echo "ÃÃ–Ã¦Ã‘ Ã£ÃÃ¡Ã­  |  ÃÃšÃ£ ÃšÃ‡Ã¡Ã£Ã­";
 								?>
 							</footer>
 						</div>
@@ -261,7 +261,7 @@ if($finalLang == "ar")
 							<p>
 								<?php 
 								if($finalLang == "en") echo "Global Presence";
-								if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+								if($finalLang == "ar") echo "ÃÃ–Ã¦Ã‘ Ã£ÃÃ¡Ã­  |  ÃÃšÃ£ ÃšÃ‡Ã¡Ã£Ã­";
 								?>
 							</p>
 						</div>
@@ -470,7 +470,7 @@ if($finalLang == "ar")
 					<div class='container'>
 						<div class='row row-centered' id='let-us-help-you'>
 							<h3>Objective-based Design, our repeatable and scalable process</h3>
-							<p class="hidden-xs">Identifying friction in your user journey is important, but it’s only one step in the process. After working with you to validate your user’s pain points, our team of strategists, designers, and developers operate alongside your team developing strategies to achieve your business objectives.</p>
+							<p class="hidden-xs">Identifying friction in your user journey is important, but itâ€™s only one step in the process. After working with you to validate your userâ€™s pain points, our team of strategists, designers, and developers operate alongside your team developing strategies to achieve your business objectives.</p>
 						</div>
 					</div>
 				</div>
@@ -555,7 +555,7 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 				<span class="mh-text-colored-with-underline">
 					<?php 
 						if($finalLang == "en") echo "News And Events";
-						if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+						if($finalLang == "ar") echo "ÃÃ–Ã¦Ã‘ Ã£ÃÃ¡Ã­  |  ÃÃšÃ£ ÃšÃ‡Ã¡Ã£Ã­";
 					?>
 				</span>
 			</h2>
@@ -566,7 +566,7 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 			<div id="show-list" class="nmb-arrow pull-right"> 
 					<?php 
 						if($finalLang == "en") echo "Show News List";
-						if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
+						if($finalLang == "ar") echo "ÃÃ–Ã¦Ã‘ Ã£ÃÃ¡Ã­  |  ÃÃšÃ£ ÃšÃ‡Ã¡Ã£Ã­";
 					?>
 
 			<i class="fa fa-th-list" aria-hidden="true"></i> </div>
@@ -835,7 +835,7 @@ $coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696",
 		<div class="col-md-7 ">
 			<div class="resume_people">
 				<h3 class="people_Name <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">Abiola Ojo-Osagie</h3>
-				<p class="<?php if ($finalLang == "ar") {echo "dir-rtl";} ?>"><b><?php if ($finalLang == "ar") {echo "ÇáÊÚííä : ";} else { echo "Designation : ";} ?></b><span class="people-title">MACHINE</span> </p>
+				<p class="<?php if ($finalLang == "ar") {echo "dir-rtl";} ?>"><b><?php if ($finalLang == "ar") {echo "Ã‡Ã¡ÃŠÃšÃ­Ã­Ã¤ : ";} else { echo "Designation : ";} ?></b><span class="people-title">MACHINE</span> </p>
 
 				<p class="texte_people <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">MACHINE</p>
 			</div>

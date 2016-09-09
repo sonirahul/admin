@@ -6,10 +6,7 @@
 					<ul class='level-1-nav list-unstyled'>
 						<li class='home'>
 							<a class="home" href="/#myCarousel">
-								<?php 
-								if($finalLang == "en") echo "Home";
-								if($finalLang == "ar") echo "«·—∆Ì”Ì…";
-								?>
+								<?php echo $home; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
@@ -17,7 +14,7 @@
 							<a class="services" href="/#main">
 								<?php 
 								if($finalLang == "en") echo "Visa Application Center";
-								if($finalLang == "ar") echo " √‘Ì—… „—ﬂ“ «· ÿ»Ìﬁ";
+								if($finalLang == "ar") echo "√ä√É√î√≠√ë√â √£√ë√ü√í √á√°√ä√ò√à√≠√û";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -26,7 +23,7 @@
 							<a class="our-work" href="/#singaporeAirlines">
 								<?php 
 								if($finalLang == "en") echo "Singapore Airlines";
-								if($finalLang == "ar") echo "ŒÿÊÿ «·ÿÌ—«‰ «·”‰€«›Ê—Ì…";
+								if($finalLang == "ar") echo "√é√ò√¶√ò √á√°√ò√≠√ë√á√§ √á√°√ì√§√õ√á√ù√¶√ë√≠√â";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -35,7 +32,7 @@
 							<a class="philosophy" href="/coo.php">
 								<?php 
 								if($finalLang == "en") echo "Countries of Operation";
-								if($finalLang == "ar") echo "œ«∆—… ⁄„·Ì« ‰«";
+								if($finalLang == "ar") echo "√è√á√Ü√ë√â √ö√£√°√≠√á√ä√§√á";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -44,7 +41,7 @@
 							<a class="philosophy" href="/#mgtTeamMain2">
 								<?php 
 								if($finalLang == "en") echo "Our Team";
-								if($finalLang == "ar") echo "„Ê«—œ‰« «·»‘—Ì…";
+								if($finalLang == "ar") echo "√£√¶√á√ë√è√§√á √á√°√à√î√ë√≠√â";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -53,7 +50,7 @@
 							<a class="blog" href="/#clientss1">
 								<?php 
 								if($finalLang == "en") echo "Our Clients";
-								if($finalLang == "ar") echo "⁄„·«∆‰«";
+								if($finalLang == "ar") echo "√ö√£√°√á√Ü√§√á";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -62,7 +59,7 @@
 							<a class="careers" href="/gallery.php">
 								<?php 
 								if($finalLang == "en") echo "Gallery";
-								if($finalLang == "ar") echo "„⁄—÷ «·’Ê—";
+								if($finalLang == "ar") echo "√£√ö√ë√ñ √á√°√ï√¶√ë";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -71,7 +68,7 @@
 							<a class="our-work" href="/#blocks-wrapper">
 								<?php 
 								if($finalLang == "en") echo "About Us";
-								if($finalLang == "ar") echo "„⁄·Ê„«  ⁄‰«";
+								if($finalLang == "ar") echo "√£√ö√°√¶√£√á√ä √ö√§√á";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -80,7 +77,7 @@
 							<a class="contact" href="/#contacts">
 								<?php 
 								if($finalLang == "en") echo "Contact Us";
-								if($finalLang == "ar") echo "« ’· »‰«";
+								if($finalLang == "ar") echo "√á√ä√ï√° √à√§√á";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -106,9 +103,7 @@
 			</div>
 			<p class='copyright'>
 				<?php 
-				if($finalLang == "en") echo "&copy; 2016 Mawared House. <span class='hidden-xs'>All rights reserved. <a href='/privacy-policy'>Privacy Policy</a></span>";
-
-				if($finalLang == "ar") echo "&copy; 2016 ‘—ﬂ… „Ê«—œ «·»Ì  <span class='hidden-xs'>ﬂ· «·ÕﬁÊﬁ „Õ›ÊŸ… <a href='/privacy-policy'>”Ì«”… «·Œ’Ê’Ì…</a></span>";
+				echo $footer_static;
 				?>
 
 			</p>
@@ -122,7 +117,7 @@
 							<a class="home" href="/#myCarousel">
 								<?php 
 								if($finalLang == "en") echo "Home";
-				if($finalLang == "ar") echo "«·—∆Ì”Ì…";
+				if($finalLang == "ar") echo "√á√°√ë√Ü√≠√ì√≠√â";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -131,7 +126,7 @@
 							<a class="services" href="/#main">
 								<?php 
 								if($finalLang == "en") echo "Visa Application Center";
-								if($finalLang == "ar") echo " √‘Ì—… „—ﬂ“ «· ÿ»Ìﬁ";
+								if($finalLang == "ar") echo "√ä√É√î√≠√ë√â √£√ë√ü√í √á√°√ä√ò√à√≠√û";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -140,7 +135,7 @@
 							<a class="our-work" href="/#singaporeAirlines">
 								<?php 
 								if($finalLang == "en") echo "Singapore Airlines";
-								if($finalLang == "ar") echo "ŒÿÊÿ «·ÿÌ—«‰ «·”‰€«›Ê—Ì…";
+								if($finalLang == "ar") echo "√é√ò√¶√ò √á√°√ò√≠√ë√á√§ √á√°√ì√§√õ√á√ù√¶√ë√≠√â";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -149,7 +144,7 @@
 							<a class="philosophy" href="/coo.php">
 								<?php 
 								if($finalLang == "en") echo "Countries of Operation";
-				if($finalLang == "ar") echo "œ«∆—… ⁄„·Ì« ‰«";
+				if($finalLang == "ar") echo "√è√á√Ü√ë√â √ö√£√°√≠√á√ä√§√á";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -158,7 +153,7 @@
 							<a class="philosophy" href="/#mgtTeamMain2">
 								<?php 
 								if($finalLang == "en") echo "Our Team";
-				if($finalLang == "ar") echo "„Ê«—œ‰« «·»‘—Ì…";
+				if($finalLang == "ar") echo "√£√¶√á√ë√è√§√á √á√°√à√î√ë√≠√â";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -167,7 +162,7 @@
 							<a class="blog" href="/#clientss1">
 								<?php 
 								if($finalLang == "en") echo "Our Clients";
-				if($finalLang == "ar") echo "⁄„·«∆‰«";
+				if($finalLang == "ar") echo "√ö√£√°√á√Ü√§√á";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -176,7 +171,7 @@
 							<a class="careers" href="/gallery.php">
 								<?php 
 								if($finalLang == "en") echo "Gallery";
-				if($finalLang == "ar") echo "„⁄—÷ «·’Ê—";
+				if($finalLang == "ar") echo "√£√ö√ë√ñ √á√°√ï√¶√ë";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -185,7 +180,7 @@
 							<a class="our-work" href="/#blocks-wrapper">
 								<?php 
 								if($finalLang == "en") echo "About Us";
-								if($finalLang == "ar") echo "„⁄·Ê„«  ⁄‰«";
+								if($finalLang == "ar") echo "√£√ö√°√¶√£√á√ä √ö√§√á";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -194,7 +189,7 @@
 							<a class="contact" href="/#contacts">
 								<?php 
 								if($finalLang == "en") echo "Contact Us";
-								if($finalLang == "ar") echo "« ’· »‰«";
+								if($finalLang == "ar") echo "√á√ä√ï√° √à√§√á";
 								?>
 							</a>
 							<span class='icon-right-open-big'></span>

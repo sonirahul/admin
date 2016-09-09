@@ -25,7 +25,8 @@
 <head>
 	<!-- <meta charset='utf-8'> -->
 	<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
- 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+ 	<!--<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">-->
+ 	<meta charset="utf-8">
  	<meta content='width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no' name='viewport'>
 	<title>Mawared House | Local Presence Global Support</title>
 	<meta content="Mawared House | Local Presence Global Support" name='description'>
@@ -67,7 +68,7 @@
 			echo "<link rel='stylesheet' id='flik_timeline-flik-css-css' href='css/flik-timeline.min.css' type='text/css' media='all'>";
 		}
 	?>
-
+<?php include "lang\\".$finalLang."\i18.php"; ?>
 
 </head>
 <body data-logo-color='light' data-nav-color='light' data-overlay-id='false' data-overlay-open='false' data-page='process' data-section='unity'>
