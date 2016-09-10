@@ -82,7 +82,7 @@
 				<a href="/"><img src="images/logo reverse.png" id='mawaredhouse-logo'>
 				</a>
 			</div>
-			<a class="menu-text" href="javascript:;">MENU</a>
+			<a class="menu-text" href="javascript:;"><?php echo $menu_static; ?></a>
 		</div>
 		<div class='menu-wrap'>
 			<a class="hamburger menu" href="javascript:;"><div></div>

@@ -179,10 +179,7 @@ if($finalLang == "ar")
 				<div id="ci1cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
 						<p>
-							<?php 
-							if($finalLang == "en") echo "Local Presence Global Support";
-							if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
-							?>
+							<?php echo $slider1_static; ?>
 						</p>
 					</blockquote>
 					
@@ -217,10 +214,7 @@ if($finalLang == "ar")
 				<div id="ci2cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
 						<p>
-							<?php 
-							if($finalLang == "en") echo "State of the art offices";
-							if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
-							?>
+							<?php echo $slider2_static; ?>
 						</p>
 					</blockquote>
 				</div>
@@ -233,16 +227,10 @@ if($finalLang == "ar")
 					<blockquote class="blockquote-reverse">
 						<div class="block-con">
 							<p>
-								<?php 
-								if($finalLang == "en") echo '"None of us is as smart as all of us"';
-								if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
-								?>
+								<?php echo $slider3_1_static; ?>
 							</p>
 							<footer>
-								<?php 
-								if($finalLang == "en") echo "Ken Blanchard";
-								if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
-								?>
+								<?php echo $slider3_2_static; ?>
 							</footer>
 						</div>
 					</blockquote>
@@ -259,10 +247,7 @@ if($finalLang == "ar")
 					<blockquote class="blockquote-reverse">
 						<div class="block-con">
 							<p>
-								<?php 
-								if($finalLang == "en") echo "Global Presence";
-								if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
-								?>
+								<?php echo $slider5_static; ?>
 							</p>
 						</div>
 					</blockquote>
@@ -553,10 +538,7 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 			<h2  class="mh-text-no-underline">
 				<i class="fa fa-newspaper-o fa-lg mh-icon-colored" aria-hidden="true"></i>
 				<span class="mh-text-colored-with-underline">
-					<?php 
-						if($finalLang == "en") echo "News And Events";
-						if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
-					?>
+					<?php echo $newEvent_static; ?>
 				</span>
 			</h2>
 		</div>
@@ -564,10 +546,7 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 	<div id="list-row" class="row">
 		<div class="news-mobile-browser hidden-lg ">
 			<div id="show-list" class="nmb-arrow pull-right"> 
-					<?php 
-						if($finalLang == "en") echo "Show News List";
-						if($finalLang == "ar") echo "ÍÖæÑ ãÍáí  |  ÏÚã ÚÇáãí";
-					?>
+					<?php echo $newEvent_showList_static; ?>
 
 			<i class="fa fa-th-list" aria-hidden="true"></i> </div>
 		</div>

@@ -6,79 +6,55 @@
 					<ul class='level-1-nav list-unstyled'>
 						<li class='home'>
 							<a class="home" href="/#myCarousel">
-								<?php echo $home; ?>
+								<?php echo $home_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='services'>
 							<a class="services" href="/#main">
-								<?php 
-								if($finalLang == "en") echo "Visa Application Center";
-								if($finalLang == "ar") echo "ÊÃÔíÑÉ ãÑßÒ ÇáÊØÈíÞ";
-								?>
+								<?php echo $vac_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='our-work'>
 							<a class="our-work" href="/#singaporeAirlines">
-								<?php 
-								if($finalLang == "en") echo "Singapore Airlines";
-								if($finalLang == "ar") echo "ÎØæØ ÇáØíÑÇä ÇáÓäÛÇÝæÑíÉ";
-								?>
+								<?php echo $sa_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
 							<a class="philosophy" href="/coo.php">
-								<?php 
-								if($finalLang == "en") echo "Countries of Operation";
-								if($finalLang == "ar") echo "ÏÇÆÑÉ ÚãáíÇÊäÇ";
-								?>
+								<?php echo $coo_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
 							<a class="philosophy" href="/#mgtTeamMain2">
-								<?php 
-								if($finalLang == "en") echo "Our Team";
-								if($finalLang == "ar") echo "ãæÇÑÏäÇ ÇáÈÔÑíÉ";
-								?>
+								<?php echo $oTeam_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='blog'>
 							<a class="blog" href="/#clientss1">
-								<?php 
-								if($finalLang == "en") echo "Our Clients";
-								if($finalLang == "ar") echo "ÚãáÇÆäÇ";
-								?>
+								<?php echo $oClients_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='careers'>
 							<a class="careers" href="/gallery.php">
-								<?php 
-								if($finalLang == "en") echo "Gallery";
-								if($finalLang == "ar") echo "ãÚÑÖ ÇáÕæÑ";
-								?>
+								<?php echo $gallery_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='our-work'>
 							<a class="our-work" href="/#blocks-wrapper">
-								<?php 
-								if($finalLang == "en") echo "About Us";
-								if($finalLang == "ar") echo "ãÚáæãÇÊ ÚäÇ";
-								?>
+								<?php echo $aboutus_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='contact'>
 							<a class="contact" href="/#contacts">
-								<?php 
-								if($finalLang == "en") echo "Contact Us";
-								if($finalLang == "ar") echo "ÇÊÕá ÈäÇ";
-								?>
+								<?php echo $contact_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
@@ -102,10 +78,7 @@
 				</div>
 			</div>
 			<p class='copyright'>
-				<?php 
-				echo $footer_static;
-				?>
-
+				<?php echo $footer_static; ?>
 			</p>
 		</section>
 	</div>
@@ -115,82 +88,55 @@
 	<ul class='level-1-nav list-unstyled'>
 						<li class='home'>
 							<a class="home" href="/#myCarousel">
-								<?php 
-								if($finalLang == "en") echo "Home";
-				if($finalLang == "ar") echo "ÇáÑÆíÓíÉ";
-								?>
+								<?php echo $home_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='services'>
 							<a class="services" href="/#main">
-								<?php 
-								if($finalLang == "en") echo "Visa Application Center";
-								if($finalLang == "ar") echo "ÊÃÔíÑÉ ãÑßÒ ÇáÊØÈíÞ";
-								?>
+								<?php echo $vac_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='our-work'>
 							<a class="our-work" href="/#singaporeAirlines">
-								<?php 
-								if($finalLang == "en") echo "Singapore Airlines";
-								if($finalLang == "ar") echo "ÎØæØ ÇáØíÑÇä ÇáÓäÛÇÝæÑíÉ";
-								?>
+								<?php echo $sa_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
 							<a class="philosophy" href="/coo.php">
-								<?php 
-								if($finalLang == "en") echo "Countries of Operation";
-				if($finalLang == "ar") echo "ÏÇÆÑÉ ÚãáíÇÊäÇ";
-								?>
+								<?php echo $coo_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
 							<a class="philosophy" href="/#mgtTeamMain2">
-								<?php 
-								if($finalLang == "en") echo "Our Team";
-				if($finalLang == "ar") echo "ãæÇÑÏäÇ ÇáÈÔÑíÉ";
-								?>
+								<?php echo $oTeam_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='blog'>
 							<a class="blog" href="/#clientss1">
-								<?php 
-								if($finalLang == "en") echo "Our Clients";
-				if($finalLang == "ar") echo "ÚãáÇÆäÇ";
-								?>
+								<?php echo $oClients_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='careers'>
 							<a class="careers" href="/gallery.php">
-								<?php 
-								if($finalLang == "en") echo "Gallery";
-				if($finalLang == "ar") echo "ãÚÑÖ ÇáÕæÑ";
-								?>
+								<?php echo $gallery_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='our-work'>
 							<a class="our-work" href="/#blocks-wrapper">
-								<?php 
-								if($finalLang == "en") echo "About Us";
-								if($finalLang == "ar") echo "ãÚáæãÇÊ ÚäÇ";
-								?>
+								<?php echo $aboutus_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='contact'>
 							<a class="contact" href="/#contacts">
-								<?php 
-								if($finalLang == "en") echo "Contact Us";
-								if($finalLang == "ar") echo "ÇÊÕá ÈäÇ";
-								?>
+								<?php echo $contact_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
@@ -216,10 +162,7 @@
 
 		</div>
 		<p>
-			<?php 
-			if($finalLang == "en") echo "&copy; 2016 Mawaredhouse.com";
-			if($finalLang == "ar") echo "&copy; 2016 Mawaredhouse.com";
-			?>
+			<?php echo $footer_static; ?>
 		</p><!-- var d = new Date().getFullYear(); -->
 	</div>
 </div>
