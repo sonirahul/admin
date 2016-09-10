@@ -131,7 +131,7 @@ label.show-title {
 				for($i=0;$i<count($allCooData);$i++){?>
 					<li class="<?php if($i==0) echo active ?>">
 						<a data-toggle="pill" href="#menu<?php echo $i?> ">
-							<img src="flags/<?php echo $allCooData[$i]["countries_flag"]?>">
+							<img src="images/flags/<?php echo $allCooData[$i]["countries_flag"]?>">
 							<p class="menu-country-name">
 								<?php 
 								if($finalLang == "en") echo $allCooData[$i]["countries_title_en"];
@@ -166,8 +166,8 @@ label.show-title {
 									if($finalLang == "ar") echo $allCooData[$i]["countries_title_ar"];
 									?>
 							</div>
-							<div id="coo-pic" class="col-sm-12 hidden-xs" style="background:url(countries/<?php echo $allCooData[$i]["countries_photo"]?>);background-size:cover;"></div>
-							<div id="coo-con-pic" class="col-sm-12 visible-xs"><img src="countries/<?php echo $allCooData[$i]["countries_photo"]?>" /></div>
+							<div id="coo-pic" class="col-sm-12 hidden-xs" style="background:url(images/countries/<?php echo $allCooData[$i]["countries_photo"]?>);background-size:cover;"></div>
+							<div id="coo-con-pic" class="col-sm-12 visible-xs"><img src="images/countries/<?php echo $allCooData[$i]["countries_photo"]?>" /></div>
 							<div class="col-sm-12">
 								
 								<div id="coo_desc">
@@ -189,7 +189,7 @@ label.show-title {
 																					<label class="show-title">
 																						<?php echo ucwords($allCooForData[$j]["countries_title_en"]); ?>
 																					</label>
-																					<span class="date"><img src="flags/<?php echo $allCooForData[$j]["countries_flag"]; ?>" style="width: 5em;"></span>
+																					<span class="date"><img src="images/flags/<?php echo $allCooForData[$j]["countries_flag"]; ?>" style="width: 5em;"></span>
 																					<span class="circle"/>
 																				</div>
 																				<div class="flik-timeline-content">

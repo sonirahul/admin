@@ -58,14 +58,14 @@ if($_POST["action"]=="beUpdate") // Update Fields
 	{ 
   	    $SQL="select countries_photo from countries where countries_id=$countriesid";
 		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../countries/".$showdelet[0]['countries_photo']);
+	    unlink("../images/countries/".$showdelet[0]['countries_photo']);
 		$TableField[$uf][0]="countries_photo";
 		$TableField[$uf][1]="''";
 		$uf++;
 	}elseif($_FILES["countries_photo"]["name"]!="")
 		{ 
 		  $TableField[$uf][0]="countries_photo";
-	      $TableField[$uf][1]=uploadfile("countries_photo",$txtename,"../countries");
+	      $TableField[$uf][1]=uploadfile("countries_photo",$txtename,"../images/countries");
 		  $uf++;
 		}
 		
@@ -97,7 +97,7 @@ if($_POST["action"]=="beUpdate") // Update Fields
 		elseif ($_FILES["countries_flag"]["name"]!="" && $countryFlagSelect == "other")
 		{
 		  $TableField[$uf][0]="countries_flag";
-	      $TableField[$uf][1]=uploadfile("countries_flag",$txtename,"../flags");
+	      $TableField[$uf][1]=uploadfile("countries_flag",$txtename,"../images/flags");
 		  $uf++;
 		}
 	}
@@ -165,7 +165,7 @@ if($_POST["action"]=="Add")
 		if($_FILES["countries_photo"]["name"]!="")
 		{ 
 			$TableField[2][0]="countries_photo";
-			$TableField[2][1]=uploadfile("countries_photo",$txtename,"../countries");
+			$TableField[2][1]=uploadfile("countries_photo",$txtename,"../images/countries");
 		}
 		$SQLwhere="countries_id=$Countries_Add_Id";	
 		update_query($link,$TableName,$TableField,$SQLwhere);
@@ -181,14 +181,14 @@ if($_POST["action"]=="Add")
 		if($_FILES["countries_photo"]["name"]!="")
 		{ 
 			$TableField[$uf][0]="countries_photo";
-			$TableField[$uf][1]=uploadfile("countries_photo",$txtename,"../countries");
+			$TableField[$uf][1]=uploadfile("countries_photo",$txtename,"../images/countries");
 			$uf++;
 		}
 
 		if($_FILES["countries_flag"]["name"]!="")
 		{
 			$TableField[$uf][0]="countries_flag";
-			$TableField[$uf][1]=uploadfile("countries_flag",$txtename,"../flags");
+			$TableField[$uf][1]=uploadfile("countries_flag",$txtename,"../images/flags");
 			$uf++;
 		}
 		insert_query($link,$TableName,$TableField);
@@ -416,7 +416,7 @@ if($_POST["action"]=="Add")
 									<input id="countries_photo" type="file" name="countries_photo" data-validate-length-range="5,20" class="optional form-control col-md-8 col-xs-12">
 									<?php if(!empty($UpdatedData[0]['countries_photo']) && $_GET["action"]=="countriesupdate"){
 										$pic_path=$UpdatedData[0]['countries_photo'];?>
-										<img border="0" src="../countries/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
+										<img border="0" src="../images/countries/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
 										<input type="checkbox" style="border:0px;" name="deletefile"  value="1">Delete
 									<?php } ?>
 								</div>
@@ -437,7 +437,7 @@ if($_POST["action"]=="Add")
 											
 											if ($(this).val() != "other" && $(this).val() != "") {
 												$('.country_flag_show').removeClass("hidden");
-												$('img.country_flag_show').attr('src', '../flags/' + $(this).val());
+												$('img.country_flag_show').attr('src', '../images/flags/' + $(this).val());
 												$('.countries_flag').addClass("hidden");
 											} 
 											if ($(this).val() == "other") {
@@ -457,7 +457,7 @@ if($_POST["action"]=="Add")
 											<option></option>
 											<option value="other">Other</option>
 											<?php
-											$handle=opendir('../flags');
+											$handle=opendir('../images/flags');
 											 $i=0;
 											while (false!==($file = readdir($handle)))
 											{ 
@@ -492,7 +492,7 @@ if($_POST["action"]=="Add")
 								<div class="item form-group country_flag_show">
 									<label class="control-label col-md-3 col-sm-3 col-xs-12" for="country_flag">Selected Flag</label>
 									<div class="col-md-8 col-sm-9 col-xs-12">
-										<img border="0" src="../flags/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
+										<img border="0" src="../images/flags/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
 										<input type="checkbox" style="border:0px;" name="deleteflag"  value="1">Delete
 									</div>
 								</div>
@@ -517,7 +517,7 @@ if($_POST["action"]=="Add")
 										  <?php if(!empty($UpdatedData[0]['countries_flag']) && $_GET["action"]=="countriesupdate"){
 											 $flag_path=$UpdatedData[0]['countries_flag'];
 										  ?>
-										  <img border="0" src="../countries/<?php echo $flag_path?>" width="80" height="80" align="absmiddle">
+										  <img border="0" src="../images/countries/<?php echo $flag_path?>" width="80" height="80" align="absmiddle">
 										  <input type="checkbox" style="border:0px;" name="deleteflag"  value="1">Delete
 										  <?php } ?></td>
 										</tr>
