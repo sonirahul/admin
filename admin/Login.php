@@ -97,7 +97,7 @@ function checkdata()
           <section class="login_content">
             <form name="Login" method="post" onSubmit="return checkdata()">
               <input name="LoginAction"  type="hidden">
-              <h1><img id="admin-logo" src="images/logo.png"></img> Admin Login</h1>
+              <h1><img id="admin-logo" src="../images/logo/mawaredhouse-admin-logo.png"></img> Admin Login</h1>
                 <?php if($msgerror == 1) 
                 	echo '<div><p class="text-danger text-left"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></i> Sorry, Username or Password is incorrect.
 					  </p></div>'
