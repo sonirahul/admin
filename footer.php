@@ -162,7 +162,7 @@
 
 		</div>
 		<p>
-			<?php echo $footer_static; ?>
+			<?php echo $footer_menu_static; ?>
 		</p><!-- var d = new Date().getFullYear(); -->
 	</div>
 </div>

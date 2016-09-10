@@ -1,4 +1,4 @@
-update content set content_title_ar='„—Õ»« »ﬂ„ ›Ì „Ê«—œ Â«Ê”',content_desc_en='<p>
+update content set content_title_ar='√£√ë√ç√à√á √à√ü√£ √ù√≠ √£√¶√á√ë√è √•√á√¶√ì',content_desc_en='<p>
 	<br />
 	<br />
 	<br />
@@ -15,7 +15,7 @@ update content set content_title_ar='„—Õ»« »ﬂ„ ›Ì „Ê«—œ Â«Ê”',content_desc_en='<
 	<br />
 	<br />
 	<br />
-	†</p>
+	¬†</p>
 <p>
 	The word 'Mawared' in Arabic means 'resources'. And this is exactly what we're all about - providing an unmatched array of services ranging from Visa Application facilities, Business Centre's to Travel and Leisure Services. Established in Kuwait in 2006, Mawared House Trading and Contracting is on a constant endeavor to provide our customers with practical solutions and state-of-the-art services that works seamlessly towards the cause of enhancing their businesses and making their lives much simpler and better. In just a short span Mawared House has put its footprint across seven countries in the Middle East and North African (MENA) Region. And no, we're not stopping at that. At Mawared House we're actively pursuing opportunities across the globe. Armed with passion, skill and the will to succeed, we're ready to meet challenges, and foray head on into the hands of tomorrow.</p>
 ',content_title_en='Welcome back',content_desc_ar='<p>
@@ -35,9 +35,9 @@ update content set content_title_ar='„—Õ»« »ﬂ„ ›Ì „Ê«—œ Â«Ê”',content_desc_en='<
 	<br />
 	<br />
 	<br />
-	†</p>
+	¬†</p>
 <p>
-	·„ Ìﬂ‰ €—Ì»« «” Œœ«„‰« ·«”„ " „Ê«—œ " ﬂ⁄‰Ê«‰ ··‘—ﬂ… ∫ ›«·„Ê«—œ «·»‘—Ì… ÂÌ ÃÊÂ—  Œ’’‰« ∫ „‰ „—«ﬂ“  ﬁœÌ„ «· √‘Ì—«  «·Ï Œœ„« ‰« ›Ì „Ã«· «·”Ì«Õ… Ê«·”›— Ì·⁄» «·⁄‰’— «·»‘—Ì ·œÌ‰« œÊ„« œÊ—« ›⁄«·« . » √”Ì”Â« ›Ì 2006 »œ√  " „Ê«—œ Â«Ê” ·· Ã«—… «·⁄«„… Ê«·„ﬁ«Ê·« " „‘Ê«—Â« · ﬁœÌ„ √›÷· «·Œœ„«  ·⁄„·«∆Â« ÕÊ· «·⁄«·„ .</p>
+	√°√£ √≠√ü√§ √õ√ë√≠√à√á √á√ì√ä√é√è√á√£√§√á √°√á√ì√£ " √£√¶√á√ë√è " √ü√ö√§√¶√á√§ √°√°√î√ë√ü√â ¬∫ √ù√á√°√£√¶√á√ë√è √á√°√à√î√ë√≠√â √•√≠ √å√¶√•√ë √ä√é√ï√ï√§√á ¬∫ √£√§ √£√ë√á√ü√í √ä√û√è√≠√£ √á√°√ä√É√î√≠√ë√á√ä √á√°√¨ √é√è√£√á√ä√§√á √ù√≠ √£√å√á√° √á√°√ì√≠√á√ç√â √¶√á√°√ì√ù√ë √≠√°√ö√à √á√°√ö√§√ï√ë √á√°√à√î√ë√≠ √°√è√≠√§√á √è√¶√£√á √è√¶√ë√á √ù√ö√á√°√á . √à√ä√É√ì√≠√ì√•√á √ù√≠ 2006 √à√è√É√ä " √£√¶√á√ë√è √•√á√¶√ì √°√°√ä√å√á√ë√â √á√°√ö√á√£√â √¶√á√°√£√û√á√¶√°√á√ä" √£√î√¶√á√ë√•√á √°√ä√û√è√≠√£ √É√ù√ñ√° √á√°√é√è√£√á√ä √°√ö√£√°√á√Ü√•√á √ç√¶√° √á√°√ö√á√°√£ .</p>
 <p>
-	»› —… ﬁ’Ì—… «” ÿ«⁄  "„Ê«—œ Â«Ê”" √‰  ŒÿÊ ŒÿÊ«  Ê«”⁄… · ‰‘— ÊÃÊœÂ« ›Ì ”»⁄… œÊ· œ«Œ· «·‘—ﬁ «·«Ê”ÿ Ê‘„«· «›—ÌﬁÌ« ∫ Ê·‰ ‰ Êﬁ› Â‰« ∫ ›Ì „Ê«—œ Â«Ê” ‰Õ‰ œÊ„« ‰»ÕÀ ⁄‰ ›—’ ÃœÌœ… ·· Ê”⁄ «·«ﬁ·Ì„Ì .</p>
+	√à√ù√ä√ë√â √û√ï√≠√ë√â √á√ì√ä√ò√á√ö√ä "√£√¶√á√ë√è √•√á√¶√ì" √É√§ √ä√é√ò√¶ √é√ò√¶√á√ä √¶√á√ì√ö√â √°√ä√§√î√ë √¶√å√¶√è√•√á √ù√≠ √ì√à√ö√â √è√¶√° √è√á√é√° √á√°√î√ë√û √á√°√á√¶√ì√ò √¶√î√£√á√° √á√ù√ë√≠√û√≠√á ¬∫ √¶√°√§ √§√ä√¶√û√ù √•√§√á ¬∫ √ù√≠ √£√¶√á√ë√è √•√á√¶√ì √§√ç√§ √è√¶√£√á √§√à√ç√ã √ö√§ √ù√ë√ï √å√è√≠√è√â √°√°√ä√¶√ì√ö √á√°√á√û√°√≠√£√≠ .</p>
 ' where content_id=1
