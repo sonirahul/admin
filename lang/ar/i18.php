@@ -1,17 +1,17 @@
 <?php
 $menu_static="قائمة طعام";
 $home_static="الرئيسية";
-$vac_static="Visa Application Center";
-$sa_static="Singapore Airlines";
-$coo_static="Countries of Operation";
-$newEvent_static="News And Events";
+$vac_static="تأشيرة مركز التطبيق";
+$sa_static="خطوط الطيران السنغافورية";
+$coo_static="بلدان العمليات";
+$newEvent_static="أخبار الأحداث";
 $newEvent_showList_static="Show News List";
-$oTeam_static="Our Team";
-$mgmtTeam_static="Management Team";
-$emp_static="Our People";
-$oClients_static="Our Clients";
-$gallery_static="Gallery";
-$aboutus_static="About Us";
+$oTeam_static="مواردنا البشرية";
+$mgmtTeam_static="فريق الإدارة";
+$emp_static="أفرادونا";
+$oClients_static="عملاؤنا";
+$gallery_static="استديو الصور";
+$aboutus_static="معلومات عنا";
 $contact_static="اتصل بنا";
 $footer_menu_static="&copy; ".date("Y")." Mawaredhouse.com";
 $footer_static="&copy; ".date("Y")." Mawared House. <span class='hidden-xs'>All rights reserved. <a href='/privacy-policy'>Privacy Policy</a></span>";

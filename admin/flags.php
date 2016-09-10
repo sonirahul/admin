@@ -42,7 +42,7 @@ if($_POST["Action"]=="Add")//Del/Un Del
 	{
 		if($_FILES["countryFlag"]["name"]!="")
 		{ 
-			$file_dir  = "../flags/"; 
+			$file_dir  = "../images/flags/"; 
 			$newfile =$_FILES["countryFlag"]['name'];
 			$filetmpname =$_FILES["countryFlag"]['tmp_name'];
 			$filesize=$_FILES["countryFlag"]["size"];		  
@@ -114,7 +114,7 @@ $showdelet=select_query($link,$SQL,0,0);
 															$countries_client_visible=$showdelet[$d]['countries_client_visible'];?>
 															<tr>
 																<td style="vertical-align: middle"><? echo ucwords($countries_title_en);?></td>
-																<td><? echo "<img class='img-responsive clients-flag' src='../flags/$countries_flag'>";?></td>
+																<td><? echo "<img class='img-responsive clients-flag' src='../images/flags/$countries_flag'>";?></td>
 																<td style="vertical-align: middle">
 																	
 																		<input name='button' type='submit' class="btn btn-danger show-hide" value='Hide' clientId='<?=$countries_id?>' <? if ($countries_client_visible == "0") {?>style="display: none;"<?}?>>

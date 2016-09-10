@@ -79,7 +79,7 @@
 	<section class='nav-bar container-fluid scroll-up' id='navbar'>
 		<div class='nav-bar-inner'>
 			<div class='identity'>
-				<a href="/"><img src="images/logo reverse.png" id='mawaredhouse-logo'>
+				<a href="/"><img src="images/logo/mavaredhouse_reverse_logo.png" id='mawaredhouse-logo'>
 				</a>
 			</div>
 			<a class="menu-text" href="javascript:;"><?php echo $menu_static; ?></a>

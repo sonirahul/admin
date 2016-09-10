@@ -90,15 +90,15 @@
                 <ul class="nav side-menu">
 				  <li><a><i class="fa fa-home"></i> Home<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.php?model=content&contentid=1&action=contentupdate" title="Manage About Us ">About Us</a>
+                      <li><a href="index.php?model=content&contentid=3&action=contentupdate" title="Manage About Us ">About Us</a>
                       </li>
-                      <li><a href="index.php?model=content&contentid=3&action=contentupdate" title="Manage Philosophy ">Philosophy</a>
+                      <li><a href="index.php?model=content&contentid=4&action=contentupdate" title="Manage Philosophy ">Philosophy</a>
                       </li>
-					  <li><a href="index.php?model=content&contentid=10&action=contentupdate" title="Manage Mission ">Mission</a>
+					  <li><a href="index.php?model=content&contentid=5&action=contentupdate" title="Manage Mission ">Mission</a>
                       </li>
-					  <li><a href="index.php?model=content&contentid=11&action=contentupdate" title="Manage Vision ">Vision</a>
+					  <li><a href="index.php?model=content&contentid=7&action=contentupdate" title="Manage Vision ">Vision</a>
                       </li>
-					  <li><a href="index.php?model=content&contentid=12&action=contentupdate" title="Manage Commitment ">Commitment</a>
+					  <li><a href="index.php?model=content&contentid=6&action=contentupdate" title="Manage Commitment ">Commitment</a>
                       </li>
                     </ul>
                   </li>
@@ -120,9 +120,9 @@
                   </li>-->
                   <li><a><i class="fa fa-edit"></i>Strategic Business Units<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.php?model=content&contentid=4&action=contentupdate" title="Manage Visa Application Centres ">Visa Application Centres</a>
+                      <li><a href="index.php?model=content&contentid=1&action=contentupdate" title="Manage Visa Application Centres ">Visa Application Centres</a>
                       </li>
-					  <li><a href="index.php?model=content&contentid=13&action=contentupdate" title="Manage Singapore Airlines ">Singapore Airlines</a>
+					  <li><a href="index.php?model=content&contentid=2&action=contentupdate" title="Manage Singapore Airlines ">Singapore Airlines</a>
                       </li>
                       <!--<li><a href="index.php?model=content&contentid=5&action=contentupdate" title="Manage Travel Club ">Travel Club</a>
                       </li>
@@ -133,21 +133,14 @@
                     </ul>
                   </li>
                   <li><a href="index.php?model=countries" title="Manage Countries of Operation"><i class="fa fa-globe" aria-hidden="true"></i> Countries of Operation</a></li>
-                  <li><a><i class="fa fa-file-image-o"></i> Gallery <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.php?model=gallary" title="Manage Our People ">Our People</a>
-                      </li>
-                      <li><a href="index.php?model=gallary2" title="Manage 5th Anniversary">5th Anniversary</a>
-                      </li>
-                    </ul>
-                  </li>
+                  <li><a href="index.php?model=gallery" title="Manage Gallery"><i class="fa fa-file-image-o"></i> Gallery</a></li>
                   <li><a href="index.php?model=news" title="Manage News"><i class="fa fa-newspaper-o"></i> News</a></li>
-                  <li><a href="index.php?model=content&contentid=8&action=contentupdate" title="Manage Site Map"><i class="fa fa-sitemap"></i> Site Map</a></li>
-                  <li><a href="index.php?model=content&contentid=9&action=contentupdate" title="Manage Contact Us"><i class="fa fa-phone"></i> Contact Us</a></li>
+                  <!--<li><a href="index.php?model=content&contentid=8&action=contentupdate" title="Manage Site Map"><i class="fa fa-sitemap"></i> Site Map</a></li>-->
+                  <li><a href="index.php?model=content&contentid=8&action=contentupdate" title="Manage Contact Us"><i class="fa fa-phone"></i> Contact Us</a></li>
                   <li><a href="index.php?model=flags" title="Manage Flags"><i class="fa fa-flag"></i> Flags</a></li>
                   <li><a href="index.php?model=statistics" title="Manage Statistics"><i class="fa fa-bar-chart"></i> Statistics</a></li>
-                  <li><a href="index.php?model=uploading" title="Manage Uploading"><i class="fa fa-upload"></i> Uploading</a></li>
-                  <li><a href="index.php?model=mhf" title="Manage Shared Files"><i class="fa fa-file-text"></i> Shared Files</a></li>
+                  <!--<li><a href="index.php?model=uploading" title="Manage Uploading"><i class="fa fa-upload"></i> Uploading</a></li>
+                  <li><a href="index.php?model=mhf" title="Manage Shared Files"><i class="fa fa-file-text"></i> Shared Files</a></li>-->
                 </ul>
               </div>
             </div>

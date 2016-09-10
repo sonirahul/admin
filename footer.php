@@ -158,7 +158,7 @@
 		</ul>
 		<div class='border'></div>
 		<div class='logo-wrapper'>
-			<img src="images/lgonew.png" id='mawaredhouse-logo'>
+			<img src="images/logo/mawaredhouse_menu_logo_footer.png" id='mawaredhouse-logo'>
 
 		</div>
 		<p>

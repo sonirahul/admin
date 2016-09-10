@@ -33,52 +33,46 @@ if($finalLang == "en")
 	$welcomeName = $allContentData[0]["content_title_en"];
 	$welcome = $allContentData[0]["content_desc_en"];
 
-	$managementTeamName = $allContentData[1]["content_title_en"];
-	$managementTeam = $allContentData[1]["content_desc_en"];
+	$philosophyName = $allContentData[1]["content_title_en"];
+	$philosophy = $allContentData[1]["content_desc_en"];
 
-	$philosophyName = $allContentData[2]["content_title_en"];
-	$philosophy = $allContentData[2]["content_desc_en"];
+	$vacName = $allContentData[2]["content_title_en"];
+	$vac = $allContentData[2]["content_desc_en"];
 
-	$vacName = $allContentData[3]["content_title_en"];
-	$vac = $allContentData[3]["content_desc_en"];
+	$missionName = $allContentData[4]["content_title_en"];
+	$mission = $allContentData[4]["content_desc_en"];
 
-	$missionName = $allContentData[9]["content_title_en"];
-	$mission = $allContentData[9]["content_desc_en"];
+	$visionName = $allContentData[5]["content_title_en"];
+	$vision = $allContentData[5]["content_desc_en"];
 
-	$visionName = $allContentData[10]["content_title_en"];
-	$vision = $allContentData[10]["content_desc_en"];
+	$commitmentName = $allContentData[6]["content_title_en"];
+	$commitment = $allContentData[6]["content_desc_en"];
 
-	$commitmentName = $allContentData[11]["content_title_en"];
-	$commitment = $allContentData[11]["content_desc_en"];
-
-	$singaporeAirlinesName = $allContentData[12]["content_title_en"];
-	$singaporeAirlines = $allContentData[12]["content_desc_en"];
+	$singaporeAirlinesName = $allContentData[7]["content_title_en"];
+	$singaporeAirlines = $allContentData[7]["content_desc_en"];
 }
 if($finalLang == "ar")
 { 
 	$welcomeName = $allContentData[0]["content_title_ar"];
 	$welcome = $allContentData[0]["content_desc_ar"];
 
-	$managementTeamName = $allContentData[1]["content_title_ar"];
-	$managementTeam = $allContentData[1]["content_desc_ar"];
+	$philosophyName = $allContentData[1]["content_title_ar"];
+	$philosophy = $allContentData[1]["content_desc_ar"];
 
-	$philosophyName = $allContentData[2]["content_title_ar"];
-	$philosophy = $allContentData[2]["content_desc_ar"];
+	$vacName = $allContentData[2]["content_title_ar"];
+	$vac = $allContentData[2]["content_desc_ar"];
 
-	$vacName = $allContentData[3]["content_title_ar"];
-	$vac = $allContentData[3]["content_desc_ar"];
+	$missionName = $allContentData[4]["content_title_ar"];
+	$mission = $allContentData[4]["content_desc_ar"];
 
-	$missionName = $allContentData[9]["content_title_ar"];
-	$mission = $allContentData[9]["content_desc_ar"];
+	$visionName = $allContentData[5]["content_title_ar"];
+	$vision = $allContentData[5]["content_desc_ar"];
 
-	$visionName = $allContentData[10]["content_title_ar"];
-	$vision = $allContentData[10]["content_desc_ar"];
+	$commitmentName = $allContentData[6]["content_title_ar"];
+	$commitment = $allContentData[6]["content_desc_ar"];
 
-	$commitmentName = $allContentData[11]["content_title_ar"];
-	$commitment = $allContentData[11]["content_desc_ar"];
-
-	$singaporeAirlinesName = $allContentData[12]["content_title_ar"];
-	$singaporeAirlines = $allContentData[12]["content_desc_ar"];
+	$singaporeAirlinesName = $allContentData[7]["content_title_ar"];
+	$singaporeAirlines = $allContentData[7]["content_desc_ar"];
 }
 ?>
 
@@ -140,8 +134,8 @@ if($finalLang == "ar")
 
 <div id="loading">
 	<div id="loading-container">
-		<img id="siteLogo" src="images/lgonewblack.png"><br/><br/>
-		<img id="loading-image" src="images/loader6.gif" alt="Loading..." /><br/>
+		<img id="siteLogo" src="images/logo/mawaredhouse_logo.png"><br/><br/>
+		<img id="loading-image" src="images/logo/mawaredhouse_loader.gif" alt="Loading..." /><br/>
 		<p id="loading-caption" class="hidden">Loading... </p>
 	</div>
 </div>
@@ -174,7 +168,7 @@ if($finalLang == "ar")
 	</ol>
 	<div class="carousel-inner" role="listbox">
 		<div id="carouselItem1" class="item active">
-			<div style="background-image:url(slider/kuwait.jpg);background-size:cover;background-position:center bottom;"></div>
+			<div style="background-image:url(images/sliders/mawaredhouse-slider-1.jpg);background-size:cover;background-position:center bottom;"></div>
 			<div class="container">
 				<div id="ci1cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
@@ -209,7 +203,7 @@ if($finalLang == "ar")
 		</div>
 
 		<div id="carouselItem2"  class="item">
-			<div style="background-image:url(slider/2.jpg);background-size:cover;background-position:center bottom"></div>
+			<div style="background-image:url(images/sliders/mawaredhouse-slider-2.jpg);background-size:cover;background-position:center bottom"></div>
 			<div class="container">
 				<div id="ci2cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
@@ -221,7 +215,7 @@ if($finalLang == "ar")
 			</div>
 		</div>
 		<div id="carouselItem3"  class="item">
-			<div style="background-image:url(slider/3.jpg);background-size:cover;background-position:center bottom"></div>
+			<div style="background-image:url(images/sliders/mawaredhouse-slider-3.jpg);background-size:cover;background-position:center bottom"></div>
 			<div class="container">
 				<div id="ci3cc" class="carousel-caption">
 					<blockquote class="blockquote-reverse">
@@ -238,7 +232,7 @@ if($finalLang == "ar")
 			</div>
 		</div>
 		<div id="carouselItem4"  class="item">
-			<div style="background-image:url(slider/4th.jpg);background-size:cover;background-position:center bottom"></div>
+			<div style="background-image:url(images/sliders/mawaredhouse-slider-4.jpg);background-size:cover;background-position:center bottom"></div>
 		</div>
 		<div id="carouselItem5"  class="item">
 			<div id="slider5Collage"></div>
@@ -339,7 +333,7 @@ if($finalLang == "ar")
 	</section>
 	<style type="text/css">
 		#singaporeAirlines {
-			background-image: url(image/singapore.jpg);
+			background-image: url(images/site/singapore.jpg);
 			background-size: cover;
 			background-position:center top;
 			background-attachment: fixed;
@@ -557,8 +551,7 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 					<li class="<?php if($i==0) echo "active" ?> news-list-content">
 						<a data-toggle="pill" href="#menu<?php echo $i+1?>">
 							<div class="row">
-								<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="news/<?php echo 
-$allNewsData[$i]["news_photo"]?>"> </div>
+								<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="images/news/<?php echo $allNewsData[$i]["news_photo"]?>"> </div>
 								<div class="col-xs-7 col-sm-8">
 									<p class="news-list-title"> 
 										<?php 
@@ -584,7 +577,7 @@ $allNewsData[$i]["news_photo"]?>"> </div>
 					<div id="menu<?echo $i+1?>" class="tab-pane fade in <?php if($i==0) echo "active" ?>">
 						<div class="row">
 							<div class="col-lg-7 news-image">
-								<div class="imageContainer specificImageSettings" style="background-image:url(news/<?php echo $allNewsData[$i]["news_photo"]?>);"></div>
+								<div class="imageContainer specificImageSettings" style="background-image:url(images/news/<?php echo $allNewsData[$i]["news_photo"]?>);"></div>
 							</div>
 							<div class="col-lg-5 news-content">
 								<h3 class="news-title">
@@ -633,7 +626,7 @@ $allNewsData[$i]["news_photo"]?>"> </div>
 						<div class="omgt-image">
 							<div class="hexagon hexagon2">
 								<div class="hexagon-in1">
-									<div class="hexagon-in2" style="background-image: url(team/<?php echo $allMagtTeamData[$i]["about_image"]?>)"></div>
+									<div class="hexagon-in2" style="background-image: url(images/team/<?php echo $allMagtTeamData[$i]["about_image"]?>)"></div>
 								</div>
 							</div>
 						</div>
@@ -767,7 +760,7 @@ $coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696",
 							<i class="fa fa-angle-double-right" aria-hidden="true"></i>
 						</div>
 					</div>
-					<img src="team/<?php echo $allEmployeeTeamData[$employeeNo]["about_image"]?>" alt="
+					<img src="images/team/<?php echo $allEmployeeTeamData[$employeeNo]["about_image"]?>" alt="
 					<?php
 					if ($finalLang == "en") echo $allEmployeeTeamData[$employeeNo]["about_title_en"];
 					else echo $allEmployeeTeamData[$employeeNo]["about_title_ar"];
@@ -841,7 +834,7 @@ $coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696",
 					<div class="contry-con1">
 						<div class="flagwave"></div>
 						<div class="clientss-image">
-							<img src="flags/<?php echo $allClientsData[$i]["countries_flag"]?>">	
+							<img src="images/flags/<?php echo $allClientsData[$i]["countries_flag"]?>">	
 						</div>
 						<div class="clientss-name">
 							<p><?php if($finalLang == "en") { echo $allClientsData[$i]["countries_title_en"]; } else { echo $allClientsData[$i]["countries_title_ar"]; }?></p>
