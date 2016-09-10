@@ -849,7 +849,6 @@ $coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696",
 	</div>
 </div>
 
-<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBygc9FtuNgR_pyjs_FAt6d4p3DHhIoFII&callback=initMap"
 type="text/javascript"></script>
 

@@ -46,7 +46,6 @@
 	<link rel="stylesheet" type="text/css" href="css/content_slider_style.css">
 	<link rel="stylesheet" type="text/css" href="css/nanoscroller.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
-	<link rel="stylesheet" type="text/css" href="33535gillsansmt/font.css">
 
 	<script src="js/main-6e0cc465.js"></script>
 	<script src="js/process-1d1f249e.js"></script>
