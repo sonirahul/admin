@@ -196,7 +196,7 @@ body {
 	#singapore-info br {display: none !important}
 	#singapore-info>div a {float: left;}
 	
-	#carouselItem4>div{background-image:url(../slider/4th_320.jpg) !important}
+	#carouselItem4>div{background-image:url(../images/sliders/4th_320.jpg) !important}
 	#contact>div>div>h2{margin-top:40px;margin-bottom:20px;}
 	#contactView i {color: #fff;}
 }
@@ -206,7 +206,7 @@ body {
 	#ci1cc{top:42% !important}
 	#ci2cc{top:42% !important}
 	#ci3cc{top:12% !important}
-	#carouselItem4>div{background-image:url(../slider/4th_360.jpg) !important}	
+	#carouselItem4>div{background-image:url(../images/sliders/4th_360.jpg) !important}	
 }
 
 @media only screen and (min-width:390px) and (max-width: 480px){
@@ -580,23 +580,23 @@ body{overflow-x:hidden;}
 
 
 @media only screen and (min-width:320px) and (max-width:359px){
-	#slider5Collage{background-image:url(../slider/5th/5th_320_480.jpg);background-size:cover;background-position:center}
+	#slider5Collage{background-image:url(../images/sliders/5th_320_480.jpg);background-size:cover;background-position:center}
 	#singaporeAirlines {background-image: url(../images/site/singapore_320.jpg) !Important}
 }
 @media only screen and (min-width:360px) and (max-width:409px){
-	#slider5Collage{background-image:url(../slider/5th/5th_360_640.jpg);background-size:cover;background-position:center}
+	#slider5Collage{background-image:url(../images/sliders/5th_360_640.jpg);background-size:cover;background-position:center}
 	#singaporeAirlines {background-image: url(../images/site/singapore_360.jpg) !Important}
 }
 @media only screen and (min-width:410px) and (max-width:767px){
-	#slider5Collage{background-image:url(../slider/5th/5th_412_730.jpg);background-size:cover;background-position:center}
+	#slider5Collage{background-image:url(../images/sliders/5th_412_730.jpg);background-size:cover;background-position:center}
 	#singaporeAirlines {background-image: url(../images/site/singapore_360.jpg) !Important}
 }
 @media only screen and (min-width:768px) and (max-width:799px) and (orientation:portrait){
-	#slider5Collage{background-image:url(../slider/5th/5th_768_1024.jpg);background-size:cover;background-position:center}
+	#slider5Collage{background-image:url(../images/sliders/5th_768_1024.jpg);background-size:cover;background-position:center}
 	#singaporeAirlines {background-image: url(../images/site/singapore.jpg) !Important}
 }
 @media only screen and (min-width:768px) and (max-width:1023px) and (orientation:landscape){
-	#slider5Collage{background-image:url(../slider/5th/5th_4_3.jpg.jpg);background-size:cover;background-position:center}
+	#slider5Collage{background-image:url(../images/sliders/5th_4_3.jpg.jpg);background-size:cover;background-position:center}
 	#singaporeAirlines {background-image: url(../images/site/singapore.jpg) !Important}
 }
 @media only screen and (min-width:800px) and (orientation:portrait){
