@@ -834,7 +834,7 @@ $coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696",
 					<div class="contry-con1">
 						<div class="flagwave"></div>
 						<div class="clientss-image">
-							<img src="images/flags/<?php echo $allClientsData[$i]["countries_flag"]?>">	
+							<img class="lazy" data-original="images/flags/<?php echo $allClientsData[$i]["countries_flag"]?>">	
 						</div>
 						<div class="clientss-name">
 							<p><?php if($finalLang == "en") { echo $allClientsData[$i]["countries_title_en"]; } else { echo $allClientsData[$i]["countries_title_ar"]; }?></p>
