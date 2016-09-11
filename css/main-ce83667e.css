@@ -2438,7 +2438,8 @@ h1{font-size:34px}
 h2{font-size:24px}
 h3{font-size:16px}
 h4{font-size:12px}
-}@font-face{font-family:myFirstFont;src:url(../font/Allura-Regular.ttf)}
+}
+
 .img-responsive.photo-gallery{height:7em}
 
 /*#lang{position:absolute;top:12px;z-index:9999;right:160px}*/
