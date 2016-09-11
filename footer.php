@@ -172,9 +172,9 @@
 <script src="js/jquery.lazyload.min.js?v=1.9.7"></script>
 <script>
 $(function() {
-	$("img.lazy,div.lazy,section.lazy").lazyload({
+	$("img.lazy,div.lazy,section.lazy,.team-mem img").lazyload({
 		effect : "fadeIn",
-		threshold : 200,
+		threshold : 300,
 		failure_limit : 10,
 		skip_invisible : true
 	});

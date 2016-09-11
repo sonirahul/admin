@@ -628,7 +628,7 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 						<div class="omgt-image">
 							<div class="hexagon hexagon2">
 								<div class="hexagon-in1">
-									<div class="hexagon-in2" style="background-image: url(images/team/<?php echo $allMagtTeamData[$i]["about_image"]?>)"></div>
+									<div class="hexagon-in2 lazy" data-original="images/team/<?php echo $allMagtTeamData[$i]["about_image"]?>"></div>
 								</div>
 							</div>
 						</div>
@@ -762,7 +762,7 @@ $coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696",
 							<i class="fa fa-angle-double-right" aria-hidden="true"></i>
 						</div>
 					</div>
-					<img src="images/team/<?php echo $allEmployeeTeamData[$employeeNo]["about_image"]?>" alt="
+					<img data-original="images/team/<?php echo $allEmployeeTeamData[$employeeNo]["about_image"]?>" src="images/others/dot.png" alt="
 					<?php
 					if ($finalLang == "en") echo $allEmployeeTeamData[$employeeNo]["about_title_en"];
 					else echo $allEmployeeTeamData[$employeeNo]["about_title_ar"];
