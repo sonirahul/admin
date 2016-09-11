@@ -168,6 +168,19 @@
 </div>
 
 
+<!-- ENABLING LAZY LOAD -->
+<script src="js/jquery.lazyload.min.js?v=1.9.7"></script>
+<script>
+$(function() {
+	$("img.lazy,div.lazy,section.lazy").lazyload({
+		effect : "fadeIn",
+		threshold : 200,
+		failure_limit : 10,
+		skip_invisible : true
+	});
+});
+</script>
+
 
 <!--lang-->
 <script type="text/javascript">
@@ -273,4 +286,5 @@ return (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|e
 
 	});
 </script>
+
 

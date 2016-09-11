@@ -333,7 +333,7 @@ if($finalLang == "ar")
 	</section>
 	<style type="text/css">
 		#singaporeAirlines {
-			background-image: url(images/site/singapore.jpg);
+			//background-image: url(images/site/singapore.jpg);
 			background-size: cover;
 			background-position:center top;
 			background-attachment: fixed;
@@ -343,7 +343,7 @@ if($finalLang == "ar")
 		#singaporeAirlines h2,#singaporeAirlines #saContent p,#singaporeAirlines #saContent a{color:#fff ;text-shadow:0 0 3px #666}
 	</style>
 
-	<section id="singaporeAirlines" class="section container-fluid">
+	<section id="singaporeAirlines" class="lazy section container-fluid" data-original="images/site/singapore.jpg">
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<h2 class="mh-text-colored hidden"><?php echo $singaporeAirlinesName ?></h2>
@@ -456,7 +456,7 @@ if($finalLang == "ar")
 			</div>
 			<div class='section-1 dt-height'>
 				<div id='section-1-wrapper'>
-					<div id='section-1'></div>
+					<div id='section-1' class="lazy" data-original="images/site/philosophy.jpg"></div>
 				</div>
 				<div class='process-content red col-md-5' data-section='1' id='research-content'>
 					<i class='icon-research'></i>
@@ -466,7 +466,7 @@ if($finalLang == "ar")
 			</div>
 			<div class='section-2 dt-height'>
 				<div id='section-2-wrapper'>
-					<div id='section-2'></div>
+					<div id='section-2' class="lazy" data-original="images/site/mission.jpg"></div>
 				</div>
 				<div class='process-content yellow col-md-5 col-md-offset-7' data-section='2'>
 					<i class='icon-strategy'></i>
@@ -476,7 +476,7 @@ if($finalLang == "ar")
 			</div>
 			<div class='section-3 dt-height'>
 				<div id='section-3-wrapper'>
-					<div id='section-3'></div>
+					<div id='section-3' class="lazy" data-original="images/site/commitment.jpg"></div>
 				</div>
 				<div class='process-content green col-md-5 col-md-offset-7' data-section='3'>
 					<i class='icon-wrench'></i>
@@ -486,7 +486,7 @@ if($finalLang == "ar")
 			</div>
 			<div class='section-4 dt-height'>
 				<div id='section-4-wrapper'>
-					<div id='section-4'></div>
+					<div id='section-4' class="lazy" data-original="images/site/vision.jpg"></div>
 				</div>
 				<div class='process-content blue col-md-5' data-section='4'>
 					<i class='icon-graph'></i>
@@ -551,7 +551,9 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 					<li class="<?php if($i==0) echo "active" ?> news-list-content">
 						<a data-toggle="pill" href="#menu<?php echo $i+1?>">
 							<div class="row">
-								<div class="col-xs-5 col-sm-4 news-image-column"> <img class="news-list-image" src="images/news/<?php echo $allNewsData[$i]["news_photo"]?>"> </div>
+								<div class="col-xs-5 col-sm-4 news-image-column">
+									<img class="lazy news-list-image" data-original="images/news/<?php echo $allNewsData[$i]["news_photo"]?>">
+								</div>
 								<div class="col-xs-7 col-sm-8">
 									<p class="news-list-title"> 
 										<?php 

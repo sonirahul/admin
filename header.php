@@ -58,18 +58,6 @@
 	<script src="js/jquery.nanoscroller.min.js"></script>
 	
 	
-<!-- ENABLING LAZY LOAD -->
-<script src="js/jquery.lazyload.min.js?v=1.9.7"></script>
-<script>
-$(function() {
-	$("img.lazy").lazyload({
-		effect : "fadeIn",
-		threshold : 200,
-		failure_limit : 10,
-		skip_invisible : true
-	});
-});
-</script>
 	
 	<?php 
 		$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
