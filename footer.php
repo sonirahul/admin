@@ -283,7 +283,6 @@ return (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|e
 <script type="text/javascript">
 	$(function(){
 		$(".nano").nanoScroller();
-
 	});
 </script>
 
