@@ -38,22 +38,16 @@
 	<meta content='Mawared House | Local Presence Global Support' property='og:title'>
 	<meta content="Local Presence Global Support" property='og:description'>
 
-	<!--<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>-->
-	<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
-	<link href='css/main-ce83667e.css' rel='stylesheet'>
-	<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet'>
-	<link href='css/responsive.css' rel='stylesheet'>
-
-	<!--
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main-ce83667e.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="css/content_slider_style.css">
 	<link rel="stylesheet" type="text/css" href="css/nanoscroller.css">
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">-->
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 
-	<!--<script src="js/main-6e0cc465.js"></script>
+	<script src="js/main-6e0cc465.js"></script>
 	<script src="js/process-1d1f249e.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -61,38 +55,13 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="js/jquery.content_slider.min.js"></script>
 	<script src="js/jquery.mousewheel.js"></script>
-	<script src="js/jquery.nanoscroller.min.js"></script>-->
+	<script src="js/jquery.nanoscroller.min.js"></script>
 	
 	
 	
 	<?php 
 		$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-		$rootUrl = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
-		
-		if ( (strpos($url,'index.php') !== false) || ($url==$rootUrl) || (strpos($url,($rootUrl . '#')) !== false )) { 
-			echo "<script src='js/main-6e0cc465.js'></script>";
-			echo "<script src='js/process-1d1f249e.js'></script>";
-			echo "<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
-			<script src='js/jquery.mousewheel.js'></script>
-			";
-			
-			echo "<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>";
-			echo "<script src='js/jquery.nanoscroller.min.js'></script>";
-		}
-
-		if (strpos($url,'coo.php') !== false) {
-			echo "<link rel='stylesheet' id='flik_timeline-flik-css-css' href='css/flik-timeline.min.css' type='text/css' media='all'>";
-			
-			echo "<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>";
-			echo "<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>";
-			echo "<script type='text/javascript' src='js/jquery.magnific-popup.min.js'></script>";
-			echo "<script type='text/javascript' src='js/jquery.overscroll.min.js'></script>";
-			echo "<script type='text/javascript' src='js/flik-timeline.js'></script>";
-			echo "<script type='text/javascript' src='js/jquery.bxslider.min.js'></script>";
-			echo "<script src='js/jquery.nanoscroller.min.js'></script>";
-		}
-
-		if (strpos($url,'gallery.php') !== false) { 
+		if (strpos($url,'coo.php') !== false) { 
 			echo "<script type='text/javascript' src='js/jquery.magnific-popup.min.js'></script>";
 			echo "<script type='text/javascript' src='js/jquery.overscroll.min.js'></script>";
 			echo "<script type='text/javascript' src='js/flik-timeline.js'></script>";
