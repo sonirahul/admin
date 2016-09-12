@@ -69,7 +69,7 @@
 			echo "<link rel='stylesheet' id='flik_timeline-flik-css-css' href='css/flik-timeline.min.css' type='text/css' media='all'>";
 		}
 	?>
-<?php include "lang\\".$finalLang."\i18.php"; ?>
+<?php include "lang/".$finalLang."/i18.php"; ?>
 
 </head>
 <body data-logo-color='light' data-nav-color='light' data-overlay-id='false' data-overlay-open='false' data-page='process' data-section='unity'>
