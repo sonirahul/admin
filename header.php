@@ -37,7 +37,8 @@
 	<meta content="Local Presence Global Support" name='twitter:description'>
 	<meta content='Mawared House | Local Presence Global Support' property='og:title'>
 	<meta content="Local Presence Global Support" property='og:description'>
-
+	<link rel="shortcut icon" href="/images/logo/favicon.png" type="image/png" />
+	
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'  media="none" onload="if(media!='all')media='all'">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" media="none" onload="if(media!='all')media='all'">
 	<link rel="stylesheet" type="text/css" href="css/main-ce83667e.css" media="screen"  media="none" onload="if(media!='all')media='all'">
