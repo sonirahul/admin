@@ -39,7 +39,6 @@ $commitment = $allContentData[6]["content_desc_" . $finalLang];
 
 $singaporeAirlinesName = $allContentData[7]["content_title_" . $finalLang];
 $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
-
 ?>
 	
 <style>
