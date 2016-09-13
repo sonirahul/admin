@@ -23,7 +23,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- <meta charset='utf-8'> -->
 	<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
  	<!--<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">-->
  	<meta charset="utf-8">
@@ -48,35 +47,11 @@
 	<link rel="stylesheet" type="text/css" href="css/nanoscroller.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 
-	<script src="js/main-6e0cc465.js"></script>
-	<script src="js/process-1d1f249e.js"></script>
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-	<script src="js/modernizr-custom.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="js/jquery.content_slider.min.js"></script>
-	<script src="js/jquery.mousewheel.js"></script>
-	<script src="js/jquery.nanoscroller.min.js"></script>
-	
-	
-	
-	<?php 
-		$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-		if (strpos($url,'coo.php') !== false) { 
-			echo "<script type='text/javascript' src='js/jquery.magnific-popup.min.js'></script>";
-			echo "<script type='text/javascript' src='js/jquery.overscroll.min.js'></script>";
-			echo "<script type='text/javascript' src='js/flik-timeline.js'></script>";
-			echo "<script type='text/javascript' src='js/jquery.bxslider.min.js'></script>";
-			echo "<link rel='stylesheet' id='flik_timeline-flik-css-css' href='css/flik-timeline.min.css' type='text/css' media='all'>";
-		}
-	?>
 <?php include "lang/".$finalLang."/i18.php"; ?>
 
 </head>
 <body data-logo-color='light' data-nav-color='light' data-overlay-id='false' data-overlay-open='false' data-page='process' data-section='unity'>
 	<?php include "function.php";?>
-
-	
 
 	<section class='nav-bar container-fluid scroll-up' id='navbar'>
 		<div class='nav-bar-inner'>
@@ -94,7 +69,6 @@
 		</div>
 	</section>
 
-
 	<form id="langForm" name="langForm" method="post" >
 		<input type="hidden" name="Action">
 		<input type="hidden" name="lang">
@@ -111,13 +85,3 @@
 		</div>
 	</form>
 
-	<script type="text/javascript">
-		$(function(){
-			$(".langSelect").on("click",function(){
-				console.log(  $(this).attr("lang")    );
-				document.forms["langForm"].elements["Action"].value = "changeLang";
-				document.forms["langForm"].elements["lang"].value = $(this).attr("lang");
-				document.forms["langForm"].submit();
-			});
-		});
-	</script>

@@ -4,14 +4,6 @@ LoadModule deflate_module modules/mod_deflate.so
 LoadModule filter_module modules/mod_filter.so
 -->
 
-<!--
-Pending Admin side work1
-1. Philosophy mission vision commitment should have seperate rows.
-	photo for management team ka option in db nahi hai ?
-2. Normal Team member data is static . usko dynamic krna hai ya nai ?
-3. Australia flag missing 
--->
-
 <?php include "header.php";?>
 <?php  
 $SQLforMagtTeam="select * from about where about_team_type = 'management'";
@@ -27,110 +19,39 @@ $allClientsData=select_query($link,$SQLforClients,0,0);
 $allNewsData=select_query($link,$SQLforNews,0,0);
 $allStatsData=select_query($link,$SQLforStats,0,0);
 
+$welcomeName = $allContentData[0]["content_title_" . $finalLang];
+$welcome = $allContentData[0]["content_desc_" . $finalLang];
 
-if($finalLang == "en")
-{
-	$welcomeName = $allContentData[0]["content_title_en"];
-	$welcome = $allContentData[0]["content_desc_en"];
+$philosophyName = $allContentData[1]["content_title_" . $finalLang];
+$philosophy = $allContentData[1]["content_desc_" . $finalLang];
 
-	$philosophyName = $allContentData[1]["content_title_en"];
-	$philosophy = $allContentData[1]["content_desc_en"];
+$vacName = $allContentData[2]["content_title_" . $finalLang];
+$vac = $allContentData[2]["content_desc_" . $finalLang];
 
-	$vacName = $allContentData[2]["content_title_en"];
-	$vac = $allContentData[2]["content_desc_en"];
+$missionName = $allContentData[4]["content_title_" . $finalLang];
+$mission = $allContentData[4]["content_desc_" . $finalLang];
 
-	$missionName = $allContentData[4]["content_title_en"];
-	$mission = $allContentData[4]["content_desc_en"];
+$visionName = $allContentData[5]["content_title_" . $finalLang];
+$vision = $allContentData[5]["content_desc_" . $finalLang];
 
-	$visionName = $allContentData[5]["content_title_en"];
-	$vision = $allContentData[5]["content_desc_en"];
+$commitmentName = $allContentData[6]["content_title_" . $finalLang];
+$commitment = $allContentData[6]["content_desc_" . $finalLang];
 
-	$commitmentName = $allContentData[6]["content_title_en"];
-	$commitment = $allContentData[6]["content_desc_en"];
+$singaporeAirlinesName = $allContentData[7]["content_title_" . $finalLang];
+$singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 
-	$singaporeAirlinesName = $allContentData[7]["content_title_en"];
-	$singaporeAirlines = $allContentData[7]["content_desc_en"];
-}
-if($finalLang == "ar")
-{ 
-	$welcomeName = $allContentData[0]["content_title_ar"];
-	$welcome = $allContentData[0]["content_desc_ar"];
-
-	$philosophyName = $allContentData[1]["content_title_ar"];
-	$philosophy = $allContentData[1]["content_desc_ar"];
-
-	$vacName = $allContentData[2]["content_title_ar"];
-	$vac = $allContentData[2]["content_desc_ar"];
-
-	$missionName = $allContentData[4]["content_title_ar"];
-	$mission = $allContentData[4]["content_desc_ar"];
-
-	$visionName = $allContentData[5]["content_title_ar"];
-	$vision = $allContentData[5]["content_desc_ar"];
-
-	$commitmentName = $allContentData[6]["content_title_ar"];
-	$commitment = $allContentData[6]["content_desc_ar"];
-
-	$singaporeAirlinesName = $allContentData[7]["content_title_ar"];
-	$singaporeAirlines = $allContentData[7]["content_desc_ar"];
-}
 ?>
-
-<!-- navbar -->
-<script type="text/javascript">
-	$(function(){
-		$(window).scroll(function() {
-			var navbarCurrentPos = $("section.nav-bar").offset().top;
-			var welcomePos = $("#myCarousel").height() - $("section.nav-bar").height();
-			var winTop = $(window).scrollTop();
-			if (winTop > welcomePos) {
-			//slided down below the landing home screen (slider 1)
-			$(".nav-bar .identity").addClass("responsive");
-			$(".nav-bar").css("position","fixed").fadeIn();
-			$("section.nav-bar").addClass("hide-nav");
-			$("#langForm").addClass("when-slided");
-		}
-		else
-		{
-			$(".nav-bar .identity").removeClass("responsive");
-			$(".nav-bar").css("position","absolute");
-			$("section.nav-bar").removeClass("hide-nav");
-			$("#langForm").removeClass("when-slided");
-		}
-	});
-	});
-</script>
-<script type="text/javascript">
-	$(function(){
-		$(window).scroll(function() {
-			var winTop = $(window).scrollTop();
-			var magtTeamPos = $("#mgtTeamMain2").offset().top - $("#mgtTeamMain2").height();
-			if (winTop > magtTeamPos) {
-				$(".mgtTeamMain2Row").addClass("mgtTeamMain2RowSupr");
-			}
-		});
-	});
-</script>
-<script type="text/javascript">
-	$(function(){
-		$(window).scroll(function() {
-			var winTop = $(window).scrollTop();
-			var ourTeamPos = $("#mgtTeam").offset().top - $("#mgtTeam").height()/2;
-			if (winTop > ourTeamPos) {
-				$("#mgtTeam").addClass("effect");
-			}
-		});
-	});
-</script>
-<!-- Complete Loader -->	
+	
 <style>
-	#loading{width:100%;height:100%;top:0;left:0;position:fixed;display:block;opacity:1.0;background-color:#000;background:linear-gradient(45deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);background:#fff;z-index:999999999;text-align:center}
-	#loading-container {position: absolute;top: 50%;left: 50%;margin-top: -75px;margin-left: -75px;}
-	#siteLogo{width:150px;}
-	#loading-image {z-index: 100;}
-	#loading-caption{width:100%;text-align: center;color: #6c6e71;}
+#loading{width:100%;height:100%;top:0;left:0;position:fixed;display:block;opacity:1.0;background-color:#000;background:linear-gradient(45deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);background:#fff;z-index:999999999;text-align:center}
+#loading-container{position:absolute;top:50%;left:50%;margin-top:-75px;margin-left:-75px}
+#siteLogo{width:150px}
+#loading-image{z-index:100}
+#loading-caption{width:100%;text-align:center;color:#6c6e71}
+.carousel-inner .item>div,.carousel{width:100%;height:100vh}
+#singaporeAirlines{//background-image:url(images/site/singapore.jpg);background-size:cover;background-position:center top;background-attachment:fixed;background-color:rgba(0,0,0,0.30);background-blend-mode:multiply}
+#singaporeAirlines h2,#singaporeAirlines #saContent p,#singaporeAirlines #saContent a{color:#fff;text-shadow:0 0 3px #666}
 </style>
-
 
 <div id="loading">
 	<div id="loading-container">
@@ -139,24 +60,8 @@ if($finalLang == "ar")
 		<p id="loading-caption" class="hidden">Loading... </p>
 	</div>
 </div>
-<script type="text/javascript">
-	$(window).load(function() {
-		$('#loading').fadeOut();
-		$('.carousel-inner>.item').addClass("activated");
-		$("li.scroll-animated-item").addClass("blocks-anim");
-		$(".home-main-content").addClass("active");
-		initStats(2000);
-		// defined in footer.php in block count js at line 168
-	});
-</script>
 
-
-
-<style type="text/css">
-	.carousel-inner .item>div,.carousel{width:100%;height:100vh}
-</style>
-
-<!-- ravi // add class slide ...to make it slide from right to left -->
+<!--add class slide ...to make it slide from right to left -->
 <div id="myCarousel" class="carousel" data-ride="carousel">
 	<!-- Indicators -->
 	<ol class="carousel-indicators">
@@ -286,13 +191,6 @@ if($finalLang == "ar")
 	</script>
 </div>
 
-<!-- setting fixed height throught javascript instead of viewport -->
-<script type="text/javascript">
-	finalHeight=window.innerHeight;
-	$(".carousel-inner .item>div,.carousel").css("height",finalHeight)
-</script>
-
-
 <div class='main clearfix div-bg5' id='main'>
 	<section id='do-dont-process'>
 		<div class='container'>
@@ -331,17 +229,6 @@ if($finalLang == "ar")
 			</div>
 		</div>
 	</section>
-	<style type="text/css">
-		#singaporeAirlines {
-			//background-image: url(images/site/singapore.jpg);
-			background-size: cover;
-			background-position:center top;
-			background-attachment: fixed;
-			background-color: rgba(0, 0, 0, 0.30);
-			background-blend-mode: multiply;
-		}
-		#singaporeAirlines h2,#singaporeAirlines #saContent p,#singaporeAirlines #saContent a{color:#fff ;text-shadow:0 0 3px #666}
-	</style>
 
 	<section id="singaporeAirlines" class="lazy section container-fluid" data-original="images/site/singapore.jpg">
 		<div class="row">
@@ -360,10 +247,6 @@ if($finalLang == "ar")
 		<div class='container'>
 			<div class='row row-centered' id='let-us-help-you'>
 				<div class='col-sm-12 <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
-					<!--<h2  class="mh-text-no-underline">
-						<i class="fa fa-newspaper-o fa-lg mh-icon-colored" aria-hidden="true"></i>
-						<span class="mh-text-colored-with-underline">News And Events</span>
-					</h2>-->
 					<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>" style="text-decoration: none">
 						<i class="fa fa-plane fa-lg about-us" aria-hidden="true"></i>
 						<span style="text-decoration: underline"><?php echo $welcomeName ?></span>
@@ -372,30 +255,7 @@ if($finalLang == "ar")
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$(".mh-text-no-underline").hover(function(){
-						$( this ).children( 'i' ).css("color", "#F99F1C");
-					}, function(){
-						if($( this ).children( 'i' ).hasClass("about-us")) {
-							$( this ).children( 'i' ).css("color", "#FFF");
-						}
-						else {
-							$( this ).children( 'i' ).css("color", "rgba(4,48,95,0.89)");
-						}
-				});
-				$(".block-stats li").hover(function(){
-						
-						$( this ).children( '.type' ).css("color", "#F99F1C");
-						$( this ).children( '.num' ).css("color", "#F99F1C");
-						$( this ).children( '.type' ).css("color", "#234973");
-						$( this ).children( '.num' ).css("color", "#234973");
-					}, function(){
-						$( this ).children( '.type' ).css("color", "lightblue");
-						$( this ).children( '.num' ).css("color", "#eaeff3");
-				});
-			});
-		</script>
+
 		<div class='container'>
 			<div class='row row-centered blocks'>
 				<div class='block red' id='block-one'>
@@ -441,6 +301,7 @@ if($finalLang == "ar")
 			</div>
 		</div>
 	</section>
+
 	<section class='dt-difference' data-active='zero' id='process'>
 		<span class='lava-lamp'></span>
 		<div class='steps'>
@@ -557,8 +418,8 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 								<div class="col-xs-7 col-sm-8">
 									<p class="news-list-title"> 
 										<?php 
-										if ($finalLang == "en") echo $allNewsData[$i]["news_title_en"];
-										else echo $allNewsData[$i]["news_title_ar"];?>
+										echo $allNewsData[$i]["news_title_" . $finalLang];
+										?>
 
 									</p>
 								</div>
@@ -584,14 +445,12 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 							<div class="col-lg-5 news-content">
 								<h3 class="news-title">
 									<?php 
-									if ($finalLang == "en") echo $allNewsData[$i]["news_title_en"];
-									else echo $allNewsData[$i]["news_title_ar"];
+									echo $allNewsData[$i]["news_title_" . $finalLang];
 									?>
 								</h3>
 								<div class="news-desc">
 									<?php 
-									if ($finalLang == "en") echo $allNewsData[$i]["news_desc_en"];
-									else echo $allNewsData[$i]["news_desc_ar"];
+									echo $allNewsData[$i]["news_desc_" . $finalLang];
 									?>
 								</div>
 							</div>
@@ -634,22 +493,19 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 						</div>
 						<div class="omgt-name <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 							<?php 
-							if ($finalLang == "en") echo $allMagtTeamData[$i]["about_title_en"];
-							else echo $allMagtTeamData[$i]["about_title_ar"];
+							echo $allMagtTeamData[$i]["about_title_" . $finalLang];
 							?>
 
 						</div>
 						<div class="omgt-pos <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 							<?php 
-							if ($finalLang == "en") echo $allMagtTeamData[$i]["about_jobtitle_en"];
-							else  echo $allMagtTeamData[$i]["about_jobtitle_ar"];
+							echo $allMagtTeamData[$i]["about_jobtitle_" . $finalLang];
 							?>
 
 						</div>
 						<div class="omgt-Content <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 							<?php 
-							if ($finalLang == "en") echo $allMagtTeamData[$i]["about_desc_en"];
-							else  echo $allMagtTeamData[$i]["about_desc_ar"];
+							echo $allMagtTeamData[$i]["about_desc_" . $finalLang];
 							?>
 						</div>
 					</div>
@@ -662,7 +518,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 
 		</div>
 	</div>
-
 </div>
 
 <div id="mgtTeam" class="section">
@@ -677,128 +532,105 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		</div>
 	</div>
 
-	<?php
-			$countFromDB=count($allEmployeeTeamData);
-			$boxes = intval($countFromDB/3);
-			
-			$widthEachBox = 2;
-			$totalWidth = 12;
-			$total = ($countFromDB + $boxes) * $widthEachBox;
-			
-			$multFactor = fmod($total,$totalWidth);
-			$missingCount = 0;
+<?php
+	$countFromDB=count($allEmployeeTeamData);
+	$boxes = intval($countFromDB/3);
+	
+	$widthEachBox = 2;
+	$totalWidth = 12;
+	$total = ($countFromDB + $boxes) * $widthEachBox;
+	
+	$multFactor = fmod($total,$totalWidth);
+	$missingCount = 0;
 
-			if ($multFactor == 0) {
-				$multFactor = intval($total/$totalWidth);
-			}
+	if ($multFactor == 0) {
+		$multFactor = intval($total/$totalWidth);
+	}
 
-			else {
-				$multFactor = intval($total/$totalWidth) + 1;
-				$missingCount = intval((($totalWidth * $multFactor) - $total)/$widthEachBox);
-			}
-			$boxes = $missingCount + $boxes;
+	else {
+		$multFactor = intval($total/$totalWidth) + 1;
+		$missingCount = intval((($totalWidth * $multFactor) - $total)/$widthEachBox);
+	}
+	$boxes = $missingCount + $boxes;
 
-			//echo "count from db: $countFromDB total of $multFactor rows, and $boxes coloured boxes.";
-			
-			if ($boxes == 4) {
-				$coloredBoxes=array("1:#ff5d72","10:#f1c824","14:#43c696","18:#45b1cc");
-			}
-			if ($boxes == 5) {
-				$coloredBoxes=array("2:#ff5d72","5:#f1c824","7:#43c696","15:#45b1cc","18:#ff5d72");
-			}
-			if ($boxes == 6) {
-				$coloredBoxes=array("2:#ff5d72","5:#f1c824","7:#43c696","10:#45b1cc","15:#f1c824","18:#43c696");
-			}
-			if ($boxes == 7) {
-				$coloredBoxes=array("1:#ff5d72","5:#f1c824","8:#43c696","12:#45b1cc","13:#f1c824","15:#45b1cc","17:#43c696");
-			}
-			if ($boxes == 8) {
-				
-$coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696","11:#ff5d72","14:#f1c824","16:#45b1cc"
-);
-			}
-			
-		?>
+	//echo "count from db: $countFromDB total of $multFactor rows, and $boxes coloured boxes.";
+	if ($boxes == 4) {
+		$coloredBoxes=array("1:#ff5d72","10:#f1c824","14:#43c696","18:#45b1cc");
+	}
+	if ($boxes == 5) {
+		$coloredBoxes=array("2:#ff5d72","5:#f1c824","7:#43c696","15:#45b1cc","18:#ff5d72");
+	}
+	if ($boxes == 6) {
+		$coloredBoxes=array("2:#ff5d72","5:#f1c824","7:#43c696","10:#45b1cc","15:#f1c824","18:#43c696");
+	}
+	if ($boxes == 7) {
+		$coloredBoxes=array("1:#ff5d72","5:#f1c824","8:#43c696","12:#45b1cc","13:#f1c824","15:#45b1cc","17:#43c696");
+	}
+	if ($boxes == 8) {
+		$coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696","11:#ff5d72","14:#f1c824","16:#45b1cc");
+	}
+?>
 
 	<div class="row" style="margin:0">
 		<?php
-		
-		
-		
-		
-		$boxCount=0;
-		$totalBoxes = count($allEmployeeTeamData) + count($coloredBoxes);
-		$employeeNo=0;
-		
-		
-		for($i=1;$i<=$totalBoxes;$i++){
-			$var=explode (":",$coloredBoxes[$boxCount]);
-			if( $i == $var[0]) 
-			{
+			$boxCount=0;
+			$totalBoxes = count($allEmployeeTeamData) + count($coloredBoxes);
+			$employeeNo=0;
+			
+			
+			for($i=1;$i<=$totalBoxes;$i++){
+				$var=explode (":",$coloredBoxes[$boxCount]);
+				if( $i == $var[0]) 
+				{
+		?>
+		<div class="col-sm-2 team-mem hidden-xs hidden-sm">
+			<div class="box" style="background-color: <?php echo $var[1] ?>"></div>
+		</div>
+		<?php $boxCount=$boxCount+1;
+		}
+		else {?>
+		<div class="col-xs-6 col-sm-2 team-mem team-view">
+			<div class="element_hover">
+				<div class="hover-content">
+					<h3 class="sl-hover-title <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
+						<?php 
+						echo $allEmployeeTeamData[$employeeNo]["about_title_" . $finalLang];
+						?>
+
+					</h3>
+					<h4 class="sl-hover-subtitle <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
+						<?php 
+						echo $allEmployeeTeamData[$employeeNo]["about_jobtitle_" . $finalLang];
+						?>
+
+					</h4>
+					<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+				</div>
+			</div>
+			<img data-original="images/team/<?php echo $allEmployeeTeamData[$employeeNo]["about_image"]?>" src="images/others/dot.png" alt="
+			<?php echo $allEmployeeTeamData[$employeeNo]["about_title_" . $finalLang]; ?>
+			" class="img_element" width="100%" height="100%/">
+			<div class="mw_team <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
+				<?php 
+				echo $allEmployeeTeamData[$employeeNo]["about_title_" . $finalLang];
 				?>
-				<div class="col-sm-2 team-mem hidden-xs hidden-sm">
-					<div class="box" style="background-color: <?php echo $var[1] ?>"></div>
-				</div>
-				<?php $boxCount=$boxCount+1;
-			}
-			else {?>
-				<div class="col-xs-6 col-sm-2 team-mem team-view">
-					<div class="element_hover">
-						<div class="hover-content">
-							<h3 class="sl-hover-title <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
-								<?php 
-								if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_title_en"];
-								else echo $allEmployeeTeamData[$employeeNo]["about_title_ar"];
-								?>
-
-							</h3>
-							<h4 class="sl-hover-subtitle <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
-								<?php 
-								if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_jobtitle_en"];
-								else echo $allEmployeeTeamData[$employeeNo]["about_jobtitle_ar"];
-								?>
-
-							</h4>
-							<i class="fa fa-angle-double-right" aria-hidden="true"></i>
-						</div>
-					</div>
-					<img data-original="images/team/<?php echo $allEmployeeTeamData[$employeeNo]["about_image"]?>" src="images/others/dot.png" alt="
-					<?php
-					if ($finalLang == "en") echo $allEmployeeTeamData[$employeeNo]["about_title_en"];
-					else echo $allEmployeeTeamData[$employeeNo]["about_title_ar"];
-					?>
-					" class="img_element" width="100%" height="100%/">
-					<div class="mw_team <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
-						<?php 
-						if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_title_en"];
-						else echo $allEmployeeTeamData[$employeeNo]["about_title_ar"];
-						?>
-
-					</div>
-					<div class="mw-team-quote <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
-						<?php 
-						if ($finalLang == "en")echo $allEmployeeTeamData[$employeeNo]["about_desc_en"];
-						else echo $allEmployeeTeamData[$employeeNo]["about_desc_ar"];
-						?>
-					</div>
-					<div class="box"></div>
-				</div>
-				<?php
-				$employeeNo = $employeeNo + 1;
+			</div>
+			<div class="mw-team-quote <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
+				<?php 
+				echo $allEmployeeTeamData[$employeeNo]["about_desc_" . $finalLang];
+				?>
+			</div>
+			<div class="box"></div>
+		</div>
+		<?php
+			$employeeNo = $employeeNo + 1;
 			}
 		}
 		?>	
-		<!-- <div class="col-sm-2 team-mem visible-lg">
-			<div class="box" style=""></div>
-		</div>
-		<div class="col-sm-2 team-mem visible-lg">
-			<div class="box" style=""></div>
-		</div>
-		<div class="col-sm-2 team-mem visible-lg">
-			<div class="box" style=""></div>
-		</div> --> 
 		
 	</div>		
+	
+	
 </div>
 
 <div id="mgtTeamViewer">
@@ -839,7 +671,10 @@ $coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696",
 							<img class="lazy" data-original="images/flags/<?php echo $allClientsData[$i]["countries_flag"]?>">	
 						</div>
 						<div class="clientss-name">
-							<p><?php if($finalLang == "en") { echo $allClientsData[$i]["countries_title_en"]; } else { echo $allClientsData[$i]["countries_title_ar"]; }?></p>
+							<p>
+							<?php echo $allClientsData[$i]["countries_title_" . $finalLang];
+							?>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -850,9 +685,6 @@ $coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696",
 		</div>
 	</div>
 </div>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBygc9FtuNgR_pyjs_FAt6d4p3DHhIoFII&callback=initMap"
-type="text/javascript"></script>
 
 <div id="contacts" class="section container-fluid">
 	<div>
@@ -996,21 +828,48 @@ type="text/javascript"></script>
 </div>
 <?php include "footer.php";?>
 
-<!-- news menu slider -->
-<!-- <script type="text/javascript">
-	$(function(){
-		count=1;
-		scrollValue = $(".news-list-content:nth-child("+count+")").position().top;
-		resetValue = $("#news-list ul").height() - $("#news-list").height() - 10;
-		setInterval(function(){
-				$("#news-list").animate({scrollTop:"+=" + scrollValue}, 1000);
-				count++;
-				scrollValue = scrollValue = $(".news-list-content:nth-child("+count-1+")").position().top;
-				if($("#news-list").scrollTop() >= resetValue) count=1;
-			},3000);
-		});
-</script> -->
+<!--loader-->
+<script type="text/javascript">
+	$(window).load(function() {
+		$('#loading').fadeOut();
+		$('.carousel-inner>.item').addClass("activated");
+		$("li.scroll-animated-item").addClass("blocks-anim");
+		$(".home-main-content").addClass("active");
+		initStats(2000);
+		// defined in footer.php in block count js at line 168
+	});
+</script>
 
+<!-- setting fixed height throught javascript instead of viewport -->
+<script type="text/javascript">
+	finalHeight=window.innerHeight;
+	$(".carousel-inner .item>div,.carousel").css("height",finalHeight)
+</script>
+
+<!-- navbar -->
+<script type="text/javascript">
+	$(function(){
+		$(window).scroll(function() {
+			var navbarCurrentPos = $("section.nav-bar").offset().top;
+			var welcomePos = $("#myCarousel").height() - $("section.nav-bar").height();
+			var winTop = $(window).scrollTop();
+			if (winTop > welcomePos) {
+			//slided down below the landing home screen (slider 1)
+			$(".nav-bar .identity").addClass("responsive");
+			$(".nav-bar").css("position","fixed").fadeIn();
+			$("section.nav-bar").addClass("hide-nav");
+			$("#langForm").addClass("when-slided");
+		}
+		else
+		{
+			$(".nav-bar .identity").removeClass("responsive");
+			$(".nav-bar").css("position","absolute");
+			$("section.nav-bar").removeClass("hide-nav");
+			$("#langForm").removeClass("when-slided");
+		}
+	});
+	});
+</script>
 
 <!--Carousel Initialization-->
 <script type="text/javascript">
@@ -1057,39 +916,91 @@ type="text/javascript"></script>
 		
 	</script>
 
-	<!--Normal slide animation -->
-	<script type="text/javascript">
-		$(function(){
-			$(window).scroll(function() {
-				$(".slideanim").each(function(){
-					var pos = $(this).offset().top;
+<!--Normal slide animation -->
+<script type="text/javascript">
+	$(function(){
+		$(window).scroll(function() {
+			$(".slideanim").each(function(){
+				var pos = $(this).offset().top;
 
-					var winTop = $(window).scrollTop();
-					if (pos < winTop + 600) {
-						$(this).addClass("slide");
-					}
-				});
+				var winTop = $(window).scrollTop();
+				if (pos < winTop + 600) {
+					$(this).addClass("slide");
+				}
 			});
 		});
-	</script>
-
-	<!-- Management Team Viewer-->
-	<script type="text/javascript">
-		$(".omgt-team").click(function(){
-			var imgsrc = $(this).find(".hexagon-in2").css('background-image').replace('url(','').replace(')','');;
-			var peopleName = $(this).find(".omgt-name").text();
-			var peopleTitle = $(this).find(".omgt-pos").text();
-			var peopleText = $(this).find(".omgt-Content").text();
-
-		//console.log(imgsrc + " " + peopleName + " " + peopleTitle + " " + peopleText);
-		//Setting values
-		$(".teamviewerimage").css("background-image",'url('+imgsrc+')');
-		$(".people_Name").html(peopleName);
-		$(".people-title").html(peopleTitle);
-		$(".texte_people").html(peopleText);
-		$("#mgtTeamViewer").show();
-		$("div#mgtTeamViewer>.row").addClass("ourMagtTeam").removeClass("ourNormalTeam");
 	});
+</script>
+
+<!--adding colors on hover-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".mh-text-no-underline").hover(function(){
+				$( this ).children( 'i' ).css("color", "#F99F1C");
+			}, function(){
+				if($( this ).children( 'i' ).hasClass("about-us")) {
+					$( this ).children( 'i' ).css("color", "#FFF");
+				}
+				else {
+					$( this ).children( 'i' ).css("color", "rgba(4,48,95,0.89)");
+				}
+		});
+		$(".block-stats li").hover(function(){
+				
+				$( this ).children( '.type' ).css("color", "#F99F1C");
+				$( this ).children( '.num' ).css("color", "#F99F1C");
+				$( this ).children( '.type' ).css("color", "#234973");
+				$( this ).children( '.num' ).css("color", "#234973");
+			}, function(){
+				$( this ).children( '.type' ).css("color", "lightblue");
+				$( this ).children( '.num' ).css("color", "#eaeff3");
+		});
+	});
+</script>
+
+<!-- magt team coming from left and right effect -->
+<script type="text/javascript">
+	$(function(){
+		$(window).scroll(function() {
+			var winTop = $(window).scrollTop();
+			var magtTeamPos = $("#mgtTeamMain2").offset().top - $("#mgtTeamMain2").height();
+			if (winTop > magtTeamPos) {
+				$(".mgtTeamMain2Row").addClass("mgtTeamMain2RowSupr");
+			}
+		});
+	});
+</script>
+
+<!-- our people coming from left effect -->
+<script type="text/javascript">
+	$(function(){
+		$(window).scroll(function() {
+			var winTop = $(window).scrollTop();
+			var ourTeamPos = $("#mgtTeam").offset().top - $("#mgtTeam").height()/2;
+			if (winTop > ourTeamPos) {
+				$("#mgtTeam").addClass("effect");
+			}
+		});
+	});
+</script>
+
+<!-- Management Team Viewer-->
+<script type="text/javascript">
+	$(".omgt-team").click(function(){
+		var imgsrc = $(this).find(".hexagon-in2").css('background-image').replace('url(','').replace(')','');;
+		var peopleName = $(this).find(".omgt-name").text();
+		var peopleTitle = $(this).find(".omgt-pos").text();
+		var peopleText = $(this).find(".omgt-Content").text();
+
+	//console.log(imgsrc + " " + peopleName + " " + peopleTitle + " " + peopleText);
+	//Setting values
+	$(".teamviewerimage").css("background-image",'url('+imgsrc+')');
+	$(".people_Name").html(peopleName);
+	$(".people-title").html(peopleTitle);
+	$(".texte_people").html(peopleText);
+	$("#mgtTeamViewer").show();
+	$("div#mgtTeamViewer>.row").addClass("ourMagtTeam").removeClass("ourNormalTeam");
+});
 </script>
 
 <!--Local Team Viewer With Close Setting-->
@@ -1230,7 +1141,8 @@ type="text/javascript"></script>
 	});
 </script>
 
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBygc9FtuNgR_pyjs_FAt6d4p3DHhIoFII&callback=init_map"
+type="text/javascript"></script>
 <!-- Add Google Maps -->
 <script type='text/javascript'>
 	function init_map() {
