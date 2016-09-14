@@ -23,7 +23,7 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
-							<a class="philosophy" href="/coo.php">
+							<a class="philosophy" href="/coo">
 								<?php echo $coo_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -41,7 +41,7 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='careers'>
-							<a class="careers" href="/gallery.php">
+							<a class="careers" href="/gallery">
 								<?php echo $gallery_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -105,7 +105,7 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
-							<a class="philosophy" href="/coo.php">
+							<a class="philosophy" href="/coo">
 								<?php echo $coo_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -123,7 +123,7 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='careers'>
-							<a class="careers" href="/gallery.php">
+							<a class="careers" href="/gallery">
 								<?php echo $gallery_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -211,7 +211,7 @@ return (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|e
 			getClickedElement = $(this).attr("href").split("/")[1];
 			topValue1 = ($(getClickedElement).offset().top);
 			topValue2 = ($(getClickedElement).offset().top) - $("section.nav-bar").height()/4;
-			console.log(topValue1 + " " + topValue2);
+			//console.log(topValue1 + " " + topValue2);
 			$('html, body').animate({
 				scrollTop: topValue2
 			}, 1500);
@@ -219,8 +219,8 @@ return (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|e
 			if(isDeviceMobile()) {
 				$("a.hamburger.menu").click();
 			}
+			return false;
 		});
-
 	});
 </script>
 
@@ -283,7 +283,10 @@ return (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|e
 <script type="text/javascript">
 	$(function(){
 		$(".nano").nanoScroller();
+		
+	});
+	$(window).bind("load", function() { 
+		history.pushState("", document.title, window.location.pathname + window.location.search);
 	});
 </script>
-
 
