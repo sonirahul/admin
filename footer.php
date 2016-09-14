@@ -316,7 +316,7 @@ return (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|e
 		$(".hamburger").click(e);
 		$(".menu-text").click(e);
 
-		//jQuery time
+		//jQuery ripple effect time
 		var parent, ink, d, x, y;
 		$("ul li a").click(function(e)
 		{

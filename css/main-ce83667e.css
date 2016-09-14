@@ -485,6 +485,8 @@ body[data-page="process"] .dt-difference[data-active='four']{background-color:rg
 }body[data-page="process"] .contact-form-wrapper{padding:60px 15px}
 body[data-page="process"] .contact-form .form-header p{padding:0 0 30px 0}
 
+.ink{display:block;position:absolute;background:hsl(180,40%,80%);border-radius:100%;transform:scale(0)}
+.ink.animate{animation:ripple .65s linear}
 @keyframes ripple{100%{opacity:0;transform:scale(2.5)}
 }ul li{list-style-type:none;position:relative;overflow:hidden}
 .slider-bottom{background-color:rgba(0,0,0,0.6);color:#fff;position:absolute;width:100%;bottom:0;padding:10px;line-height:1.0em}
