@@ -15,7 +15,7 @@
 		document.cookie = "language=<? echo $finalLang; ?>";
 		</script>
 		<?php
-		echo "<script>document.location='index.php';</script>";
+		echo "<script>document.location='/';</script>";
 	}
 	
 	setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/", "mawaredhouse.com");
@@ -48,38 +48,24 @@
 	<link rel="stylesheet" type="text/css" href="css/nanoscroller.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">-->
 
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main-ce83667e.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">	
+	
 <?php 
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$rootUrl = 'http://' . $_SERVER['HTTP_HOST'] . '/';
 	
-	if ( ($url == $rootUrl) || (strpos($url,$rootUrl.'#') !== false) || (strpos($url,'index.php') !== false) ) { 
+	if (strpos($url,'coo') !== false) {
 		echo '
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="css/main-ce83667e.css" media="screen">
-		<link rel="stylesheet" type="text/css" href="css/responsive.css">	
-		';
-	}
-
-	if (strpos($url,'coo.php') !== false) {
-		echo '
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="css/main-ce83667e.css" media="screen">
-		<link rel="stylesheet" type="text/css" href="css/responsive.css">
 		<link rel="stylesheet" id="flik_timeline-flik-css-css" href="css/flik-timeline.min.css" type="text/css" media="all">
 		';
 	}
 
-	if (strpos($url,'gallery.php') !== false) { 
+	if (strpos($url,'gallery') !== false) { 
 		echo '
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="css/main-ce83667e.css" media="screen">
-		<link rel="stylesheet" type="text/css" href="css/responsive.css">	
 		<link href="css/jquery.gridder.min.css" rel="stylesheet">
 		<link href="css/demo.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Atma:400,700|Courgette|Ewert|Fruktur|Galada|Kavoon|Lemonada|Mogra|Oleo+Script|Pacifico|Sriracha|Yellowtail" rel="stylesheet">

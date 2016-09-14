@@ -23,7 +23,7 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
-							<a class="philosophy" href="/coo.php">
+							<a class="philosophy" href="/coo">
 								<?php echo $coo_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -41,7 +41,7 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='careers'>
-							<a class="careers" href="/gallery.php">
+							<a class="careers" href="/gallery">
 								<?php echo $gallery_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -105,7 +105,7 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
-							<a class="philosophy" href="/coo.php">
+							<a class="philosophy" href="/coo">
 								<?php echo $coo_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -123,7 +123,7 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='careers'>
-							<a class="careers" href="/gallery.php">
+							<a class="careers" href="/gallery">
 								<?php echo $gallery_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -181,20 +181,12 @@
 
 <?php 
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-	$rootUrl = 'http://' . $_SERVER['HTTP_HOST'] . '/';
 	
-	if ( ($url == $rootUrl) || (strpos($url,$rootUrl.'#') !== false) || (strpos($url,'index.php') !== false) ) { 
-		echo "
-		<script src='js/main-6e0cc465.js'></script>
-		<script src='js/process-1d1f249e.js'></script>
-		<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
-		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
-		<script src='js/jquery.mousewheel.js'></script>
-		<script src='js/jquery.nanoscroller.min.js'></script>
-		";
-	}
+	#$rootUrl = 'http://' . $_SERVER['HTTP_HOST'] . '/';
+	
+	#if ( ($url == $rootUrl) || (strpos($url,$rootUrl.'#') !== false) || (strpos($url,'index.php') !== false) ) { }
 
-	if (strpos($url,'coo.php') !== false) {
+	if (strpos($url,'coo') !== false) {
 		echo "
 		<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
 		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
@@ -207,8 +199,8 @@
 		
 		";
 	}
-
-	if (strpos($url,'gallery.php') !== false) { 
+	
+	else if (strpos($url,'gallery') !== false) { 
 		echo "
 		<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
 		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
@@ -217,6 +209,17 @@
 		<script src='js/jquery.nanoscroller.min.js'></script>
 		";
 	}
+	else {
+		echo "
+		<script src='js/main-6e0cc465.js'></script>
+		<script src='js/process-1d1f249e.js'></script>
+		<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
+		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
+		<script src='js/jquery.mousewheel.js'></script>
+		<script src='js/jquery.nanoscroller.min.js'></script>
+		";		
+	}
+	
 ?>
 
 <!-- Select Language -->
@@ -282,8 +285,10 @@ return (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|e
 			if(isDeviceMobile()) {
 				$("a.hamburger.menu").click();
 			}
+			
+			//to remove the hash from the url
+			return false;
 		});
-
 	});
 </script>
 
@@ -347,5 +352,12 @@ return (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|e
 <script type="text/javascript">
 	$(function(){
 		$(".nano").nanoScroller();
+	});
+</script>
+
+<!-- remove/handles the url hash  -->
+<script type="text/javascript">
+	$(window).bind("load", function() { 
+		history.pushState("", document.title, window.location.pathname + window.location.search);
 	});
 </script>
