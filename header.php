@@ -20,6 +20,8 @@
 	
 	setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/", "mawaredhouse.com");
 ?>
+<?php include "php-html-css-js-minifier.php"; ?>
+
 
 <html>
 <head>
