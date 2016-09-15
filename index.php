@@ -389,7 +389,7 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 <div id="news" class="section container-fluid">
 	<div class="row">
 		<div class="col-sm-12 text-center">
-			<h2  class="mh-text-no-underline">
+			<h2  class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 				<i class="fa fa-newspaper-o fa-lg mh-icon-colored" aria-hidden="true"></i>
 				<span class="mh-text-colored-with-underline">
 					<?php echo $newEvent_static; ?>
@@ -472,9 +472,9 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<h2  class="mh-text-no-underline">
+				<h2  class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 					<i class="fa fa-universal-access fa-lg mh-icon-colored" aria-hidden="true"></i>
-					<span class="mh-text-colored-with-underline">Management Team</span>
+					<span class="mh-text-colored-with-underline"><?php echo $mgmtTeam_static; ?></span>
 				</h2>
 			</div>
 		</div>
@@ -523,9 +523,9 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 text-center">
-				<h2  class="mh-text-no-underline">
+				<h2  class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 					<i class="fa fa-users fa-lg mh-icon-colored" aria-hidden="true"></i>
-					<span class="mh-text-colored-with-underline">Our People</span>
+					<span class="mh-text-colored-with-underline"><?php echo $emp_static; ?></span>
 				</h2>
 			</div>
 		</div>
@@ -653,9 +653,9 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 <div id="clientss1" class="section container-fluid">
 	<div class="row">
 		<div class="col-sm-12 text-center">
-			<h2 class="mh-text-no-underline">
+			<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 				<i class="fa fa-street-view fa-lg mh-icon-colored" aria-hidden="true"></i>
-				<span class="mh-text-colored-with-underline">Our Clients</span>
+				<span class="mh-text-colored-with-underline"><?php echo $oClients_static; ?></span>
 			</h2>
 		</div>
 	</div>
@@ -696,9 +696,9 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		<div id="contact" class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12 text-center">
-					<h2 class="mh-text-white mh-text-no-underline">
+					<h2 class="mh-text-white mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 						<i class="fa fa-plane fa-lg about-us" aria-hidden="true"></i>
-						<span style="text-decoration: underline">Contact Us</span>
+						<span style="text-decoration: underline"><?php echo $contact_static; ?></span>
 					</h2>
 				</div>
 			</div>
