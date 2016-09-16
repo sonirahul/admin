@@ -434,7 +434,7 @@ body[data-page="process"] .process-content h3{margin:5px 0 15px 0;color:#fff}
 }@media(min-width:1050px){body[data-page="process"] .process-content{height:auto!important}
 }body[data-page="process"] .section-1,body[data-page="process"] .section-2,body[data-page="process"] .section-3,body[data-page="process"] .section-4{max-height:900px;position:relative;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 @media(min-width:1050px){body[data-page="process"] #research-content{visibility:hidden;opacity:0}
-}body[data-page="process"] #section-1,body[data-page="process"] #section-2,body[data-page="process"] #section-3,body[data-page="process"] #section-4{display:none;background-position:top center!important;background-repeat:no-repeat;background-size:100%;display:block;height:0;padding-bottom:80%;overflow:hidden;position:absolute;top:0;width:100%;z-index:-1}
+}body[data-page="process"] #section-1,body[data-page="process"] #section-2,body[data-page="process"] #section-3,body[data-page="process"] #section-4{display:none;background-position:top center;background-repeat:no-repeat;background-size:100%;display:block;height:0;padding-bottom:80%;overflow:hidden;position:absolute;top:0;width:100%;z-index:-1}
 @media(min-width:1050px){body[data-page="process"] #section-1,body[data-page="process"] #section-2,body[data-page="process"] #section-3,body[data-page="process"] #section-4{display:block}
 }body[data-page="process"] #section-1{//background-image:url("../images/site/philosophy.jpg");}
 body[data-page="process"] #section-2{//background-image:url("../images/site/mission.jpg")}
@@ -722,3 +722,5 @@ span.langSelected{display:inline-block;padding-left:10px;padding-bottom:5px}
     top: 11px;
     right: 150px;
 }
+
+#section-2,#section-3,#section-4{background-attachment:fixed}
