@@ -17,14 +17,13 @@
 		<?php
 		echo "<script>document.location='/';</script>";
 	}
-	
+
 	setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/", "mawaredhouse.com");
 ?>
-
+<!DOCTYPE html>
 <html>
 <head>
 	<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
- 	<!--<meta http-equiv="Content-Type" content="text/html; charset=windows-1256">-->
  	<meta charset="utf-8">
  	<meta content='width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no' name='viewport'>
 	<title>Mawared House | Local Presence Global Support</title>
@@ -37,7 +36,6 @@
 	<meta content='Mawared House | Local Presence Global Support' property='og:title'>
 	<meta content="Local Presence Global Support" property='og:description'>
 	<link rel="shortcut icon" href="/images/logo/favicon.png" type="image/png" />
-	
 
 	<!--<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -53,11 +51,11 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main-ce83667e.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">	
-	
+
 <?php 
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$rootUrl = 'http://' . $_SERVER['HTTP_HOST'] . '/';
-	
+
 	if (strpos($url,'coo') !== false) {
 		echo '
 		<link rel="stylesheet" id="flik_timeline-flik-css-css" href="css/flik-timeline.min.css" type="text/css" media="all">
@@ -72,13 +70,7 @@
 		';
 	}
 ?>
-	
-	
-	
-	
-	
 <?php include "lang/".$finalLang."/i18.php"; ?>
-
 </head>
 <body data-logo-color='light' data-nav-color='light' data-overlay-id='false' data-overlay-open='false' data-page='process' data-section='unity'>
 	<?php include "function.php";?>
@@ -98,7 +90,6 @@
 			</a>
 		</div>
 	</section>
-
 	<form id="langForm" name="langForm" method="post" >
 		<input type="hidden" name="Action">
 		<input type="hidden" name="lang">
@@ -114,4 +105,3 @@
 			</ul>
 		</div>
 	</form>
-

@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
 <?php include "header.php";?>
-
 <?php  
 $SQLforCoo="select * from countries where countries_operation = 1 order by countries_title_en asc";
 $allCooData=select_query($link,$SQLforCoo,0,0);
 ?>
-
 <style type="text/css">
 body{padding-bottom:0;padding-top:50px}
 #coo-main{font-family:'Source Sans Pro',sans-serif!important;background-color:#fff;//background-image:linear-gradient(bottom,#f6f6f6 45%,#86b0ff 100%);//background-image:-moz-linear-gradient(bottom,#f6f6f6 45%,#86b0ff 100%);//background-image:-webkit-linear-gradient(bottom,#f6f6f6 45%,#86b0ff 100%)}
@@ -30,6 +26,8 @@ i.fa{display:none}
 #coo-country-name{color:#333;color:#FFF;//color:#f99f1c;text-transform:uppercase;text-align:center;padding:30px;font-size:32px}
 li.active p.menu-country-name{color:orange}
 .content-inner-wrap h4{font-size:18px;text-transform:capitalize;font-weight:normal}
+.content-inner-wrap h4.coo-suspended{font-size:18px;text-transform:capitalize;font-weight:normal;color:orange}
+.content-inner-wrap{padding-top:15px}
 #coo-main h2,.menu-country-name{color:#133963}
 label.show-title{font-weight:normal!important}
 #coo-pic{padding-top:54%;background-position:center!important}
@@ -75,8 +73,6 @@ i#coo-content-back-btn{color:#fff;margin-left:20px}
 }.content-title{color:#f99f1c}
 .tab-pane{background-color:#133963}
 </style>
-
-
 <div id="coo-main" class="section container-fluid">
 	<h2>Countries of Operation </h2>
 	<div id="con-content-parent">
@@ -102,9 +98,6 @@ i#coo-content-back-btn{color:#fff;margin-left:20px}
 				} 
 				?>	
 			</ul>
-
-
-
 			<div class="tab-content col-sm-8 column-center">
 				<i id="coo-content-back-btn" class="fa fa-3x fa-angle-left visible-xs visible-sm " aria-hidden="true"></i>
 				<?php 
@@ -126,38 +119,43 @@ i#coo-content-back-btn{color:#fff;margin-left:20px}
 							<div class="col-sm-12">
 								
 								<div id="coo_desc">
-									
+									<div class="entry-content">
+										
+										<div class="content-inner-wrap">
+											<?php 
+											if (count($allCooForData) != 0) { ?>
+												<h4>To know more about the visa process click the country below:</h4>
+												<ul class="flik-timeline flik-timeline-10" data-scroll-effect="default-effect">
+													<?php 
+													for($j=0;$j<count($allCooForData);$j++){ ?>
+														<li class="default-effect">
+															<div class="relative">
+																<label class="show-title">
+																	<?php echo ucwords($allCooForData[$j]["countries_title_en"]); ?>
+																</label>
+																<span class="date"><img src="images/flags/<?php echo $allCooForData[$j]["countries_flag"]; ?>" style="width: 5em;"></span>
+																<span class="circle"/>
+															</div>
+															<div class="flik-timeline-content">
+																<div class="content-title"><?php echo ucwords($allCooForData[$j]["countries_title_en"]); ?></div>
+																<div class="content-main"><a href="<?php echo $allCooForData[$j]["countries_website_en"]; ?>"><?php echo $allCooForData[$j]["countries_website_en"]; ?></a></div>
+															</div>
+														</li>
+												<?	}?>
+												</ul>
+										<?  } else { ?>
+											<h4 class="coo-suspended">Currently the operations are suspended from 
+												<?php 
+													if($finalLang == "en") echo $allCooData[$i]["countries_title_en"];
+													if($finalLang == "ar") echo $allCooData[$i]["countries_title_ar"];
+												?>,
+												please visit us later for any updates.
+											
+											</h4>
+										<? 	} ?>
 
-															<div class="entry-content">
-																
-																<div class="content-inner-wrap">
-																	<h4>To know more about the visa process click the country below:</h4>
-																	<ul class="flik-timeline flik-timeline-10" data-scroll-effect="default-effect">
-																		<?php for($j=0;$j<count($allCooForData);$j++){ ?>
-																			<li class="default-effect">
-																				<div class="relative">
-																					<label class="show-title">
-																						<?php echo ucwords($allCooForData[$j]["countries_title_en"]); ?>
-																					</label>
-																					<span class="date"><img src="images/flags/<?php echo $allCooForData[$j]["countries_flag"]; ?>" style="width: 5em;"></span>
-																					<span class="circle"/>
-																				</div>
-																				<div class="flik-timeline-content">
-																					<div class="content-title"><?php echo ucwords($allCooForData[$j]["countries_title_en"]); ?></div>
-																					<div class="content-main"><a href="<?php echo $allCooForData[$j]["countries_website_en"]; ?>"><?php echo $allCooForData[$j]["countries_website_en"]; ?></a></div>
-																				</div>
-																			</li>
-																		<? } ?>
-																		
-																	</ul>
-
-																</div>
-															</div><!-- .entry-content -->
-									
-									
-									
-
-									
+										</div>
+									</div><!-- .entry-content -->
 								</div>
 							</div>
 						</div>
@@ -165,14 +163,12 @@ i#coo-content-back-btn{color:#fff;margin-left:20px}
 					<?php
 				} 
 				?>	
-
 			</div>
 		</div>
 	</div>
 </div>
 
 <?php include "footer.php";?>
-
 
 <!-- navbar -->
 <script type="text/javascript">
@@ -183,9 +179,14 @@ i#coo-content-back-btn{color:#fff;margin-left:20px}
 		$("#langForm").addClass("when-slided");
 	});
 </script>
-
 <script type="text/javascript">
-
+	$(function(){
+		$('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+			$('#menu'+$(e.target).closest('li').index() +' ul.flik-timeline li:first-child .show-title').click();
+		})
+	});
+</script>
+<script type="text/javascript">
 	$(function(){
 		if(isDeviceMobile()) {$(".tab-content").hide();}
 		earlierTopValue=0;
@@ -206,8 +207,5 @@ i#coo-content-back-btn{color:#fff;margin-left:20px}
 		});
 	});
 </script>
-
-
-
 </body>
 </html>
