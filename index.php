@@ -326,7 +326,7 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 			</div>
 			<div class='section-2 dt-height'>
 				<div id='section-2-wrapper'>
-					<div id='section-2' class="lazy" data-original="images/site/mission.jpg"></div>
+					<div id='section-2' class="parallax lazy" data-original="images/site/mission.jpg"></div>
 				</div>
 				<div class='process-content yellow col-md-5 col-md-offset-7' data-section='2'>
 					<i class='icon-strategy'></i>
@@ -336,7 +336,7 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 			</div>
 			<div class='section-3 dt-height'>
 				<div id='section-3-wrapper'>
-					<div id='section-3' class="lazy" data-original="images/site/commitment.jpg"></div>
+					<div id='section-3' class="parallax lazy" data-original="images/site/commitment.jpg"></div>
 				</div>
 				<div class='process-content green col-md-5 col-md-offset-7' data-section='3'>
 					<i class='icon-wrench'></i>
@@ -346,7 +346,7 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 			</div>
 			<div class='section-4 dt-height'>
 				<div id='section-4-wrapper'>
-					<div id='section-4' class="lazy" data-original="images/site/vision.jpg"></div>
+					<div id='section-4' class="parallax lazy" data-original="images/site/vision.jpg"></div>
 				</div>
 				<div class='process-content blue col-md-5' data-section='4'>
 					<i class='icon-graph'></i>
@@ -1119,19 +1119,19 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		flag=0;
 		$("#contactView button").click(function(){
 			if(flag==0){
-		//$("#contact").addClass("contactOpacity");
-		$("#contact").fadeOut();
-		$(this).html('View Contact');
-		flag=1;
-	}
-	else
-	{
-		//$("#contact").removeClass("contactOpacity");
-		$("#contact").fadeIn();
-		$(this).html('<i class="fa fa-map-o" aria-hidden="true"></i> &nbsp;View Map');
-		flag=0;  
-	}
-});
+			//$("#contact").addClass("contactOpacity");
+			$("#contact").fadeOut();
+			$(this).html('View Contact');
+			flag=1;
+			}
+			else
+			{
+				//$("#contact").removeClass("contactOpacity");
+				$("#contact").fadeIn();
+				$(this).html('<i class="fa fa-map-o" aria-hidden="true"></i> &nbsp;View Map');
+				flag=0;  
+			}
+		});
 	});
 </script>
 
@@ -1146,6 +1146,25 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		$("#contactForm").fadeOut();
 	});
 </script>
+
+<-- parallax effect -->
+<script type="text/javascript">
+$(function(){
+	var parallax = document.querySelectorAll(".parallax");
+	var speed = 0.5;
+	
+	window.onscroll = function(){
+		[].slice.call(parallax).forEach(function(el,i){
+			var windowYOffset = window.pageYOffset;
+			var elBackgrounPos = (($(el).offset().top / 2) - (windowYOffset * speed)) + "px";
+			el.style.backgroundPositionY = elBackgrounPos;
+		});
+	};
+});
+</script>
+
+$(this).offset().top - 
+
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBygc9FtuNgR_pyjs_FAt6d4p3DHhIoFII&callback=init_map"
 type="text/javascript"></script>
@@ -1175,6 +1194,8 @@ type="text/javascript"></script>
 	}
 	google.maps.event.addDomListener(window, 'load', init_map);
 </script>
+
+
 
 </body>
 
