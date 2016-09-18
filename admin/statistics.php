@@ -116,19 +116,17 @@ $showdelet=select_query($link,$SQL,0,0);
 	</div>
 </div>
 <script type="text/javascript">
-	$.noConflict();
+	$(function() {
+	    $('.statistics-button').on("click", function(){
 
-	jQuery(function() {
-	    jQuery('.statistics-button').on("click", function(){
-
-			if (jQuery(this).val() == "Edit"){
-				jQuery(this).val('Save');
-				var statisticsId = jQuery(this).attr("statisticsId");
-				jQuery("input[statisticsId='"+statisticsId+"']").attr("disabled", false);
+			if ($(this).val() == "Edit"){
+				$(this).val('Save');
+				var statisticsId = $(this).attr("statisticsId");
+				$("input[statisticsId='"+statisticsId+"']").attr("disabled", false);
 			}
 			else {
-				document.forms["Prowse"].elements["Action"].value = jQuery(this).val();
-				document.forms["Prowse"].elements["StatisticsId"].value = jQuery(this).attr("statisticsId");
+				document.forms["Prowse"].elements["Action"].value = $(this).val();
+				document.forms["Prowse"].elements["StatisticsId"].value = $(this).attr("statisticsId");
 				document.forms["Prowse"].submit();
 			}
 			

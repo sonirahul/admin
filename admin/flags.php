@@ -181,11 +181,10 @@ $showdelet=select_query($link,$SQL,0,0);
 	</div>
 </div>
 <script type="text/javascript">
-	$.noConflict();
-	jQuery(function() {
-	    jQuery('.show-hide').on("click", function(){
-			document.forms["Prowse"].elements["Action"].value = jQuery(this).val();
-			document.forms["Prowse"].elements["ClientId"].value = jQuery(this).attr("clientId");
+	$(function() {
+	    $('.show-hide').on("click", function(){
+			document.forms["Prowse"].elements["Action"].value = $(this).val();
+			document.forms["Prowse"].elements["ClientId"].value = $(this).attr("clientId");
 			//document.forms["Prowse"].submit();
 	    });
 
