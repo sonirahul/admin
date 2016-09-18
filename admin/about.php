@@ -48,7 +48,7 @@ if($_POST["action"]=="beUpdate")// Update Fields
 	{ 
   	    $SQL="select about_image from about where about_id=$aboutId";
 		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../team/".$showdelet[0]['about_image']);
+	    unlink("../images/team/".$showdelet[0]['about_image']);
 		$TableField[$uf][0]="about_image";
 		$TableField[$uf][1]="''";
 		$uf++;
@@ -56,7 +56,7 @@ if($_POST["action"]=="beUpdate")// Update Fields
 		{ 
 		  $myfile=str_replace(' ', '_', $txtename);
 		  $TableField[$uf][0]="about_image";
-	      $TableField[$uf][1]=uploadfile("about_image","$myfile","../team");
+	      $TableField[$uf][1]=uploadfile("about_image","$myfile","../images/team");
 		  $uf++;
 		}
 
@@ -90,7 +90,7 @@ $aboutId=auto_num($link,"about","about_id");
 	$TableField[7][1]="'$_GET[type]'";
 	$TableField[8][0]="about_image";
 	$myfile=str_replace(' ', '_', $txtename);
-	$TableField[8][1]=uploadfile("about_image","$myfile","../team");
+	$TableField[8][1]=uploadfile("about_image","$myfile","../images/team");
 	
     insert_query($link,$TableName,$TableField);
 	echo "<script>document.location='index.php?model=about&type=$_GET[type]';</script>";
@@ -141,12 +141,10 @@ $UpdatedData=select_query($link,$SQL,0,0);
 							</div>
 						</form>
 						<script type="text/javascript">
-							$.noConflict();
-
-							jQuery(function() {
-							    jQuery('.about-delete-button').on("click", function(){
-							    	document.forms["Prowse"].elements["action"].value = jQuery(this).val();
-									document.forms["Prowse"].elements["aboutId"].value = jQuery(this).attr("aboutId");
+							$(function() {
+							    $('.about-delete-button').on("click", function(){
+							    	document.forms["Prowse"].elements["action"].value = $(this).val();
+									document.forms["Prowse"].elements["aboutId"].value = $(this).attr("aboutId");
 									document.forms["Prowse"].submit();
 							    });
 							});
@@ -218,7 +216,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 									<input id="about_image" type="file" name="about_image" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
 									<?php if(!empty($UpdatedData[0]['about_image']) && $_GET["action"]=="aboutupdate"){
 										$pic_path=$UpdatedData[0]['about_image'];?>
-										<img border="0" src="../team/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
+										<img border="0" src="../images/team/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
 										<input type="checkbox" style="border:0px;" name="deletefile"  value="1">Delete
 									<?php } ?>
 								</div>
