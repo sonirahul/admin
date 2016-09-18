@@ -242,7 +242,7 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 		</div>
 	</section>
 
-	<section class='hidden-ipad blocks-wrapper' data-scroll-position='above' id='blocks-wrapper'>
+	<section class=' visible-lg blocks-wrapper' data-scroll-position='above' id='blocks-wrapper'>
 		<div class='container'>
 			<div class='row row-centered' id='let-us-help-you'>
 				<div class='col-sm-12 <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
@@ -301,7 +301,7 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 		</div>
 	</section>
 
-	<section class='dt-difference' data-active='zero' id='process'>
+	<section class='dt-difference visible-lg' data-active='zero' id='process'>
 		<span class='lava-lamp'></span>
 		<div class='steps'>
 			<div class='dt-height visible-ipad' data-section='0'>
@@ -358,7 +358,7 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 	</section>
 </div>
 
-<div id="mobile-about-us" class="visible-xs">
+<div id="mobile-about-us" class="hidden-lg">
 	<div id="mau1" class="mau">
 		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class="icon-signs 
 mh-icon-colored" ></i><?php echo $welcomeName ?></h3>

@@ -129,7 +129,13 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='our-work'>
-							<a class="our-work" href="/#blocks-wrapper">
+							<a class="visible-lg our-work" href="/#blocks-wrapper">
+								<?php echo $aboutus_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='hidden-lg our-work'>
+							<a class="our-work" href="/#mobile-about-us">
 								<?php echo $aboutus_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -215,6 +221,7 @@
 		<script src='js/process-1d1f249e.js'></script>
 		<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
 		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
+		<script src='js/modernizr-custom.js'></script>
 		<script src='js/jquery.mousewheel.js'></script>
 		<script src='js/jquery.nanoscroller.min.js'></script>
 		";		
