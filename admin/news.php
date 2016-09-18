@@ -152,6 +152,9 @@ $UpdatedData=select_query($link,$SQL,0,0);
 						<form name="Add" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" novalidate>
 							<input type="hidden"  name="action">
 							<input type="hidden" name="newsid" value="<?php echo $_GET["newsid"]?>" />
+							<script>
+								var actionUrl = '<?php echo $_GET["action"]=='newsupdate'? 'beUpdate':'Add';?>';
+							</script>
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtaname">Arabic Title <span class="required">*</span>
 								</label>
@@ -170,7 +173,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtadesc">Arabic Description <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<textarea id="txtadesc" class="form-control col-md-7 col-xs-12 ckeditor" name="txtadesc" cols="60" rows="15">
+									<textarea id="txtadesc" class="form-control col-md-7 col-xs-12 ckeditor required" name="txtadesc" cols="60" rows="15">
 										<?php echo $UpdatedData[0]['news_desc_ar'];?>
 									</textarea>
 								</div>
@@ -179,7 +182,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtedesc">English Description <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<textarea id="txtedesc" class="form-control col-md-7 col-xs-12 ckeditor" name="txtedesc" cols="60" rows="15">
+									<textarea id="txtedesc" class="form-control col-md-7 col-xs-12 ckeditor required" name="txtedesc" cols="60" rows="15">
 										<?php echo $UpdatedData[0]['news_desc_en'];?>
 									</textarea>
 								</div>
@@ -199,36 +202,11 @@ $UpdatedData=select_query($link,$SQL,0,0);
 							<div class="ln_solid"></div>
 							<div class="form-group">
 								<div class="col-md-6 col-md-offset-3">
-									<button type="submit" class="btn btn-primary" onclick="checkdata();">Save</button>
+									<button type="submit" class="btn btn-primary">Save</button>
 									<button type="reset" class="btn btn-success">Reset</button>
 								</div>
 							</div>
 						</form>
-
-						<script>
-						function checkdata()
-						{
-									//---------------------------------------
-										if(document.Add.txtaname.value=="")
-									{
-										alert("The Arabic Title should not be empty");
-										document.Add.txtaname.focus()
-										return false;
-									}
-									//---------------------------------------
-										if(document.Add.txtename.value=="")
-									{
-										alert("The English Title should not be empty");
-										document.Add.txtename.focus()
-										return false;
-									}
-									//---------------------------------------
-									document.Add.action.value='<?php echo $_GET["action"]=='newsupdate'? 'beUpdate':'Add';?>';
-									document.Add.submit();
-									return true;
-						}
-						</script>
-
 					<?php } ?>
 				</div>
 			</div>
