@@ -23,7 +23,7 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
-							<a class="philosophy" href="/coo">
+							<a class="philosophy" href="/countries-of-operation">
 								<?php echo $coo_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -111,7 +111,7 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='philosophy'>
-							<a class="philosophy" href="/coo">
+							<a class="philosophy" href="/countries-of-operation">
 								<?php echo $coo_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
@@ -198,7 +198,7 @@
 	
 	#if ( ($url == $rootUrl) || (strpos($url,$rootUrl.'#') !== false) || (strpos($url,'index.php') !== false) ) { }
 
-	if (strpos($url,'coo') !== false) {
+	if (strpos($url,'countries-of-operation') !== false) {
 		echo "
 		<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
 		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
