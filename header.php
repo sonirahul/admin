@@ -9,7 +9,7 @@
 	if($_POST["Action"]=="changeLang")
 	{
 		$finalLang = $_POST["lang"];
-		setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/", "mawaredhouse.com");
+		//setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/", "mawaredhouse.com");
 		?>
 		<script>
 		document.cookie = "language=<? echo $finalLang; ?>";
@@ -18,7 +18,7 @@
 		echo "<script>document.location='/';</script>";
 	}
 
-	setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/", "mawaredhouse.com");
+	//setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/", "mawaredhouse.com");
 ?>
 <!DOCTYPE html>
 <html>
