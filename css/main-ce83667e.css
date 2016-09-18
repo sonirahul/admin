@@ -6,11 +6,7 @@ body{margin:0;font-family:"roboto","sans-serif","Helvetica","arial"}
 .div-bg4{background:url(http://supernovathemes.com/wp-content/themes/supernonvathemes/images/bg/b3.png)}
 .div-bg5{//background:url(../images/background-pattern.jpg)}
 
-
-
 select{background:#fff!important}
-
-
 
 }*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{font-size:62.5%;-webkit-tap-highlight-color:rgba(0,0,0,0)}
@@ -289,8 +285,10 @@ ul.level-1-nav a{position:relative;display:block;text-transform:uppercase;text-d
 .nav-open .level-1-nav li:nth-child(5){-webkit-transition-delay:.6s;transition-delay:.6s}
 .nav-open .level-1-nav li:nth-child(6){-webkit-transition-delay:.7s;transition-delay:.7s}
 .nav-open .level-1-nav li:nth-child(7){-webkit-transition-delay:.8s;transition-delay:.8s}
+/* adding same 9s two times because about us in mob and desktop, we are using two diff. li */
 .nav-open .level-1-nav li:nth-child(8){-webkit-transition-delay:.9s;transition-delay:.9s}
-.nav-open .level-1-nav li:nth-child(9){-webkit-transition-delay:.10s;transition-delay:1s}
+.nav-open .level-1-nav li:nth-child(9){-webkit-transition-delay:.9s;transition-delay:.9s}
+.nav-open .level-1-nav li:nth-child(10){-webkit-transition-delay:.10s;transition-delay:1s}
 .nav-open .nav-footer{opacity:1;-webkit-transition-delay:1.1s;transition-delay:1.1s}
 body[data-logo-color="dark"] .identity .dt-brandmark{fill:#1f1f1f;-webkit-transition:all 200ms;transition:all 200ms}
 body[data-logo-color="dark"] .identity .dt-logo{fill:#1f1f1f;-webkit-transition:all 200ms;transition:all 200ms}

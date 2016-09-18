@@ -230,7 +230,7 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 			</div>
 		</div>
 	</section>
-	<section class='hidden-ipad blocks-wrapper' data-scroll-position='above' id='blocks-wrapper'>
+	<section class=' visible-lg blocks-wrapper' data-scroll-position='above' id='blocks-wrapper'>
 		<div class='container'>
 			<div class='row row-centered' id='let-us-help-you'>
 				<div class='col-sm-12 <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
@@ -287,7 +287,7 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 			</div>
 		</div>
 	</section>
-	<section class='dt-difference' data-active='zero' id='process'>
+	<section class='dt-difference visible-lg' data-active='zero' id='process'>
 		<span class='lava-lamp'></span>
 		<div class='steps'>
 			<div class='dt-height visible-ipad' data-section='0'>
@@ -343,7 +343,7 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 		</div>
 	</section>
 </div>
-<div id="mobile-about-us" class="visible-xs">
+<div id="mobile-about-us" class="hidden-lg">
 	<div id="mau1" class="mau">
 		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class="icon-signs 
 mh-icon-colored" ></i><?php echo $welcomeName ?></h3>
@@ -746,24 +746,24 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 						</div>
 						<div class="row">
 							<div class="col-lg-6 form-group">
-								<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+								<input class="form-control" id="form-name" name="name" placeholder="Name" type="text" required>
 							</div>
 							<div class="col-lg-6 form-group">
-								<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+								<input class="form-control" id="form-email" name="email" placeholder="Email" type="email" required>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-lg-6 form-group">
-								<input class="form-control" id="name" name="name" placeholder="Subject" type="text" required>
+								<input class="form-control" id="form-subject" name="subject" placeholder="Subject" type="text" required>
 							</div>
 							<div class="col-lg-6 form-group">
-								<input class="form-control" id="email" name="email" placeholder="Mobile" type="email" required>
+								<input class="form-control" id="form-mobile" name="mobile" placeholder="Mobile" type="email" required>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12 form-group">
-								<textarea class="form-control hidden-xs" id="comments" name="comments" placeholder="Details" rows="5" style="resize: none;"></textarea>
-								<textarea class="form-control visible-xs" id="comments" name="comments" placeholder="Details" rows="3" style="resize: none;"></textarea>
+								<textarea class="form-control hidden-xs" id="form-comments" name="comments" placeholder="Details" rows="5" style="resize: none;"></textarea>
+								<textarea class="form-control visible-xs" id="form-comments" name="comments" placeholder="Details" rows="3" style="resize: none;"></textarea>
 							</div>
 						</div>
 						<br>

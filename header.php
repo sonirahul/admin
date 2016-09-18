@@ -56,7 +56,7 @@
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$rootUrl = 'http://' . $_SERVER['HTTP_HOST'] . '/';
 
-	if (strpos($url,'coo') !== false) {
+	if (strpos($url,'countries-of-operation') !== false) {
 		echo '
 		<link rel="stylesheet" id="flik_timeline-flik-css-css" href="css/flik-timeline.min.css" type="text/css" media="all">
 		';
