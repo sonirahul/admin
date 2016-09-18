@@ -4457,4 +4457,15 @@ max-width:100px;
 }
 
 .dir-rtl{direction:rtl;text-align: right;}
+
+textarea.ckeditor {
+    visibility: visible !important;
+    display: block !important;
+    height: 0px !important;
+    width: 0px !important;
+    padding: 0 !important;
+    border: none !important;
+    resize: none;
+    overflow: hidden;
+}
     

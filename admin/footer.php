@@ -1,3 +1,46 @@
+<!-- /page content -->
+<script src="../js/validator.min.js"></script>
+
+<!-- validator -->
+<script>
+	// initialize the validator function
+	validator.message.date = 'not a real date';
+
+	// validate a field on "blur" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
+	$('form')
+			.on('blur', '*.required, input[required], input.optional, select.required', validator.checkField)
+			.on('change', 'select.required, *.required', validator.checkField);
+			
+	$('.multi.required').on('keyup blur', 'input', function() {
+		validator.checkField.apply($(this).siblings().last()[0]);
+	});
+	
+	$('form').submit(function(e) {
+		e.preventDefault();
+		var submit = true;
+		
+		$("textarea.required").attr("required","required");
+		for (instance in CKEDITOR.instances) {
+			CKEDITOR.instances[instance].updateElement();
+		}
+		// evaluate the form using generic validaing
+		if (!validator.checkAll($(this))) {
+			submit = false;
+		}
+
+		if (submit) {
+
+		this.action.value=actionUrl;
+		this.submit();
+		return true;
+	 }
+					//this.submit();
+
+		//$("textarea.required").css("display","none");
+		return false;
+ });
+</script>
+
  <!-- footer content -->
         <!--<style>
 		body { padding-bottom: 49px; }

@@ -21,7 +21,7 @@ for($i=0;$i<count($IDcheckValue);$i++)
 		$showdelet=select_query($link,$SQL,0,0);
         for($d=0;$d<count($showdelet);$d++)
 		{
-		  if($showdelet[$d]['news_photo']!="") unlink("../news/".$showdelet[$d]['news_photo']);
+		  if($showdelet[$d]['news_photo']!="") unlink("../images/news/".$showdelet[$d]['news_photo']);
 		}
 		//----------------------------------------
 		delete_query($link,$TableName,$SQLwhere);
@@ -51,14 +51,14 @@ if($_POST["action"]=="beUpdate")//Applay Updates
 	{ 
   	    $SQL="select news_photo from news where news_id=$newsid";
 		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../news/".$showdelet[0]['news_photo']);
+	    unlink("../images/news/".$showdelet[0]['news_photo']);
 		$TableField[$uf][0]="news_photo";
 		$TableField[$uf][1]="''";
 		$uf++;
 	}elseif($_FILES["news_photo"]["name"]!="")
 		{ 
 		  $TableField[$uf][0]="news_photo";
-	      $TableField[$uf][1]=uploadfile("news_photo","news_".$newsid,"../news");
+	      $TableField[$uf][1]=uploadfile("news_photo","news_".$newsid,"../images/news");
 		  $uf++;
 		}
 	
@@ -89,14 +89,14 @@ $newsid=auto_num($link,"news","news_id");
 	{ 
   	    $SQL="select news_photo from news where news_id=$newsid";
 		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../news/".$showdelet[0]['news_photo']);
+	    unlink("../images/news/".$showdelet[0]['news_photo']);
 		$TableField[$uf][0]="news_photo";
 		$TableField[$uf][1]="''";
 		$uf++;
 	}elseif($_FILES["news_photo"]["name"]!="")
 		{ 
 		  $TableField[$uf][0]="news_photo";
-	      $TableField[$uf][1]=uploadfile("news_photo","news_".$newsid,"../news");
+	      $TableField[$uf][1]=uploadfile("news_photo","news_".$newsid,"../images/news");
 		  $uf++;
 		}
 
@@ -191,7 +191,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 									<input id="news_photo" type="file" name="news_photo" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
 									<?php if(!empty($UpdatedData[0]['news_photo']) && $_GET["action"]=="newsupdate"){
 										$pic_path=$UpdatedData[0]['news_photo'];?>
-										<img border="0" src="../news/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
+										<img border="0" src="../images/news/<?php echo $pic_path?>" width="80" height="80" align="absmiddle">
 										<input type="checkbox" style="border:0px;" name="deletefile"  value="1">Delete
 									<?php } ?>
 								</div>

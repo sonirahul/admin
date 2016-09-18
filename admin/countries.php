@@ -285,6 +285,9 @@ if($_POST["action"]=="Add")
 							<input type="hidden"  name="action">
 							<input type="hidden" name="countriesid" value="<?php echo $_GET["countriesid"]?>" />
 							<input type="hidden" name="countriesContentCount" />
+							<script>
+								var actionUrl = '<?php echo $_GET["action"]=='countriesupdate'? 'beUpdate':'Add';?>';
+							</script>
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtaname">Arabic Country Name <span class="required">*</span>
 								</label>
@@ -300,7 +303,7 @@ if($_POST["action"]=="Add")
 								</div>
 							</div>
 							<div class="item form-group">
-								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtename">Mission &amp; Website Links <span class="required">*</span>
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtename">Mission &amp; Website Links
 								</label>
 								<div class="col-md-8 col-sm-9 col-xs-12">
 									<table class=" table table-responsive table-striped table-bordered table-condensed table-hover" id="countryContentTable" cellspacing="0" width="100%">
@@ -532,29 +535,10 @@ if($_POST["action"]=="Add")
 					<script>
 					function checkdata()
 					{
-								//---------------------------------------
-									if(document.Add.txtaname.value=="")
-								{
-									alert("The Arabic Title should not be empty");
-									document.Add.txtaname.focus()
-									return false;
-								}
-								//---------------------------------------
-									if(document.Add.txtename.value=="")
-								{
-									alert("The English Title should not be empty");
-									document.Add.txtename.focus()
-									return false;
-								}
-								//---------------------------------------
-								var action = '<?php echo $_GET["action"]=='countriesupdate'? 'beUpdate':'Add';?>';
 								
-								document.Add.action.value=action;
 								document.Add.countriesContentCount.value=countriesContentCount;
 								$("*[disabled=true]").attr("disabled", false);
 								
-								document.Add.submit();
-								return false;
 					}
 					</script>
 					<!-- update end -->

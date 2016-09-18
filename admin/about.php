@@ -102,7 +102,6 @@ $SQL="select * from about where about_id=$_GET[aboutId]";
 $UpdatedData=select_query($link,$SQL,0,0);	
 }
 ?>
-
 <div class="right_col" role="main">
 	<div class="row">
 		<div class="col-md-12 col-sm-12 col-xs-12">
@@ -154,6 +153,9 @@ $UpdatedData=select_query($link,$SQL,0,0);
 						<form name="Add" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" novalidate>
 							<input type="hidden"  name="action">
 							<input type="hidden" name="aboutId" value="<?php echo $_GET["aboutId"]?>" />
+							<script>
+								var actionUrl = '<?php echo $_GET["action"]=='aboutupdate'? 'beUpdate':'Add';?>';
+							</script>
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtaname">Arabic Name <span class="required">*</span>
 								</label>
@@ -186,7 +188,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtadesc">Arabic Description <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<textarea id="txtadesc" class="form-control col-md-7 col-xs-12 ckeditor" name="txtadesc" cols="60" rows="15">
+									<textarea id="txtadesc" class="form-control col-md-7 col-xs-12 ckeditor required" name="txtadesc" cols="60" rows="15">
 										<?php echo $UpdatedData[0]['about_desc_ar'];?>
 									</textarea>
 								</div>
@@ -195,20 +197,11 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtedesc">English Description <span class="required">*</span>
 								</label>
 								<div class="col-md-6 col-sm-6 col-xs-12">
-									<textarea id="txtedesc" class="form-control col-md-7 col-xs-12 ckeditor" name="txtedesc" cols="60" rows="15">
+									<textarea id="txtedesc" class="form-control col-md-7 col-xs-12 ckeditor required" name="txtedesc" cols="60" rows="15">
 										<?php echo $UpdatedData[0]['about_desc_en'];?>
 									</textarea>
 								</div>
 							</div>
-							<!--<div class="item form-group">
-								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="txtjobtype">Job Type <span class="required">*</span>
-								</label>
-								<div class="col-md-6 col-sm-6 col-xs-12">
-									
-									<label class="radio-inline"><input type="radio" name="aboutTeamType" value="management" <?php if($UpdatedData[0]['about_team_type']!= "" && $UpdatedData[0]['about_team_type'] == "management") {echo 'checked';}?>>Management</label>
-									<label class="radio-inline"><input type="radio" name="aboutTeamType" value="employee" <?php if($UpdatedData[0]['about_team_type']!= "" && $UpdatedData[0]['about_team_type'] == "employee") {echo 'checked';}?>>Employee</label>
-								</div>
-							</div>-->
 							<div class="item form-group">
 								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="about_image">Photo Attach 
 								</label>
@@ -224,49 +217,11 @@ $UpdatedData=select_query($link,$SQL,0,0);
 							<div class="ln_solid"></div>
 							<div class="form-group">
 								<div class="col-md-6 col-md-offset-3">
-									<button type="submit" class="btn btn-primary" onclick="checkdata();">Save</button>
+									<button type="submit" class="btn btn-primary">Save</button>
 									<button type="reset" class="btn btn-success">Reset</button>
 								</div>
 							</div>
 						</form>
-
-						<script>
-						function checkdata()
-						{
-									if(document.Add.txtaname.value=="")
-									{
-										alert("The Arabic Name should not be empty");
-										document.Add.txtaname.focus()
-										return false;
-									} 
-									//---------------------------------------
-									if(document.Add.txtename.value=="")
-									{
-										alert("The English Name should not be empty");
-										document.Add.txtename.focus()
-										return false;
-									} 
-									//---------------------------------------
-									if(document.Add.txtajobtitle.value=="")
-									{
-										alert("The Arabic Job Title should not be empty");
-										document.Add.txtajobtitle.focus()
-										return false;
-									} 
-									//---------------------------------------
-									if(document.Add.txtejobtitle.value=="")
-									{
-										alert("The English Job Title should not be empty");
-										document.Add.txtejobtitle.focus()
-										return false;
-									} 
-									//---------------------------------------
-									document.Add.action.value='<?php echo $_GET["action"]=='aboutupdate'? 'beUpdate':'Add';?>';
-									document.Add.submit();
-									return true;
-						}
-						</script>
-
 					<?php } ?>			
 				</div>
 			</div>
