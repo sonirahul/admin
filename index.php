@@ -3,7 +3,6 @@ and un-comment them
 LoadModule deflate_module modules/mod_deflate.so
 LoadModule filter_module modules/mod_filter.so
 -->
-
 <?php include "header.php";?>
 <?php  
 $SQLforMagtTeam="select * from about where about_team_type = 'management'";
@@ -40,7 +39,6 @@ $commitment = $allContentData[6]["content_desc_" . $finalLang];
 $singaporeAirlinesName = $allContentData[7]["content_title_" . $finalLang];
 $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 ?>
-	
 <style>
 #loading{width:100%;height:100%;top:0;left:0;position:fixed;display:block;opacity:1.0;background-color:#000;background:linear-gradient(45deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);background:#fff;z-index:999999999;text-align:center}
 #loading-container{position:absolute;top:50%;left:50%;margin-top:-75px;margin-left:-75px}
@@ -51,7 +49,6 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 #singaporeAirlines{//background-image:url(images/site/singapore.jpg);background-size:cover;background-position:center top;background-attachment:fixed;background-color:rgba(0,0,0,0.30);background-blend-mode:multiply}
 #singaporeAirlines h2,#singaporeAirlines #saContent p,#singaporeAirlines #saContent a{color:#fff;text-shadow:0 0 3px #666}
 </style>
-
 <div id="loading">
 	<div id="loading-container">
 		<img id="siteLogo" src="images/logo/mawaredhouse_logo.png"><br/><br/>
@@ -59,7 +56,6 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 		<p id="loading-caption" class="hidden">Loading... </p>
 	</div>
 </div>
-
 <!--add class slide ...to make it slide from right to left -->
 <div id="myCarousel" class="carousel" data-ride="carousel">
 	<!-- Indicators -->
@@ -80,7 +76,6 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 							<?php echo $slider1_static; ?>
 						</p>
 					</blockquote>
-					
 					<div class="block-stats hidden-xs">
 						<ul>
 							<?php for($i=0;$i<count($allStatsData);$i++){?>
@@ -100,12 +95,9 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 						</ul>
 					</div>
 					<p class="hidden main-screen-subcaption">Kuwait - Morocco - Syria - Jordan - Lebanon - Iran - Algeria</p>
-
 				</div>
-
 			</div>
 		</div>
-
 		<div id="carouselItem2"  class="item">
 			<div style="background-image:url(images/sliders/mawaredhouse-slider-2.jpg);background-size:cover;background-position:center bottom"></div>
 			<div class="container">
@@ -176,7 +168,6 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 		</div>
 	</div>
 	<div class="home-main-content"></div>
-
 	<script type="text/javascript">
 		var timeoutID;
 
@@ -189,7 +180,6 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 		}
 	</script>
 </div>
-
 <div class='main clearfix div-bg5' id='main'>
 	<section id='do-dont-process'>
 		<div class='container'>
@@ -228,7 +218,6 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 			</div>
 		</div>
 	</section>
-
 	<section id="singaporeAirlines" class="lazy section container-fluid" data-original="images/site/singapore.jpg">
 		<div class="row">
 			<div class="col-sm-12 text-center">
@@ -241,7 +230,6 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 			</div>
 		</div>
 	</section>
-
 	<section class='hidden-ipad blocks-wrapper' data-scroll-position='above' id='blocks-wrapper'>
 		<div class='container'>
 			<div class='row row-centered' id='let-us-help-you'>
@@ -254,7 +242,6 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 				</div>
 			</div>
 		</div>
-
 		<div class='container'>
 			<div class='row row-centered blocks'>
 				<div class='block red' id='block-one'>
@@ -300,7 +287,6 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 			</div>
 		</div>
 	</section>
-
 	<section class='dt-difference' data-active='zero' id='process'>
 		<span class='lava-lamp'></span>
 		<div class='steps'>
@@ -357,7 +343,6 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 		</div>
 	</section>
 </div>
-
 <div id="mobile-about-us" class="visible-xs">
 	<div id="mau1" class="mau">
 		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class="icon-signs 
@@ -385,7 +370,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $vision ?></p>
 	</div>
 </div>
-
 <div id="news" class="section container-fluid">
 	<div class="row">
 		<div class="col-sm-12 text-center">
@@ -400,9 +384,9 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 	<div id="list-row" class="row">
 		<div class="news-mobile-browser hidden-lg ">
 			<div id="show-list" class="nmb-arrow pull-right"> 
-					<?php echo $newEvent_showList_static; ?>
-
-			<i class="fa fa-th-list" aria-hidden="true"></i> </div>
+				<?php echo $newEvent_showList_static; ?>
+				<i class="fa fa-th-list" aria-hidden="true"></i>
+			</div>
 		</div>
 		<div id="news-list" class="col-lg-4 ">
 			<ul class="nav nav-pills nav-stacked">
@@ -419,7 +403,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 										<?php 
 										echo $allNewsData[$i]["news_title_" . $finalLang];
 										?>
-
 									</p>
 								</div>
 							</div>
@@ -427,11 +410,9 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 					</li>
 					<?php 
 				} 
-				?>	
-
+				?>
 			</ul>
 		</div>
-
 		<div id="news-item" class="col-lg-8">
 			<div class="tab-content">
 				<?php 
@@ -457,8 +438,7 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 					</div>
 					<?php
 				}
-				?>	
-
+				?>
 			</div>
 		</div>
 		<div class="news-mobile-browser hidden-lg">
@@ -467,7 +447,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		</div>
 	</div>
 </div>
-
 <div id="mgtTeamMain2" class="section" style="overflow:hidden">
 	<div class="container-fluid">
 		<div class="row">
@@ -512,13 +491,9 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 				<?php
 			} 
 			?>
-
-
-
 		</div>
 	</div>
 </div>
-
 <div id="mgtTeam" class="section">
 	<div class="container-fluid">
 		<div class="row">
@@ -530,15 +505,14 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 			</div>
 		</div>
 	</div>
-
 <?php
 	$countFromDB=count($allEmployeeTeamData);
 	$boxes = intval($countFromDB/3);
-	
+
 	$widthEachBox = 2;
 	$totalWidth = 12;
 	$total = ($countFromDB + $boxes) * $widthEachBox;
-	
+
 	$multFactor = fmod($total,$totalWidth);
 	$missingCount = 0;
 
@@ -576,7 +550,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		}
 	}
 ?>
-
 	<div class="row" style="margin:0">
 		<?php
 			$boxCount=0;
@@ -608,7 +581,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 						<?php 
 						echo $allEmployeeTeamData[$employeeNo]["about_jobtitle_" . $finalLang];
 						?>
-
 					</h4>
 					<i class="fa fa-angle-double-right" aria-hidden="true"></i>
 				</div>
@@ -632,13 +604,9 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 			$employeeNo = $employeeNo + 1;
 			}
 		}
-		?>	
-		
+		?>
 	</div>		
-	
-	
 </div>
-
 <div id="mgtTeamViewer">
 	<div class="row">
 		<div class="col-md-5 teamviewerimagecontent <?php if ($finalLang == "ar") {echo "pull-right";} ?>">
@@ -656,7 +624,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 	</div>
 	<div class="justBlackBg"></div>
 </div>
-
 <div id="clientss1" class="section container-fluid">
 	<div class="row">
 		<div class="col-sm-12 text-center">
@@ -667,7 +634,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		</div>
 	</div>
 	<div class="row col-sm-10 column-center">
-
 		<div class="row">
 			<?php for($i=0;$i<count($allClientsData);$i++){?>
 				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
@@ -687,19 +653,15 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 				<?php
 			} 
 			?>	
-
 		</div>
 	</div>
 </div>
-
 <div id="contacts" class="section container-fluid">
 	<div>
 		<div id="googleMap">
 			<div id='gmap_canvas' style='width:100%'>
-
 			</div>
 		</div>
-
 		<div id="contact" class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12 text-center">
@@ -709,11 +671,9 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 					</h2>
 				</div>
 			</div>
-
 			<div id="contact-content" class="row">
 				<div class="col-md-8 nopadding">
 					<div class="col-sm-6 nopadding">
-
 						<div class="contact-col nopadding">
 							<div class="contact-col-icon">
 								<i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -730,7 +690,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 								</p>
 							</div>
 						</div>
-
 						<div class="contact-col nopadding">
 							<div class="contact-col-icon">
 								<i class="fa fa-paper-plane" aria-hidden="true"></i>
@@ -745,8 +704,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 						</div>
 
 					</div>
-
-
 					<div class="col-sm-6 nopadding">
 						<div class="contact-col nopadding">
 							<div class="contact-col-icon quick-contact">
@@ -823,13 +780,10 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 					</button>
 				</div>
 			</div>
-
-
 		</div>
 		<div id="contactView">
 			<button type="button" class="btn btn-success"><i class="fa fa-map-o" aria-hidden="true"></i> &nbsp;View Map</button>
 		</div>
-
 	</div>
 </div>
 <?php include "footer.php";?>
@@ -1163,8 +1117,6 @@ $(function(){
 });
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBygc9FtuNgR_pyjs_FAt6d4p3DHhIoFII&callback=init_map"
-type="text/javascript"></script>
 <!-- Add Google Maps -->
 <script type='text/javascript'>
 	function init_map() {
@@ -1191,9 +1143,5 @@ type="text/javascript"></script>
 	}
 	google.maps.event.addDomListener(window, 'load', init_map);
 </script>
-
-
-
 </body>
-
 </html>

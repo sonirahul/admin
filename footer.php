@@ -212,6 +212,7 @@
 	else {
 		echo "
 		<script src='js/main-6e0cc465.js'></script>
+		<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBygc9FtuNgR_pyjs_FAt6d4p3DHhIoFII' type='text/javascript'></script>
 		<script src='js/process-1d1f249e.js'></script>
 		<script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
 		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
