@@ -240,7 +240,6 @@
 <script type="text/javascript">
 	$(function(){
 		$(".langSelect").on("click",function(){
-			console.log(  $(this).attr("lang")    );
 			document.forms["langForm"].elements["Action"].value = "changeLang";
 			document.forms["langForm"].elements["lang"].value = $(this).attr("lang");
 			document.forms["langForm"].submit();

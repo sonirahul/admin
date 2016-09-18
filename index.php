@@ -952,7 +952,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		var peopleTitle = $(this).find(".omgt-pos").text();
 		var peopleText = $(this).find(".omgt-Content").text();
 
-	//console.log(imgsrc + " " + peopleName + " " + peopleTitle + " " + peopleText);
 	//Setting values
 	$(".teamviewerimage").css("background-image",'url('+imgsrc+')');
 	$(".people_Name").html(peopleName);
@@ -971,7 +970,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		var peopleTitle = $(this).find(".sl-hover-subtitle").text();
 		var peopleText = $(this).find(".mw-team-quote").text();
 
-		console.log(imgsrc + " " + peopleName + " " + peopleTitle + " " + peopleText);
 		//Setting values
 		$(".teamviewerimage").css("background-image",'url('+imgsrc+')');
 		$(".people_Name").html(peopleName);

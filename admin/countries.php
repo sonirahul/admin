@@ -378,7 +378,6 @@ if($_POST["action"]=="Add")
 										else if ($(this).val() == "Add") {
 											
 											var tableRow= '<tr><td><select name="countriesContent['+ countriesContentCount +'][1]" class="form-control countries_flag_select"><option></option><option value="other">Other</option><?php for ($k=0; $k < count($AllData);$k++) { echo "<option value=".$AllData[$k]["countries_id"].">".ucwords($AllData[$k]["countries_title_en"])."</option>"; } ?></select></td><td><input type="text" name="countriesContent['+ countriesContentCount +'][2]" class="form-control"><input type="hidden" name="countriesContent['+ countriesContentCount +'][3]" value="add"></td></tr>';
-											console.log(tableRow);
 											$('#countryContentTable tbody').append(tableRow);
 											countriesContentCount = countriesContentCount + 1;
 										}

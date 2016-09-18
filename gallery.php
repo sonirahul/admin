@@ -96,14 +96,14 @@ jQuery(document).ready(function ($) {
 		prevText: "<i class=\"fa fa-arrow-left\"></i>",
 		closeText: "<i class=\"fa fa-times\"></i>",
 		onStart: function () {
-			console.log("Gridder Inititialized");
+			//console.log("Gridder Inititialized");
 		},
 		onContent: function () {
-			console.log("Gridder Content Loaded");
+			//console.log("Gridder Content Loaded");
 			$(".carousel").carousel();
 		},
 		onClosed: function () {
-			console.log("Gridder Closed");
+			//console.log("Gridder Closed");
 		}
 	});
 });
