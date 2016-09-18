@@ -47,7 +47,13 @@
 							<span class='icon-right-open-big'></span>
 						</li>
 						<li class='our-work'>
-							<a class="our-work" href="/#blocks-wrapper">
+							<a class="visible-lg our-work" href="/#blocks-wrapper">
+								<?php echo $aboutus_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='hidden-lg our-work'>
+							<a class="our-work" href="/#mobile-about-us">
 								<?php echo $aboutus_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
