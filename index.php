@@ -787,26 +787,27 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 								<div class="cc-title"><h3>Contact/Feedback Form</h3></div>
 							</div>
 						</div>
+						
 						<div class="row">
 							<div class="col-lg-6 form-group">
-								<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+								<input class="form-control" id="form-name" name="name" placeholder="Name" type="text" required>
 							</div>
 							<div class="col-lg-6 form-group">
-								<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+								<input class="form-control" id="form-email" name="email" placeholder="Email" type="email" required>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-lg-6 form-group">
-								<input class="form-control" id="name" name="name" placeholder="Subject" type="text" required>
+								<input class="form-control" id="form-subject" name="subject" placeholder="Subject" type="text" required>
 							</div>
 							<div class="col-lg-6 form-group">
-								<input class="form-control" id="email" name="email" placeholder="Mobile" type="email" required>
+								<input class="form-control" id="form-mobile" name="mobile" placeholder="Mobile" type="email" required>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12 form-group">
-								<textarea class="form-control hidden-xs" id="comments" name="comments" placeholder="Details" rows="5" style="resize: none;"></textarea>
-								<textarea class="form-control visible-xs" id="comments" name="comments" placeholder="Details" rows="3" style="resize: none;"></textarea>
+								<textarea class="form-control hidden-xs" id="form-comments" name="comments" placeholder="Details" rows="5" style="resize: none;"></textarea>
+								<textarea class="form-control visible-xs" id="form-comments" name="comments" placeholder="Details" rows="3" style="resize: none;"></textarea>
 							</div>
 						</div>
 						<br>
