@@ -1147,7 +1147,7 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 	});
 </script>
 
-<-- parallax effect -->
+<!-- parallax effect -->
 <script type="text/javascript">
 $(function(){
 	var parallax = document.querySelectorAll(".parallax");
@@ -1162,9 +1162,6 @@ $(function(){
 	};
 });
 </script>
-
-$(this).offset().top - 
-
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBygc9FtuNgR_pyjs_FAt6d4p3DHhIoFII&callback=init_map"
 type="text/javascript"></script>
