@@ -27,6 +27,9 @@ $philosophy = $allContentData[1]["content_desc_" . $finalLang];
 $vacName = $allContentData[2]["content_title_" . $finalLang];
 $vac = $allContentData[2]["content_desc_" . $finalLang];
 
+$contactUsName = $allContentData[3]["content_title_" . $finalLang];
+$contactUs = $allContentData[3]["content_desc_" . $finalLang];
+
 $missionName = $allContentData[4]["content_title_" . $finalLang];
 $mission = $allContentData[4]["content_desc_" . $finalLang];
 
@@ -667,12 +670,13 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 				<div class="col-sm-12 text-center">
 					<h2 class="mh-text-white mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 						<i class="fa fa-plane fa-lg about-us" aria-hidden="true"></i>
-						<span style="text-decoration: underline"><?php echo $contact_static; ?></span>
+						<span style="text-decoration: underline"><?php echo $contactUsName; ?></span>
 					</h2>
 				</div>
 			</div>
-			<div id="contact-content" class="row">
-				<div class="col-md-8 nopadding">
+			<div id="contact-content" class="row <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+				<?php echo $contactUs; ?>
+				<!-- <div class="col-md-8 nopadding">
 					<div class="col-sm-6 nopadding">
 						<div class="contact-col nopadding">
 							<div class="contact-col-icon">
@@ -685,8 +689,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 									Al Qibla Area<br/>
 									Opposite Central Bank of Kuwait<br/>
 									Kuwait City
-
-
 								</p>
 							</div>
 						</div>
@@ -732,7 +734,7 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div id="contactForm" class="col-sm-6 col-md-4" style="">
 					<div id="contactFormMobileClose" class="visible-xs visible-sm"><i class="icon-rounded-x"></i></div>
 					<div id="mainPopupForm" class="col-sm-6 col-md-12 col-lg-12 column-center">
