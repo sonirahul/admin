@@ -679,6 +679,9 @@ footer {
 .nav-sm footer {
   margin-left: 70px ;  
 }
+.nav-sm .admin-landing {
+  margin-left: 70px ;  
+}
 .tile-stats.sparkline {
   padding: 10px;
   text-align: center;
