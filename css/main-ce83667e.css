@@ -722,3 +722,5 @@ span.langSelected{display:inline-block;padding-left:10px;padding-bottom:5px}
 }
 
 #section-2,#section-3,#section-4{background-attachment:fixed}
+.contact-col.nopadding * , #contact-header-info.contact-col *{transition: all 1s ease-in-out}
+.contact-col.nopadding:hover * , #contact-header-info.contact-col:hover *{color: orange !important}

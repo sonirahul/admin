@@ -21,4 +21,13 @@ $slider3_1_static="\"None of us is as smart as all of us\"";
 $slider3_2_static="Ken Blanchard";
 $slider4_static="";
 $slider5_static="Global Presence";
+$name_static="Name";
+$email_static="Email";
+$subject_static="Subject";
+$mobile_static="Mobile";
+$details_static="Details";
+$send_static="Send";
+$feedback_static="FEEDBACK FORM";
+$viewMap_static="View Map";
+$contactFeedback_static="Contact/Feedback Form";
 ?>

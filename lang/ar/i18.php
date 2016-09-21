@@ -21,4 +21,13 @@ $slider3_1_static="\"ذكاؤنا كجماعة لايضاهيه ذكاء الف�
 $slider3_2_static="Ken Blanchard";
 $slider4_static="";
 $slider5_static="حضور عالمي";
+$name_static="الصيت";
+$email_static="البريد الإلكتروني";
+$subject_static="موضوع";
+$mobile_static="التليفون المحمول";
+$details_static="تفاصيل";
+$send_static="إرسال";
+$feedback_static="نموذج الملاحظات";
+$viewMap_static="إعرض الخريطة";
+$contactFeedback_static="نموذج الملاحظات/اتصال";
 ?>

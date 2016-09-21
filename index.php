@@ -27,6 +27,9 @@ $philosophy = $allContentData[1]["content_desc_" . $finalLang];
 $vacName = $allContentData[2]["content_title_" . $finalLang];
 $vac = $allContentData[2]["content_desc_" . $finalLang];
 
+$contactUsName = $allContentData[3]["content_title_" . $finalLang];
+$contactUs = $allContentData[3]["content_desc_" . $finalLang];
+
 $missionName = $allContentData[4]["content_title_" . $finalLang];
 $mission = $allContentData[4]["content_desc_" . $finalLang];
 
@@ -667,12 +670,13 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 				<div class="col-sm-12 text-center">
 					<h2 class="mh-text-white mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 						<i class="fa fa-plane fa-lg about-us" aria-hidden="true"></i>
-						<span style="text-decoration: underline"><?php echo $contact_static; ?></span>
+						<span style="text-decoration: underline"><?php echo $contactUsName; ?></span>
 					</h2>
 				</div>
 			</div>
-			<div id="contact-content" class="row">
-				<div class="col-md-8 nopadding">
+			<div id="contact-content" class="row <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+				<?php echo $contactUs; ?>
+				<!-- <div class="col-md-8 nopadding">
 					<div class="col-sm-6 nopadding">
 						<div class="contact-col nopadding">
 							<div class="contact-col-icon">
@@ -685,8 +689,6 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 									Al Qibla Area<br/>
 									Opposite Central Bank of Kuwait<br/>
 									Kuwait City
-
-
 								</p>
 							</div>
 						</div>
@@ -732,45 +734,45 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div id="contactForm" class="col-sm-6 col-md-4" style="">
+				</div> -->
+				<div id="contactForm" class="col-sm-6 col-md-4 col-md-offset-1" style="">
 					<div id="contactFormMobileClose" class="visible-xs visible-sm"><i class="icon-rounded-x"></i></div>
 					<div id="mainPopupForm" class="col-sm-6 col-md-12 col-lg-12 column-center">
 						<form action="mail.php" method="post">
 							<div id="contact-header-info" class="contact-col">
-								<div class="contact-col-icon">
+								<div class="contact-col-icon <?php if ($finalLang == "ar") {echo "pull-right";} ?>">
 									<i class="fa fa-wpforms" aria-hidden="true"></i>
 								</div>
 								<div class="contact-col-content">
-									<div class="cc-title"><h3>Contact/Feedback Form</h3></div>
+									<div class="cc-title"><h3><?php echo $contactFeedback_static; ?></h3></div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-lg-6 form-group">
-									<input class="form-control" id="form-name" name="name" placeholder="Name" type="text" required>
+									<input class="form-control" id="form-name" name="name" placeholder="<?php echo $name_static; ?>" type="text" required>
 								</div>
 								<div class="col-lg-6 form-group">
-									<input class="form-control" id="form-email" name="email" placeholder="Email" type="email" required>
+									<input class="form-control" id="form-email" name="email" placeholder="<?php echo $email_static; ?>" type="email" required>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-lg-6 form-group">
-									<input class="form-control" id="form-subject" name="subject" placeholder="Subject" type="text" required>
+									<input class="form-control" id="form-subject" name="subject" placeholder="<?php echo $subject_static; ?>" type="text" required>
 								</div>
 								<div class="col-lg-6 form-group">
-									<input class="form-control" id="form-mobile" name="mobile" placeholder="Mobile" type="number" required>
+									<input class="form-control" id="form-mobile" name="mobile" placeholder="<?php echo $mobile_static; ?>" type="number" required>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-12 form-group">
-									<textarea class="form-control hidden-xs" id="form-comments" name="comments_lg" placeholder="Details" rows="5" style="resize: none;"></textarea>
-									<textarea class="form-control visible-xs" id="form-comments" name="comments_mob" placeholder="Details" rows="3" style="resize: none;"></textarea>
+									<textarea class="form-control hidden-xs" id="form-comments" name="comments_lg" placeholder="<?php echo $details_static; ?>" rows="5" style="resize: none;"></textarea>
+									<textarea class="form-control visible-xs" id="form-comments" name="comments_mob" placeholder="<?php echo $details_static; ?>" rows="3" style="resize: none;"></textarea>
 								</div>
 							</div>
 							<br>
 							<div class="row">
 								<div class="col-md-12 form-group">
-									<button class="btn btn-default pull-right" type="submit">Send</button>
+									<button class="btn btn-info pull-right" type="submit"><?php echo $send_static; ?></button>
 								</div>
 							</div>	
 						</form>
@@ -778,13 +780,13 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 				</div>
 				<div id="contactFormBtn" class="col-xs-12 visible-xs visible-sm">
 					<button type="button" class="btn btn-primary">
-						<span class="icon-scroll"> FEEDBACK FORM</span>
+						<span class="icon-scroll"> <?php echo $feedback_static; ?></span>
 					</button>
 				</div>
 			</div>
 		</div>
 		<div id="contactView">
-			<button type="button" class="btn btn-success"><i class="fa fa-map-o" aria-hidden="true"></i> &nbsp;View Map</button>
+			<button type="button" class="btn btn-success"><i class="fa fa-map-o" aria-hidden="true"></i> &nbsp;<?php echo $viewMap_static; ?></button>
 		</div>
 	</div>
 </div>
