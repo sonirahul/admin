@@ -22,30 +22,6 @@
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
-						<li class='philosophy'>
-							<a class="philosophy" href="/countries-of-operation">
-								<?php echo $coo_static; ?>
-							</a>
-							<span class='icon-right-open-big'></span>
-						</li>
-						<li class='philosophy'>
-							<a class="philosophy" href="/#mgtTeamMain2">
-								<?php echo $oTeam_static; ?>
-							</a>
-							<span class='icon-right-open-big'></span>
-						</li>
-						<li class='blog'>
-							<a class="blog" href="/#clientss1">
-								<?php echo $oClients_static; ?>
-							</a>
-							<span class='icon-right-open-big'></span>
-						</li>
-						<li class='careers'>
-							<a class="careers" href="/gallery">
-								<?php echo $gallery_static; ?>
-							</a>
-							<span class='icon-right-open-big'></span>
-						</li>
 						<li class='our-work'>
 							<a class="visible-lg our-work" href="/#blocks-wrapper">
 								<?php echo $aboutus_static; ?>
@@ -58,9 +34,34 @@
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
+						
+						<li class='philosophy'>
+							<a class="philosophy" href="/#mgtTeamMain2">
+								<?php echo $oTeam_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='blog'>
+							<a class="blog" href="/#clientss1">
+								<?php echo $oClients_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
 						<li class='contact'>
 							<a class="contact" href="/#contacts">
 								<?php echo $contact_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='philosophy'>
+							<a class="philosophy" href="/countries-of-operation">
+								<?php echo $coo_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='careers'>
+							<a class="careers" href="/gallery">
+								<?php echo $gallery_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
@@ -110,9 +111,15 @@
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
-						<li class='philosophy'>
-							<a class="philosophy" href="/countries-of-operation">
-								<?php echo $coo_static; ?>
+						<li class='our-work'>
+							<a class="visible-lg our-work" href="/#blocks-wrapper">
+								<?php echo $aboutus_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='hidden-lg our-work'>
+							<a class="our-work" href="/#mobile-about-us">
+								<?php echo $aboutus_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
@@ -128,27 +135,21 @@
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
-						<li class='careers'>
-							<a class="careers" href="/gallery">
-								<?php echo $gallery_static; ?>
-							</a>
-							<span class='icon-right-open-big'></span>
-						</li>
-						<li class='our-work'>
-							<a class="visible-lg our-work" href="/#blocks-wrapper">
-								<?php echo $aboutus_static; ?>
-							</a>
-							<span class='icon-right-open-big'></span>
-						</li>
-						<li class='hidden-lg our-work'>
-							<a class="our-work" href="/#mobile-about-us">
-								<?php echo $aboutus_static; ?>
-							</a>
-							<span class='icon-right-open-big'></span>
-						</li>
 						<li class='contact'>
 							<a class="contact" href="/#contacts">
 								<?php echo $contact_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='philosophy'>
+							<a class="philosophy" href="/countries-of-operation">
+								<?php echo $coo_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='careers'>
+							<a class="careers" href="/gallery">
+								<?php echo $gallery_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
