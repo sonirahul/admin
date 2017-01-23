@@ -6,26 +6,19 @@ $txtename=$_POST["txtename"];
 $txtedesc=$_POST["txtedesc"];
 $deletefile=$_POST["deletefile"];
 //-------------------------------------------Delet Fields
-if($_POST["action"]=="deletfields")
-	{
+if($_POST["action"]=="Delete"){
 	$TableName="news";
-	$IDcheckValue=$_POST[IDcheckValue];
-for($i=0;$i<count($IDcheckValue);$i++)
-	{
-	if($_POST[IDcheck][$i])
-		{
-		$SQLwhere="news_id=";
-		$SQLwhere.=$IDcheckValue[$i];
+	if($newsid){
+		$SQLwhere="news_id=".$newsid;
 		//----------------------------------------
-		$SQL="select * from news where news_id=$IDcheckValue[$i]";
+		$SQL="select * from news where news_id=$newsid";
 		$showdelet=select_query($link,$SQL,0,0);
-        for($d=0;$d<count($showdelet);$d++)
+		for($d=0;$d<count($showdelet);$d++)
 		{
 		  if($showdelet[$d]['news_photo']!="") unlink("../images/news/".$showdelet[$d]['news_photo']);
 		}
 		//----------------------------------------
 		delete_query($link,$TableName,$SQLwhere);
-		}
 	}
 }
 //---------Show Data------------------	
@@ -119,7 +112,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 						<span class="section">News</span>
 						<form method="post" name="Prowse" class="form-horizontal form-label-left" novalidate>
 							<input type="hidden" name="action">
-							<input type="hidden" name="newsId">
+							<input type="hidden" name="newsid">
 							<div class="item form-group">
 								<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
 									<a href="index.php?model=news&action=newsadd" class="btn btn-primary">Add New News</a><br/><br/>
@@ -138,7 +131,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 													<td><?php echo $SettingData[$i]["news_title_en"]?></td>
 													<td>
 														<a href="index.php?model=news&newsid=<?php echo $SettingData[$i]["news_id"]?>&action=newsupdate" class="btn btn-warning">Edit</a>
-														<input name="button" type="button" class="btn btn-danger news-delete-button" value="Delete" newsId="<?php echo $SettingData[$i]['news_id']?>">
+														<input name="button" type="button" class="btn btn-danger news-delete-button" value="Delete" newsid="<?php echo $SettingData[$i]['news_id']?>">
 													</td>
 												</tr>
 											<?php } ?>
@@ -146,7 +139,15 @@ $UpdatedData=select_query($link,$SQL,0,0);
 								</div>
 							</div>
 						</form>
-
+						<script type="text/javascript">
+							$(function() {
+								$('.news-delete-button').on("click", function(){
+									document.forms["Prowse"].elements["action"].value = $(this).val();
+									document.forms["Prowse"].elements["newsid"].value = $(this).attr("newsId");
+									document.forms["Prowse"].submit();
+								});
+							});
+						</script>
 					<?php }elseif($_GET["action"]=="newsupdate" || $_GET["action"]=="newsadd"){?>
 						<span class="section"><?php if ($_GET["action"]=="newsupdate") echo "Edit News Detail"; else echo "Add News Detail";?></span>
 						<form name="Add" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left" novalidate>
