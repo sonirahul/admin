@@ -17,23 +17,27 @@
 	
 	$('form').submit(function(e) {
 		e.preventDefault();
-		var submit = true;
 		
-		$("textarea.required").attr("required","required");
-		for (instance in CKEDITOR.instances) {
-			CKEDITOR.instances[instance].updateElement();
-		}
-		// evaluate the form using generic validaing
-		if (!validator.checkAll($(this))) {
-			submit = false;
-		}
+		// added this condition for flags page.
+		if (typeof $(this).attr("dontValidate") === 'undefined') {
+			var submit = true;
+			
+			$("textarea.required").attr("required","required");
+			for (instance in CKEDITOR.instances) {
+				CKEDITOR.instances[instance].updateElement();
+			}
+			// evaluate the form using generic validaing
+			if (!validator.checkAll($(this))) {
+				submit = false;
+			}
 
-		if (submit) {
+			if (submit) {
 
-		this.action.value=actionUrl;
-		this.submit();
-		return true;
-	 }
+			this.action.value=actionUrl;
+			this.submit();
+			return true;
+			}
+		}
 					//this.submit();
 
 		//$("textarea.required").css("display","none");

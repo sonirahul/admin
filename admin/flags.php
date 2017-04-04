@@ -91,7 +91,7 @@ $showdelet=select_query($link,$SQL,0,0);
 							</div>
 							<div id="collapse1" class="panel-collapse collapse in">
 								<div class="panel-body">
-									<form method="post" name="Prowse" id="Prowse" class="form-horizontal form-label-left" novalidate>
+									<form method="post" name="Prowse" id="Prowse" class="form-horizontal form-label-left" novalidate dontValidate=true>
 										<input type="hidden" name="Action">
 										<input type="hidden" name="ClientId">
 										<div class="item form-group">
