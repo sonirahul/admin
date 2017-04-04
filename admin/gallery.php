@@ -27,7 +27,7 @@ for($i=0;$i<count($IDcheckValue);$i++)
         for($d=0;$d<count($showdelet);$d++)
 		{
 		  if($showdelet[$d]['gallery_photo']!="") unlink("../images/gallery/".$showdelet[$d]['gallery_photo']);
-		  if($showdelet[$d]['gallery_thumb']!="") unlink("../images/gallery/".$showdelet[$d]['gallery_thumb']);
+		  //if($showdelet[$d]['gallery_thumb']!="") unlink("../images/gallery/".$showdelet[$d]['gallery_thumb']);
 		}
 		//----------------------------------------
 		delete_query($link,$TableName,$SQLwhere);
@@ -63,7 +63,7 @@ if(!$NofPage || $NofPage==0)$NofPage=1;
 $PageCount=10;
 $SettingData=select_query($link,$SQL,$PageCount,$NofPage);	
 //--------------------------------
-if($_POST["action"]=="beUpdate")//Applay Updates
+if($_POST["action"]=="beUpdate")//Apply Updates
 {
 	$TableName="gallery";
 	$TableField=array();
@@ -84,12 +84,12 @@ if($_POST["action"]=="beUpdate")//Applay Updates
 	}elseif($_FILES["gallery_photo"]["name"]!="")
 		{ 
 		  $TableField[$uf][0]="gallery_photo";
-		  $photoid=mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
+		  $photoid=str_replace(' ', '_', strtolower($txtename))."_".mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
 	      $TableField[$uf][1]=uploadfile("gallery_photo",$photoid,"../images/gallery");
-		  $uf++;
+		  //$uf++;
 		}
 		
-	if($deletethumbfile==1)
+	/*if($deletethumbfile==1)
 	{ 
   	    $SQL="select * from gallery where gallery_id=$gid";
 		$showdelet=select_query($link,$SQL,0,0);
@@ -101,11 +101,11 @@ if($_POST["action"]=="beUpdate")//Applay Updates
 		  $TableField[$uf][0]="gallery_thumb";
 		  $photoid=mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
 	     $TableField[$uf][1]=uploadfile("gallery_thumb","thumb_".$photoid,"../images/gallery");
-		}
+		}*/
 		
     $SQLwhere="gallery_id=$gid";	
 	update_query($link,$TableName,$TableField,$SQLwhere);
-	echo "<script>document.location='index.php?model=gallary';</script>";
+	echo "<script>document.location='index.php?model=gallery';</script>";
 }
 //----------------------Add	
 if($_POST["action"]=="Add")
@@ -122,39 +122,26 @@ $gid=auto_num($link,"gallery","gallery_id");
 	$TableField[3][0]="gallery_name_en";
 	$TableField[3][1]="'$txtename'";	
 	
-	$af=4;
-	if($deletefile==1)
-	{ 
-  	    $SQL="select * from gallery where gallery_id=$gid";
-		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../images/gallery/".$showdelet[0]['gallery_photo']);
-		$TableField[$af][0]="gallery_photo";
-		$TableField[$af][1]="''";
-		$af++;
-  	}elseif($_FILES["gallery_photo"]["name"]!="")
+	$af=4;	
+	
+	if($_FILES["gallery_photo"]["name"]!="")
 		{
 		  $TableField[$af][0]="gallery_photo";
-		  $photoid=mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
-	      $TableField[$af][1]=uploadfile("gallery_photo",$photoid,"../images/gallery");
-		  $af++;
+		  $photoid=str_replace(' ', '_', strtolower($txtename))."_".mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
+		  echo "photo ka naam: ".$photoid;
+		  $TableField[$af][1]=uploadfile("gallery_photo",$photoid,"../images/gallery");
+		  //$af++;
 		}
 		
-	if($deletethumbfile==1)
-	{ 
-  	    $SQL="select * from gallery where gallery_id=$gid";
-		$showdelet=select_query($link,$SQL,0,0);
-	    unlink("../images/gallery/".$showdelet[0]['gallery_thumb']);
-		$TableField[$af][0]="gallery_thumb";
-		$TableField[$af][1]="''";
-	}elseif($_FILES["gallery_thumb"]["name"]!="")
+	/*if($_FILES["gallery_thumb"]["name"]!="")
 		{ 
 		  $TableField[$af][0]="gallery_thumb";
 		  $photoid=mktime(date("H"),date("i"),date("s"),date("m"),date("d"),date("Y"));
 	      $TableField[$af][1]=uploadfile("gallery_thumb","thumb_".$photoid,"../images/gallery");
-		}
+		}*/
 
     insert_query($link,$TableName,$TableField);
-	echo "<script>document.location='index.php?model=gallary';</script>";
+	//echo "<script>document.location='index.php?model=gallery';</script>";
 }
 //---------------------------
 if($_GET["action"]=="galleryupdate")
@@ -182,7 +169,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 </tr>
 <tr>
 	  <td width="77%" align="left">&nbsp;</td>
-	  <TD width="23%" align="center"><a href="index.php?model=gallary&action=galleryadd" class="link">Add New Photo Gallery</a></TD>
+	  <TD width="23%" align="center"><a href="index.php?model=gallery&action=galleryadd" class="link">Add New Photo Gallery</a></TD>
 </tr>
 			<tr><td colspan="2">&nbsp;</td></tr>
 			
@@ -210,7 +197,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 						<? }else {?>
 						<? for($i=0;$i<count($SettingData)-1;$i++){?>
 						<tr align="center">
-						<td><a href="index.php?model=gallary&gid=<?=$SettingData[$i]["gallery_id"]?>&action=galleryupdate" class="link">Edit</a></td>
+						<td><a href="index.php?model=gallery&gid=<?=$SettingData[$i]["gallery_id"]?>&action=galleryupdate" class="link">Edit</a></td>
                         <td><?=$SettingData[$i]["gallery_name_en"]?></td>
 						<td><img border="0" src="../images/gallery/<?=$SettingData[$i]["gallery_photo"]?>" width="80" height="80" align="absmiddle"></td>
 						<td><input type="checkbox" name="IDcheck[<? echo $i?>]" id="datachk" style="border:0;background : transparent;"> 
@@ -274,7 +261,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 			  <input type="checkbox" style="border:0px;" name="deletefile"  value="1">Delete
               <? } ?></td>
 			</tr>
-            <tr height="25" bgcolor="#FFFFFF"> 
+            <!--<tr height="25" bgcolor="#FFFFFF"> 
               <td width="28%" valign="top"><strong>Photo Thumbnail </strong></td>
               <td width="72%"><input type="file" name="gallery_thumb">&nbsp;
 			  <? if(!empty($UpdatedData[0]['gallery_thumb']) && $_GET["action"]=="galleryupdate"){	
@@ -283,7 +270,7 @@ $UpdatedData=select_query($link,$SQL,0,0);
 			  <img border="0" src="../images/gallery/<?=$pic_path?>" width="80" height="80" align="absmiddle">
 			  <input type="checkbox" style="border:0px;" name="deletethumbfile"  value="1">Delete
               <? } ?></td>
-			</tr>
+			</tr>-->
 			
 			<tr height="25" bgcolor="#FFFFFF"> 
               <td colspan="2"> <p align="center"> 
