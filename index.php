@@ -1127,16 +1127,16 @@ $(function(){
 			scrollwheel:false,
 			draggable: false,
 			scaleControl:false,
-			center: new google.maps.LatLng(29.37585899999999, 48.00223471640631),
+			center: new google.maps.LatLng(29.378188, 47.989124),
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 		map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
 		marker = new google.maps.Marker({
 			map: map,
-			position: new google.maps.LatLng(29.37585899999999, 48.00223471640631)
+			position: new google.maps.LatLng(29.378188, 47.989124)
 		});
 		infowindow = new google.maps.InfoWindow({
-			content: '<strong>Mawared House</strong><br>4B, 2nd Floor, Al Banwan Building Al Qibla Area Opposite Central Bank Of Kuwait Kuwait City<br>'
+			content : '<strong>Mawared House</strong><br>Kuwait Arraya Centre. 30th Floor, Al Shuhada Street, Kuwait City, Capital Governorate, Kuwait<br/> '
 		});
 		google.maps.event.addListener(marker, 'click', function() {
 			infowindow.open(map, marker);
