@@ -41,6 +41,25 @@ $commitment = $allContentData[6]["content_desc_" . $finalLang];
 
 $singaporeAirlinesName = $allContentData[7]["content_title_" . $finalLang];
 $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
+
+// TODO : 
+// 1. Need to revisit the area
+// 2. need to check the index of the relocation service in all content data (currently 8)
+// $relocationServicesName = $allContentData[8]["content_title_" . $finalLang];
+// $relocationService = $allContentData[8]["content_desc_" . $finalLang];
+
+$relocationServicesName="Relocation Services";
+$relocationService=
+"
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+It has survived not only five centuries, but also the leap into electronic typesetting, 
+remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
+like Aldus PageMaker including versions of Lorem Ipsum.
+";
+
 ?>
 <style>
 #loading{width:100%;height:100%;top:0;left:0;position:fixed;display:block;opacity:1.0;background-color:#000;background:linear-gradient(45deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);background:#fff;z-index:999999999;text-align:center}
@@ -233,6 +252,67 @@ $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 			</div>
 		</div>
 	</section>
+	
+	<style type="text/css">
+		
+		div#mrpLogoCon>img{
+		    width: 80%;
+		    margin-top: 15%;
+		}
+		div#rsPartnerLogo img{
+			width: 80px;
+		}
+		ul#relocFeatureList li {
+		    list-style-type: initial;
+		    overflow: initial;
+		}
+	</style>
+	<section id="relocationServices" class="lazy section container-fluid">
+		<div class='row  column-center text-justify <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
+			<div class='col-md-5 col-sm-12'>
+				<div id="mrpLogoCon" class="text-center">
+					<img src="images/relocationService/mrp-logo.png"/>
+				</div>
+			</div>
+			<div class='col-md-7 col-sm-12'>
+				<h1>
+					<span class="mh-text-colored-with-underline slideanim">Metrica Relocation Plus</span>
+				</h1>
+				<h4>Reliable, Responsive, and Highly Recommended</h4>
+				<p>Mawared House is proud to be the partners’ of Metrica Relocations Plus  for Kuwait since May 2017</p>
+
+				<ul id="relocFeatureList">
+					<li class="slideanim">Destination Service Provider with coverage in over 110 countries.</li>
+					<li class="slideanim">Certified independent minority and women-owned and operated small business enterprise, founded in 1984 </li>
+					<li class="slideanim">Over 20 years of global relocation management and consulting experience serving the US government, corporate clients and international organizations</li>
+					<li class="slideanim">M+ in-country partners / firms are currently located in strategic and emerging markets throughout Africa, Eastern European, Asia and Lat-Am and we're constantly expanding driven by client needs</li>
+				</ul>
+				<br/>
+				<div id="rsPartnerLogo" class="row text-center">
+					<div class="col-md-4">
+						<img src="images/relocationService/shell-logo.png"/>
+					</div>
+					<div class="col-md-4">
+						<img src="images/relocationService/unilever-logo.png"/>
+					</div>
+					<div class="col-md-4">
+						<img src="images/relocationService/twb-logo.jpg"/>
+					</div>
+				</div>
+				<br/>
+				<div class="row">
+					<div class="pull-left">
+						<a href="http://www.metricarelocations.com">www.metricarelocations.com</a>
+					</div>
+					<div class="pull-right">
+						<a href="tel:9652297142">(+965 ) 22971142</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
 	<section class=' visible-lg blocks-wrapper' data-scroll-position='above' id='blocks-wrapper'>
 		<div class='container'>
 			<div class='row row-centered' id='let-us-help-you'>
