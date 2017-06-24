@@ -62,14 +62,14 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 
 ?>
 <style>
-#loading{width:100%;height:100%;top:0;left:0;position:fixed;display:block;opacity:1.0;background-color:#000;background:linear-gradient(45deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);background:#fff;z-index:999999999;text-align:center}
-#loading-container{position:absolute;top:50%;left:50%;margin-top:-75px;margin-left:-75px}
-#siteLogo{width:150px}
-#loading-image{z-index:100}
-#loading-caption{width:100%;text-align:center;color:#6c6e71}
-.carousel-inner .item>div,.carousel{width:100%;height:100vh}
-#singaporeAirlines{//background-image:url(images/site/singapore.jpg);background-size:cover;background-position:center top;background-attachment:fixed;background-color:rgba(0,0,0,0.30);background-blend-mode:multiply}
-#singaporeAirlines h2,#singaporeAirlines #saContent p,#singaporeAirlines #saContent a{color:#fff;text-shadow:0 0 3px #666}
+	#loading{width:100%;height:100%;top:0;left:0;position:fixed;display:block;opacity:1.0;background-color:#000;background:linear-gradient(45deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);background:#fff;z-index:999999999;text-align:center}
+	#loading-container{position:absolute;top:50%;left:50%;margin-top:-75px;margin-left:-75px}
+	#siteLogo{width:150px}
+	#loading-image{z-index:100}
+	#loading-caption{width:100%;text-align:center;color:#6c6e71}
+	.carousel-inner .item>div,.carousel{width:100%;height:100vh}
+	#singaporeAirlines{//background-image:url(images/site/singapore.jpg);background-size:cover;background-position:center top;background-attachment:fixed;background-color:rgba(0,0,0,0.30);background-blend-mode:multiply}
+	#singaporeAirlines h2,#singaporeAirlines #saContent p,#singaporeAirlines #saContent a{color:#fff;text-shadow:0 0 3px #666}
 </style>
 <div id="loading">
 	<div id="loading-container">
@@ -101,106 +101,109 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 					<div class="block-stats hidden-xs">
 						<ul>
 							<?php for($i=0;$i<count($allStatsData);$i++){?>
-								<?php $statValue = $allStatsData[$i]["statistics_value"]?>
-								<li class="scroll-animated-item animate<?php echo $i+1?> fadeInRight">
-									<div class="num" 
-									data-num="<?php if($statValue>999) {$statValue=($statValue/1000); echo $statValue; ?>" 
-									data-content="<?php echo $statValue;echo "K";}else echo $statValue;?>"
-									>
+							<?php $statValue = $allStatsData[$i]["statistics_value"]?>
+							<li class="scroll-animated-item animate<?php echo $i+1?> fadeInRight">
+								<div class="num" 
+								data-num="<?php if($statValue>999) {$statValue=($statValue/1000); echo $statValue; ?>" 
+								data-content="<?php echo $statValue;echo "K";}else echo $statValue;?>"
+								>
 
-									<?php echo $statValue;?>
+								<?php echo $statValue;?>
 
-								</div>
-								<div class="type"><?php echo $allStatsData[$i]["statistics_name"]?></div>
-							</li>
-							<?php } ?>	
-						</ul>
-					</div>
-					<p class="hidden main-screen-subcaption">Kuwait - Morocco - Syria - Jordan - Lebanon - Iran - Algeria</p>
-				</div>
-			</div>
-		</div>
-		<div id="carouselItem2"  class="item">
-			<div style="background-image:url(images/sliders/mawaredhouse-slider-2.jpg);background-size:cover;background-position:center bottom"></div>
-			<div class="container">
-				<div id="ci2cc" class="carousel-caption">
-					<blockquote class="blockquote-reverse">
-						<p>
-							<?php echo $slider2_static; ?>
-						</p>
-					</blockquote>
-				</div>
-			</div>
-		</div>
-		<div id="carouselItem3"  class="item">
-			<div style="background-image:url(images/sliders/mawaredhouse-slider-3.jpg);background-size:cover;background-position:center bottom"></div>
-			<div class="container">
-				<div id="ci3cc" class="carousel-caption">
-					<blockquote class="blockquote-reverse">
-						<div class="block-con">
-							<p>
-								<?php echo $slider3_1_static; ?>
-							</p>
-							<footer>
-								<?php echo $slider3_2_static; ?>
-							</footer>
-						</div>
-					</blockquote>
-				</div>
-			</div>
-		</div>
-		<div id="carouselItem4"  class="item">
-			<div style="background-image:url(images/sliders/mawaredhouse-slider-4.jpg);background-size:cover;background-position:center bottom"></div>
-		</div>
-		<div id="carouselItem5"  class="item">
-			<div id="slider5Collage"></div>
-			<div class="container">
-				<div id="ci5cc" class="carousel-caption">
-					<blockquote class="blockquote-reverse">
-						<div class="block-con">
-							<p>
-								<?php echo $slider5_static; ?>
-							</p>
-						</div>
-					</blockquote>
-				</div>
-			</div>
-		</div>
-	</div>
-	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-		<i class="glyphicon-chevron-left fa fa-chevron-left" aria-hidden="true"></i>
-		<span class="sr-only">Previous</span>
-	</a>
-	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-		<i class="glyphicon-chevron-right fa fa-chevron-right" aria-hidden="true"></i>
-		<span class="sr-only">Next</span>
-	</a>
-	<div class="slider-bottom">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<ul class="list-unstyled list-inline">
-						<li><a href="tel:+96522971100" target="_blank"><i class="fa fa-phone"></i> +965-2297-1100 </a> </li>
-						<li class="hidden-xs"><i class="fa fa-clock-o"></i> 8:30 AM to 05:00 PM </li>
-						<li><a href="mailto:info@mawaredhouse.com" target="_blank"><i class="fa fa-envelope"></i> info@mawaredhouse.com </a></li>
-						<li class="hidden"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
+							</div>
+							<div class="type"><?php echo $allStatsData[$i]["statistics_name"]?></div>
+						</li>
+						<?php } ?>	
 					</ul>
 				</div>
+				<p class="hidden main-screen-subcaption">Kuwait - Morocco - Syria - Jordan - Lebanon - Iran - Algeria</p>
 			</div>
 		</div>
 	</div>
-	<div class="home-main-content"></div>
-	<script type="text/javascript">
-		var timeoutID;
+	<div id="carouselItem2"  class="item">
+		<div style="background-image:url(images/sliders/mawaredhouse-slider-2.jpg);background-size:cover;background-position:center bottom"></div>
+		<div class="container">
+			<div id="ci2cc" class="carousel-caption">
+				<blockquote class="blockquote-reverse">
+					<p>
+						<?php echo $slider2_static; ?>
+					</p>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+	<div id="carouselItem3"  class="item">
+		<div style="background-image:url(images/sliders/mawaredhouse-slider-3.jpg);background-size:cover;background-position:center bottom"></div>
+		<div class="container">
+			<div id="ci3cc" class="carousel-caption">
+				<blockquote class="blockquote-reverse">
+					<div class="block-con">
+						<p>
+							<?php echo $slider3_1_static; ?>
+						</p>
+						<footer>
+							<?php echo $slider3_2_static; ?>
+						</footer>
+					</div>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+	<div id="carouselItem4"  class="item">
+		<div style="background-image:url(images/sliders/mawaredhouse-slider-4.jpg);background-size:cover;background-position:center bottom"></div>
+	</div>
+	<div id="carouselItem5"  class="item">
+		<div id="slider5Collage"></div>
+		<div class="container">
+			<div id="ci5cc" class="carousel-caption">
+				<blockquote class="blockquote-reverse">
+					<div class="block-con">
+						<p>
+							<?php echo $slider5_static; ?>
+						</p>
+					</div>
+				</blockquote>
+			</div>
+		</div>
+	</div>
+</div>
+<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	<i class="glyphicon-chevron-left fa fa-chevron-left" aria-hidden="true"></i>
+	<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	<i class="glyphicon-chevron-right fa fa-chevron-right" aria-hidden="true"></i>
+	<span class="sr-only">Next</span>
+</a>
+<div class="slider-bottom">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<ul class="list-unstyled list-inline">
+					<li><a href="tel:+96522971100" target="_blank"><i class="fa fa-phone"></i> +965-2297-1100 </a> </li>
+					<li class="hidden-xs"><i class="fa fa-clock-o"></i> 8:30 AM to 05:00 PM </li>
+					<li><a href="mailto:info@mawaredhouse.com" target="_blank"><i class="fa fa-envelope"></i> info@mawaredhouse.com </a></li>
+					<li class="hidden"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="home-main-content"></div>
+<script type="text/javascript">
+	var timeoutID;
 
-		function delayedAlert() {
-			timeoutID = window.setTimeout(slowAlert, 2000);
-		}
+	function delayedAlert() {
+		timeoutID = window.setTimeout(slowAlert, 2000);
+	}
 
-		function slowAlert() {
-			alert("That was really slow!");
-		}
-	</script>
+	function slowAlert() {
+		alert("That was really slow!");
+	}
+</script>
+
+<div class="tenYrCompl"></div>
+
 </div>
 <div class='main clearfix div-bg5' id='main'>
 	<section id='do-dont-process'>
@@ -256,29 +259,47 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 	<style type="text/css">
 		
 		div#mrpLogoCon>img{
-		    width: 80%;
-		    margin-top: 15%;
+			width: 50%;
 		}
 		div#rsPartnerLogo img{
 			width: 80px;
 		}
 		ul#relocFeatureList li {
-		    list-style-type: initial;
-		    overflow: initial;
+			list-style-type: initial;
+			overflow: initial;
 		}
 	</style>
 	<section id="relocationServices" class="lazy section container-fluid">
+
+
+
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2  class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+					<span class="mh-text-colored-with-underline">
+						<?php echo "Metrica Relocation Plus"; ?>
+					</span>
+				</h2>
+			</div>
+		</div>
+
+
+
 		<div class='row  column-center text-justify <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
-			<div class='col-md-5 col-sm-12'>
-				<div id="mrpLogoCon" class="text-center">
+			<div class='col-md-4 col-md-offset-1 col-sm-12'>
+				<div id="mrpLogoCon" class="form-group">
 					<img src="images/relocationService/mrp-logo.png"/>
+				</div>
+
+				<div class="form-group" style="margin-top:30px;">
+					<label>Website URL : <a href="http://www.metricarelocations.com">www.metricarelocations.com</a></label>
+					<label>Phone : <a href="tel:9652297142">(+965 ) 22971142</a></label>
 				</div>
 			</div>
 			<div class='col-md-7 col-sm-12'>
-				<h1>
-					<span class="mh-text-colored-with-underline slideanim">Metrica Relocation Plus</span>
-				</h1>
-				<h4>Reliable, Responsive, and Highly Recommended</h4>
+				<span class="mh-text-subHead">
+					Reliable, Responsive, and Highly Recommended
+				</span>
 				<p>Mawared House is proud to be the partners’ of Metrica Relocations Plus  for Kuwait since May 2017</p>
 
 				<ul id="relocFeatureList">
@@ -287,29 +308,22 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 					<li class="slideanim">Over 20 years of global relocation management and consulting experience serving the US government, corporate clients and international organizations</li>
 					<li class="slideanim">M+ in-country partners / firms are currently located in strategic and emerging markets throughout Africa, Eastern European, Asia and Lat-Am and we're constantly expanding driven by client needs</li>
 				</ul>
-				<br/>
-				<div id="rsPartnerLogo" class="row text-center">
-					<div class="col-md-4">
-						<img src="images/relocationService/shell-logo.png"/>
-					</div>
-					<div class="col-md-4">
-						<img src="images/relocationService/unilever-logo.png"/>
-					</div>
-					<div class="col-md-4">
-						<img src="images/relocationService/twb-logo.jpg"/>
-					</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="rsPartnerLogo" class="row text-center">
+				<div class="col-xs-4">
+					<img src="images/relocationService/shell-logo.png"/>
 				</div>
-				<br/>
-				<div class="row">
-					<div class="pull-left">
-						<a href="http://www.metricarelocations.com">www.metricarelocations.com</a>
-					</div>
-					<div class="pull-right">
-						<a href="tel:9652297142">(+965 ) 22971142</a>
-					</div>
+				<div class="col-xs-4">
+					<img src="images/relocationService/unilever-logo.png"/>
+				</div>
+				<div class="col-xs-4">
+					<img src="images/relocationService/twb-logo.jpg"/>
 				</div>
 			</div>
 		</div>
+
 	</section>
 	
 	
@@ -429,296 +443,296 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 <div id="mobile-about-us" class="hidden-lg">
 	<div id="mau1" class="mau">
 		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class="icon-signs 
-mh-icon-colored" ></i><?php echo $welcomeName ?></h3>
-		<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $welcome ?></p>
-	</div>
-	<div id="mau2" class="mau">
-		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-research 
-mh-icon-colored'></i>1. <?php echo $philosophyName ?></h3>
-		<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $philosophy  ?></p>
-	</div>
-	<div id="mau3" class="mau">
-		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-strategy 
-mh-icon-colored'></i>2. <?php echo $missionName ?></h3>
-		<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $mission ?></p>
-	</div>
-	<div id="mau4" class="mau">
-		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-wrench 
-mh-icon-colored'></i>3. <?php echo $commitmentName ?></h3>
-		<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $commitment ?></p>
-	</div>
-	<div id="mau5" class="mau">
-		<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-graph 
-mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
-		<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $vision ?></p>
-	</div>
-</div>
-<div id="news" class="section container-fluid">
-	<div class="row">
-		<div class="col-sm-12 text-center">
-			<h2  class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
-				<i class="fa fa-newspaper-o fa-lg mh-icon-colored" aria-hidden="true"></i>
-				<span class="mh-text-colored-with-underline">
-					<?php echo $newEvent_static; ?>
-				</span>
-			</h2>
+			mh-icon-colored" ></i><?php echo $welcomeName ?></h3>
+			<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $welcome ?></p>
 		</div>
-	</div>
-	<div id="list-row" class="row">
-		<div class="news-mobile-browser hidden-lg ">
-			<div id="show-list" class="nmb-arrow pull-right"> 
-				<?php echo $newEvent_showList_static; ?>
-				<i class="fa fa-th-list" aria-hidden="true"></i>
+		<div id="mau2" class="mau">
+			<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-research 
+				mh-icon-colored'></i>1. <?php echo $philosophyName ?></h3>
+				<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $philosophy  ?></p>
 			</div>
-		</div>
-		<div id="news-list" class="col-lg-4 ">
-			<ul class="nav nav-pills nav-stacked">
-				<?php 
-				for($i=0;$i<count($allNewsData);$i++){?>
-					<li class="<?php if($i==0) echo "active" ?> news-list-content">
-						<a data-toggle="pill" href="#menu<?php echo $i+1?>">
-							<div class="row">
-								<div class="col-xs-5 col-sm-4 news-image-column">
-									<img class="lazy news-list-image" data-original="images/news/<?php echo $allNewsData[$i]["news_photo"]?>">
-								</div>
-								<div class="col-xs-7 col-sm-8">
-									<p class="news-list-title"> 
-										<?php 
-										echo $allNewsData[$i]["news_title_" . $finalLang];
-										?>
-									</p>
-								</div>
-							</div>
-						</a>
-					</li>
-					<?php 
-				} 
-				?>
-			</ul>
-		</div>
-		<div id="news-item" class="col-lg-8">
-			<div class="tab-content">
-				<?php 
-				for($i=0;$i<count($allNewsData);$i++){?>
-					<div id="menu<?echo $i+1?>" class="tab-pane fade in <?php if($i==0) echo "active" ?>">
-						<div class="row">
-							<div class="col-lg-7 news-image">
-								<div class="imageContainer specificImageSettings" style="background-image:url(images/news/<?php echo $allNewsData[$i]["news_photo"]?>);"></div>
-							</div>
-							<div class="col-lg-5 news-content">
-								<h3 class="news-title">
-									<?php 
-									echo $allNewsData[$i]["news_title_" . $finalLang];
-									?>
-								</h3>
-								<div class="news-desc">
-									<?php 
-									echo $allNewsData[$i]["news_desc_" . $finalLang];
-									?>
-								</div>
-							</div>
+			<div id="mau3" class="mau">
+				<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-strategy 
+					mh-icon-colored'></i>2. <?php echo $missionName ?></h3>
+					<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $mission ?></p>
+				</div>
+				<div id="mau4" class="mau">
+					<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-wrench 
+						mh-icon-colored'></i>3. <?php echo $commitmentName ?></h3>
+						<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $commitment ?></p>
+					</div>
+					<div id="mau5" class="mau">
+						<h3 class='mh-text-colored-with-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'><i class='icon-graph 
+							mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
+							<p class=' <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'> <?php echo $vision ?></p>
 						</div>
 					</div>
-					<?php
-				}
-				?>
-			</div>
-		</div>
-		<div class="news-mobile-browser hidden-lg">
-			<div id="nlprev" class="nmb-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i> Prev</div>
-			<div id="nlnext" class="nmb-arrow pull-right">Next <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
-		</div>
-	</div>
-</div>
-<div id="mgtTeamMain2" class="section" style="overflow:hidden">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12 text-center">
-				<h2  class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
-					<i class="fa fa-universal-access fa-lg mh-icon-colored" aria-hidden="true"></i>
-					<span class="mh-text-colored-with-underline"><?php echo $mgmtTeam_static; ?></span>
-				</h2>
-			</div>
-		</div>
-		<div class="row mgtTeamMain2Row" style="">
-			<?php 
-			for($i=0;$i<count($allMagtTeamData) ;$i++){?>
-				<div class="col-sm-3 col-xs-12">
-					<div class="omgt-team">
-						<div class="omgt-image">
-							<div class="hexagon hexagon2">
-								<div class="hexagon-in1">
-									<div class="hexagon-in2 lazy" data-original="images/team/<?php echo $allMagtTeamData[$i]["about_image"]?>"></div>
-								</div>
+					<div id="news" class="section container-fluid">
+						<div class="row">
+							<div class="col-sm-12 text-center">
+								<h2  class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+									<i class="fa fa-newspaper-o fa-lg mh-icon-colored" aria-hidden="true"></i>
+									<span class="mh-text-colored-with-underline">
+										<?php echo $newEvent_static; ?>
+									</span>
+								</h2>
 							</div>
 						</div>
-						<div class="omgt-name <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
-							<?php 
-							echo $allMagtTeamData[$i]["about_title_" . $finalLang];
-							?>
-
+						<div id="list-row" class="row">
+							<div class="news-mobile-browser hidden-lg ">
+								<div id="show-list" class="nmb-arrow pull-right"> 
+									<?php echo $newEvent_showList_static; ?>
+									<i class="fa fa-th-list" aria-hidden="true"></i>
+								</div>
+							</div>
+							<div id="news-list" class="col-lg-4 ">
+								<ul class="nav nav-pills nav-stacked">
+									<?php 
+									for($i=0;$i<count($allNewsData);$i++){?>
+									<li class="<?php if($i==0) echo "active" ?> news-list-content">
+										<a data-toggle="pill" href="#menu<?php echo $i+1?>">
+											<div class="row">
+												<div class="col-xs-5 col-sm-4 news-image-column">
+													<img class="lazy news-list-image" data-original="images/news/<?php echo $allNewsData[$i]["news_photo"]?>">
+												</div>
+												<div class="col-xs-7 col-sm-8">
+													<p class="news-list-title"> 
+														<?php 
+														echo $allNewsData[$i]["news_title_" . $finalLang];
+														?>
+													</p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<?php 
+								} 
+								?>
+							</ul>
 						</div>
-						<div class="omgt-pos <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
-							<?php 
-							echo $allMagtTeamData[$i]["about_jobtitle_" . $finalLang];
+						<div id="news-item" class="col-lg-8">
+							<div class="tab-content">
+								<?php 
+								for($i=0;$i<count($allNewsData);$i++){?>
+								<div id="menu<?echo $i+1?>" class="tab-pane fade in <?php if($i==0) echo "active" ?>">
+									<div class="row">
+										<div class="col-lg-7 news-image">
+											<div class="imageContainer specificImageSettings" style="background-image:url(images/news/<?php echo $allNewsData[$i]["news_photo"]?>);"></div>
+										</div>
+										<div class="col-lg-5 news-content">
+											<h3 class="news-title">
+												<?php 
+												echo $allNewsData[$i]["news_title_" . $finalLang];
+												?>
+											</h3>
+											<div class="news-desc">
+												<?php 
+												echo $allNewsData[$i]["news_desc_" . $finalLang];
+												?>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php
+							}
 							?>
-
 						</div>
-						<div class="omgt-Content <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
-							<?php 
-							echo $allMagtTeamData[$i]["about_desc_" . $finalLang];
-							?>
-						</div>
+					</div>
+					<div class="news-mobile-browser hidden-lg">
+						<div id="nlprev" class="nmb-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i> Prev</div>
+						<div id="nlnext" class="nmb-arrow pull-right">Next <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
 					</div>
 				</div>
-				<?php
-			} 
-			?>
-		</div>
-	</div>
-</div>
-<div id="mgtTeam" class="section">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-12 text-center">
-				<h2  class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
-					<i class="fa fa-users fa-lg mh-icon-colored" aria-hidden="true"></i>
-					<span class="mh-text-colored-with-underline"><?php echo $emp_static; ?></span>
-				</h2>
+			</div>
+			<div id="mgtTeamMain2" class="section" style="overflow:hidden">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h2  class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+								<i class="fa fa-universal-access fa-lg mh-icon-colored" aria-hidden="true"></i>
+								<span class="mh-text-colored-with-underline"><?php echo $mgmtTeam_static; ?></span>
+							</h2>
+						</div>
+					</div>
+					<div class="row mgtTeamMain2Row" style="">
+						<?php 
+						for($i=0;$i<count($allMagtTeamData) ;$i++){?>
+						<div class="col-sm-3 col-xs-12">
+							<div class="omgt-team">
+								<div class="omgt-image">
+									<div class="hexagon hexagon2">
+										<div class="hexagon-in1">
+											<div class="hexagon-in2 lazy" data-original="images/team/<?php echo $allMagtTeamData[$i]["about_image"]?>"></div>
+										</div>
+									</div>
+								</div>
+								<div class="omgt-name <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+									<?php 
+									echo $allMagtTeamData[$i]["about_title_" . $finalLang];
+									?>
+
+								</div>
+								<div class="omgt-pos <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+									<?php 
+									echo $allMagtTeamData[$i]["about_jobtitle_" . $finalLang];
+									?>
+
+								</div>
+								<div class="omgt-Content <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+									<?php 
+									echo $allMagtTeamData[$i]["about_desc_" . $finalLang];
+									?>
+								</div>
+							</div>
+						</div>
+						<?php
+					} 
+					?>
+				</div>
 			</div>
 		</div>
-	</div>
-<?php
-	$countFromDB=count($allEmployeeTeamData);
-	$boxes = intval($countFromDB/3);
+		<div id="mgtTeam" class="section">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<h2  class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+							<i class="fa fa-users fa-lg mh-icon-colored" aria-hidden="true"></i>
+							<span class="mh-text-colored-with-underline"><?php echo $emp_static; ?></span>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<?php
+			$countFromDB=count($allEmployeeTeamData);
+			$boxes = intval($countFromDB/3);
 
-	$widthEachBox = 2;
-	$totalWidth = 12;
-	$total = ($countFromDB + $boxes) * $widthEachBox;
+			$widthEachBox = 2;
+			$totalWidth = 12;
+			$total = ($countFromDB + $boxes) * $widthEachBox;
 
-	$multFactor = fmod($total,$totalWidth);
-	$missingCount = 0;
+			$multFactor = fmod($total,$totalWidth);
+			$missingCount = 0;
 
-	if ($multFactor == 0) {
-		$multFactor = intval($total/$totalWidth);
-	}
+			if ($multFactor == 0) {
+				$multFactor = intval($total/$totalWidth);
+			}
 
-	else {
-		$multFactor = intval($total/$totalWidth) + 1;
-		$missingCount = intval((($totalWidth * $multFactor) - $total)/$widthEachBox);
-	}
-	$boxes = $missingCount + $boxes;
+			else {
+				$multFactor = intval($total/$totalWidth) + 1;
+				$missingCount = intval((($totalWidth * $multFactor) - $total)/$widthEachBox);
+			}
+			$boxes = $missingCount + $boxes;
 
 	//echo "count from db: $countFromDB total of $multFactor rows, and $boxes coloured boxes.";
-	if ($multFactor ==3) {
-		if ($boxes == 4) {
-			$coloredBoxes=array("1:#ff5d72","10:#f1c824","14:#43c696","18:#45b1cc");
-		}
-		if ($boxes == 5) {
-			$coloredBoxes=array("2:#ff5d72","5:#f1c824","7:#43c696","15:#45b1cc","18:#ff5d72");
-		}
-		if ($boxes == 6) {
-			$coloredBoxes=array("2:#ff5d72","5:#f1c824","7:#43c696","10:#45b1cc","15:#f1c824","18:#43c696");
-		}
-		if ($boxes == 7) {
-			$coloredBoxes=array("1:#ff5d72","5:#f1c824","8:#43c696","12:#45b1cc","13:#f1c824","15:#45b1cc","17:#43c696");
-		}
-		if ($boxes == 8) {
-			$coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696","11:#ff5d72","14:#f1c824","16:#45b1cc");
-		}
-	}
-	if ($multFactor ==4) {
-		if ($boxes == 8) {
-			$coloredBoxes=array("1:#ff5d72","4:#f1c824","9:#43c696","12:#45b1cc","14:#45b1cc","17:#ff5d72","21:#f1c824","24:#43c696");
-		}
-	}
-?>
-	<div class="row" style="margin:0">
-		<?php
-			$boxCount=0;
-			$totalBoxes = count($allEmployeeTeamData) + count($coloredBoxes);
-			$employeeNo=0;
-			
-			
-			for($i=1;$i<=$totalBoxes;$i++){
-				$var=explode (":",$coloredBoxes[$boxCount]);
-				if( $i == $var[0]) 
-				{
-		?>
-		<div class="col-sm-2 team-mem hidden-xs hidden-sm">
-			<div class="box" style="background-color: <?php echo $var[1] ?>"></div>
-		</div>
-		<?php $boxCount=$boxCount+1;
-		}
-		else {?>
-		<div class="col-xs-6 col-sm-2 team-mem team-view">
-			<div class="element_hover">
-				<div class="hover-content">
-					<h3 class="sl-hover-title <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
-						<?php 
-						echo $allEmployeeTeamData[$employeeNo]["about_title_" . $finalLang];
-						?>
+			if ($multFactor ==3) {
+				if ($boxes == 4) {
+					$coloredBoxes=array("1:#ff5d72","10:#f1c824","14:#43c696","18:#45b1cc");
+				}
+				if ($boxes == 5) {
+					$coloredBoxes=array("2:#ff5d72","5:#f1c824","7:#43c696","15:#45b1cc","18:#ff5d72");
+				}
+				if ($boxes == 6) {
+					$coloredBoxes=array("2:#ff5d72","5:#f1c824","7:#43c696","10:#45b1cc","15:#f1c824","18:#43c696");
+				}
+				if ($boxes == 7) {
+					$coloredBoxes=array("1:#ff5d72","5:#f1c824","8:#43c696","12:#45b1cc","13:#f1c824","15:#45b1cc","17:#43c696");
+				}
+				if ($boxes == 8) {
+					$coloredBoxes=array("2:#ff5d72","4:#f1c824","6:#43c696","7:#45b1cc","9:#43c696","11:#ff5d72","14:#f1c824","16:#45b1cc");
+				}
+			}
+			if ($multFactor ==4) {
+				if ($boxes == 8) {
+					$coloredBoxes=array("1:#ff5d72","4:#f1c824","9:#43c696","12:#45b1cc","14:#45b1cc","17:#ff5d72","21:#f1c824","24:#43c696");
+				}
+			}
+			?>
+			<div class="row" style="margin:0">
+				<?php
+				$boxCount=0;
+				$totalBoxes = count($allEmployeeTeamData) + count($coloredBoxes);
+				$employeeNo=0;
 
-					</h3>
-					<h4 class="sl-hover-subtitle <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
-						<?php 
-						echo $allEmployeeTeamData[$employeeNo]["about_jobtitle_" . $finalLang];
+
+				for($i=1;$i<=$totalBoxes;$i++){
+					$var=explode (":",$coloredBoxes[$boxCount]);
+					if( $i == $var[0]) 
+					{
 						?>
-					</h4>
-					<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+						<div class="col-sm-2 team-mem hidden-xs hidden-sm">
+							<div class="box" style="background-color: <?php echo $var[1] ?>"></div>
+						</div>
+						<?php $boxCount=$boxCount+1;
+					}
+					else {?>
+					<div class="col-xs-6 col-sm-2 team-mem team-view">
+						<div class="element_hover">
+							<div class="hover-content">
+								<h3 class="sl-hover-title <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
+									<?php 
+									echo $allEmployeeTeamData[$employeeNo]["about_title_" . $finalLang];
+									?>
+
+								</h3>
+								<h4 class="sl-hover-subtitle <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
+									<?php 
+									echo $allEmployeeTeamData[$employeeNo]["about_jobtitle_" . $finalLang];
+									?>
+								</h4>
+								<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+							</div>
+						</div>
+						<img data-original="images/team/<?php echo $allEmployeeTeamData[$employeeNo]["about_image"]?>" src="images/others/dot.png" alt="
+						<?php echo $allEmployeeTeamData[$employeeNo]["about_title_" . $finalLang]; ?>
+						" class="img_element" width="100%" height="100%/">
+						<div class="mw_team <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
+							<?php 
+							echo $allEmployeeTeamData[$employeeNo]["about_title_" . $finalLang];
+							?>
+						</div>
+						<div class="mw-team-quote <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
+							<?php 
+							echo $allEmployeeTeamData[$employeeNo]["about_desc_" . $finalLang];
+							?>
+						</div>
+						<div class="box"></div>
+					</div>
+					<?php
+					$employeeNo = $employeeNo + 1;
+				}
+			}
+			?>
+		</div>		
+	</div>
+	<div id="mgtTeamViewer">
+		<div class="row">
+			<div class="col-md-5 teamviewerimagecontent <?php if ($finalLang == "ar") {echo "pull-right";} ?>">
+				<div class="teamviewerimage"></div>
+			</div>
+			<div class="col-md-7 ">
+				<div class="resume_people">
+					<h3 class="people_Name <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">Abiola Ojo-Osagie</h3>
+					<p class="<?php if ($finalLang == "ar") {echo "dir-rtl";} ?>"><b><?php if ($finalLang == "ar") {echo "ÇáÊÚííä : ";} else { echo "Designation : ";} ?></b><span class="people-title">MACHINE</span> </p>
+
+					<p class="texte_people <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">MACHINE</p>
 				</div>
 			</div>
-			<img data-original="images/team/<?php echo $allEmployeeTeamData[$employeeNo]["about_image"]?>" src="images/others/dot.png" alt="
-			<?php echo $allEmployeeTeamData[$employeeNo]["about_title_" . $finalLang]; ?>
-			" class="img_element" width="100%" height="100%/">
-			<div class="mw_team <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
-				<?php 
-				echo $allEmployeeTeamData[$employeeNo]["about_title_" . $finalLang];
-				?>
-			</div>
-			<div class="mw-team-quote <?php if ($finalLang == "ar") {echo "dir-rtl-right";} ?>">
-				<?php 
-				echo $allEmployeeTeamData[$employeeNo]["about_desc_" . $finalLang];
-				?>
-			</div>
-			<div class="box"></div>
+			<div class="fa fa-times fa-2x <?php if ($finalLang == "ar") {echo "mgtTeamViewercloseleft";} else { echo "mgtTeamViewerclose";} ?>" aria-hidden="true"></div>
 		</div>
-		<?php
-			$employeeNo = $employeeNo + 1;
-			}
-		}
-		?>
-	</div>		
-</div>
-<div id="mgtTeamViewer">
-	<div class="row">
-		<div class="col-md-5 teamviewerimagecontent <?php if ($finalLang == "ar") {echo "pull-right";} ?>">
-			<div class="teamviewerimage"></div>
-		</div>
-		<div class="col-md-7 ">
-			<div class="resume_people">
-				<h3 class="people_Name <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">Abiola Ojo-Osagie</h3>
-				<p class="<?php if ($finalLang == "ar") {echo "dir-rtl";} ?>"><b><?php if ($finalLang == "ar") {echo "ÇáÊÚííä : ";} else { echo "Designation : ";} ?></b><span class="people-title">MACHINE</span> </p>
-
-				<p class="texte_people <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">MACHINE</p>
-			</div>
-		</div>
-		<div class="fa fa-times fa-2x <?php if ($finalLang == "ar") {echo "mgtTeamViewercloseleft";} else { echo "mgtTeamViewerclose";} ?>" aria-hidden="true"></div>
+		<div class="justBlackBg"></div>
 	</div>
-	<div class="justBlackBg"></div>
-</div>
-<div id="clientss1" class="section container-fluid">
-	<div class="row">
-		<div class="col-sm-12 text-center">
-			<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
-				<i class="fa fa-street-view fa-lg mh-icon-colored" aria-hidden="true"></i>
-				<span class="mh-text-colored-with-underline"><?php echo $oClients_static; ?></span>
-			</h2>
-		</div>
-	</div>
-	<div class="row col-sm-10 column-center">
+	<div id="clientss1" class="section container-fluid">
 		<div class="row">
-			<?php for($i=0;$i<count($allClientsData);$i++){?>
+			<div class="col-sm-12 text-center">
+				<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+					<i class="fa fa-street-view fa-lg mh-icon-colored" aria-hidden="true"></i>
+					<span class="mh-text-colored-with-underline"><?php echo $oClients_static; ?></span>
+				</h2>
+			</div>
+		</div>
+		<div class="row col-sm-10 column-center">
+			<div class="row">
+				<?php for($i=0;$i<count($allClientsData);$i++){?>
 				<div class="col-xs-4 col-sm-3 col-md-2 country-con">
 					<div class="contry-con1">
 						<div class="flagwave"></div>
@@ -727,8 +741,8 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 						</div>
 						<div class="clientss-name">
 							<p>
-							<?php echo $allClientsData[$i]["countries_title_" . $finalLang];
-							?>
+								<?php echo $allClientsData[$i]["countries_title_" . $finalLang];
+								?>
 							</p>
 						</div>
 					</div>
@@ -960,26 +974,26 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 		
 	</script>
 
-<!--Normal slide animation -->
-<script type="text/javascript">
-	$(function(){
-		$(window).scroll(function() {
-			$(".slideanim").each(function(){
-				var pos = $(this).offset().top;
+	<!--Normal slide animation -->
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function() {
+				$(".slideanim").each(function(){
+					var pos = $(this).offset().top;
 
-				var winTop = $(window).scrollTop();
-				if (pos < winTop + 600) {
-					$(this).addClass("slide");
-				}
+					var winTop = $(window).scrollTop();
+					if (pos < winTop + 600) {
+						$(this).addClass("slide");
+					}
+				});
 			});
 		});
-	});
-</script>
+	</script>
 
-<!--adding colors on hover-->
-<script type="text/javascript">
-	$(document).ready(function(){
-		$(".mh-text-no-underline").hover(function(){
+	<!--adding colors on hover-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".mh-text-no-underline").hover(function(){
 				$( this ).children( 'i' ).css("color", "#F99F1C");
 			}, function(){
 				if($( this ).children( 'i' ).hasClass("about-us")) {
@@ -988,8 +1002,8 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 				else {
 					$( this ).children( 'i' ).css("color", "rgba(4,48,95,0.89)");
 				}
-		});
-		$(".block-stats li").hover(function(){
+			});
+			$(".block-stats li").hover(function(){
 				
 				$( this ).children( '.type' ).css("color", "#F99F1C");
 				$( this ).children( '.num' ).css("color", "#F99F1C");
@@ -998,43 +1012,43 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 			}, function(){
 				$( this ).children( '.type' ).css("color", "lightblue");
 				$( this ).children( '.num' ).css("color", "#eaeff3");
+			});
 		});
-	});
-</script>
+	</script>
 
-<!-- magt team coming from left and right effect -->
-<script type="text/javascript">
-	$(function(){
-		$(window).scroll(function() {
-			var winTop = $(window).scrollTop();
-			var magtTeamPos = $("#mgtTeamMain2").offset().top - $("#mgtTeamMain2").height();
-			if (winTop > magtTeamPos) {
-				$(".mgtTeamMain2Row").addClass("mgtTeamMain2RowSupr");
-			}
+	<!-- magt team coming from left and right effect -->
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function() {
+				var winTop = $(window).scrollTop();
+				var magtTeamPos = $("#mgtTeamMain2").offset().top - $("#mgtTeamMain2").height();
+				if (winTop > magtTeamPos) {
+					$(".mgtTeamMain2Row").addClass("mgtTeamMain2RowSupr");
+				}
+			});
 		});
-	});
-</script>
+	</script>
 
-<!-- our people coming from left effect -->
-<script type="text/javascript">
-	$(function(){
-		$(window).scroll(function() {
-			var winTop = $(window).scrollTop();
-			var ourTeamPos = $("#mgtTeam").offset().top - $("#mgtTeam").height()/2;
-			if (winTop > ourTeamPos) {
-				$("#mgtTeam").addClass("effect");
-			}
+	<!-- our people coming from left effect -->
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function() {
+				var winTop = $(window).scrollTop();
+				var ourTeamPos = $("#mgtTeam").offset().top - $("#mgtTeam").height()/2;
+				if (winTop > ourTeamPos) {
+					$("#mgtTeam").addClass("effect");
+				}
+			});
 		});
-	});
-</script>
+	</script>
 
-<!-- Management Team Viewer-->
-<script type="text/javascript">
-	$(".omgt-team").click(function(){
-		var imgsrc = $(this).find(".hexagon-in2").css('background-image').replace('url(','').replace(')','');;
-		var peopleName = $(this).find(".omgt-name").text();
-		var peopleTitle = $(this).find(".omgt-pos").text();
-		var peopleText = $(this).find(".omgt-Content").text();
+	<!-- Management Team Viewer-->
+	<script type="text/javascript">
+		$(".omgt-team").click(function(){
+			var imgsrc = $(this).find(".hexagon-in2").css('background-image').replace('url(','').replace(')','');;
+			var peopleName = $(this).find(".omgt-name").text();
+			var peopleTitle = $(this).find(".omgt-pos").text();
+			var peopleText = $(this).find(".omgt-Content").text();
 
 	//Setting values
 	$(".teamviewerimage").css("background-image",'url('+imgsrc+')');
@@ -1159,9 +1173,9 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 			$("#contact").fadeOut();
 			$(this).html('View Contact');
 			flag=1;
-			}
-			else
-			{
+		}
+		else
+		{
 				//$("#contact").removeClass("contactOpacity");
 				$("#contact").fadeIn();
 				$(this).html('<i class="fa fa-map-o" aria-hidden="true"></i> &nbsp;View Map');
@@ -1185,18 +1199,18 @@ mh-icon-colored'></i>4. <?php echo $visionName ?></h3>
 
 <!-- parallax effect -->
 <script type="text/javascript">
-$(function(){
-	var parallax = document.querySelectorAll(".parallax");
-	var speed = 0.5;
-	
-	window.onscroll = function(){
-		[].slice.call(parallax).forEach(function(el,i){
-			var windowYOffset = window.pageYOffset;
-			var elBackgrounPos = (($(el).offset().top / 2) - (windowYOffset * speed)) + "px";
-			el.style.backgroundPositionY = elBackgrounPos;
-		});
-	};
-});
+	$(function(){
+		var parallax = document.querySelectorAll(".parallax");
+		var speed = 0.5;
+
+		window.onscroll = function(){
+			[].slice.call(parallax).forEach(function(el,i){
+				var windowYOffset = window.pageYOffset;
+				var elBackgrounPos = (($(el).offset().top / 2) - (windowYOffset * speed)) + "px";
+				el.style.backgroundPositionY = elBackgrounPos;
+			});
+		};
+	});
 </script>
 
 <!-- Add Google Maps -->
