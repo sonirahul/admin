@@ -269,6 +269,9 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 			overflow: initial;
 		}
 	</style>
+
+	<section id="blackBlankSection"></section>
+
 	<section id="relocationServices" class="lazy section container-fluid">
 
 
@@ -310,20 +313,6 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 				</ul>
 			</div>
 		</div>
-		<div class="row">
-			<div id="rsPartnerLogo" class="row text-center">
-				<div class="col-xs-4">
-					<img src="images/relocationService/shell-logo.png"/>
-				</div>
-				<div class="col-xs-4">
-					<img src="images/relocationService/unilever-logo.png"/>
-				</div>
-				<div class="col-xs-4">
-					<img src="images/relocationService/twb-logo.jpg"/>
-				</div>
-			</div>
-		</div>
-
 	</section>
 	
 	
@@ -752,7 +741,51 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 			?>	
 		</div>
 	</div>
+
+
 </div>
+
+
+	<div id="our-partners" class="section container-fluid">
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+					<i class="fa fa-handshake-o fa-lg mh-icon-colored" aria-hidden="true"></i>
+					<span class="mh-text-colored-with-underline"><?php echo "Our Partners" ?></span>
+				</h2>
+			</div>
+		</div>
+		<div id="partnerContent" class="row col-sm-12 column-center text-center">
+			<div class="row">
+				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+					<img src="images/partners/mrs.jpg">
+				</div>
+
+				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+					<img src="images/partners/sa.png">
+				</div>
+
+				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+					<img src="images/partners/shell.png">
+				</div>
+
+				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+					<img src="images/partners/unilever.jpg">
+				</div>
+
+				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+					<img src="images/partners/vfs.png">
+				</div>
+
+				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+					<img src="images/partners/wb.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 <div id="contacts" class="section container-fluid">
 	<div>
 		<div id="googleMap">
@@ -1040,7 +1073,16 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 				}
 			});
 		});
-	</script>
+
+		$(function(){
+			$(window).scroll(function() {
+				var winTop = $(window).scrollTop();
+				var ourPartners = $("#our-partners").offset().top - $("#our-partners").height() * 2;
+				if (winTop > ourPartners) {
+					$("#partnerContent").addClass("effect");
+				}
+			});
+		});	</script>
 
 	<!-- Management Team Viewer-->
 	<script type="text/javascript">

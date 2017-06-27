@@ -27,6 +27,32 @@ body{font-family:'Source Sans Pro',"Whitney SSm A","Whitney SSm B",sans-serif!im
 .slide>div p{transition:all .4s ease-in-out}
 .teamviewerimagecontent{padding:0}
 .tenYrCompl {background-image: url(../images/others/10yrComp.png);background-size: contain;position: absolute}
+section#relocationServices{background-image: url(../images/relocationservice/rs-bg/1.jpg);background-attachment: fixed; background-size: cover; background-color: rgba(0,0,0,0.8); background-blend-mode:multiply;}
+section#relocationServices, section#relocationServices h2, section#relocationServices p, section#relocationServices span {color: white !important;}
+section#blackBlankSection {height: 0px;background: black;}
+.partner-item{}
+.partner-item img {width:80%}
+
+.edge--bottom{position:relative;z-index:1}
+.edge--bottom:after{background:inherit;content:'';display:block;height:50%;left:0;position:absolute;right:0;z-index:-1;-webkit-backface-visibility:hidden}
+.edge--bottom:after{bottom:0;-webkit-transform:skewY(-1.5deg);transform:skewY(-1.5deg);-webkit-transform-origin:100%;transform-origin:100%}
+.edge--bottom--reverse{position:relative;z-index:1}
+.edge--bottom--reverse:after{background:inherit;content:'';display:block;height:50%;left:0;position:absolute;right:0;z-index:-1;-webkit-backface-visibility:hidden}
+.edge--bottom--reverse:after{bottom:0;-webkit-transform:skewY(1.5deg);transform:skewY(1.5deg);-webkit-transform-origin:0 100%;transform-origin:0 100%}
+.edge--top{position:relative;z-index:1}
+.edge--top:before{background:inherit;content:'';display:block;height:50%;left:0;position:absolute;right:0;z-index:-1;-webkit-backface-visibility:hidden}
+.edge--top:before{top:0;-webkit-transform:skewY(1.5deg);transform:skewY(1.5deg);-webkit-transform-origin:100% 0;transform-origin:100% 0}
+.edge--top--reverse{position:relative;z-index:1}
+.edge--top--reverse:before{background:inherit;content:'';display:block;height:50%;left:0;position:absolute;right:0;z-index:-1;-webkit-backface-visibility:hidden}
+.edge--top--reverse:before{top:0;-webkit-transform:skewY(-1.5deg);transform:skewY(-1.5deg);-webkit-transform-origin:0 0;transform-origin:0 0}
+.edge--both{position:relative;z-index:1}
+.edge--both:before,.edge--both:after{background:inherit;content:'';display:block;height:50%;left:0;position:absolute;right:0;z-index:-1;-webkit-backface-visibility:hidden}
+.edge--both:before{top:0;-webkit-transform:skewY(1.5deg);transform:skewY(1.5deg);-webkit-transform-origin:100% 0;transform-origin:100% 0}
+.edge--both:after{bottom:0;-webkit-transform:skewY(-1.5deg);transform:skewY(-1.5deg);-webkit-transform-origin:100%;transform-origin:100%}
+.edge--both--reverse{position:relative;z-index:1}
+.edge--both--reverse:before,.edge--both--reverse:after{background:inherit;content:'';display:block;height:50%;left:0;position:absolute;right:0;z-index:-1;-webkit-backface-visibility:hidden}
+.edge--both--reverse:before{top:0;-webkit-transform:skewY(-1.5deg);transform:skewY(-1.5deg);-webkit-transform-origin:0 0;transform-origin:0 0}
+.edge--both--reverse:after{bottom:0;-webkit-transform:skewY(1.5deg);transform:skewY(1.5deg);-webkit-transform-origin:0 0;transform-origin:0 0}
 
 @media only screen and (min-width : 320px) and (max-width:480px){
 	.row{margin:0}
@@ -452,14 +478,14 @@ body{font-family:'Source Sans Pro',"Whitney SSm A","Whitney SSm B",sans-serif!im
 	.footer ul.level-1-nav.list-unstyled{-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;}
 
 body{overflow-x:hidden;}
-#mgtTeam .team-mem{margin:0;position:relative;opacity:0;right:-30%;-webkit-transform:translateX(1000px);-moz-transform:translateX(1000px);-ms-transform:translateX(1000px);-o-transform:translateX(1000px);transform:translateX(1000px);-webkit-transition:-webkit-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;-moz-transition:-moz-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;-o-transition:-o-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;transition:transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms}
-#mgtTeam.effect .team-mem{opacity:1;right:0;-webkit-transform:translateX(0px);-moz-transform:translateX(0px);-ms-transform:translateX(0px);-o-transform:translateX(0px);transform:translateX(0px)}
-#mgtTeam.effect .team-mem:nth-child(1){-webkit-transition-delay:.2s;transition-delay:.2s}
-#mgtTeam.effect .team-mem:nth-child(2){-webkit-transition-delay:.3s;transition-delay:.3s}
-#mgtTeam.effect .team-mem:nth-child(3){-webkit-transition-delay:.4s;transition-delay:.4s}
-#mgtTeam.effect .team-mem:nth-child(4){-webkit-transition-delay:.5s;transition-delay:.5s}
-#mgtTeam.effect .team-mem:nth-child(5){-webkit-transition-delay:.6s;transition-delay:.6s}
-#mgtTeam.effect .team-mem:nth-child(6){-webkit-transition-delay:.7s;transition-delay:.7s}
+#mgtTeam .team-mem,  #partnerContent .partner-item{margin:0;position:relative;opacity:0;right:-30%;-webkit-transform:translateX(1000px);-moz-transform:translateX(1000px);-ms-transform:translateX(1000px);-o-transform:translateX(1000px);transform:translateX(1000px);-webkit-transition:-webkit-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;-moz-transition:-moz-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;-o-transition:-o-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;transition:transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms}
+#mgtTeam.effect .team-mem,  #partnerContent.effect .partner-item{opacity:1;right:0;-webkit-transform:translateX(0px);-moz-transform:translateX(0px);-ms-transform:translateX(0px);-o-transform:translateX(0px);transform:translateX(0px)}
+#mgtTeam.effect .team-mem:nth-child(1), #partnerContent.effect.effect .partner-item:nth-child(1){-webkit-transition-delay:.2s;transition-delay:.2s}
+#mgtTeam.effect .team-mem:nth-child(2), #partnerContent.effect.effect .partner-item:nth-child(2){-webkit-transition-delay:.3s;transition-delay:.3s}
+#mgtTeam.effect .team-mem:nth-child(3), #partnerContent.effect.effect .partner-item:nth-child(3){-webkit-transition-delay:.4s;transition-delay:.4s}
+#mgtTeam.effect .team-mem:nth-child(4), #partnerContent.effect.effect .partner-item:nth-child(4){-webkit-transition-delay:.5s;transition-delay:.5s}
+#mgtTeam.effect .team-mem:nth-child(5), #partnerContent.effect.effect .partner-item:nth-child(5){-webkit-transition-delay:.6s;transition-delay:.6s}
+#mgtTeam.effect .team-mem:nth-child(6), #partnerContent.effect.effect .partner-item:nth-child(6){-webkit-transition-delay:.7s;transition-delay:.7s}
 #mgtTeam.effect .team-mem:nth-child(7){-webkit-transition-delay:.8s;transition-delay:.8s}
 #mgtTeam.effect .team-mem:nth-child(8){-webkit-transition-delay:.9s;transition-delay:.9s}
 #mgtTeam.effect .team-mem:nth-child(9){-webkit-transition-delay:1s;transition-delay:1s}
@@ -518,14 +544,14 @@ body{overflow-x:hidden;}
 	.footer ul.level-1-nav.list-unstyled{-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;}
 
 body{overflow-x:hidden;}
-#mgtTeam .team-mem{margin:0;position:relative;opacity:0;right:-30%;-webkit-transform:translateX(1000px);-moz-transform:translateX(1000px);-ms-transform:translateX(1000px);-o-transform:translateX(1000px);transform:translateX(1000px);-webkit-transition:-webkit-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;-moz-transition:-moz-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;-o-transition:-o-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;transition:transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms}
-#mgtTeam.effect .team-mem{opacity:1;right:0;-webkit-transform:translateX(0px);-moz-transform:translateX(0px);-ms-transform:translateX(0px);-o-transform:translateX(0px);transform:translateX(0px)}
-#mgtTeam.effect .team-mem:nth-child(1){-webkit-transition-delay:.2s;transition-delay:.2s}
-#mgtTeam.effect .team-mem:nth-child(2){-webkit-transition-delay:.3s;transition-delay:.3s}
-#mgtTeam.effect .team-mem:nth-child(3){-webkit-transition-delay:.4s;transition-delay:.4s}
-#mgtTeam.effect .team-mem:nth-child(4){-webkit-transition-delay:.5s;transition-delay:.5s}
-#mgtTeam.effect .team-mem:nth-child(5){-webkit-transition-delay:.6s;transition-delay:.6s}
-#mgtTeam.effect .team-mem:nth-child(6){-webkit-transition-delay:.7s;transition-delay:.7s}
+#mgtTeam .team-mem, #partnerContent .partner-item{margin:0;position:relative;opacity:0;right:-30%;-webkit-transform:translateX(1000px);-moz-transform:translateX(1000px);-ms-transform:translateX(1000px);-o-transform:translateX(1000px);transform:translateX(1000px);-webkit-transition:-webkit-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;-moz-transition:-moz-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;-o-transition:-o-transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms;transition:transform 600ms cubic-bezier(0.165,0.84,0.44,1),opacity 500ms ease-in 500ms}
+#mgtTeam.effect .team-mem, #partnerContent.effect .partner-item{opacity:1;right:0;-webkit-transform:translateX(0px);-moz-transform:translateX(0px);-ms-transform:translateX(0px);-o-transform:translateX(0px);transform:translateX(0px)}
+#mgtTeam.effect .team-mem:nth-child(1), #partnerContent.effect .partner-item:nth-child(1){-webkit-transition-delay:.2s;transition-delay:.2s}
+#mgtTeam.effect .team-mem:nth-child(2), #partnerContent.effect .partner-item:nth-child(2){-webkit-transition-delay:.3s;transition-delay:.3s}
+#mgtTeam.effect .team-mem:nth-child(3), #partnerContent.effect .partner-item:nth-child(3){-webkit-transition-delay:.4s;transition-delay:.4s}
+#mgtTeam.effect .team-mem:nth-child(4), #partnerContent.effect .partner-item:nth-child(4){-webkit-transition-delay:.5s;transition-delay:.5s}
+#mgtTeam.effect .team-mem:nth-child(5), #partnerContent.effect .partner-item:nth-child(5){-webkit-transition-delay:.6s;transition-delay:.6s}
+#mgtTeam.effect .team-mem:nth-child(6), #partnerContent.effect .partner-item:nth-child(6){-webkit-transition-delay:.7s;transition-delay:.7s}
 #mgtTeam.effect .team-mem:nth-child(7){-webkit-transition-delay:.8s;transition-delay:.8s}
 #mgtTeam.effect .team-mem:nth-child(8){-webkit-transition-delay:.9s;transition-delay:.9s}
 #mgtTeam.effect .team-mem:nth-child(9){-webkit-transition-delay:1s;transition-delay:1s}
