@@ -191,7 +191,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.php?model=statistics" title="Our Partners">
+                                <a href="index.php?model=content&contentid=10&action=contentupdate"
+                                   title="Our Partners">
                                     <i class="fa fa-handshake-o"></i> Our Partners
                                 </a>
                             </li>
