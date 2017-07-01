@@ -746,43 +746,92 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 </div>
 
 
-	<div id="our-partners" class="section container-fluid">
-		<div class="row">
-			<div class="col-sm-12 text-center">
-				<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
-					<i class="fa fa-handshake-o fa-lg mh-icon-colored" aria-hidden="true"></i>
-					<span class="mh-text-colored-with-underline"><?php echo "Our Partners" ?></span>
-				</h2>
-			</div>
+<div id="our-partners" class="section container-fluid">
+	<div id="partnerTitle" class="row">
+		<div class="col-sm-12 text-center">
+			<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+				<i class="fa fa-handshake-o fa-lg mh-icon-colored" aria-hidden="true"></i>
+				<span class="mh-text-colored-with-underline"><?php echo "Our Partners 1" ?></span>
+			</h2>
+			<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
 		</div>
-		<div id="partnerContent" class="row col-sm-12 column-center text-center">
-			<div class="row">
-				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
-					<img src="images/partners/mrs.jpg">
-				</div>
+	</div>
+	<div id="partnerContent" class="row col-sm-12 column-center text-center">
+		<div class="row">
+			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+				<img src="images/partners/mrs.jpg">
+			</div>
 
-				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
-					<img src="images/partners/sa.png">
-				</div>
+			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+				<img src="images/partners/sa.png">
+			</div>
 
-				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
-					<img src="images/partners/shell.png">
-				</div>
+			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+				<img src="images/partners/shell.png">
+			</div>
 
-				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
-					<img src="images/partners/unilever.jpg">
-				</div>
+			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+				<img src="images/partners/unilever.jpg">
+			</div>
 
-				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
-					<img src="images/partners/vfs.png">
-				</div>
+			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+				<img src="images/partners/vfs.png">
+			</div>
 
-				<div class="partner-item col-md-2 col-sm-4 col-xs-6">
-					<img src="images/partners/wb.jpg">
-				</div>
+			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+				<img src="images/partners/wb.jpg">
 			</div>
 		</div>
 	</div>
+</div>
+
+<div id="blankSpace" style="height: 200px;background-color: black;"></div>
+
+<div id="our-partners" class="section container-fluid">
+	<div id="partnerTitle" class="row">
+		<div class="col-sm-12 text-center">
+			<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
+				<i class="fa fa-handshake-o fa-lg mh-icon-colored" aria-hidden="true"></i>
+				<span class="mh-text-colored-with-underline"><?php echo "Our Partners 1" ?></span>
+			</h2>
+			<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
+		</div>
+	</div>
+	<style type="text/css">
+		.pi11{
+			padding: 20px 70px;
+		}
+	</style>
+	<div id="partnerContent1" class="row col-sm-12 column-center text-center">
+		<div class="row">
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
+				<img src="images/partners/mrs.jpg">
+			</div>
+
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
+				<img src="images/partners/sa.png">
+			</div>
+
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
+				<img src="images/partners/shell.png">
+			</div>
+
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
+				<img src="images/partners/unilever.jpg">
+			</div>
+
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
+				<img src="images/partners/vfs.png">
+			</div>
+
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
+				<img src="images/partners/wb.jpg">
+			</div>
+		</div>
+	</div>
+</div>
+
+
 
 
 
@@ -803,65 +852,6 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 			</div>
 			<div id="contact-content" class="row <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 				<?php echo $contactUs; ?>
-				<!-- <div class="col-md-8 nopadding">
-					<div class="col-sm-6 nopadding">
-						<div class="contact-col nopadding">
-							<div class="contact-col-icon">
-								<i class="fa fa-map-marker" aria-hidden="true"></i>
-							</div>
-							<div class="contact-col-content">
-								<div class="cc-title"><h3>Kuwait</h3></div>
-								<p class="cc-desc">
-									4B, 2nd Floor, Al Banwan building<br/>
-									Al Qibla Area<br/>
-									Opposite Central Bank of Kuwait<br/>
-									Kuwait City
-								</p>
-							</div>
-						</div>
-						<div class="contact-col nopadding">
-							<div class="contact-col-icon">
-								<i class="fa fa-paper-plane" aria-hidden="true"></i>
-							</div>
-							<div class="contact-col-content">
-								<div class="cc-title"><h3>Mailing address</h3></div>
-								<p class="cc-desc">
-									P.O.Box 1112 Salmiya 22012<br/>
-									Kuwait
-								</p>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-sm-6 nopadding">
-						<div class="contact-col nopadding">
-							<div class="contact-col-icon quick-contact">
-								<i class="fa fa-phone" aria-hidden="true"></i>
-							</div>
-							<div class="contact-col-content">
-								<div class="cc-title"><p> +965 2297 1100</p></div>
-							</div>
-						</div>
-
-						<div class="contact-col nopadding">
-							<div class="contact-col-icon quick-contact">
-								<i class="fa fa-fax" aria-hidden="true"></i>
-							</div>
-							<div class="contact-col-content">
-								<div class="cc-title"><p>+965 2249 5787</p></div>
-							</div>
-						</div>
-
-						<div class="contact-col nopadding">
-							<div class="contact-col-icon quick-contact">
-								<i class="fa fa-envelope" aria-hidden="true"></i>
-							</div>
-							<div class="contact-col-content">
-								<div class="cc-title"><p>info@mawaredhouse.com</p></div>
-							</div>
-						</div>
-					</div>
-				</div> -->
 				<div id="contactForm" class="col-sm-6 col-md-4 col-md-offset-1" style="">
 					<div id="contactFormMobileClose" class="visible-xs visible-sm"><i class="icon-rounded-x"></i></div>
 					<div id="mainPopupForm" class="col-sm-6 col-md-12 col-lg-12 column-center">
@@ -1084,13 +1074,13 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 			});
 		});	</script>
 
-	<!-- Management Team Viewer-->
-	<script type="text/javascript">
-		$(".omgt-team").click(function(){
-			var imgsrc = $(this).find(".hexagon-in2").css('background-image').replace('url(','').replace(')','');;
-			var peopleName = $(this).find(".omgt-name").text();
-			var peopleTitle = $(this).find(".omgt-pos").text();
-			var peopleText = $(this).find(".omgt-Content").text();
+		<!-- Management Team Viewer-->
+		<script type="text/javascript">
+			$(".omgt-team").click(function(){
+				var imgsrc = $(this).find(".hexagon-in2").css('background-image').replace('url(','').replace(')','');;
+				var peopleName = $(this).find(".omgt-name").text();
+				var peopleTitle = $(this).find(".omgt-pos").text();
+				var peopleText = $(this).find(".omgt-Content").text();
 
 	//Setting values
 	$(".teamviewerimage").css("background-image",'url('+imgsrc+')');
