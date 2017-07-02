@@ -785,51 +785,6 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 	</div>
 </div>
 
-<div id="blankSpace" style="height: 200px;background-color: black;"></div>
-
-<div id="our-partners" class="section container-fluid">
-	<div id="partnerTitle" class="row">
-		<div class="col-sm-12 text-center">
-			<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
-				<i class="fa fa-handshake-o fa-lg mh-icon-colored" aria-hidden="true"></i>
-				<span class="mh-text-colored-with-underline"><?php echo "Our Partners 1" ?></span>
-			</h2>
-			<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
-		</div>
-	</div>
-	<div id="partnerContent1" class="row col-sm-12 column-center text-center">
-		<div class="row">
-			<div class="partner-item pi11 col-sm-4 col-xs-6">
-				<img src="images/partners/mrs.jpg">
-			</div>
-
-			<div class="partner-item pi11 col-sm-4 col-xs-6">
-				<img src="images/partners/sa.png">
-			</div>
-
-			<div class="partner-item pi11 col-sm-4 col-xs-6">
-				<img src="images/partners/shell.png">
-			</div>
-
-			<div class="partner-item pi11 col-sm-4 col-xs-6">
-				<img src="images/partners/unilever.jpg">
-			</div>
-
-			<div class="partner-item pi11 col-sm-4 col-xs-6">
-				<img src="images/partners/vfs.png">
-			</div>
-
-			<div class="partner-item pi11 col-sm-4 col-xs-6">
-				<img src="images/partners/wb.jpg">
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-
-
 <div id="contacts" class="section container-fluid">
 	<div>
 		<div id="googleMap">
