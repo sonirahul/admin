@@ -751,9 +751,17 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 		<div class="col-sm-12 text-center">
 			<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 				<i class="fa fa-handshake-o fa-lg mh-icon-colored" aria-hidden="true"></i>
-				<span class="mh-text-colored-with-underline"><?php echo "Our Partners 1" ?></span>
+				<span class="mh-text-colored-with-underline"><?php echo "Our Partners" ?></span>
 			</h2>
-			<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
+		</div>
+		<style type="text/css">
+			#partner-sub-title {
+				text-shadow: 0 0 20px #715549;
+				font-size: 1.1em;
+			}
+		</style>
+		<div id="partner-sub-title" class="text-center">
+			The basis of partnership strategy and partnership approach: <br/>Having a partner allows one to take more risks.
 		</div>
 	</div>
 	<div id="partnerContent1" class="row col-sm-12 column-center text-center">
