@@ -756,29 +756,29 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 			<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
 		</div>
 	</div>
-	<div id="partnerContent" class="row col-sm-12 column-center text-center">
+	<div id="partnerContent1" class="row col-sm-12 column-center text-center">
 		<div class="row">
-			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
 				<img src="images/partners/mrs.jpg">
 			</div>
 
-			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
 				<img src="images/partners/sa.png">
 			</div>
 
-			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
 				<img src="images/partners/shell.png">
 			</div>
 
-			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
 				<img src="images/partners/unilever.jpg">
 			</div>
 
-			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
 				<img src="images/partners/vfs.png">
 			</div>
 
-			<div class="partner-item col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
 				<img src="images/partners/wb.jpg">
 			</div>
 		</div>
@@ -797,11 +797,6 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 			<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
 		</div>
 	</div>
-	<style type="text/css">
-		.pi11{
-			padding: 20px 70px;
-		}
-	</style>
 	<div id="partnerContent1" class="row col-sm-12 column-center text-center">
 		<div class="row">
 			<div class="partner-item pi11 col-sm-4 col-xs-6">

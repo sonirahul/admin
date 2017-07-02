@@ -36,9 +36,10 @@ section#blackBlankSection {height: 0px;background: black;}
 #our-partners, our-partners, #our-partners h2, #our-partners p, #our-partners span, #our-partners i {color: white !important;}
 
 #partnerTitle{margin-bottom: 50px}
-.partner-item{}
+.partner-item{margin-bottom: 25px}
 .partner-item img {width:80%;box-shadow: 0 0 20px #000;}
-
+.pi11{padding: 20px 70px;}
+.pi11.col-md-2{padding:0}
 @media only screen and (min-width : 320px) and (max-width:480px){
 	.row{margin:0}
 	.section.container-fluid{padding:5px}
@@ -181,6 +182,9 @@ section#blackBlankSection {height: 0px;background: black;}
 	#carouselItem4>div{background-image:url(../images/sliders/4th_320.jpg) !important}
 	#contact>div>div>h2{margin-top:40px;margin-bottom:20px;}
 	#contactView i {color: #fff;}
+
+	.partner-item img {width:90%}
+	.pi11{padding: 0}
 }
 
 @media only screen and (min-width:360px) and (max-width: 480px){
@@ -189,6 +193,8 @@ section#blackBlankSection {height: 0px;background: black;}
 	#ci2cc{top:42% !important}
 	#ci3cc{top:12% !important}
 	#carouselItem4>div{background-image:url(../images/sliders/4th_360.jpg) !important}
+	.partner-item img {width:90%}
+	.pi11{padding: 0}
 }
 
 @media only screen and (min-width:390px) and (max-width: 480px){
@@ -308,6 +314,10 @@ section#blackBlankSection {height: 0px;background: black;}
 	#clientss1 .clientss-image img{padding:0!important}
 	#clientss1 .clientss-name p{padding:7px 0!important;font-size:11px!important}
 	.col-xs-4.col-sm-2.country-con{padding:0 10px;margin-bottom:10px}
+
+	/*partners*/
+	.partner-item img {width:85%}
+	.pi11{padding: 0}
 
 	/*contact*/
 	.contact-col-icon.quick-contact{line-height:50px;height:50px}

@@ -22,6 +22,12 @@
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
+						<li class=''>
+							<a class="" href="/#relocationServices">
+								<?php echo "Metrica Relocation Services"; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
 						<li class='our-work'>
 							<a class="visible-lg our-work" href="/#blocks-wrapper">
 								<?php echo $aboutus_static; ?>
@@ -44,6 +50,12 @@
 						<li class='blog'>
 							<a class="blog" href="/#clientss1">
 								<?php echo $oClients_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class=''>
+							<a class="" href="/#our-partners">
+								<?php echo "Our Partners"; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
@@ -108,6 +120,12 @@
 						<li class='our-work'>
 							<a class="our-work" href="/#singaporeAirlines">
 								<?php echo $sa_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class=''>
+							<a class="" href="/#relocationServices">
+								<?php echo "Metrica Relocation Services"; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
@@ -179,18 +197,6 @@
 		</p><!-- var d = new Date().getFullYear(); -->
 	</div>
 </div>
-
-
-<!--<script src="js/main-6e0cc465.js"></script>
-<script src="js/process-1d1f249e.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-<script src="js/modernizr-custom.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="js/jquery.content_slider.min.js"></script>
-<script src="js/jquery.mousewheel.js"></script>
-<script src="js/jquery.nanoscroller.min.js"></script>-->
-
 
 <?php 
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
