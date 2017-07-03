@@ -313,34 +313,34 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 				</ul>-->
 
                 <div class="slideanim row" style="padding-top: 25px">
-                    <div class="col-md-1">
+                    <div class="col-xs-2 col-md-1">
                         <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true"></i>
                     </div>
-                    <div class="col-md-11">
+                    <div class="col-xs-10 col-md-11">
                         Destination Service Provider with coverage in over 110 countries.
                     </div>
                 </div>
                 <div class="slideanim row" style="padding-top: 25px">
-                    <div class="col-md-1">
+                    <div class="col-xs-2 col-md-1">
                         <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true" style="padding-top: 10px"></i>
                     </div>
-                    <div class="col-md-11">
+                    <div class="col-xs-10 col-md-11">
                         Certified independent minority and women-owned and operated small business enterprise, founded in 1984.
                     </div>
                 </div>
                 <div class="slideanim row" style="padding-top: 25px">
-                    <div class="col-md-1">
+                    <div class="col-xs-2 col-md-1">
                         <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true" style="padding-top: 10px"></i>
                     </div>
-                    <div class="col-md-11">
+                    <div class="col-xs-10 col-md-11">
                         Over 20 years of global relocation management and consulting experience serving the US government, corporate clients and international organizations.
                     </div>
                 </div>
                 <div class="slideanim row" style="padding-top: 25px">
-                    <div class="col-md-1">
+                    <div class="col-xs-2 col-md-1">
                         <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true" style="padding-top: 10px"></i>
                     </div>
-                    <div class="col-md-11">
+                    <div class="col-xs-10 col-md-11">
                         M+ in-country partners / firms are currently located in strategic and emerging markets throughout Africa, Eastern European, Asia and Lat-Am and we're constantly expanding driven by client needs.
                     </div>
                 </div>
