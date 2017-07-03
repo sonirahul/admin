@@ -288,7 +288,7 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 
 
 
-		<div class='row  column-center text-justify <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
+		<div class='row column-center text-justify <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
 			<div class='col-md-4 col-md-offset-1 col-sm-12'>
 				<div id="mrpLogoCon" class="form-group">
 					<img src="images/relocationService/mrp-logo.png"/>
@@ -305,12 +305,45 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 				</span>
 				<p>Mawared House is proud to be the partners’ of Metrica Relocations Plus  for Kuwait since May 2017</p>
 
-				<ul id="relocFeatureList">
+				<!--<ul id="relocFeatureList">
 					<li class="slideanim">Destination Service Provider with coverage in over 110 countries.</li>
 					<li class="slideanim">Certified independent minority and women-owned and operated small business enterprise, founded in 1984 </li>
 					<li class="slideanim">Over 20 years of global relocation management and consulting experience serving the US government, corporate clients and international organizations</li>
 					<li class="slideanim">M+ in-country partners / firms are currently located in strategic and emerging markets throughout Africa, Eastern European, Asia and Lat-Am and we're constantly expanding driven by client needs</li>
-				</ul>
+				</ul>-->
+
+                <div class="slideanim row" style="padding-top: 25px">
+                    <div class="col-md-1">
+                        <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-11">
+                        Destination Service Provider with coverage in over 110 countries.
+                    </div>
+                </div>
+                <div class="slideanim row" style="padding-top: 25px">
+                    <div class="col-md-1">
+                        <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true" style="padding-top: 10px"></i>
+                    </div>
+                    <div class="col-md-11">
+                        Certified independent minority and women-owned and operated small business enterprise, founded in 1984.
+                    </div>
+                </div>
+                <div class="slideanim row" style="padding-top: 25px">
+                    <div class="col-md-1">
+                        <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true" style="padding-top: 10px"></i>
+                    </div>
+                    <div class="col-md-11">
+                        Over 20 years of global relocation management and consulting experience serving the US government, corporate clients and international organizations.
+                    </div>
+                </div>
+                <div class="slideanim row" style="padding-top: 25px">
+                    <div class="col-md-1">
+                        <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true" style="padding-top: 10px"></i>
+                    </div>
+                    <div class="col-md-11">
+                        M+ in-country partners / firms are currently located in strategic and emerging markets throughout Africa, Eastern European, Asia and Lat-Am and we're constantly expanding driven by client needs.
+                    </div>
+                </div>
 			</div>
 		</div>
 	</section>
