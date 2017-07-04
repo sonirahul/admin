@@ -85,7 +85,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: goldenrod}
 	#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:center;}
 	#carouselItem1 blockquote p,#carouselItem2 blockquote p,#carouselItem3 blockquote p,#carouselItem5 blockquote p{font-size: 21px;}
 	#carouselItem3 blockquote>.block-con{padding:10px;}
-	.tenYrCompl {height: 90px;width: 90px;bottom: 20vh;right:10px}
+	.tenYrCompl {height: 90px;width: 90px;bottom: 15vh;right:10px}
 
 	/*vac & about us*/
 	.block-stats li{width:90px;height:initial;margin:5px 5px}
@@ -207,6 +207,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: goldenrod}
 @media only screen and (min-width:410px) and (max-width: 480px){
 	#carouselItem1 blockquote p, #carouselItem2 blockquote p, #carouselItem3 blockquote p, #carouselItem5 blockquote p {font-size: 26px;}
 	#singapore-info {padding-left: 45px;}
+	.tenYrCompl {height: 100px;width: 100px;bottom: 15vh;right: 15px}
 }
 
 @media only screen and (min-width:481px) and (max-width: 1199px){
