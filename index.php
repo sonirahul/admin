@@ -290,7 +290,7 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 
 		<div class='row column-center text-justify <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
 			<div class='col-md-4 col-md-offset-1 col-sm-12'>
-				<div id="mrpLogoCon" class="form-group">
+				<div id="mrpLogoCon" class="form-group text-center">
 					<img src="images/relocationService/mrp-logo.png"/>
 				</div>
 

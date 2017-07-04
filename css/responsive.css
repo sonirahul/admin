@@ -185,6 +185,8 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: goldenrod}
 
 	.partner-item img {width:90%}
 	.pi11{padding: 0}
+
+	#relocationServices{padding-bottom: 50px;}
 }
 
 @media only screen and (min-width:360px) and (max-width: 480px){
@@ -195,6 +197,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: goldenrod}
 	#carouselItem4>div{background-image:url(../images/sliders/4th_360.jpg) !important}
 	.partner-item img {width:90%}
 	.pi11{padding: 0}
+	#relocationServices{padding-bottom: 50px;}
 }
 
 @media only screen and (min-width:390px) and (max-width: 480px){
