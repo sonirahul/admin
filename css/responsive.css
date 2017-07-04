@@ -30,7 +30,7 @@ body{font-family:'Source Sans Pro',"Whitney SSm A","Whitney SSm B",sans-serif!im
 section#relocationServices{background-image: url(../images/relocationservice/rs-bg/1.jpg);background-attachment: fixed; background-size: cover; background-color: rgba(0,0,0,0.8); background-blend-mode:multiply;}
 section#relocationServices, our-partners, section#relocationServices h2, section#relocationServices p, section#relocationServices span {color: white !important;}
 section#blackBlankSection {height: 0px;background: black;}
-i.fa.fa-telegram.fa-lg.fa-2x {color: goldenrod}
+i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 
 #our-partners{background-image: url(../images/partners/bg.jpg);background-attachment: fixed; background-size: cover; background-color: rgba(0,0,0,0.3); background-blend-mode:multiply;}
 #our-partners, our-partners, #our-partners h2, #our-partners p, #our-partners span, #our-partners i {color: white !important;}
