@@ -59,12 +59,6 @@
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
-						<li class='contact'>
-							<a class="contact" href="/#contacts">
-								<?php echo $contact_static; ?>
-							</a>
-							<span class='icon-right-open-big'></span>
-						</li>
 						<li class='philosophy'>
 							<a class="philosophy" href="/countries-of-operation">
 								<?php echo $coo_static; ?>
@@ -74,6 +68,18 @@
 						<li class='careers'>
 							<a class="careers" href="/gallery">
 								<?php echo $gallery_static; ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='contact'>
+							<a class="contact" href="/qualityPolicy">
+								<?php echo "Quality Policy" ?>
+							</a>
+							<span class='icon-right-open-big'></span>
+						</li>
+						<li class='contact'>
+							<a class="contact" href="/#contacts">
+								<?php echo $contact_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
