@@ -210,21 +210,7 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 </div>
 
 
-<style type="text/css">
-.isoLogo {
-    background-image: url(images/others/iso_logo.jpg);
-    box-shadow: 0 0 20px black;
-    background-size: cover;
-    height: 90px;
-    width: 250px;
-    position: fixed;
-    bottom: 10vh;
-    left: 0;
-    z-index: 9999999999;
-}
-</style>
 
-<div class="isoLogo"></div>
 
 <div class='main clearfix div-bg5' id='main'>
 	<section id='do-dont-process'>
@@ -914,6 +900,13 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 		</div>
 	</div>
 </div>
+</div>
+<style type="text/css">
+
+</style>
+
+<div class="isoLogo"></div>
+
 <?php include "footer.php";?>
 
 <!--loader-->
