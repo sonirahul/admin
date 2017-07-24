@@ -202,9 +202,30 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 	}
 </script>
 
+
+
+
 <div class="tenYrCompl"></div>
 
 </div>
+
+
+<style type="text/css">
+.isoLogo {
+    background-image: url(images/others/iso_logo.jpg);
+    box-shadow: 0 0 20px black;
+    background-size: cover;
+    height: 90px;
+    width: 250px;
+    position: fixed;
+    bottom: 10vh;
+    left: 0;
+    z-index: 9999999999;
+}
+</style>
+
+<div class="isoLogo"></div>
+
 <div class='main clearfix div-bg5' id='main'>
 	<section id='do-dont-process'>
 		<div class='container'>
@@ -838,7 +859,7 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 			</div>
 			<div id="contact-content" class="row <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 				<?php echo $contactUs; ?>
-				<div id="contactForm" class="col-sm-6 col-md-4 col-md-offset-1" style="">
+				<div id="contactForm" class="col-sm-6 col-md-4" style="">
 					<div id="contactFormMobileClose" class="visible-xs visible-sm"><i class="icon-rounded-x"></i></div>
 					<div id="mainPopupForm" class="col-sm-6 col-md-12 col-lg-12 column-center">
 						<form action="mail.php" method="post">
