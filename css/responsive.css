@@ -211,14 +211,14 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 }
 
 @media only screen and (min-width:410px) and (max-width: 480px){
-	#qualityPolicyCon.container{width:380px;}
+
 	#carouselItem1 blockquote p, #carouselItem2 blockquote p, #carouselItem3 blockquote p, #carouselItem5 blockquote p {font-size: 26px;}
 	#singapore-info {padding-left: 45px;}
 	.tenYrCompl {height: 100px;width: 100px;bottom: 15vh;right: 15px}
 }
 
 @media only screen and (min-width:481px) and (max-width: 1199px){
-	#qualityPolicyCon.container{width:450px;}
+
 	
 	
 	p{font-size:19px;}
@@ -362,7 +362,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 }
 
 @media only screen and (min-width:600px) and (max-width: 1199px){
-	#qualityPolicyCon.container{width:500px;}
+
 	.row.mgtTeamMain2Row>div {width: 50%;}
 	.team-mem{width:33.33%}
 	.mgtTeamViewerclose.fa.fa-times{position:fixed;top:50%;margin-top:-35vh;right:10vw}
@@ -377,7 +377,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 }
 
 @media only screen and (min-width:768px) and (max-width: 1199px) {
-	#qualityPolicyCon.container{width:700px;}
+
 	#lang .dropdown-menu>li>a {font-size: 18px!important;}
 	.carousel-inner>.item.active .carousel-caption{top: 35% !important}
 	.carousel-inner>.item.active .carousel-caption {width:520px;left: 50%;margin-left: -260px;}	.block-stats li{float: none;display: inline-block;}
@@ -399,7 +399,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 }
 
 @media only screen and (min-width:992px) and (max-width: 1199px){
-	#qualityPolicyCon.container{width:700px;}
+
 	p{font-size:18px;}
 	h3{font-size:20px;}
 	.row.mgtTeamMain2Row>div {width: 25%;}
@@ -434,7 +434,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 	.footer ul.level-1-nav.list-unstyled{-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;}	
 }
 @media only screen and (min-width:1200px) and (max-width: 1823px) {
-	#qualityPolicyCon.container{width:700px;}
+
 	p,span.langSelectedText{font-size:16px;}
 	h2{font-size:28px;}
 	h3{font-size:20px;}
@@ -530,7 +530,7 @@ body{overflow-x:hidden;}
 }
 
 @media only screen and (min-width:1824px){
-	#qualityPolicyCon.container{width:700px;}
+
 	
 	.nav-bar .menu-text {font-size: 20px;font-family: roboto;margin-top: 4px;font-weight: bold;}
 	.nav-overlay .level-1-nav{padding-right:0}
