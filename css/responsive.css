@@ -33,7 +33,7 @@ section#blackBlankSection {height: 0px;background: black;}
 i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 
 #our-partners{background-image: url(../images/partners/bg.jpg);background-attachment: fixed; background-size: cover; background-color: rgba(0,0,0,0.3); background-blend-mode:multiply;}
-#our-partners, our-partners, #our-partners h2, #our-partners p, #our-partners span, #our-partners i {color: white !important;}
+/*#our-partners, our-partners, #our-partners h2, #our-partners p, #our-partners span, #our-partners i {color: white !important;}*/
 
 #partnerTitle{margin-bottom: 50px}
 .partner-item{margin-bottom: 25px}

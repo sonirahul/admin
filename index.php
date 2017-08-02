@@ -789,9 +789,9 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 <div id="our-partners" class="section container-fluid">
 	<div id="partnerTitle" class="row">
 		<div class="col-sm-12 text-center">
-			<h2 class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
-				<i class="fa fa-handshake-o fa-lg mh-icon-colored" aria-hidden="true"></i>
-				<span class="mh-text-colored-with-underline"><?php echo "Our Partners" ?></span>
+			<h2 class="mh-text-white mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>" style="text-decoration: none">
+				<i class="fa fa-handshake-o fa-lg about-us" aria-hidden="true"></i>
+				<span style="text-decoration: underline"><?php echo "Our Partners" ?></span>
 			</h2>
 		</div>
 		<style type="text/css">
@@ -800,9 +800,16 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 				font-size: 1.1em;
 			}
 		</style>
-		<div id="partner-sub-title" class="text-center">
-			The basis of partnership strategy and partnership approach: <br/>Having a partner allows one to take more risks.
-		</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="partner-sub-title" class="text-center">
+                        Mawared House  is proud to partner with some of the most successful and discernible organisations in the world. Our partnerships are built to be dynamic and flexible and goal oriented for both Mawared House  and our partners. We immensely value their contribution and the role they play in supporting our development and enabling us to offer targeted responses to customer needs.
+                    </div>
+                </div>
+            </div>
+        </div>
+
 	</div>
 	<div id="partnerContent1" class="row col-sm-12 column-center text-center">
 		<div class="row">
