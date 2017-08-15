@@ -26,7 +26,7 @@ body{font-family:'Source Sans Pro',"Whitney SSm A","Whitney SSm B",sans-serif!im
 .slide>div:hover p{color:#306eb0}
 .slide>div p{transition:all .4s ease-in-out}
 .teamviewerimagecontent{padding:0}
-.tenYrCompl {background-image: url(../images/others/10yrComp.png);background-size: contain;position: absolute}
+.tenYrCompl {background-image: url(../images/others/10yrComp.png);background-size: contain;position: absolute;background-repeat: no-repeat;}
 section#relocationServices{background-image: url(../images/relocationservice/rs-bg/1.jpg);background-attachment: fixed; background-size: cover; background-color: rgba(0,0,0,0.8); background-blend-mode:multiply;}
 section#relocationServices, our-partners, section#relocationServices h2, section#relocationServices p, section#relocationServices span {color: white !important;}
 section#blackBlankSection {height: 0px;background: black;}
@@ -86,7 +86,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 	#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:center;}
 	#carouselItem1 blockquote p,#carouselItem2 blockquote p,#carouselItem3 blockquote p,#carouselItem5 blockquote p{font-size: 21px;}
 	#carouselItem3 blockquote>.block-con{padding:10px;}
-	.tenYrCompl {height: 90px;width: 90px;bottom: 15vh;right:10px}
+	.tenYrCompl {height: 120px;width: 90px;bottom: 15vh;right:10px}
 
 	/*vac & about us*/
 	.block-stats li{width:90px;height:initial;margin:5px 5px}
@@ -210,7 +210,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 
 	#carouselItem1 blockquote p, #carouselItem2 blockquote p, #carouselItem3 blockquote p, #carouselItem5 blockquote p {font-size: 26px;}
 	#singapore-info {padding-left: 45px;}
-	.tenYrCompl {height: 100px;width: 100px;bottom: 15vh;right: 15px}
+	.tenYrCompl {height: 140px;width: 110px;bottom: 13vh;right: 15px}
 }
 
 @media only screen and (min-width:481px) and (max-width: 1199px){
@@ -256,7 +256,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 	#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:center;}
 	#carouselItem1 blockquote p,#carouselItem2 blockquote p,#carouselItem3 blockquote p,#carouselItem5 blockquote p {font-size: 24px;}
 	#carouselItem3 blockquote>.block-con{padding:10px;}
-	.tenYrCompl {height: 100px;width: 100px;bottom: 20vh;right: 20px}
+	.tenYrCompl {height: 130px;width: 100px;bottom: 20vh;right: 20px}
 	/*vac & about us*/
 	.block-stats li{width:90px;height:initial;margin:5px 5px}
 	.block-stats li{background-size:contain}
@@ -369,7 +369,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 	#carouselItem3 blockquote p, #carouselItem2 blockquote p{text-align:right;}
 	#sa-img img {width: 150px;}
 	#singapore-info>div {display: inline-block;}
-	.tenYrCompl {height: 100px;width: 100px;bottom: 20vh;right: 20px}
+	.tenYrCompl {height: 130px;width: 100px;bottom: 20vh;right: 20px}
 }
 
 @media only screen and (min-width:768px) and (max-width: 1199px) {
@@ -391,7 +391,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 	.nav-bar .identity.responsive img{}
 	#sa-img img {width: 150px;}
 	#carouselItem3 blockquote>.block-con{padding:10px 30px;}
-	.tenYrCompl {height: 150px;width: 150px;bottom: 10vh;right: 20px}
+	.tenYrCompl {height: 170px;width: 150px;bottom: 10vh;right: 20px}
 }
 
 @media only screen and (min-width:992px) and (max-width: 1199px){
@@ -442,7 +442,7 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 	.block-stats li .num{font-size:24px;}
 	.block-stats li .type{font-size:15px;}
 	.slider-bottom li,.slider-bottom a{font-size:16px;//text-transform: uppercase;}
-	.tenYrCompl {height: 150px;width: 150px;bottom: 10vh;right: 20px}
+	.tenYrCompl {height: 190px;width: 150px;bottom: 10vh;right: 20px}
 
 	.nav-bar .identity img{height:100px;}	
 	.nav-bar .menu-text {font-size: 16px;font-family: roboto;margin-top: 4px;font-weight: bold;}
@@ -539,7 +539,7 @@ body{overflow-x:hidden;}
 	.omgt-team:hover .hexagon-in2 {background-color: cornsilk;background-blend-mode: multiply;}
 	.omgt-team:hover {background: linear-gradient(180deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);color: #fff;background: linear-gradient(180deg,#f2e0ba 0,rgb(153, 3, 3) 100%);background: linear-gradient(180deg,white 0,#f58000 70%);}
 	.omgt-team:hover .omgt-name, .omgt-team:hover .omgt-pos {background-color: rgba(255, 0, 0, 0.57);background-color: rgba(0,0,0,0.15);}
-	.tenYrCompl {height: 150px;width: 150px;bottom: 10vh;right: 20px}
+	.tenYrCompl {height: 190px;width: 150px;bottom: 10vh;right: 20px}
 	
 	#contactView button.btn.btn-success, button[type="submit"]{font-size:18px;}
 	#clientss1 .clientss-name p,.form-control,.footer .copyright,.slider-bottom li{font-size:18px;}
