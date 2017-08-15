@@ -9,7 +9,7 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
         box-shadow: 0 0 10px #aaa;
         margin:auto;
         margin-bottom: 10px;
-    //margin-top: 100px;
+        margin-top: 75px;
         padding-bottom: 1px;
         background-color: white;
     }
@@ -25,14 +25,14 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
     body,.footer{background-color: #f0f0f0;}
 </style>
 
-<div id="qualityPolicyCon" class="">
+<div id="qualityPolicyCon" class="container">
     <div id="qualityPolicy" class="section">
         <div id="qpHeading" class="row">
             <div class="col-sm-3"><img class="img-responsive" src="./images/others/white-male-2064872_640.jpg" style="max-height: 150px;"></div>
             <div class="col-sm-offset-2 col-sm-7"><h2 style="text-align: left; padding-top: 1em">Quality Policy </h2></div>
 
         </div>
-        <div id="qpBody" class="container">
+        <div id="qpBody" class="">
 
             <p>Mawared House is specialized in providing Visa application services, including biometric enrolment, for diplomatic missions.</p>
 
