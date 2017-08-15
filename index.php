@@ -806,7 +806,7 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 
 	</div>
 	<div id="partnerContent1" class="row col-sm-12 column-center text-center">
-		<div class="row">
+		<div class="row container">
 			<div class="partner-item pi11 col-sm-4 col-xs-6">
 				<img src="images/partners/vfs.png">
 			</div>
