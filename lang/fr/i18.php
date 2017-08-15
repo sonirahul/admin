@@ -30,4 +30,7 @@ $send_static="Send";
 $feedback_static="FEEDBACK FORM";
 $viewMap_static="View Map";
 $contactFeedback_static="Contact/Feedback Form";
+$quality_static="Quality Policy";
+$metrica_static="Metrica Relocation Plus";
+$partners_static="Our Partners";
 ?>
