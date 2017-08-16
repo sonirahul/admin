@@ -794,12 +794,6 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 				<span style="text-decoration: underline"><?php echo "Our Partners" ?></span>
 			</h2>
 		</div>
-		<style type="text/css">
-			#partner-sub-title {
-				text-shadow: 0 0 20px #715549;
-				font-size: 1.1em;
-			}
-		</style>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -813,22 +807,22 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 	</div>
 	<div id="partnerContent1" class="row col-sm-12 column-center text-center">
 		<div class="row">
-			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
 				<img src="images/partners/vfs.png">
 			</div>
-			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
 				<img src="images/partners/sa.png">
 			</div>
-			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
 				<img src="images/partners/mrs.jpg">
 			</div>
-			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
 				<img src="images/partners/shell.png">
 			</div>
-			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
 				<img src="images/partners/unilever.jpg">
 			</div>
-			<div class="partner-item pi11 col-md-2 col-sm-4 col-xs-6">
+			<div class="partner-item pi11 col-sm-4 col-xs-6">
 				<img src="images/partners/wb.jpg">
 			</div>
 		</div>

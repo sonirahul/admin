@@ -34,10 +34,11 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 
 #our-partners{background-image: url(../images/partners/bg.jpg);background-attachment: fixed; background-size: cover; background-color: rgba(0,0,0,0.3); background-blend-mode:multiply;}
 /*#our-partners, our-partners, #our-partners h2, #our-partners p, #our-partners span, #our-partners i {color: white !important;}*/
+#partner-sub-title {text-shadow: 0 0 20px #715549;color:white;font-size: 1.3em;}
 
 #partnerTitle{margin-bottom: 50px}
 .partner-item{margin-bottom: 25px}
-.partner-item img {width:80%;box-shadow: 0 0 20px #000;}
+.partner-item img {width:80%;box-shadow: 0 0 20px #000;border-radius: 10%}
 .pi11{padding: 20px 70px;}
 .pi11.col-md-2{padding:0}
 
