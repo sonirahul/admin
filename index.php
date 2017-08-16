@@ -42,23 +42,11 @@ $commitment = $allContentData[6]["content_desc_" . $finalLang];
 $singaporeAirlinesName = $allContentData[7]["content_title_" . $finalLang];
 $singaporeAirlines = $allContentData[7]["content_desc_" . $finalLang];
 
-// TODO : 
-// 1. Need to revisit the area
-// 2. need to check the index of the relocation service in all content data (currently 8)
-// $relocationServicesName = $allContentData[8]["content_title_" . $finalLang];
-// $relocationService = $allContentData[8]["content_desc_" . $finalLang];
+$relocationServicesName = $allContentData[8]["content_title_" . $finalLang];
+$relocationServices = $allContentData[8]["content_desc_" . $finalLang];
 
-$relocationServicesName="Relocation Services";
-$relocationService=
-"
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-It has survived not only five centuries, but also the leap into electronic typesetting, 
-remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-sheets containing Lorem Ipsum passages, and more recently with desktop publishing software 
-like Aldus PageMaker including versions of Lorem Ipsum.
-";
+$ourPartnersName = $allContentData[9]["content_title_" . $finalLang];
+$ourPartners = $allContentData[9]["content_desc_" . $finalLang];
 
 ?>
 <style>
@@ -287,72 +275,14 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 			<div class="col-sm-12 text-center">
 				<h2  class="mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>">
 					<span class="mh-text-colored-with-underline">
-						<?php echo "Metrica Relocation Plus"; ?>
+						<?php echo $relocationServicesName ?>
 					</span>
 				</h2>
 			</div>
 		</div>
-
-
-
 		<div class='row column-center text-justify <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>'>
-			<div class='col-md-4 col-md-offset-1 col-sm-12'>
-				<div id="mrpLogoCon" class="form-group text-center">
-					<img src="images/relocationService/mrp-logo.png"/>
-				</div>
-
-				<div class="form-group" style="margin-top:30px;">
-					<label>Website URL : <a href="http://www.metricarelocations.com">www.metricarelocations.com</a></label>
-					<label>Phone : <a href="tel:9652297142">(+965 ) 22971142</a></label>
-				</div>
-			</div>
-			<div class='col-md-7 col-sm-12'>
-				<span class="mh-text-subHead">
-					Reliable, Responsive, and Highly Recommended
-				</span>
-				<p>Mawared House is proud to be the partners’ of Metrica Relocations Plus  for Kuwait since May 2017</p>
-
-				<!--<ul id="relocFeatureList">
-					<li class="slideanim">Destination Service Provider with coverage in over 110 countries.</li>
-					<li class="slideanim">Certified independent minority and women-owned and operated small business enterprise, founded in 1984 </li>
-					<li class="slideanim">Over 20 years of global relocation management and consulting experience serving the US government, corporate clients and international organizations</li>
-					<li class="slideanim">M+ in-country partners / firms are currently located in strategic and emerging markets throughout Africa, Eastern European, Asia and Lat-Am and we're constantly expanding driven by client needs</li>
-				</ul>-->
-
-                <div class="slideanim row" style="padding-top: 25px">
-                    <div class="col-xs-2 col-md-1">
-                        <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-xs-10 col-md-11">
-                        Destination Service Provider with coverage in over 110 countries.
-                    </div>
-                </div>
-                <div class="slideanim row" style="padding-top: 25px">
-                    <div class="col-xs-2 col-md-1">
-                        <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true" style="padding-top: 10px"></i>
-                    </div>
-                    <div class="col-xs-10 col-md-11">
-                        Certified independent minority and women-owned and operated small business enterprise, founded in 1984.
-                    </div>
-                </div>
-                <div class="slideanim row" style="padding-top: 25px">
-                    <div class="col-xs-2 col-md-1">
-                        <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true" style="padding-top: 10px"></i>
-                    </div>
-                    <div class="col-xs-10 col-md-11">
-                        Over 20 years of global relocation management and consulting experience serving the US government, corporate clients and international organizations.
-                    </div>
-                </div>
-                <div class="slideanim row" style="padding-top: 25px">
-                    <div class="col-xs-2 col-md-1">
-                        <i class="fa fa-telegram fa-lg fa-2x" aria-hidden="true" style="padding-top: 10px"></i>
-                    </div>
-                    <div class="col-xs-10 col-md-11">
-                        M+ in-country partners / firms are currently located in strategic and emerging markets throughout Africa, Eastern European, Asia and Lat-Am and we're constantly expanding driven by client needs.
-                    </div>
-                </div>
-			</div>
-		</div>
+            <?php echo $relocationServices ?>
+        </div>
 	</section>
 	
 	
@@ -791,14 +721,14 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 		<div class="col-sm-12 text-center">
 			<h2 class="mh-text-white mh-text-no-underline <?php if ($finalLang == "ar") {echo "dir-rtl";} ?>" style="text-decoration: none">
 				<i class="fa fa-handshake-o fa-lg about-us" aria-hidden="true"></i>
-				<span style="text-decoration: underline"><?php echo "Our Partners" ?></span>
+				<span style="text-decoration: underline"><?php echo $ourPartnersName ?></span>
 			</h2>
 		</div>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <div id="partner-sub-title" class="text-center">
-                        Mawared House  is proud to partner with some of the most successful and discernible organisations in the world. Our partnerships are built to be dynamic and flexible and goal oriented for both Mawared House  and our partners. We immensely value their contribution and the role they play in supporting our development and enabling us to offer targeted responses to customer needs.
+                        <?php echo $ourPartners ?>
                     </div>
                 </div>
             </div>
