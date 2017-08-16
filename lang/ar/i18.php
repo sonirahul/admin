@@ -30,7 +30,7 @@ $send_static="إرسال";
 $feedback_static="نموذج الملاحظات";
 $viewMap_static="إعرض الخريطة";
 $contactFeedback_static="نموذج الملاحظات/اتصال";
-$quality_static="Quality Policy";
-$metrica_static="Metrica Relocation Plus";
-$partners_static="Our Partners";
+$quality_static="سياسة الجودة";
+$metrica_static="ميتريكا ريلوكاتيون بلوس";
+$partners_static="شركاؤنا";
 ?>
