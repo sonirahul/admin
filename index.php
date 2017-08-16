@@ -912,8 +912,6 @@ like Aldus PageMaker including versions of Lorem Ipsum.
 
 </style>
 
-<div class="isoLogo"></div>
-
 <?php include "footer.php";?>
 
 <!--loader-->

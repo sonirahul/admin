@@ -41,9 +41,6 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 .pi11{padding: 20px 70px;}
 .pi11.col-md-2{padding:0}
 
-.isoLogo{background-image:url(../images/others/iso_logo.jpg);box-shadow:0 0 20px #000;background-size:cover;height:90px;width:250px;position:fixed;bottom:10vh;left:0;z-index:9999999999}
-
-
 @media only screen and (min-width : 320px) and (max-width:480px){
 	.row{margin:0}
 	.section.container-fluid{padding:5px}
@@ -191,7 +188,6 @@ i.fa.fa-telegram.fa-lg.fa-2x {color: #f99f1c;}
 	.pi11{padding: 0}
 
 	#relocationServices{padding-bottom: 50px;}
-	.isoLogo{position:initial;margin:auto;box-shadow:none}
 }
 
 @media only screen and (min-width:360px) and (max-width: 480px){

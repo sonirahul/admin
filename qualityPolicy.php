@@ -4,32 +4,103 @@ $SQLforCoo="select * from countries where countries_operation = 1 order by count
 $allCooData=select_query($link,$SQLforCoo,0,0);
 ?>
 <style type="text/css">
-    body{padding-bottom:0;padding-top:50px}
-    #qualityPolicyCon {
-        box-shadow: 0 0 10px #aaa;
-        margin:auto;
-        margin-bottom: 10px;
-        margin-top: 75px;
-        padding-bottom: 1px;
-        background-color: white;
-    }
-    #qualityPolicy {
-        margin: 20px;
+
+
+body{padding-bottom:0;padding-top:50px}
+#qualityPolicyCon {
+    box-shadow: 0 0 10px #aaa;
+    margin:auto;
+    margin-bottom: 10px;
+    margin-top: 75px;
+    padding-bottom: 1px;
+    background-color: white;
+}
+#qualityPolicy {
         margin-bottom: 50px;
     }
-    #qpHeading {
-        padding: 0 10px 0 5px;
-        margin-bottom: 30px;
-        border-bottom: 10px solid #f99f1c;
+#qpHeading {
+    padding: 0 10px 0 5px;
+    margin-bottom: 30px;
+    border-bottom: 10px solid #f99f1c;
+}
+#qFooter {
+    margin-top: 60px;
+    overflow: auto;
+}
+#qFooter img{
+    width: 100%;
+}
+
+body,.footer{background-color: #f0f0f0;}
+
+
+@media only screen and (min-width : 320px) and (max-width:480px){
+
+}
+
+@media only screen and (min-width:360px) and (max-width: 480px){
+
+}
+
+@media only screen and (min-width:390px) and (max-width: 480px){
+}
+
+@media only screen and (min-width:410px) and (max-width: 480px){
+
+}
+
+@media only screen and (min-width:481px) and (max-width: 1199px){
+
+}
+
+@media only screen and (min-width:600px) and (max-width: 1199px){
+    #qFooter>div{
+        width: 40%;
     }
-    body,.footer{background-color: #f0f0f0;}
+}
+
+@media only screen and (min-width:768px) and (max-width: 1199px) {
+    #qualityPolicy {
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width: 1199px){
+    #qualityPolicy {
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width:1200px) and (max-width: 1823px) {
+    #qualityPolicy {
+        margin: 20px;
+    }
+    #qFooter>div{
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width:1824px){
+    #qualityPolicy {
+        margin: 20px;
+    }
+    #qFooter>div{
+        width: 25%;
+    }
+}
+
+
 </style>
 
 <div id="qualityPolicyCon" class="container">
     <div id="qualityPolicy" class="section">
         <div id="qpHeading" class="row">
-            <div class="col-sm-3"><img class="img-responsive" src="./images/others/white-male-2064872_640.jpg" style="max-height: 150px;"></div>
-            <div class="col-sm-offset-2 col-sm-7"><h2 style="text-align: left; padding-top: 1em">Quality Policy </h2></div>
+            <div class="col-sm-3 col-xs-6">
+                <img class="img-responsive" src="./images/others/white-male-2064872_640.jpg" style="max-height: 150px;">
+            </div>
+            <div class="col-sm-offset-2 col-sm-7 col-xs-6">
+                <h2 style="text-align: left; padding-top: 1em">Quality Policy </h2>
+            </div>
 
         </div>
         <div id="qpBody" class="">
@@ -88,6 +159,11 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
                 </div>
             </div>
 
+        </div>
+        <div id="qFooter" class="">
+            <div class="pull-right">
+                <img src="images/others/iso_logo.jpg">
+            </div>
         </div>
     </div>
 </div>
