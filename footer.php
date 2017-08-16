@@ -24,7 +24,7 @@
 						</li>
 						<li class=''>
 							<a class="" href="/#relocationServices">
-								<?php echo "Metrica Relocation Services"; ?>
+								<?php echo $metrica_static ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
@@ -55,7 +55,7 @@
 						</li>
 						<li class=''>
 							<a class="" href="/#our-partners">
-								<?php echo "Our Partners"; ?>
+								<?php echo $partners_static; ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
@@ -73,7 +73,7 @@
 						</li>
 						<li class='contact'>
 							<a class="contact" href="/qualityPolicy">
-								<?php echo "Quality Policy" ?>
+								<?php echo $quality_static ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
@@ -131,7 +131,7 @@
 						</li>
 						<li class=''>
 							<a class="" href="/#relocationServices">
-								<?php echo "Metrica Relocation Services"; ?>
+								<?php echo $metrica_static ?>
 							</a>
 							<span class='icon-right-open-big'></span>
 						</li>
