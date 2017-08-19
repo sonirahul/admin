@@ -7,13 +7,19 @@ $allCooData=select_query($link,$SQLforCoo,0,0);
 
 
 body{padding-bottom:0;padding-top:50px}
+#qualityPolicySection {
+    background-image: url(images/quality/bg1.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-blend-mode: multiply;
+    margin-top: 18px;
+}
 #qualityPolicyCon {
-    box-shadow: 0 0 10px #aaa;
-    margin:auto;
     margin-bottom: 10px;
-    margin-top: 75px;
     padding-bottom: 1px;
-    background-color: white;
+}
+#qualityPolicyCon, #qualityPolicyCon p {
+    color: white !important;
 }
 #qualityPolicy {
         margin-bottom: 50px;
@@ -92,16 +98,16 @@ body,.footer{background-color: #f0f0f0;}
 
 </style>
 
-<div id="qualityPolicyCon" class="container">
-    <div id="qualityPolicy" class="section">
-        <div id="qpHeading" class="row">
-            <div class="col-sm-3 col-xs-6">
-                <img class="img-responsive" src="./images/others/white-male-2064872_640.jpg" style="max-height: 150px;">
-            </div>
-            <div class="col-sm-offset-2 col-sm-7 col-xs-6">
-                <h2 style="text-align: left; padding-top: 1em">Quality Policy </h2>
-            </div>
 
+<div id="qualityPolicySection">
+<div class="container">
+    
+
+
+<div id="qualityPolicyCon" class="row col-sm-10 col-sm-offset-1">
+    <div id="qualityPolicy" class="section">
+        <div id="qpHeading">
+            <h2 style="padding-top: 1em"  class="text-center">Quality Policy </h2>
         </div>
         <div id="qpBody" class="">
 
@@ -161,13 +167,14 @@ body,.footer{background-color: #f0f0f0;}
 
         </div>
         <div id="qFooter" class="">
-            <div class="pull-right">
+            <div class="">
                 <img src="images/others/iso_logo.jpg">
             </div>
         </div>
     </div>
 </div>
-
+</div>
+</div>
 <?php include "footer.php";?>
 
 <!-- navbar -->
