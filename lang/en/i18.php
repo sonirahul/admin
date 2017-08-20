@@ -13,7 +13,7 @@ $oClients_static="Our Clients";
 $gallery_static="Gallery";
 $aboutus_static="About Us";
 $contact_static="Contact Us";
-$footer_menu_static="&copy; ".date("Y")." Mawaredhouse.com";
+$footer_menu_static="&copy; ".date("Y")." mawaredhouse.com";
 $footer_static="&copy; ".date("Y")." Mawared House. <span class='hidden-xs'>All rights reserved. <a href='/privacy-policy'>Privacy Policy</a></span>";
 $slider1_static="Local Presence Global Support";
 $slider2_static="State of the art offices";

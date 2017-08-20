@@ -13,7 +13,7 @@ $oClients_static="عملاؤنا";
 $gallery_static="استديو الصور";
 $aboutus_static="معلومات عنا";
 $contact_static="اتصل بنا";
-$footer_menu_static="&copy; ".date("Y")." Mawaredhouse.com";
+$footer_menu_static="&copy; ".date("Y")." mawaredhouse.com";
 $footer_static="&copy; ".date("Y")." Mawared House. <span class='hidden-xs'>All rights reserved. <a href='/privacy-policy'>Privacy Policy</a></span>";
 $slider1_static="تواجد محلي دعم عالمي";
 $slider2_static="المكاتب تحفة فنيه";
