@@ -68,7 +68,11 @@ if($_POST["Action"]=="changeLang")
 <section class='nav-bar container-fluid scroll-up' id='navbar'>
     <div class='nav-bar-inner'>
         <div class='identity'>
-            <a href="/"><img src="images/logo/mavaredhouse_reverse_logo.png" id='mawaredhouse-logo'>
+            <a href="/">
+                <img src="images/logo/mavaredhouse_reverse_logo.png" id='mawaredhouse-logo'>
+            </a>
+            <a id="isoLink" href="/qualityPolicy">
+                ISO 9001 Certified
             </a>
         </div>
         <a class="menu-text" href="javascript:;"><?php echo $menu_static; ?></a>

@@ -6,6 +6,7 @@
 
 <style type="text/css">
 body{padding-bottom:0;padding-top:150px;background-image:url('images/background-pattern.jpg')}
+.nav-bar .identity a{width: 150px}
 #galleryID{font-size:90px;text-transform:none;color:#1e456f;font-family:'Lemonada',cursive;font-family:'Mogra',cursive;font-family:'Sriracha',cursive;font-family:'Arima Madurai',cursive;font-family:'Atma',cursive;font-family:'Fruktur',cursive;font-family:'Kavoon',cursive;font-family:'Ewert',cursive;font-family:'Pacifico',cursive;font-family:'Yellowtail',cursive;font-family:'Galada',cursive;font-family:'Courgette',cursive;font-family:'Oleo Script',cursive;font-family:'myFirstFont',cursive}
 body{//background:#6b92b9;background-image:-webkit-linear-gradient(bottom,#fff 45%,rgba(222,222,222,0.85) 100%)}
 canvas{display:block;position:absolute;z-index:1}
