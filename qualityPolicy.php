@@ -168,7 +168,7 @@ body,.footer{background-color: #f0f0f0;}
         </div>
         <div id="qFooter" class="">
             <div class="pull-right">
-                <img src="images/others/iso_logo.jpg">
+                <img src="images/others/iso.png">
             </div>
         </div>
     </div>
