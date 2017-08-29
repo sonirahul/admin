@@ -174,6 +174,9 @@ $ourPartners = $allContentData[9]["content_desc_" . $finalLang];
 					<li class="hidden"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
 				</ul>
 			</div>
+			<div class="isoCompany">
+				<a id="isoLink" href="/qualityPolicy">An ISO 9001:2015 certified company</a>
+			</div>
 		</div>
 	</div>
 </div>

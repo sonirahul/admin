@@ -26,6 +26,7 @@ body{font-family:'Source Sans Pro',"Whitney SSm A","Whitney SSm B",sans-serif!im
 .slide>div p{transition:all .4s ease-in-out}
 .teamviewerimagecontent{padding:0}
 .tenYrCompl{background-image:url(../images/others/10yrComp.png);background-size:contain;position:absolute;background-repeat:no-repeat}
+.isoCompany {position: absolute;margin-right: 10px}
 section#relocationServices{background-image:url(../images/relocationservice/rs-bg/1.jpg);background-attachment:fixed;background-size:cover;background-color:rgba(0,0,0,0.8);background-blend-mode:multiply}
 section#relocationServices,our-partners,section#relocationServices h2,section#relocationServices p,section#relocationServices span{color:white!important}
 section#blackBlankSection{height:0;background:black}
@@ -37,7 +38,7 @@ i.fa.fa-telegram.fa-lg.fa-2x, i.fa-chevron-circle-left.fa-lg.fa-2x{color:#f99f1c
 .partner-item img{width:80%;box-shadow:0 0 20px #000;border-radius:10%}
 .pi11{padding:20px 70px}
 .pi11.col-md-2{padding:0}
-#isoLink{margin-top:5px;display:block;width:140px;font-size:12px;color:white;text-shadow:0 0 2px black}
+#isoLink{//margin-top:5px;display:block;width:140px;font-size:13px;color:white;text-shadow:0 0 2px black;font-weight: bold;}
 .responsive #isoLink{display: none;}
 .nav-bar .identity .navLogoContainer{position:relative;left:40px;top:5px;text-align:center}
 .nav-bar .identity img{height:140px;transition:all .8s ease-in-out}
@@ -78,7 +79,9 @@ span.langSelectedText{font-size:15px!important}
 #carouselItem3 blockquote p,#carouselItem2 blockquote p{text-align:center}
 #carouselItem1 blockquote p,#carouselItem2 blockquote p,#carouselItem3 blockquote p,#carouselItem5 blockquote p{font-size:21px}
 #carouselItem3 blockquote>.block-con{padding:10px}
-.tenYrCompl{height:120px;width:90px;bottom:15vh;right:10px}
+.tenYrCompl{height:120px;width:90px;bottom:20vh}
+.isoCompany {margin-right: -10px;margin-top: -60px}
+.tenYrCompl,.isoCompany {right:10px}
 .block-stats li{width:90px;height:initial;margin:5px 5px}
 .block-stats li{background-size:contain}
 .block-stats li .num{padding:30px 0 2px;position:relative;top:-15px}
@@ -159,6 +162,10 @@ i.fa.fa-wpforms{position:relative;top:13px}
 #isoLink{width: 110px;font-size: 10px;}
 }
 
+@media only screen and (max-width:360px) and (max-height:580px){
+	.tenYrCompl{bottom:23vh}
+}
+
 @media only screen and (min-width:360px) and (max-width:480px){#carouselItem1 blockquote p,#carouselItem2 blockquote p,#carouselItem3 blockquote p,#carouselItem5 blockquote p{font-size:22px}
 #ci1cc{top:42%!important}
 #ci2cc{top:42%!important}
@@ -174,7 +181,9 @@ i.fa.fa-wpforms{position:relative;top:13px}
 
 @media only screen and (min-width:410px) and (max-width:480px){#carouselItem1 blockquote p,#carouselItem2 blockquote p,#carouselItem3 blockquote p,#carouselItem5 blockquote p{font-size:26px}
 #singapore-info{padding-left:45px}
-.tenYrCompl{height:140px;width:110px;bottom:13vh;right:15px}
+.tenYrCompl{height:140px;width:110px;bottom:20vh}
+.isoCompany {margin-right: 5px}
+.tenYrCompl,.isoCompany {right:0}
 }
 
 @media only screen and (min-width:481px) and (max-width:1199px){p{font-size:19px}
@@ -210,7 +219,9 @@ span.langSelectedText{font-size:15px!important}
 #carouselItem3 blockquote p,#carouselItem2 blockquote p{text-align:center}
 #carouselItem1 blockquote p,#carouselItem2 blockquote p,#carouselItem3 blockquote p,#carouselItem5 blockquote p{font-size:24px}
 #carouselItem3 blockquote>.block-con{padding:10px}
-.tenYrCompl{height:130px;width:100px;bottom:20vh;right:20px}
+.tenYrCompl{height:130px;width:100px;bottom:20vh}
+.isoCompany {margin-right: -18px;margin-top: -75px}
+.tenYrCompl,.isoCompany {right:20px}
 .block-stats li{width:90px;height:initial;margin:5px 5px}
 .block-stats li{background-size:contain}
 .block-stats li .num{padding:30px 0 2px;position:relative;top:-15px}
@@ -297,7 +308,8 @@ input[type="text"],input[type="email"],input[type="password"],textarea{font-size
 #carouselItem3 blockquote p,#carouselItem2 blockquote p{text-align:right}
 #sa-img img{width:150px}
 #singapore-info>div{display:inline-block}
-.tenYrCompl{height:130px;width:100px;bottom:20vh;right:20px}
+.tenYrCompl{height:130px;width:100px;bottom:20vh}
+.tenYrCompl,.isoCompany {right:20px}
 }
 
 @media only screen and (min-width:768px) and (max-width:1199px){#lang .dropdown-menu>li>a{font-size:18px!important}
@@ -316,7 +328,9 @@ input[type="text"],input[type="email"],input[type="password"],textarea{font-size
 .social{float:none}
 #sa-img img{width:150px}
 #carouselItem3 blockquote>.block-con{padding:10px 30px}
-.tenYrCompl{height:170px;width:150px;bottom:10vh;right:20px}
+.tenYrCompl{height:170px;width:150px;bottom:14vh}
+.tenYrCompl,.isoCompany {right:20px}
+.isoCompany {margin-right:15px}
 .nav-overlay .level-1-nav li a{font-size: 20px}
 }
 
@@ -357,7 +371,8 @@ h3{font-size:20px}
 .block-stats li .num{font-size:24px}
 .block-stats li .type{font-size:15px}
 .slider-bottom li,.slider-bottom a{font-size:16px;//text-transform:uppercase}
-.tenYrCompl{height:190px;width:150px;bottom:10vh;right:20px}
+.tenYrCompl{height:190px;width:150px;bottom:10vh}
+.tenYrCompl,.isoCompany {right:20px}
 .nav-bar .identity img{height:100px}
 .nav-bar .menu-text{font-size:16px;font-family:roboto;margin-top:4px;font-weight:bold}
 .nav-bar .hamburger{width:24px}
@@ -439,7 +454,8 @@ body{overflow-x:hidden}
 .omgt-team:hover .hexagon-in2{background-color:cornsilk;background-blend-mode:multiply}
 .omgt-team:hover{background:linear-gradient(180deg,#00b5e2 0,rgba(2,18,35,0.89) 100%);color:#fff;background:linear-gradient(180deg,#f2e0ba 0,#990303 100%);background:linear-gradient(180deg,white 0,#f58000 70%)}
 .omgt-team:hover .omgt-name,.omgt-team:hover .omgt-pos{background-color:rgba(255,0,0,0.57);background-color:rgba(0,0,0,0.15)}
-.tenYrCompl{height:190px;width:150px;bottom:10vh;right:20px}
+.tenYrCompl{height:190px;width:150px;bottom:10vh}
+.tenYrCompl,.isoCompany {right:20px}
 #contactView button.btn.btn-success,button[type="submit"]{font-size:18px}
 #clientss1 .clientss-name p,.form-control,.footer .copyright,.slider-bottom li{font-size:18px}
 input[type="text"],input[type="email"],input[type="password"],textarea{margin-bottom:initial}
