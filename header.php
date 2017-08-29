@@ -15,7 +15,7 @@ if($_POST["Action"]=="changeLang")
         document.cookie = "language=<? echo $finalLang; ?>";
     </script>
     <?php
-    echo "<script>document.location='/';</script>";
+    //echo "<script>document.location='/';</script>";
 }
 
 //setcookie($cookie_name, $finalLang, time() + (86400 * 30), "/", "mawaredhouse.com");
@@ -71,9 +71,6 @@ if($_POST["Action"]=="changeLang")
             <div class="navLogoContainer">
                 <a href="/">
                     <img src="images/logo/mavaredhouse_reverse_logo.png" id='mawaredhouse-logo'>
-                </a>
-                <a id="isoLink" href="/qualityPolicy">
-                    An ISO 9001:2015 certified company
                 </a>
             </div>      
         </div>
