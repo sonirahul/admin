@@ -1,5 +1,5 @@
 <?php
-$menu_static="قائمة طعام";
+$menu_static="القائمة";
 $home_static="الرئيسية";
 $vac_static="تأشيرة مركز التطبيق";
 $sa_static="خطوط الطيران السنغافورية";
