@@ -175,7 +175,7 @@ $ourPartners = $allContentData[9]["content_desc_" . $finalLang];
 				</ul>
 			</div>
 			<div class="isoCompany">
-				<a id="isoLink" href="/qualityPolicy">An ISO 9001:2015 certified company</a>
+				<a id="isoLink" href="/qualityPolicy">An ISO 9001:2015 Company</a>
 			</div>
 		</div>
 	</div>
